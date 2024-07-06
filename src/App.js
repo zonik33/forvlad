@@ -54,7 +54,7 @@ function App() {
       setIsContentLoaded(true);
     };
     document.addEventListener('DOMContentLoaded', handleContentLoaded);
-    openPopup2()
+    // openPopup2()
     // openPopup3()
     return () => {
       document.removeEventListener('DOMContentLoaded', handleContentLoaded);

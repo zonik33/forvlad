@@ -71,47 +71,48 @@ export default function Main (props) {
     return (
         <main>
             <div className={'main'} id={'main'}>
-                    <div className={'main-items'}>
-                        <div className={'bottle-left'}>
-                            <img className={'bottle-float-left'} src= {wintohealth}/>
-                        </div>
-                        <div className={'main-text-text'}>
-                            {/*<div className={'main-text'}> Купите билет и получите гарантированный приз от 585 ЗОЛОТОЙ! Выиграйте медицинскую страховку!</div>*/}
-                            <div className={'main-text'}>
-                                <div className={'buy-block'}>
-                                    <a className={'buy-block-a'}>КУПИТЕ</a>
-                                    <p className={'buy-block-p'}>БИЛЕТ<br></br> с 1.02.2024 <br></br>по 31.03.2024</p>
-                                </div>
-                                <div className={'take-block'}>
-                                    <a className={'take-block-a'}>ПОЛУЧИТЕ</a>
-                                    <p className={'take-block-p'}>Гарантированный подарок от 585 золотой*</p>
-                                </div>
-                                <div className={'win-block'}>
-                                    <a className={'win-block-a'}>ВЫИГРАЙТЕ</a>
-                                    <p className={'win-block-p'}>Медицинскую <br></br>страховку <br></br>каждый день</p>
-                                </div>
+                <div className={'main-items'}>
+                    <div className={'bottle-left'}>
+                        <img className={'bottle-float-left'} src={wintohealth}/>
+                    </div>
+                    <div className="myElement"></div>
+                    <div className={'main-text-text'}>
+                        {/*<div className={'main-text'}> Купите билет и получите гарантированный приз от 585 ЗОЛОТОЙ! Выиграйте медицинскую страховку!</div>*/}
+                        <div className={'main-text'}>
+                            <div className={'buy-block'}>
+                                <a className={'buy-block-a'}>КУПИТЕ</a>
+                                <p className={'buy-block-p'}>БИЛЕТ<br></br> с 1.02.2024 <br></br>по 31.03.2024</p>
                             </div>
-                            <a onClick={handleOnClick} className={'button-animation-text'}> <b>Принять участие в
-                                акции</b> </a>
-                            {isPopupOpen && (
-                                <Popup isOpen={isPopupOpen} closeModal={closePopup} />
-                            )}
+                            <div className={'take-block'}>
+                                <a className={'take-block-a'}>ПОЛУЧИТЕ</a>
+                                <p className={'take-block-p'}>Гарантированный подарок от 585 золотой*</p>
+                            </div>
+                            <div className={'win-block'}>
+                                <a className={'win-block-a'}>ВЫИГРАЙТЕ</a>
+                                <p className={'win-block-p'}>Медицинскую <br></br>страховку <br></br>каждый день</p>
+                            </div>
                         </div>
-                        <div className={'right-float-img'}>
-                            <img className={'snake-left'} src= {snake}/>
-                            <img className={'man'} src= {man}/>
-                            <img className={'rings'} src= {rings}/>
-                            <img className={'full-snake'} src= {snakefulls}/>
-                            <img className={'full-hearth'} src= {fullhearth}/>
-                            <img className={'pluse1'} src= {pluse1}/>
-                            <img className={'pluse2'} src= {plusemain}/>
-                            <img className={'left-half-ring'} src= {leftring}/>
-                            <img className={'center-hearth'} src= {centerhearth}/>
-                            <img className={'right-ring'} src= {rightRing}/>
-                            <img className={'right-hearth'} src= {rightHearth}/>
-                            <img className={'scroll-down'}  src= {scrollDown}/>
-                            <img className={'stars-man'}  src= {starsMan}/>
-                        </div>
+                        <a onClick={handleOnClick} className={'button-animation-text'}> <b>Принять участие в
+                            акции</b> </a>
+                        {isPopupOpen && (
+                            <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
+                        )}
+                    </div>
+                    <div className={'right-float-img'}>
+                        <img className={'snake-left'} src={snake}/>
+                        <img className={'man'} src={man}/>
+                        <img className={'rings'} src={rings}/>
+                        <img className={'full-snake'} src={snakefulls}/>
+                        <img className={'full-hearth'} src={fullhearth}/>
+                        <img className={'pluse1'} src={pluse1}/>
+                        <img className={'pluse2'} src={plusemain}/>
+                        <img className={'left-half-ring'} src={leftring}/>
+                        <img className={'center-hearth'} src={centerhearth}/>
+                        <img className={'right-ring'} src={rightRing}/>
+                        <img className={'right-hearth'} src={rightHearth}/>
+                        <img className={'scroll-down'} src={scrollDown}/>
+                        <img className={'stars-man'} src={starsMan}/>
+                    </div>
                 </div>
             </div>
             <How/>

@@ -21,6 +21,7 @@ body {
   scroll-behavior: smooth;
   font-size: 1.11vw;
   line-height: 1.5;
+  background-color: #023d6c;
 
 }
 .wrapper-main {
@@ -63,7 +64,7 @@ header {
   z-index: 99;
   box-sizing: border-box;
   transition: background 0.3s;
-  background-color: #007E36;
+  background-color: #023d6c;
 }
 header .container {
   position: relative;
@@ -281,11 +282,12 @@ header .button-animation:hover {
   margin-left: 1.1vw;
   margin-top: -0.73vw;
 }
+
 /* MAIN --------------------------------*/
 
 .main {
   padding: 5.5vw 0;
-  background-image: linear-gradient(#03BE53, #009640, #00622A);
+  background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
   background-size: cover;
   width: 100%;
   height: 47.95vw;
@@ -294,7 +296,19 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  clip-path: polygon(0 0, 100% 0, 100% 87.3%, 0 100%);
+  /*border-bottom-left-radius: 1500px; !* Загруглить левый нижний угол *!*/
+  /*border-bottom-right-radius: 1500px; !* Загруглить правый нижний угол *!*/
+  margin-bottom: 11vw;
+}
+.myElement {
+  width: 121.815vw;
+  height: 93.854vw;
+  margin: -51vw 0vw 0vw -23vw;
+  transform: rotate(0deg);
+  position: absolute;
+  background: linear-gradient(285deg, #1B4CF9 0%, #45B9FB 100%);
+  border-radius: 50% 50% 50% 50%;
+  overflow: hidden; /* Обрезать элемент, если он выходит за границы */
 }
 .main-profile {
   margin-top: 1vw;
@@ -1149,6 +1163,7 @@ header .button-animation:hover {
   margin-left: -14.8vw;
   margin-top: -0.65vw;
 }
+
 .how-tickets-img {
   display: flex;
   justify-content: flex-start;
@@ -1667,7 +1682,7 @@ header .button-animation:hover {
   line-height: 1.5;
   margin-top: -10vw;
   padding-top: 1.46vw;
-  background-image: linear-gradient(#03BE53, #009640, #01632B);
+  background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
 }
 .p-bil {
   font-size: 1.61vw;
@@ -2193,7 +2208,7 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  background-image: linear-gradient(#00622A, #009640, #03BE53);
+  background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
 }
 .prizes-text11 {
   text-transform: uppercase;
@@ -3369,7 +3384,7 @@ header .button-animation:hover {
 .winners {
   margin-top: -0.1vw;
   padding-top: 1.56vw;
-  background-image: linear-gradient(#03BE53, #009640, #00622A);
+  background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
 }
 .winners-text {
   margin-top: 0vw;
@@ -4438,7 +4453,7 @@ header .button-animation:hover {
 /* QUESTIONS --------------------------------------------------------------------------->*/
 .faq {
   position: relative;
-  background-image: linear-gradient(#00622A, #009640, #03BE53);
+  background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
   clip-path: polygon(0 0, 100% 0, 100% 98.9%, 0 100%);
   height: 187.59vw;
   margin-top: -0.2vw;
@@ -4929,7 +4944,7 @@ button[type="submit"] {
   margin-top: -5.3vw;
   padding-top: 8.46vw;
   padding-bottom: 7.5vw;
-  background-color: #007E36;
+  background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
 }
 .footer-profile {
   display: flex;
