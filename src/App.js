@@ -87,18 +87,18 @@ function App() {
           <Routes>
             <Route path="/" element={<Nav />} />
             <Route
-                path="/profile/*"
-                element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
+                path="/profile/*" element={<Profile />}
+                // element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
             />
             <Route
-                path="/gifts/*"
-                element={isAuthenticated ? <Gifts /> : <Navigate to="/" />}
+                path="/gifts/*" element={<Gifts />}
+                // element={isAuthenticated ? <Gifts /> : <Navigate to="/" />}
             />
             <Route
-                path="/tickets/*"
-                element={isAuthenticated ? <Tickets/> : <Navigate to="/" />}
+                path="/tickets/*" element={<Tickets/>}
+                // element={isAuthenticated ? <Tickets/> : <Navigate to="/" />}
             />
-            <Route path="/videos/*" element={isAuthenticated ? <Videos/> : <Navigate to="/" />}
+            {/*<Route path="/videos/*" element={isAuthenticated ? <Videos/> : <Navigate to="/" />}*/}
             />
             <Route path="/winners-videos/*" element={<WinnersVideos />}
             />

@@ -351,18 +351,6 @@ const barcodeRefs = useRef([]);
                                             </div>
                                         </NavLink>
                                     </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/videos"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/videos'}
-                                            className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Розыгрыши
-                                            </div>
-                                        </NavLink>
-                                    </div>
                                 </div>
                                 <div className={'right-second-profile-gifts'}>
                                     <p className={'right-second-gifts-p'}>Ваши подарки</p>

@@ -120,7 +120,7 @@ header .menu-content{
   justify-content: space-between;
   align-items: center;
   padding-top: 1.95vw;
-  padding-left: 20vw;
+  padding-left: 27vw;
 }
 header .menu-content-profile{
   display: flex;
@@ -290,7 +290,7 @@ header .button-animation:hover {
   background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
   background-size: cover;
   width: 100%;
-  height: 47.95vw;
+  height: 60.95vw;
   font-family: 'Circe', sans-serif;
   font-weight: 700;
   scroll-behavior: smooth;
@@ -299,17 +299,42 @@ header .button-animation:hover {
   /*border-bottom-left-radius: 1500px; !* Загруглить левый нижний угол *!*/
   /*border-bottom-right-radius: 1500px; !* Загруглить правый нижний угол *!*/
   margin-bottom: 11vw;
+  position: relative;
+  overflow: hidden;
 }
 .myElement {
   width: 121.815vw;
-  height: 93.854vw;
-  margin: -51vw 0vw 0vw -23vw;
+  height: 101.854vw;
+  margin: -48vw 0vw 0vw -14vw;
   transform: rotate(0deg);
   position: absolute;
   background: linear-gradient(285deg, #1B4CF9 0%, #45B9FB 100%);
-  border-radius: 50% 50% 50% 50%;
-  overflow: hidden; /* Обрезать элемент, если он выходит за границы */
+  border-radius: 34% 56% 78% 56%;
+  overflow: hidden;
+  z-index: 3;
 }
+.myElementFooter {
+  width: 109.815vw;
+  height: 59.854vw;
+  margin: 40vw 0vw 0vw -6vw;
+  transform: rotate(177deg);
+  position: absolute;
+  background: linear-gradient(285deg, #1B4CF9 0%, #45B9FB 100%);
+  border-radius: 34% 56% 78% 56%;
+  overflow: hidden;
+  z-index: 0;
+}
+/*.myElement::before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  bottom: -46%; !* Полное покрытие снизу *!*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%; !* Высота белого свечения *!*/
+/*  background-color: white; !* Цвет белого свечения *!*/
+/*  opacity: 0.5; !* Прозрачность белого свечения *!*/
+/*  border-radius: 50% 50% 50% 50%;*/
+/*}*/
 .main-profile {
   margin-top: 1vw;
   background-image: linear-gradient(#009640, #03BE53, #009640);
@@ -380,18 +405,18 @@ header .button-animation:hover {
 }
 .main-text {
   position: relative;
-  text-align: center;
+  text-align: left;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #EEF3EC;
-  font-size: 1.61vw;
-  line-height: 2.25vw;
-  margin-left: -16vw;
-  margin-top: 27.65vw;
+  font-size: 2.196vw;
+  line-height: 2.928vw;
+  margin-left: -10.3vw;
+  margin-top: 20.85vw;
   word-wrap: normal;
   margin-bottom: 3.26vw;
   z-index: 5;
-  width: 48.28vw;
+  width: 31.28vw;
   height: 6.81vw;
 }
 .buy-block {
@@ -509,6 +534,9 @@ header .button-animation:hover {
   flex-direction: row;
   margin-top: 15vw;
   margin-left: -55vw;
+}
+.how-button-animation-text {
+  display: none;
 }
 .global-name-name {
   position: relative;
@@ -1152,6 +1180,13 @@ header .button-animation:hover {
   margin-left: 8.53vw;
   transform: rotate(1.7deg);
 }
+.bottle-float-left.main-test-55 {
+  width: 86%;
+  height: auto;
+  margin-top: 41.55vw;
+  margin-left: 8.83vw;
+  transform: rotate(1.7deg);
+}
 .how-bottle-float-left {
   width: 76.5%;
   height: 100%;
@@ -1305,11 +1340,11 @@ header .button-animation:hover {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.1vw 2.1vw;
+  padding: 1.5vw 2.2vw;
   border-radius: 1.23vw;
   background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
-  margin-left: -13.5vw;
-  margin-top: 7.5vw;
+  margin-left: -10.3vw;
+  margin-top: 6.5vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
   border: 0.15vw solid #FFFFFF80;
   transition: background-image 0.3s ease;
@@ -1398,11 +1433,20 @@ header .button-animation:hover {
 
 .man {
   position: absolute;
-  flex: 1;
+  flex: 1 1;
   height: auto;
-  width: 46.8%;
-  margin-left: -15.7vw;
-  margin-top: 4.5vw;
+  width: 48.8%;
+  margin-left: -69.7vw;
+  margin-top: 46vw;
+  z-index: 8;
+}
+.man.logo-pochta {
+  position: absolute;
+  flex: 1 1;
+  height: auto;
+  width: 8.8%;
+  margin-left: -10.2vw;
+  margin-top: 13.75vw;
   z-index: 8;
 }
 .rings {
@@ -1673,7 +1717,7 @@ header .button-animation:hover {
 /* HOW ********************************** */
 .how {
   background-size: cover;
-  height: 108vw;
+  height: 136vw;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   min-width: initial;
@@ -1694,13 +1738,13 @@ header .button-animation:hover {
 .prizes-text {
   text-transform: uppercase;
   text-align: center;
-  margin: 13.1vw 0 3vw 23.45vw;
+  margin: 29.4vw 0 3vw 20.25vw;
   font-weight: 700;
   font-family: 'Acrom Medium', Arial, sans-serif;
   color: #EEF3EC;
   font-size: 3.66vw;
   line-height: 4.03vw;
-  width: 33.75vw;
+  width: 39.75vw;
   height: 8.05vw;
 }
 .prizes-items {
@@ -1797,6 +1841,157 @@ header .button-animation:hover {
   color: #FFFFFF;
   z-index: 2;
 }
+.users-logo-spin {
+  position: absolute;
+  width: 23.8vw;
+  height: auto;
+  margin: 5.55vw 0vw 0vw 5.4vw;
+}
+#spin, #reset {
+  position: absolute;
+}
+
+#spin:hover {
+  color: rgb(0, 180, 120);
+  border-color: rgb(0, 180, 120);
+}
+
+#spin:focus, #reset:focus {
+  outline:none;
+}
+
+/* #reset {
+  position: absolute;
+  bottom: 20vh;
+  right: 35vw;
+} */
+
+#reset:hover {
+  color: red;
+  border-color: red;
+}
+.canvas-container {
+
+}
+
+.items-block-how {
+  margin-top: -39vw;
+  margin-left: -1.3vw;
+  position: absolute;
+  width: 82.81vw;
+  height: 172vw;
+  border-radius: 1.46vw;
+  background-color: #023d6c;
+  z-index: 2;
+  box-shadow: 0 0 1.5vw 0.3vw #3979dc;
+}
+
+
+
+
+
+
+
+
+
+
+canvas#wheel {
+  position: relative;
+  z-index: 5;
+  width: 34.722vw;
+  height: 34.722vw;
+}
+.spin-block {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.spin-block.fade-enter-done {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.spin-block-enter {
+  opacity: 0;
+}
+
+.prizes-text-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.prizes-text-exit {
+  opacity: 1;
+}
+
+.spin-block-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.prizes-text.fade-enter-done {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.spin-block-enter {
+  opacity: 0;
+}
+
+.spin-block-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.spin-block-exit {
+  opacity: 1;
+}
+
+.spin-block-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-out;
+}
+
+
+#readout {
+  position: absolute;
+}
+#selectorspin{
+  color: #d52976;
+  position: absolute;
+  margin-top: 3.53vw;
+  margin-left: 15vw;
+  font-size: 4.678vw;
+  z-index: 6;
+}
+#wheel-center {
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  background: #fff;
+  margin-top: 17.4vw;
+  margin-left: 17.4vw;
+  z-index: 100;
+  box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, .75);
+}
 .how-first-li {
   font-size: 1.61vw;
   line-height: 2.27vw;
@@ -1864,7 +2059,9 @@ header .button-animation:hover {
   text-align: left;
   color: #FFFFFF;
 }
-
+.spin-block {
+  margin: 0vw 0vw 0vw 0vw;
+}
 
 .prizes-button {
   text-align: center;
@@ -4464,8 +4661,8 @@ header .button-animation:hover {
   font-weight: 700;
   font-size: 3.66vw;
   line-height: 4.03vw;
-  margin-left: 4.3vw;
-  margin-top: 3vw;
+  margin-left: 24.3vw;
+  margin-top: 7vw;
   text-align: left;
   font-family: 'Acrom Medium', sans-serif;
   color: #FFFFFF;
@@ -4503,11 +4700,11 @@ header .button-animation:hover {
 
 .faq-items {
   display: flex;
-  position: relative;
+  position: absolute;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 0.2vw;
+  margin-top: 2.2vw;
   margin-bottom: 1vw;
 }
 .faq-items-left {
@@ -4516,9 +4713,9 @@ header .button-animation:hover {
   overflow-y: scroll;
   width: 82.71vw;
   height: 172vw;
-  border: #FFFFFF4D 0.15vw solid;
   border-radius: 1.46vw;
-  background-color: #FFFFFF26;
+  background-color: #023d6c;
+  box-shadow: 0 0 1.5vw 0.3vw #3979dc;
 }
 
 .faq-items-right {
@@ -4938,6 +5135,8 @@ button[type="submit"] {
 
 /* FOOTER */
 .footer {
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4945,6 +5144,10 @@ button[type="submit"] {
   padding-top: 8.46vw;
   padding-bottom: 7.5vw;
   background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
+}
+.footer-container {
+  position: relative;
+  overflow: hidden; /* Предотвращает появление скроллов и обрезает myElementFooter */
 }
 .footer-profile {
   display: flex;
@@ -5025,12 +5228,14 @@ button[type="submit"] {
 .footer-left {
   margin-left: 8.55vw;
   margin-top: 0.1vw;
+  z-index: 5;
 }
 .footer-right {
   width: 54.61vw;
   height: 12.30vw;
   margin-right: 8.5vw;
   margin-top: -2.15vw;
+  z-index: 5;
 }
 .footer-colm {
   text-transform: uppercase;
@@ -5408,10 +5613,10 @@ button[type="submit"] {
   position: relative;
 }
 .under-text-quest {
-  position: relative;
+  position: absolute;
   align-items: center;
   margin-bottom: 5vw;
-  margin-top: 1.15vw;
+  margin-top: 177.15vw;
   margin-left: 15.7vw;
 }
 .under-text-quest-first-a {
@@ -6849,6 +7054,7 @@ iframe {
   }
 
   .how-button-animation-text {
+    display: flex;
     position: absolute;
     z-index: 6;
     cursor: pointer;

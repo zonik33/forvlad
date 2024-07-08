@@ -130,8 +130,8 @@ export default function Header (props){
                         <div className={'menu-content'}>
                             <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                             <a className="smooth" href={'#prizes'} onClick={(event) => {closeMenu(); ScrollPrizes(event); }}>Призы</a>
-                            <a className="smooth" href={'#winners'} onClick={(event) => {closeMenu(); ScrollWinners(event); }}> Победители </a>
-                            <a className="smooth" href={'#faq'} onClick={(event) => {closeMenu(); ScrollFaq(event); }}> Faq </a>
+                            {/*<a className="smooth" href={'#winners'} onClick={(event) => {closeMenu(); ScrollWinners(event); }}> Победители </a>*/}
+                            <a className="smooth" href={'#faq'} onClick={(event) => {closeMenu(); ScrollFaq(event); }}> Вопрос-ответ </a>
                             <a className="smooth backFaq" href={'#faq'} onClick={ScrollFaq}> Обратная связь </a>
                             <div className={'random-block'}>
                                 {isAuthenticated ? (

@@ -37,10 +37,35 @@ import img31 from "../image/img_31.png"
 import img32 from "../image/img_32.png"
 import img33 from "../image/img_33.png"
 import Popup from "./PopupReg/Popup";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import Test from "./test";
+import { useInView } from 'react-intersection-observer';
+import { CSSTransition } from 'react-transition-group';
 
 
 export default function How (props) {
+    const [isPrizesTextVisible, setIsPrizesTextVisible] = useState(false);
+    const [isComponentVisible, setIsComponentVisible] = useState(false);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+    const [prizesTextRef, prizesTextInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setIsComponentVisible(true);
+        }
+    }, [inView]);
+
+    useEffect(() => {
+        if (prizesTextInView) {
+            setIsPrizesTextVisible(true);
+        }
+    }, [prizesTextInView]);
     function openPopup2() {
         document.getElementById("popup-ticket1").style.display = "block";
         document.body.classList.add("no-scroll");
@@ -124,8 +149,9 @@ export default function How (props) {
         return (
         <div className={'how'} id={'how'}>
             <div className={'wrapper-how'}>
+                <div className={'items-block-how'}>
                 <div className={'how-bottle-left'}>
-                    <img className={'how-bottle-float-left'} src= {wintohealth}/>
+                    <img className={'how-bottle-float-left'} src={wintohealth}/>
                 </div>
                 <div className={'how-main-text-text'}>
                     <div className={'how-main-text'}>
@@ -149,27 +175,36 @@ export default function How (props) {
                         <Popup isOpen={isPopupOpen5} closeModal={closePopup5}/>
                     )}
                 </div>
-                <div className={'prizes-text'}>Как принять участие?
+                <div ref={prizesTextRef}>
+                    <CSSTransition
+                        in={isPrizesTextVisible}
+                        timeout={1000} // Продолжительность анимации в миллисекундах
+                        classNames="fade" // CSS классы для анимации
+                        unmountOnExit
+                    >
+                <div className={'prizes-text'}>
+                    Как участвовать?
                 </div>
+                    </CSSTransition>
+                </div>
+
                 <div className={'prizes-items'}>
-                    <img className={'img-22'} src={img22}/>
-                    <img className={'img-23'} src={img23}/>
-                    <img className={'img-24'} src={img24}/>
-                    <img className={'img-25'} src={img25}/>
-                    <img className={'img-26'} src={img26}/>
-                    <img className={'img-27'} src={img27}/>
-                    <img className={'img-28'} src= {img28}/>
-                    <img className={'img-29'} src= {img29}/>
-                    <img className={'img-30'} src= {img30}/>
-                    <img className={'img-31'} src= {img31}/>
-                    <img className={'img-32'} src= {img32}/>
-                    <img className={'img-33'} src= {img33}/>
+                    {/*<img className={'img-22'} src={img22}/>*/}
+                    {/*<img className={'img-23'} src={img23}/>*/}
+                    {/*<img className={'img-24'} src={img24}/>*/}
+                    {/*<img className={'img-25'} src={img25}/>*/}
+                    {/*<img className={'img-26'} src={img26}/>*/}
+                    {/*<img className={'img-27'} src={img27}/>*/}
+                    {/*<img className={'img-28'} src= {img28}/>*/}
+                    {/*<img className={'img-29'} src= {img29}/>*/}
+                    {/*<img className={'img-30'} src= {img30}/>*/}
+                    {/*<img className={'img-31'} src= {img31}/>*/}
+                    {/*<img className={'img-32'} src= {img32}/>*/}
+                    {/*<img className={'img-33'} src= {img33}/>*/}
                     <div className={'prizes-content-box1'}>
                         <img className={'how-left-icon'} src={howLeftIcon}/>
                         <div className={'prizes-content-box-title-bot1'}>
                             Купите билет:
-
-
                             {/*<p className={'how-tickes-img-p'}>Кликайте на любой понравившийся билет, выбирайте тираж,*/}
                             {/*    после оформления покупки билет появится в вашем личном кабинете и Вы станете*/}
                             {/*    участником ежедневного розыгрыша. Удачи!</p>*/}
@@ -179,7 +214,8 @@ export default function How (props) {
                                         src={howFull5}/></a>
                                 </div>
                                 <div className="how-full4-img for-test-img-test">
-                                    <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img src={howFull3}/></a>
+                                    <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img
+                                        src={howFull3}/></a>
                                 </div>
                                 {/*<div className="how-full4-img for-test-img">*/}
                                 {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
@@ -261,16 +297,16 @@ export default function How (props) {
                                             src={hovered4 ? pochtaNew : pochta}/></a>
                                     </div>
                                 </div>
-                                    <div className={'how-tickets-img-second-1'}>
-                                        <div className={'how-tickets-img-1-test'}>
-                                            <div className={'how-full2-img bonus-magnit'}>
-                                                <a><img
-                                                    src={magnit}/></a>
-                                            </div>
-                                            <div className={'how-full1-img bonus-ka5'}><img
-                                                src={ka5}/>
-                                            </div>
+                                <div className={'how-tickets-img-second-1'}>
+                                    <div className={'how-tickets-img-1-test'}>
+                                        <div className={'how-full2-img bonus-magnit'}>
+                                            <a><img
+                                                src={magnit}/></a>
                                         </div>
+                                        <div className={'how-full1-img bonus-ka5'}><img
+                                            src={ka5}/>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className={'how-tickets-img-second-2'}>
                                     {/*<div className={'how-full5-img bonus-perek'}>*/}
@@ -300,7 +336,9 @@ export default function How (props) {
                                 {/*    /!*</div>*!/*/}
                                 {/*</div>*/}
                             </div>
-                            <p className={'how-first-li-2'}>В фирменных точках продаж «Национальная лотерея», на сайте <a href={"https://nloto.ru/"} className={'text-nloto'} target="_blank">nloto.ru</a> или через мобильное приложение. Скачать:</p>
+                            <p className={'how-first-li-2'}>В фирменных точках продаж «Национальная лотерея», на
+                                сайте <a href={"https://nloto.ru/"} className={'text-nloto'}
+                                         target="_blank">nloto.ru</a> или через мобильное приложение. Скачать:</p>
                             <div className={'how-download-img'}>
                                 <a href={'https://nloto.ru/download-app?utm_source=main&utm_medium=bottom&utm_campaign=button'}
                                    target="_blank" className={"/#"}><img className={'how-appstore'} src={howAppstore}/></a>
@@ -341,12 +379,25 @@ export default function How (props) {
                     {isPopupOpen && (
                         <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
                     )}
-                    <img className={'snake-left-how'} src={snakeHow}/>
-                    <img className={'pluse-left-how'} src={leftHow}/>
-                    <img className={'circle-right-how'} src={rightHows}/>
+                    <div ref={ref}>
+                        <CSSTransition
+                            in={isComponentVisible}
+                            timeout={500} // Продолжительность анимации в миллисекундах
+                            classNames="fade" // CSS классы для анимации
+                            unmountOnExit
+                        >
+                            <div className="spin-block">
+                                <Test/>
+                            </div>
+                        </CSSTransition>
+                    </div>
+                    {/*<img className={'snake-left-how'} src={snakeHow}/>*/}
+                    {/*<img className={'pluse-left-how'} src={leftHow}/>*/}
+                    {/*<img className={'circle-right-how'} src={rightHows}/>*/}
 
+                </div>
                 </div>
             </div>
         </div>
-    )
+)
 }

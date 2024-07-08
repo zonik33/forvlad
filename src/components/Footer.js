@@ -1,12 +1,17 @@
 import ticketText from '../image/tickettext.png'
 import React from "react";
+import img55 from "../image/img_55.png";
+import man from "../image/img_56.png";
 
 
 export default function Footer (props) {
     const currentDomain = window.location.origin;
     return (
         <footer className={'footer'}>
+            <div className="myElementFooter">
+            </div>
             <div className="footer-left">
+
                 <div className={'footer-row'}>
                     <div className={'footer-colm'}>
                         <img className={'footer-logo'} src={ticketText}/>
@@ -49,7 +54,9 @@ export default function Footer (props) {
                         Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской Федерации
                         от 29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г.
                         Информация об организаторе лотерей, правилах их проведения, призовом фонде лотерей,
-                        количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a className={"text-nloto"} href={'https://nloto.ru/'} target="_blank">www.nloto.ru</a> и по телефону 8 (800) 333-7-333. </a>
+                        количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a
+                            className={"text-nloto"} href={'https://nloto.ru/'} target="_blank">www.nloto.ru</a> и по
+                        телефону 8 (800) 333-7-333. </a>
                 </div>
                 <div className={'footer-row4'}>
                     <a>Реклама. Рекламодатель: ООО «Спортивные Лотереи», ОГРН 1195027010386, ИНН 5003133760</a>

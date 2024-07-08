@@ -338,18 +338,18 @@ export default function Profile(props){
                                             </div>
                                         </NavLink>
                                     </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/videos"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/videos'}
-                                            className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Розыгрыши
-                                            </div>
-                                        </NavLink>
-                                    </div>
+                                    {/*<div className={'right-first-profile'}>*/}
+                                    {/*    <NavLink*/}
+                                    {/*        to="/videos"*/}
+                                    {/*        activeclassname="active-subsection"*/}
+                                    {/*        isactive={() => location.pathname === '/videos'}*/}
+                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                    {/*    >*/}
+                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                    {/*        /!*    Розыгрыши*!/*/}
+                                    {/*        /!*</div>*!/*/}
+                                    {/*    </NavLink>*/}
+                                    {/*</div>*/}
                                 </div>
                                 <div className={'right-second-profile'}>
                                     <div className={'content-from-left'}>

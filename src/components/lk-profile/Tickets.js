@@ -312,18 +312,6 @@ export default function Tickets(){
                                             <p className={'p-main-profile-color'}>Билеты</p>
                                         </NavLink>
                                     </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/videos"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/videos'}
-                                            className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Розыгрыши
-                                            </div>
-                                        </NavLink>
-                                    </div>
                                 </div>
                                 <div className={'right-second-profile-tickets'}>
                                     <div className={'content-from-left'}>
@@ -344,7 +332,7 @@ export default function Tickets(){
                                                             </div>
                                                         </div>
                                                         <div className={'table-body-ticket'}>
-                                                            {profile && profile.tickets.map((ticket, index) => (
+                                                            {profile && profile.tickets && profile.tickets.map((ticket, index) => (
                                                                 <div className={'table-body-winners-ticket'}
                                                                      key={index}>
                                                                     <div className={'centered-ticket-wrapper'}>

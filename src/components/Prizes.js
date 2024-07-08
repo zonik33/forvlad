@@ -14,8 +14,10 @@ import prizesRightHalfRing from '../image/img_7.png'
 import prizesLeftHearth from '../image/img_8.png'
 import prizesLeftFullHearth from '../image/img_9.png'
 import prizesSnakeInBlock from '../image/img_1.png'
-import {useEffect, useLayoutEffect, useRef} from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {useLocation} from "react-router-dom";
+import {useInView} from "react-intersection-observer";
+import {CSSTransition} from "react-transition-group";
 
 export default function Prizes (props) {
 
@@ -56,17 +58,48 @@ export default function Prizes (props) {
             }, 0);
         }
     }, [activeSection]);
+    const [isComponentVisibled, setIsComponentVisibled] = useState(false);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+    const [prizesTextRef, prizesTextInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setIsComponentVisibled(true);
+        }
+    }, [inView]);
+    // useEffect(() => {
+    //     if (prizesTextInView) {
+    //         setIsPrizesTextVisible(true);
+    //     }
+    // }, [prizesTextInView]);
 
         return (
             <div className={'prizes'} id={'prizes'} ref={prizesRef}>
                 <div className={'wrapper'}>
-                    <div className={'prizes-text11'}>Призы
+                    <div ref={ref}>
+                        <CSSTransition
+                            in={isComponentVisibled}
+                            timeout={1000} // Продолжительность анимации в миллисекундах
+                            classNames="fade" // CSS классы для анимации
+                            unmountOnExit
+                        >
+                            <div className={'prizes-text11'}>
+                                Призы розыгрышей
+                            </div>
+                        </CSSTransition>
                     </div>
                     <div className={'prizes-items11'}>
 
                         <div className={'prizes-content-box11'}>
                             <div className={'prizes-content-box-title-middle1'}><p>Получите гарантированный</p></div>
-                            <div className={'prizes-content-box-title-middle2'}><p>приз* за регистрацию билета!</p></div>
+                            <div className={'prizes-content-box-title-middle2'}><p>приз* за регистрацию билета!</p>
+                            </div>
                             <img className={'prizes-content-box1-img11'} src={prizesLeft}/>
                             <img className={'bg-image1'} src={bgImagese}/>
                             <div className={'prizes-content-box-title-bot11'}><p>Гарантированный приз</p></div>
@@ -125,16 +158,16 @@ export default function Prizes (props) {
                     </div>
 
                     <div className={'prizes-background-image'}>
-                        <img className={'prizes-Ring'} src={prizesRing}/>
-                        <img className={'prizes-left-title'} src={prizesFromLeft}/>
-                        <img className={'prizes-right-pluse'} src={prizesRightPluse}/>
-                        <img className={'prizes-right-hearth'} src={prizesRightHearth}/>
-                        <img className={'prizes-right-snake'} src={prizesRightSnake}/>
-                        <img className={'prizes-right-plusepluse'} src={prizesRightPlusePluse}/>
-                        <img className={'prizes-right-half-ping'} src={prizesRightHalfRing}/>
-                        <img className={'prizes-left-hearth'} src={prizesLeftHearth}/>
-                        <img className={'prizes-left-full-hearth'} src={prizesLeftFullHearth}/>
-                        <img className={'prizes-snake-inblock'} src={prizesSnakeInBlock}/>
+                        {/*<img className={'prizes-Ring'} src={prizesRing}/>*/}
+                        {/*<img className={'prizes-left-title'} src={prizesFromLeft}/>*/}
+                        {/*<img className={'prizes-right-pluse'} src={prizesRightPluse}/>*/}
+                        {/*<img className={'prizes-right-hearth'} src={prizesRightHearth}/>*/}
+                        {/*<img className={'prizes-right-snake'} src={prizesRightSnake}/>*/}
+                        {/*<img className={'prizes-right-plusepluse'} src={prizesRightPlusePluse}/>*/}
+                        {/*<img className={'prizes-right-half-ping'} src={prizesRightHalfRing}/>*/}
+                        {/*<img className={'prizes-left-hearth'} src={prizesLeftHearth}/>*/}
+                        {/*<img className={'prizes-left-full-hearth'} src={prizesLeftFullHearth}/>*/}
+                        {/*<img className={'prizes-snake-inblock'} src={prizesSnakeInBlock}/>*/}
                     </div>
                 </div>
             </div>

@@ -1,23 +1,9 @@
 import wintohealth from '../image/wintohealth.png'
-import snake from '../image/snake.png'
-import man from '../image/main-man.png'
-import rings from '../image/ring.png'
-import snakefulls from '../image/full-snake.png'
-import fullhearth from '../image/full-hearth.png'
-import plusemain from '../image/pluse.png'
-import pluse1 from '../image/pluse1.png'
-import leftring from '../image/half-ring.png'
-import centerhearth from '../image/center-hearth.png'
-import rightRing from '../image/right-ring.png'
-import rightHearth from '../image/right-hearth.png'
-import scrollDown from '../image/scroll-down.png'
-import starsMan from '../image/stars-man.png'
-import ticketDown from '../image/ticket-down.png'
-import mainTextRedmond from '../image/main-text-redmond.png'
-import mainRedmond from '../image/main-redmond.png'
+import img55 from '../image/img_55.png'
+import man from '../image/img_56.png'
+import logopochta from '../image/img_57.png'
 import How from "./How";
 import Prizes from "./Prizes";
-import Winners from "./Winners";
 import Questions from "./Questions";
 import Footer from "./Footer";
 import PopupTicket1 from "./PopupTicket/PopupTicket1";
@@ -75,49 +61,55 @@ export default function Main (props) {
                     <div className={'bottle-left'}>
                         <img className={'bottle-float-left'} src={wintohealth}/>
                     </div>
-                    <div className="myElement"></div>
+                    <div className="myElement">
+                        <img className={'bottle-float-left main-test-55'} src={img55}/>
+                        <img className={'man'} src={man}/>
+                    </div>
                     <div className={'main-text-text'}>
-                        {/*<div className={'main-text'}> Купите билет и получите гарантированный приз от 585 ЗОЛОТОЙ! Выиграйте медицинскую страховку!</div>*/}
-                        <div className={'main-text'}>
-                            <div className={'buy-block'}>
-                                <a className={'buy-block-a'}>КУПИТЕ</a>
-                                <p className={'buy-block-p'}>БИЛЕТ<br></br> с 1.02.2024 <br></br>по 31.03.2024</p>
-                            </div>
-                            <div className={'take-block'}>
-                                <a className={'take-block-a'}>ПОЛУЧИТЕ</a>
-                                <p className={'take-block-p'}>Гарантированный подарок от 585 золотой*</p>
-                            </div>
-                            <div className={'win-block'}>
-                                <a className={'win-block-a'}>ВЫИГРАЙТЕ</a>
-                                <p className={'win-block-p'}>Медицинскую <br></br>страховку <br></br>каждый день</p>
-                            </div>
+                        <img className={'man logo-pochta'} src={logopochta}/>
+                        <div className={'main-text'}> Покупайте лотерейные билеты в отделениях «Почты России» и
+                            участвуйте в розыгрыше призов от Национальной Лотереи
                         </div>
-                        <a onClick={handleOnClick} className={'button-animation-text'}> <b>Принять участие в
+                        {/*<div className={'main-text'}>*/}
+                        {/*    <div className={'buy-block'}>*/}
+                        {/*        <a className={'buy-block-a'}>КУПИТЕ</a>*/}
+                        {/*        <p className={'buy-block-p'}>БИЛЕТ<br></br> с 1.02.2024 <br></br>по 31.03.2024</p>*/}
+                        {/*    </div>*/}
+                        {/*    <div className={'take-block'}>*/}
+                        {/*        <a className={'take-block-a'}>ПОЛУЧИТЕ</a>*/}
+                        {/*        <p className={'take-block-p'}>Гарантированный подарок от 585 золотой*</p>*/}
+                        {/*    </div>*/}
+                        {/*    <div className={'win-block'}>*/}
+                        {/*        <a className={'win-block-a'}>ВЫИГРАЙТЕ</a>*/}
+                        {/*        <p className={'win-block-p'}>Медицинскую <br></br>страховку <br></br>каждый день</p>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+                        <a onClick={handleOnClick} className={'button-animation-text'}> <b>Участвовать в
                             акции</b> </a>
                         {isPopupOpen && (
                             <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
                         )}
                     </div>
                     <div className={'right-float-img'}>
-                        <img className={'snake-left'} src={snake}/>
-                        <img className={'man'} src={man}/>
-                        <img className={'rings'} src={rings}/>
-                        <img className={'full-snake'} src={snakefulls}/>
-                        <img className={'full-hearth'} src={fullhearth}/>
-                        <img className={'pluse1'} src={pluse1}/>
-                        <img className={'pluse2'} src={plusemain}/>
-                        <img className={'left-half-ring'} src={leftring}/>
-                        <img className={'center-hearth'} src={centerhearth}/>
-                        <img className={'right-ring'} src={rightRing}/>
-                        <img className={'right-hearth'} src={rightHearth}/>
-                        <img className={'scroll-down'} src={scrollDown}/>
-                        <img className={'stars-man'} src={starsMan}/>
+                        {/*<img className={'snake-left'} src={snake}/>*/}
+                        {/*<img className={'man'} src={man}/>*/}
+                        {/*<img className={'rings'} src={rings}/>*/}
+                        {/*<img className={'full-snake'} src={snakefulls}/>*/}
+                        {/*<img className={'full-hearth'} src={fullhearth}/>*/}
+                        {/*<img className={'pluse1'} src={pluse1}/>*/}
+                        {/*<img className={'pluse2'} src={plusemain}/>*/}
+                        {/*<img className={'left-half-ring'} src={leftring}/>*/}
+                        {/*<img className={'center-hearth'} src={centerhearth}/>*/}
+                        {/*<img className={'right-ring'} src={rightRing}/>*/}
+                        {/*<img className={'right-hearth'} src={rightHearth}/>*/}
+                        {/*<img className={'scroll-down'} src={scrollDown}/>*/}
+                        {/*<img className={'stars-man'} src={starsMan}/>*/}
                     </div>
                 </div>
             </div>
             <How/>
             <Prizes/>
-            <Winners/>
+            {/*<Winners/>*/}
             <Questions/>
         <Footer/>
             <PopupPasswordCopy/>

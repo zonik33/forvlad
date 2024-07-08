@@ -214,7 +214,7 @@ function Accordion() {
                         <div className="accordion">
                             <div className={'faq-global-text'}>
                                 <div className={"faq-main-text"}>
-                                    FAQ
+                                   ВОПРОС-ОТВЕТ
                                 </div>
 
                                 <div className={"faq-text"}>
@@ -262,13 +262,13 @@ function Accordion() {
                         </div>
 
                     </div>
-                    <div className={"faq-items-right"}>
-                        <div className={"faq-main-text-right"}>
-                            Обратная связь
-                        </div>
-                        <Form/>
+                    {/*<div className={"faq-items-right"}>*/}
+                    {/*    <div className={"faq-main-text-right"}>*/}
+                    {/*        Обратная связь*/}
+                    {/*    </div>*/}
+                    {/*    <Form/>*/}
 
-                    </div>
+                    {/*</div>*/}
 
 
                 </div>
