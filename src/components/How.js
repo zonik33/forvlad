@@ -1,4 +1,4 @@
-import howLeftIcon from '../image/how-left-icon.png'
+import howLeftIcon from '../image/img_58.png'
 import howCenterIcon from '../image/how-center-icon.png'
 import howRightIcon from '../image/how-right-icon.png'
 import snakeHow from "../image/snake1.png";
@@ -6,10 +6,10 @@ import howAppstore from "../image/how-appstore_.png";
 import howGooglePlay from "../image/how-googleplay_.png";
 import howFull4 from "../image/how-full4-img.png";
 import howFull6 from "../image/8_march.jpg";
-import howFull1 from "../image/img_34.png";
-import howFull2 from "../image/ticket111.png";
-import howFull3 from "../image/23_feb-new.png";
-import howFull5 from "../image/img_37.png";
+import howFull1 from "../image/img_59.png";
+import howFull2 from "../image/img_62.png";
+import howFull3 from "../image/img_60.png";
+import howFull5 from "../image/img_61.png";
 import magnit from "../image/magnit_.png";
 import magnitNew from "../image/magnit___.png";
 import lenta from "../image/lenta_.png";
@@ -175,18 +175,11 @@ export default function How (props) {
                         <Popup isOpen={isPopupOpen5} closeModal={closePopup5}/>
                     )}
                 </div>
-                <div ref={prizesTextRef}>
-                    <CSSTransition
-                        in={isPrizesTextVisible}
-                        timeout={1000} // Продолжительность анимации в миллисекундах
-                        classNames="fade" // CSS классы для анимации
-                        unmountOnExit
-                    >
+
                 <div className={'prizes-text'}>
                     Как участвовать?
                 </div>
-                    </CSSTransition>
-                </div>
+
 
                 <div className={'prizes-items'}>
                     {/*<img className={'img-22'} src={img22}/>*/}
@@ -203,19 +196,18 @@ export default function How (props) {
                     {/*<img className={'img-33'} src= {img33}/>*/}
                     <div className={'prizes-content-box1'}>
                         <img className={'how-left-icon'} src={howLeftIcon}/>
+                        <p className={'how-left-icon-text'}>1</p>
                         <div className={'prizes-content-box-title-bot1'}>
-                            Купите билет:
-                            {/*<p className={'how-tickes-img-p'}>Кликайте на любой понравившийся билет, выбирайте тираж,*/}
-                            {/*    после оформления покупки билет появится в вашем личном кабинете и Вы станете*/}
-                            {/*    участником ежедневного розыгрыша. Удачи!</p>*/}
+                            <p className={'how-tickes-img-p'}> Покупайте лотерейные билеты на сумму от 300 рублей в отделениях «Почты России»* </p>
+                            <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург, Краснодар, Екатеринбург</p>
                             <div className={'how-tickets-img'}>
                                 <div className="how-full44-img">
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
-                                        src={howFull5}/></a>
-                                </div>
-                                <div className="how-full4-img for-test-img-test">
                                     <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img
                                         src={howFull3}/></a>
+                                </div>
+                                <div className="how-full4-img for-test-img-test">
+                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                        src={howFull5}/></a>
                                 </div>
                                 {/*<div className="how-full4-img for-test-img">*/}
                                 {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
