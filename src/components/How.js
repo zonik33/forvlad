@@ -19,6 +19,13 @@ import diksiNew from "../image/diksi___.png";
 import pochtaNew from "../image/russianpost___.png";
 import perekrestok from "../image/perekrestok_.png";
 import ka5 from "../image/5ka_.png";
+import mini1 from "../image/img_63.png";
+import mini2 from "../image/img_64.png";
+import mini3 from "../image/img_65.png";
+import mini4 from "../image/img_66.png";
+import mini5 from "../image/img_67.png";
+import mini6 from "../image/img_68.png";
+import mini7 from "../image/img_69.png";
 import ka5New from "../image/5ka___.png";
 import pochta from "../image/russianpost.png";
 import leftHow from "../image/pluse-how.png";
@@ -198,8 +205,10 @@ export default function How (props) {
                         <img className={'how-left-icon'} src={howLeftIcon}/>
                         <p className={'how-left-icon-text'}>1</p>
                         <div className={'prizes-content-box-title-bot1'}>
-                            <p className={'how-tickes-img-p'}> Покупайте лотерейные билеты на сумму от 300 рублей в отделениях «Почты России»* </p>
-                            <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург, Краснодар, Екатеринбург</p>
+                            <p className={'how-tickes-img-p'}> Покупайте лотерейные билеты на сумму от 300 рублей в
+                                отделениях «Почты России»* </p>
+                            <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
+                                Краснодар, Екатеринбург</p>
                             <div className={'how-tickets-img'}>
                                 <div className="how-full44-img">
                                     <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img
@@ -258,48 +267,84 @@ export default function How (props) {
                                 {/*        src={howFull1}/></a>*/}
                                 {/*</div>*/}
                             </div>
-                            <div className={'prizes-content-box-title-bot1-second'}>
-                                {/*<p className={'p-bil'}>Где ещё можно купить билеты:</p>*/}
-                                <div className={'how-tickets-img-second'}>
-                                    <div className="how-full44-img-second" onMouseEnter={handleMouseEnter3}
-                                         onMouseLeave={handleMouseLeave3}>
-                                        <a><img
-                                            src={hovered3 ? magnitNew : magnit}/></a>
-                                    </div>
-                                    <div className="how-full4-img-second" onMouseEnter={handleMouseEnter1}
-                                         onMouseLeave={handleMouseLeave1}>
-                                        <a className={"#"}><img src={hovered1 ? ka5New : ka5}/></a>
-                                    </div>
-                                    {/*<div className="how-full412-img-second">*/}
-                                    {/*    <a className={"#"}><img src={perekrestok}/></a>*/}
-                                    {/*</div>*/}
 
-                                    <div className="how-full444-img-second" onMouseEnter={handleMouseEnter2}
-                                         onMouseLeave={handleMouseLeave2}>
-                                        <a><img
-                                            src={hovered2 ? lentaNew : lenta}/></a>
-                                    </div>
-                                    {/*<div className="how-full44445-img-second"  onMouseEnter={handleMouseEnter}*/}
-                                    {/*     onMouseLeave={handleMouseLeave}>*/}
-                                    {/*    <a><img src={hovered ? diksiNew : diksi}/></a>*/}
-                                    {/*</div>*/}
-                                    <div className="how-full4444-img-second" onMouseEnter={handleMouseEnter4}
-                                         onMouseLeave={handleMouseLeave4}>
-                                        <a><img
-                                            src={hovered4 ? pochtaNew : pochta}/></a>
-                                    </div>
+                            <div className={'how-tickets-img'}>
+                                <div className="how-full44-img for-test-img-test-mini">
+                                    <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img
+                                        src={mini1}/></a>
                                 </div>
-                                <div className={'how-tickets-img-second-1'}>
-                                    <div className={'how-tickets-img-1-test'}>
-                                        <div className={'how-full2-img bonus-magnit'}>
-                                            <a><img
-                                                src={magnit}/></a>
-                                        </div>
-                                        <div className={'how-full1-img bonus-ka5'}><img
-                                            src={ka5}/>
-                                        </div>
-                                    </div>
+                                <div className="how-full4-img for-test-img-test-mini2">
+                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                        src={mini2}/></a>
                                 </div>
+                                {/*<div className="how-full4-img for-test-img">*/}
+                                {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
+                                {/*</div>*/}
+                                <div className="how-full444-img for-test-img-second-mini">
+                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                        src={mini3}/></a>
+                                </div>
+                                <div className="how-full4444-img for-test-img-third-mini">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={mini4}/></a>
+                                </div>
+                                <div className="how-full4444-img for-test-img-4-mini">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={mini5}/></a>
+                                </div>
+                                <div className="how-full4444-img for-test-img-5-mini">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={mini6}/></a>
+                                </div>
+                                <div className="how-full4444-img for-test-img-6-mini">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={mini7}/></a>
+                                </div>
+
+                            </div>
+
+
+                            <div className={'prizes-content-box-title-bot1-second'}>
+                                {/*<div className={'how-tickets-img-second'}>*/}
+                                {/*<div className="how-full44-img-second" onMouseEnter={handleMouseEnter3}*/}
+                                {/*         onMouseLeave={handleMouseLeave3}>*/}
+                                {/*        <a><img*/}
+                                {/*            src={hovered3 ? magnitNew : magnit}/></a>*/}
+                                {/*    </div>*/}
+                                {/*    <div className="how-full4-img-second" onMouseEnter={handleMouseEnter1}*/}
+                                {/*         onMouseLeave={handleMouseLeave1}>*/}
+                                {/*        <a className={"#"}><img src={hovered1 ? ka5New : ka5}/></a>*/}
+                                {/*    </div>*/}
+                                {/*    /!*<div className="how-full412-img-second">*!/*/}
+                                {/*    /!*    <a className={"#"}><img src={perekrestok}/></a>*!/*/}
+                                {/*    /!*</div>*!/*/}
+
+                                {/*    <div className="how-full444-img-second" onMouseEnter={handleMouseEnter2}*/}
+                                {/*         onMouseLeave={handleMouseLeave2}>*/}
+                                {/*        <a><img*/}
+                                {/*            src={hovered2 ? lentaNew : lenta}/></a>*/}
+                                {/*    </div>*/}
+                                {/*    /!*<div className="how-full44445-img-second"  onMouseEnter={handleMouseEnter}*!/*/}
+                                {/*    /!*     onMouseLeave={handleMouseLeave}>*!/*/}
+                                {/*    /!*    <a><img src={hovered ? diksiNew : diksi}/></a>*!/*/}
+                                {/*    /!*</div>*!/*/}
+                                {/*    <div className="how-full4444-img-second" onMouseEnter={handleMouseEnter4}*/}
+                                {/*         onMouseLeave={handleMouseLeave4}>*/}
+                                {/*        <a><img*/}
+                                {/*            src={hovered4 ? pochtaNew : pochta}/></a>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                {/*<div className={'how-tickets-img-second-1'}>*/}
+                                {/*    <div className={'how-tickets-img-1-test'}>*/}
+                                {/*        <div className={'how-full2-img bonus-magnit'}>*/}
+                                {/*            <a><img*/}
+                                {/*                src={magnit}/></a>*/}
+                                {/*        </div>*/}
+                                {/*        <div className={'how-full1-img bonus-ka5'}><img*/}
+                                {/*            src={ka5}/>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
                                 <div className={'how-tickets-img-second-2'}>
                                     {/*<div className={'how-full5-img bonus-perek'}>*/}
                                     {/*    <a><img*/}
@@ -365,22 +410,22 @@ export default function How (props) {
                     {/*    </div>*/}
                     {/*</div>*/}
                 </div>
-                <div className={'prizes-button'}>
-                    <a onClick={handleOnClick} className={'prizes-button-check'}>
-                        <b>Принять участие в акции</b></a>
-                    {isPopupOpen && (
-                        <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
-                    )}
-                    <div ref={ref}>
-                        <CSSTransition
-                            in={isComponentVisible}
-                            timeout={500} // Продолжительность анимации в миллисекундах
-                            classNames="fade" // CSS классы для анимации
-                            unmountOnExit
-                        >
-                            <div className="spin-block">
-                                <Test/>
-                            </div>
+                    <div className={'prizes-button'}>
+                        <a onClick={handleOnClick} className={'prizes-button-check'}>
+                            <b>Принять участие в акции</b></a>
+                        {isPopupOpen && (
+                            <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
+                        )}
+                        <div ref={ref}>
+                            <CSSTransition
+                                in={isComponentVisible}
+                                timeout={500} // Продолжительность анимации в миллисекундах
+                                classNames="fade" // CSS классы для анимации
+                                unmountOnExit
+                            >
+                                <div className="spin-block">
+                                    <Test/>
+                                </div>
                         </CSSTransition>
                     </div>
                     {/*<img className={'snake-left-how'} src={snakeHow}/>*/}

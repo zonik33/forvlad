@@ -313,6 +313,25 @@ header .button-animation:hover {
   overflow: hidden;
   z-index: 3;
 }
+.myELementSecond {
+  width: 121.815vw;
+  height: 101.854vw;
+  margin: -48vw 0vw 0vw 98vw;
+  position: absolute;
+  z-index: 3;
+}
+.overlay {
+  position: absolute;
+  margin: 84.43vw 0vw 0vw -29vw;
+  width: 14vw;
+  height: 29vw;
+  /* background-color: rgba(0, 0, 0, 1); */
+  border-radius: 23% 38% 144% 18%;
+  z-index: 19;
+  background-color: #023d6c;
+  transform: rotate(63deg);
+
+}
 .myElementFooter {
   width: 109.815vw;
   height: 59.854vw;
@@ -1027,6 +1046,19 @@ header .button-animation:hover {
   z-index: 11;
   background-size: cover;
 }
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* Выравнивание изображений по левому краю контейнера */
+}
+
+.small-image {
+  width: 100%;
+  height: auto;
+}
+
+.image-container a {
+  margin: 0; /* Убрать внешние отступы для ссылок */
+}
 .right-second-profile {
   position: relative;
   width: 55.12vw;
@@ -1230,6 +1262,9 @@ header .button-animation:hover {
   /*border: 0.35vw solid white;*/
 
 }
+.how-full44-img-mini img {
+  width: 55.5% !important;
+}
 @keyframes blink {
   0% {
     opacity: 1;
@@ -1281,18 +1316,59 @@ header .button-animation:hover {
   width: 86.1%;
   margin-left: -1vw;
 }
+.for-test-img-mini img {
+  width: 66%;
+  margin-left: -1vw;
+}
+
 .for-test-img-test img {
   width: 102%;
   margin-left: -8.5vw;
+}
+.for-test-img-test-mini img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -10vw;
+}
+.for-test-img-test-mini2 img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -8.4vw;
 }
 .for-test-img-second img {
   width: 101.5%;
   margin-left: -7.1vw;
 }
+.for-test-img-second-mini img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -6.8vw;
+}
 .for-test-img-third img {
   margin-left: -5.8vw;
   width: 135.1%;
 }
+.for-test-img-third-mini img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -5.4vw;
+}
+.for-test-img-4-mini img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -3.8vw;
+}
+.for-test-img-5-mini img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -2.3vw;
+}
+.for-test-img-6-mini img {
+  width: 104%;
+  margin-top: -1.45vw;
+  margin-left: -0.7vw;
+}
+
 
 .how-full44-img-second img {
   width: 80%;
@@ -1445,9 +1521,9 @@ header .button-animation:hover {
   flex: 1 1;
   height: auto;
   width: 48.8%;
-  margin-left: -69.7vw;
+  margin-left: -68.2vw;
   margin-top: 46vw;
-  z-index: 8;
+  z-index: 8;user-select: none;
 
 }
 .man.logo-pochta {
@@ -1772,6 +1848,7 @@ header .button-animation:hover {
   align-items: flex-start;
 }
 .prizes-content-box2 {
+  margin-top: 13vw;
   width: auto;
   height: 16vw;
   display: flex;

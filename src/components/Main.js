@@ -63,7 +63,10 @@ export default function Main (props) {
                     </div>
                     <div className="myElement">
                         <img className={'bottle-float-left main-test-55'} src={img55}/>
+                    </div>
+                    <div className={'myELementSecond'}>
                         <img className={'man'} src={man}/>
+                        <div className={'overlay'}></div>
                     </div>
                     <div className={'main-text-text'}>
                         <img className={'man logo-pochta'} src={logopochta}/>
