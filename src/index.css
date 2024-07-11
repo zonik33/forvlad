@@ -7215,7 +7215,7 @@ iframe {
 
   .main {
     padding: 50.5vw 0;
-    background-image: linear-gradient(#00622A, #009640);
+    /*background-image: linear-gradient(#00622A, #009640);*/
     background-size: cover;
     width: 100%;
     height: 18vw;
@@ -7225,6 +7225,18 @@ iframe {
     font-size: 0.83vw;
     line-height: 1.5;
     clip-path: polygon(0 0, 100% 0, 100% 95.3%, 0 100%);
+  }
+  .items-block-how {
+    overflow: hidden;
+    margin-top: -39vw;
+    margin-left: -1.3vw;
+    position: absolute;
+    width: auto;
+    height: 922vw;
+    border-radius: 1.46vw;
+    background-color: #023d6c;
+    z-index: 2;
+    box-shadow: 1vw 1vw 5.5vw 1.3vw #3979dc;
   }
 
 
@@ -7651,7 +7663,7 @@ iframe {
   .prizes {
     margin-top: -0.5vw;
     background-size: cover;
-    height: 619.25vw;
+    height: 100.25vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     min-width: initial;
