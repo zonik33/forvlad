@@ -126,14 +126,14 @@ export default function NotFoundPage(props){
             <div className={'container'}>
                 <div className={'content'}>
                     <div className={'logo-content'}>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                             <img className={'logo'} src={ticket}
                                  alt="Logo"
                                  onMouseOver={() => { /* Обработчик наведения на картинку */
                                  }}
                                  onClick={handleImageClick}/>
                         </Link>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                             <img className={'logo-text'} src={tickettext}
                                  alt="Logo"
                                  onMouseOver={() => { /* Обработчик наведения на картинку */
@@ -151,14 +151,14 @@ export default function NotFoundPage(props){
                                 closeMenu();
                                 handleGoToPrizes(event)
                             }}> Призы </a>
-                            <a className="smooth" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToWinners(event)
-                            }}>Победители</a>
+                            {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
+                            {/*    closeMenu();*/}
+                            {/*    handleGoToWinners(event)*/}
+                            {/*}}>Победители</a>*/}
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToFaq(event)
-                            }}> Faq </a>
+                            }}> Вопрос-ответ </a>
                             <a className="smooth backFaq" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToSupport(event)
@@ -190,14 +190,14 @@ export default function NotFoundPage(props){
                                 участие в акции</b> </a>
                         </div>
                         <div className={'back-ground-with-img'}>
-                            <img className={'profile-snake-left NFP-snake-left'} src={snake}/>
-                            <img className={'profile-rings NFP-rings'} src={rings}/>
-                            <img className={'profile-full-hearth NFP-full-hearth'} src={fullhearth}/>
-                            <img className={'profile-pluse1 NFP-pluse1'} src={pluse1}/>
-                            <img className={'profile-left-half-ring NFP-left-half-ring'} src={leftring}/>
-                            <img className={'profile-center-hearth NFP-center-hearth'} src={centerhearth}/>
-                            <img className={'profile-right-ring NFP-right-ring'} src={rightRing}/>
-                            <img className={'full-snake NFP-full-snake'} src={snakefulls}/>
+                            {/*<img className={'profile-snake-left NFP-snake-left'} src={snake}/>*/}
+                            {/*<img className={'profile-rings NFP-rings'} src={rings}/>*/}
+                            {/*<img className={'profile-full-hearth NFP-full-hearth'} src={fullhearth}/>*/}
+                            {/*<img className={'profile-pluse1 NFP-pluse1'} src={pluse1}/>*/}
+                            {/*<img className={'profile-left-half-ring NFP-left-half-ring'} src={leftring}/>*/}
+                            {/*<img className={'profile-center-hearth NFP-center-hearth'} src={centerhearth}/>*/}
+                            {/*<img className={'profile-right-ring NFP-right-ring'} src={rightRing}/>*/}
+                            {/*<img className={'full-snake NFP-full-snake'} src={snakefulls}/>*/}
 
                         </div>
                     </div>
@@ -206,6 +206,7 @@ export default function NotFoundPage(props){
             <main>
                 <div className={'main-error'} id={'main-error'}>
                     <div className={'main-items main-items-profile'}>
+                        <div className={'items-block-how-error'}></div>
                         <div className={'global-name-name'}>
                             <p className={'global-name-biggest'}>
                                 404</p>
@@ -222,7 +223,10 @@ export default function NotFoundPage(props){
 
             </main>
             <footer className={'footer'}>
+                <div className="myElementFooter">
+                </div>
                 <div className="footer-left">
+
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
                             <img className={'footer-logo'} src={ticketText}/>
@@ -230,51 +234,39 @@ export default function NotFoundPage(props){
                     </div>
                     <div className={'footer-medium'}>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>
+                            {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
                         </div>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`} target="_blank">Политика
-                                обработки персональных данных</a>
+                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
+                               target="_blank">Конфиденциальность</a>
                         </div>
                         <div className={'footer-row-left'}>
                             <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
-                               target="_blank">Обработка персональных данных третьими лицами</a>
+                               target="_blank">Пользовательское соглашение</a>
                         </div>
                     </div>
                 </div>
                 <div className="footer-right">
                     <div className={'footer-row1'}>
-                        <a>Общий срок проведения акции с «01» февраля 2024 года по «30» апреля 2024. Подробную
-                            информацию об организаторе акции,
-                            о правилах ее проведения, количестве призов по результатам акции, сроках, месте и порядке их
-                            вручения, уточняйте на сайте <a className={"text-nloto"}
-                                                            href={'https://nloto-promo.ru/'}>https://nloto-promo.ru</a> или
-                            по телефону
-                            горячей линии 8 (800) 333-7-333.
+                        <a>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения выигрышей № 4 («Мечталлион»),
+                            срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
+                            телефону 8 800 333-7-333.
                         </a>
                     </div>
-                    {/*<div className={'footer-row2'}>*/}
-                    {/*    <a>Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской Федерации от*/}
-                    {/*        29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г. Информация об */}
-                    {/*        организаторе лотерей, правилах их проведения, призовом фонде лотерей, количестве призов */}
-                    {/*        или выигрышей, сроках, месте и порядке их получения - на сайте www.nloto.ru и по телефону */}
-                    {/*        8 800 333-7-333. </a>*/}
-                    {/*</div>*/}
+                    <div className={'footer-row2'}>
+                        <a>Специальные призы от Redmond разыгрываются только среди билетов, купленных в «Почте
+                            России». </a>
+
+                    </div>
                     <div className={'footer-row3'}>
-                        <a>*Внешний вид подарка может отличаться от изображений, представленных в рекламных материалах.
-                            Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской
-                            Федерации
-                            от 29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г.
-                            Информация об организаторе лотерей, правилах их проведения, призовом фонде лотерей,
-                            количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a
-                                className={"text-nloto"} href={'https://nloto.ru/'} target="_blank">www.nloto.ru</a> и
-                            по телефону 8 (800) 333-7-333. </a>
+                        <a>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022
+                            г.,
+                            включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
                     </div>
                     <div className={'footer-row4'}>
-                        <a>Реклама. Рекламодатель: ООО «Спортивные Лотереи», ОГРН 1195027010386, ИНН 5003133760</a>
+                        <a>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН: 1195027010386, ИНН: 5003133760).</a>
                     </div>
                 </div>
-
                 <PopupTicket1/>
                 <PopupTicket2/>
                 <PopupTicket3/>

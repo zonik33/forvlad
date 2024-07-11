@@ -65,6 +65,7 @@ header {
   box-sizing: border-box;
   transition: background 0.3s;
   background-color: #023d6c;
+  box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
 }
 header .container {
   position: relative;
@@ -135,8 +136,8 @@ header .error-menu-profile {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.8vw;
-  padding-left: 20.2vw;
+  padding-top: 1.95vw;
+  padding-left: 27vw;
 }
 header .menu-content a {
   text-transform: uppercase;
@@ -242,8 +243,8 @@ header .menu-content-profile a {
   margin-top: -0.55vw;
 }
 .for-error-random-block {
-  margin-left: 0vw;
-  margin-top: 0.01vw;
+  margin-left: -6.5vw;
+  margin-top: -0.2vw;
 
 }
 .right-block-margin {
@@ -334,12 +335,12 @@ header .button-animation:hover {
 }
 .myElementFooter {
   width: 109.815vw;
-  height: 59.854vw;
+  height: 63.854vw;
   margin: 40vw 0vw 0vw -6vw;
   transform: rotate(177deg);
   position: absolute;
   background: linear-gradient(285deg, #1B4CF9 0%, #45B9FB 100%);
-  border-radius: 34% 56% 78% 56%;
+  border-radius: 23% 56% 92% 56%;
   overflow: hidden;
   z-index: 0;
 }
@@ -365,11 +366,11 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
 }
 .main-error {
   margin-top: 1vw;
-  background-image: linear-gradient(#00622A, #009640, #03BE53);
+  /*background-image: linear-gradient(#023d6c, #023d6c, #023d6c);*/
   background-size: cover;
   width: 100%;
   height: 44.8vw;
@@ -378,7 +379,8 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  clip-path: polygon(0 0, 100% 0, 100% 92.3%, 0 100%);
+  z-index: 5;
+  position: relative;
 }
 .main-videos {
   margin-top: 1vw;
@@ -392,7 +394,7 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
 
 }
 .main-tickets {
@@ -406,7 +408,7 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  clip-path: polygon(0 0,100% 0,100% 99.3%,0 100%);
+
 
 }
 .main-gifts {
@@ -420,7 +422,7 @@ header .button-animation:hover {
   scroll-behavior: smooth;
   font-size: 0.83vw;
   line-height: 1.5;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
 }
 .main-text {
   position: relative;
@@ -580,8 +582,8 @@ header .button-animation:hover {
 .global-name-biggest {
   width: 36.46vw;
   height: 9.66vw;
-  font-size: 8.78vw;
-  line-height: 9.66vw;
+  font-size: 3.66vw;
+  line-height: 6.03vw;
   margin-top: 5.8vw;
   font-weight: 700;
   text-align: center;
@@ -2125,6 +2127,18 @@ header .button-animation:hover {
   z-index: 2;
   box-shadow: 1vw 1vw 5.5vw 1.3vw #3979dc;
 }
+.items-block-how-error {
+  overflow: hidden;
+  margin-top: 0vw;
+  margin-left: 8vw;
+  position: absolute;
+  width: 83.81vw;
+  height: 37vw;
+  border-radius: 0 0 1.46vw 1.46vw;
+  background-color: #023d6c;
+  z-index: 1;
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+}
 
 
 
@@ -2212,6 +2226,7 @@ canvas#wheel {
 
 #readout {
   position: absolute;
+  display: none;
 }
 #selectorspin{
   color: #d52976;
@@ -4996,8 +5011,7 @@ canvas#wheel {
 .faq {
   position: relative;
   background-image: linear-gradient(#023d6c, #023d6c, #023d6c);
-  clip-path: polygon(0 0, 100% 0, 100% 98.9%, 0 100%);
-  height: 187.59vw;
+  height: 200.59vw;
   margin-top: -0.2vw;
 }
 .faq-global-text {
@@ -5006,7 +5020,7 @@ canvas#wheel {
   font-weight: 700;
   font-size: 3.66vw;
   line-height: 4.03vw;
-  margin-left: 24.3vw;
+  margin-left: 26vw;
   margin-top: 7vw;
   text-align: left;
   font-family: 'Acrom Medium', sans-serif;
@@ -5060,7 +5074,7 @@ canvas#wheel {
   height: 172vw;
   border-radius: 1.46vw;
   background-color: #023d6c;
-  box-shadow: 0 0 1.5vw 0.3vw #3979dc;
+  box-shadow: 0vw 1vw 5.5vw 1.3vw #3979dc
 }
 
 .faq-items-right {
@@ -5587,14 +5601,14 @@ button[type="submit"] {
 }
 .footer-left {
   margin-left: 8.55vw;
-  margin-top: 0.1vw;
+  margin-top: 1.1vw;
   z-index: 5;
 }
 .footer-right {
   width: 54.61vw;
-  height: 12.30vw;
+  height: 4.3vw;
   margin-right: 8.5vw;
-  margin-top: -2.15vw;
+  margin-top: -7.15vw;
   z-index: 5;
 }
 .footer-colm {
@@ -5638,7 +5652,7 @@ button[type="submit"] {
 }
 
 .footer-medium {
-  margin-top: 2.125vw;
+  margin-top: 4.125vw;
   font-family: "Acrom Medium", Arial, sans-serif;
   font-size: 0.68vw;
   line-height: 0.94vw;
@@ -5976,24 +5990,25 @@ button[type="submit"] {
   position: absolute;
   align-items: center;
   margin-bottom: 5vw;
-  margin-top: 177.15vw;
+  margin-top: 180.15vw;
   margin-left: 15.7vw;
 }
 .under-text-quest-first-a {
   display: block;
-  font-size: 1.32vw;
+  font-size: 2.928vw;
   font-weight: 400;
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
-  line-height: 1.76vw;
+  line-height: 3.514vw;
+  margin-bottom: 2vw;
 
 }
 .under-text-quest-second-p {
   font-weight: 400;
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
-  font-size: 1.17vw;
+  font-size: 2.343vw;
   margin-top: 0.5vw;
   display: block;
-  line-height: 1.46vw;
+  line-height: 2.928vw;
 }
 .rcs-inner-handle {
 }
@@ -7224,7 +7239,7 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    clip-path: polygon(0 0, 100% 0, 100% 95.3%, 0 100%);
+
   }
   .items-block-how {
     overflow: hidden;
@@ -8510,7 +8525,6 @@ iframe {
   .faq {
     position: relative;
     background-image: linear-gradient(#00622A, #009640, #03BE53);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     height: 310.59vw;
     margin-top: -2.2vw;
   }
@@ -9129,6 +9143,7 @@ iframe {
     box-sizing: border-box;
     transition: background 0.3s;
     background-color: #007E36;
+    box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
   }
 
   .main-profile {
@@ -9142,7 +9157,7 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
   }
 
   header .logo-text-profile {
@@ -9535,7 +9550,7 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
   }
 
   .left-second-gifts {
@@ -9909,7 +9924,7 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
   }
 
   .right-second-profile-tickets {
@@ -11568,7 +11583,6 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .global-name-biggest {
     width: 36.46vw;
@@ -12011,7 +12025,7 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
   }
   .global-name-name-winners-videos {
     position: relative;

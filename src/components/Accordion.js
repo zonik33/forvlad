@@ -275,9 +275,7 @@ function Accordion() {
             </div>
             <div id={'support'} className={'under-text-quest'} ref={supportRef}>
                 <a className={'under-text-quest-first-a'}> Не нашли ответа на интересующий вас вопрос? </a>
-                <a className={'under-text-quest-second-p'}> Напишите на <a className={'text-nloto'}>support@nloto.ru</a> или позвоните по номеру: <br></br>8 800 333-7-333, <br></br>поддержка
-                    24/7 </a>
-                <a className={'under-text-quest-second-p'}> Мы всегда рады вам помочь. </a>
+                <a className={'under-text-quest-second-p'}> Напишите на support@nloto.ru или звоните по номеру <br></br>8 800 333-7-333, поддержка 24/7. Мы всегда рады вам помочь. </a>
 
             </div>
             <div className={'faq-items-shadow-icon-up'}>

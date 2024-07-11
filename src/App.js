@@ -103,7 +103,7 @@ function App() {
             <Route path="/winners-videos/*" element={<WinnersVideos />}
             />
 
-            <Route path="/404/*" element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage/>} />
 
           </Routes>
         </BrowserRouter>
