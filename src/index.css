@@ -1330,10 +1330,20 @@ header .button-animation:hover {
   margin-top: -1.45vw;
   margin-left: -10vw;
 }
+.for-test-img-test-mini-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
+}
 .for-test-img-test-mini2 img {
   width: 104%;
   margin-top: -1.45vw;
   margin-left: -8.4vw;
+}
+.for-test-img-test-mini2-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
 }
 .for-test-img-second img {
   width: 101.5%;
@@ -1344,6 +1354,11 @@ header .button-animation:hover {
   margin-top: -1.45vw;
   margin-left: -6.8vw;
 }
+.for-test-img-second-mini-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
+}
 .for-test-img-third img {
   margin-left: -5.8vw;
   width: 135.1%;
@@ -1352,6 +1367,11 @@ header .button-animation:hover {
   width: 104%;
   margin-top: -1.45vw;
   margin-left: -5.4vw;
+}
+.for-test-img-third-mini-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
 }
 .for-test-img-4-mini img {
   width: 104%;
@@ -1367,6 +1387,26 @@ header .button-animation:hover {
   width: 104%;
   margin-top: -1.45vw;
   margin-left: -0.7vw;
+}
+.for-test-img-4-mini-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
+}
+.for-test-img-5-mini-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
+}
+.for-test-img-6-mini-prizes img {
+  width: 118%;
+  margin-top: -0.85vw;
+  margin-left: -0.4vw;
+}
+.for-test-img-7-mini-prizes img {
+  width: 89%;
+  margin-top: -0.85vw;
+  margin-left: 2.4vw;
 }
 
 
@@ -2074,6 +2114,7 @@ header .button-animation:hover {
 }
 
 .items-block-how {
+  overflow: hidden;
   margin-top: -39vw;
   margin-left: -1.3vw;
   position: absolute;
@@ -2082,7 +2123,7 @@ header .button-animation:hover {
   border-radius: 1.46vw;
   background-color: #023d6c;
   z-index: 2;
-  box-shadow: 0 0 1.5vw 0.3vw #3979dc;
+  box-shadow: 1vw 1vw 5.5vw 1.3vw #3979dc;
 }
 
 
@@ -2299,9 +2340,22 @@ canvas#wheel {
 .prizes-content-box-title-bot2 {
   position: relative;
   width: 67.13vw;
-  height: 10.54vw;
+  height: 60.54vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   margin: -1.3vw 0 0 2vw;
+  font-size: 2.928vw;
+  font-weight: 400;
+  line-height: 3.514vw;
+  text-align: left;
+  color: #FFFFFF;
+  z-index: 5;
+}
+.prizes-content-box-title-bot2-prizes {
+  position: relative;
+  width: 73.13vw;
+  height: 60.54vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin: -2.48vw 0 0 4.6vw;
   font-size: 2.928vw;
   font-weight: 400;
   line-height: 3.514vw;
@@ -2517,6 +2571,24 @@ canvas#wheel {
   margin-top: 1.15vw;
   margin-left: 0vw;
 }
+.how-center-p-text-prizes {
+  width: 75.6vw;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin-top: 1.15vw;
+  margin-left: 0vw;
+}
+.how-center-p-text-prizes-2 {
+  width: 75.6vw;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin-top: -0.55vw;
+  margin-left: 0vw;
+}
 .how-appstore {
   width: 14%;
 }
@@ -2668,7 +2740,7 @@ canvas#wheel {
 /* PRIZES ------------------------------------------------- */
 
 .prizes {
-  margin-top: -0.1vw;
+  margin-top: 17.9vw;
   background-size: cover;
   height: 56.25vw;
   font-family: 'Montserrat', sans-serif;
@@ -2682,13 +2754,13 @@ canvas#wheel {
 .prizes-text11 {
   text-transform: uppercase;
   text-align: center;
-  margin: 5.3vw 0vw 3vw 0;
+  margin: 7.1vw 0vw 2vw -0.1vw;
   font-weight: 700;
   font-family: 'Acrom Medium', Arial, sans-serif;
   color: #EEF3EC;
   font-size: 3.66vw;
   line-height: 4.03vw;
-  letter-spacing: -0.005vw;
+
 
 }
 .prizes-items11 {

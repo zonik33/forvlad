@@ -31,15 +31,6 @@ class Test extends React.Component {
     componentDidMount() {
         // generate canvas wheel on load
         this.renderWheel();
-        this.autoSpinInterval = setInterval(this.spin, 5000); // каждые 5 секунд
-    }
-    componentWillUnmount() {
-        clearInterval(this.autoSpinInterval); // Очистить интервал перед размонтированием компонента
-    }
-    autoSpin = () => {
-        if (!this.state.spinning) { // если вращение уже не происходит
-            this.spin();
-        }
     }
 
     renderWheel() {
@@ -168,13 +159,10 @@ class Test extends React.Component {
     }
 
     spin = () => {
-        if (!this.state.spinning && this.state.availableTickets >= 3) {
-            let randomSpin = Math.floor(Math.random() * 900) + 500;
-            this.setState({
-                rotate: randomSpin,
-                easeOut: 2,
-                spinning: true
-            });
+        // set random spin degree and ease out time
+        // set state variables to initiate animation
+        if (this.state.availableTickets < 3) {
+            alert(`У вас сейчас ${this.state.availableTickets} шт. Вам нужно как минимум 3 билета, чтобы начать вращение колеса.`);
             return;
         }
         let randomSpin = Math.floor(Math.random() * 900) + 500;
