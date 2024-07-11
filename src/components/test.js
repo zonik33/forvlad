@@ -219,8 +219,15 @@ class Test extends React.Component {
     render() {
         return (
             <div className="Appspin">
+                <div className={'selectorspin-container'}>
                 <span id="selectorspin">&#9660;</span>
+            </div>
+                <div className={'wheel-center-container'}>
                 <span id="wheel-center"></span>
+                <span id="wheel-center-2"></span>
+                <span id="wheel-center-3"></span>
+                <span id="wheel-center-4"></span>
+                </div>
                 <img className={'users-logo-spin'} src={spin}/>
                 <canvas
                     id="wheel"

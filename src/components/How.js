@@ -1,5 +1,5 @@
 import howLeftIcon from '../image/img_58.png'
-import howCenterIcon from '../image/how-center-icon.png'
+import howCenterIcon from '../image/img_58.png'
 import howRightIcon from '../image/how-right-icon.png'
 import snakeHow from "../image/snake1.png";
 import howAppstore from "../image/how-appstore_.png";
@@ -157,284 +157,290 @@ export default function How (props) {
         <div className={'how'} id={'how'}>
             <div className={'wrapper-how'}>
                 <div className={'items-block-how'}>
-                <div className={'how-bottle-left'}>
-                    <img className={'how-bottle-float-left'} src={wintohealth}/>
-                </div>
-                <div className={'how-main-text-text'}>
-                    <div className={'how-main-text'}>
-                        <div className={'buy-block-1'}>
-                            <a className={'buy-block-a-1'}>КУПИТЕ</a>
-                            <p className={'buy-block-p-1'}>БИЛЕТ <br></br>C 1.02.2024 по 31.03.2024</p>
-                        </div>
-                        <div className={'take-block-1'}>
-                            <a className={'take-block-a-1'}>ПОЛУЧИТЕ</a>
-                            <p className={'take-block-p-1'}>Гарантированный подарок от 585 золотой*</p>
-                        </div>
-                        <div className={'win-block-1'}>
-                            <a className={'win-block-a-1'}>ВЫИГРАЙТЕ</a>
-                            <p className={'win-block-p-1'}>Медицинскую <br></br>страховку <br></br>каждый день</p>
-                        </div>
-
+                    <div className={'how-bottle-left'}>
+                        <img className={'how-bottle-float-left'} src={wintohealth}/>
                     </div>
-                    <a className={'how-button-animation-text'} onClick={handleOnClick}> <b>Принять участие в акции</b>
-                    </a>
-                    {isPopupOpen5 && (
-                        <Popup isOpen={isPopupOpen5} closeModal={closePopup5}/>
-                    )}
-                </div>
+                    <div className={'how-main-text-text'}>
+                        <div className={'how-main-text'}>
+                            <div className={'buy-block-1'}>
+                                <a className={'buy-block-a-1'}>КУПИТЕ</a>
+                                <p className={'buy-block-p-1'}>БИЛЕТ <br></br>C 1.02.2024 по 31.03.2024</p>
+                            </div>
+                            <div className={'take-block-1'}>
+                                <a className={'take-block-a-1'}>ПОЛУЧИТЕ</a>
+                                <p className={'take-block-p-1'}>Гарантированный подарок от 585 золотой*</p>
+                            </div>
+                            <div className={'win-block-1'}>
+                                <a className={'win-block-a-1'}>ВЫИГРАЙТЕ</a>
+                                <p className={'win-block-p-1'}>Медицинскую <br></br>страховку <br></br>каждый день</p>
+                            </div>
 
-                <div className={'prizes-text'}>
-                    Как участвовать?
-                </div>
+                        </div>
+                        <a className={'how-button-animation-text'} onClick={handleOnClick}> <b>Принять участие в
+                            акции</b>
+                        </a>
+                        {isPopupOpen5 && (
+                            <Popup isOpen={isPopupOpen5} closeModal={closePopup5}/>
+                        )}
+                    </div>
+
+                    <div className={'prizes-text'}>
+                        Как участвовать?
+                    </div>
 
 
-                <div className={'prizes-items'}>
-                    {/*<img className={'img-22'} src={img22}/>*/}
-                    {/*<img className={'img-23'} src={img23}/>*/}
-                    {/*<img className={'img-24'} src={img24}/>*/}
-                    {/*<img className={'img-25'} src={img25}/>*/}
-                    {/*<img className={'img-26'} src={img26}/>*/}
-                    {/*<img className={'img-27'} src={img27}/>*/}
-                    {/*<img className={'img-28'} src= {img28}/>*/}
-                    {/*<img className={'img-29'} src= {img29}/>*/}
-                    {/*<img className={'img-30'} src= {img30}/>*/}
-                    {/*<img className={'img-31'} src= {img31}/>*/}
-                    {/*<img className={'img-32'} src= {img32}/>*/}
-                    {/*<img className={'img-33'} src= {img33}/>*/}
-                    <div className={'prizes-content-box1'}>
-                        <img className={'how-left-icon'} src={howLeftIcon}/>
-                        <p className={'how-left-icon-text'}>1</p>
-                        <div className={'prizes-content-box-title-bot1'}>
-                            <p className={'how-tickes-img-p'}> Покупайте лотерейные билеты на сумму от 300 рублей в
-                                отделениях «Почты России»* </p>
-                            <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
-                                Краснодар, Екатеринбург</p>
-                            <div className={'how-tickets-img'}>
-                                <div className="how-full44-img">
-                                    <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img
-                                        src={howFull3}/></a>
-                                </div>
-                                <div className="how-full4-img for-test-img-test">
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
-                                        src={howFull5}/></a>
-                                </div>
-                                {/*<div className="how-full4-img for-test-img">*/}
-                                {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
-                                {/*</div>*/}
-                                <div className="how-full444-img for-test-img-second">
-                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
-                                        src={howFull2}/></a>
-                                </div>
-                                <div className="how-full4444-img for-test-img-third">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={howFull1}/></a>
-                                </div>
-                                <div className={'how-tickets-img-1'}>
-                                    <div className={'how-full3-img test-for-for-need'}>
+                    <div className={'prizes-items'}>
+                        {/*<img className={'img-22'} src={img22}/>*/}
+                        {/*<img className={'img-23'} src={img23}/>*/}
+                        {/*<img className={'img-24'} src={img24}/>*/}
+                        {/*<img className={'img-25'} src={img25}/>*/}
+                        {/*<img className={'img-26'} src={img26}/>*/}
+                        {/*<img className={'img-27'} src={img27}/>*/}
+                        {/*<img className={'img-28'} src= {img28}/>*/}
+                        {/*<img className={'img-29'} src= {img29}/>*/}
+                        {/*<img className={'img-30'} src= {img30}/>*/}
+                        {/*<img className={'img-31'} src= {img31}/>*/}
+                        {/*<img className={'img-32'} src= {img32}/>*/}
+                        {/*<img className={'img-33'} src= {img33}/>*/}
+                        <div className={'prizes-content-box1'}>
+                            <img className={'how-left-icon'} src={howLeftIcon}/>
+                            <p className={'how-left-icon-text'}>1</p>
+                            <div className={'prizes-content-box-title-bot1'}>
+                                <p className={'how-tickes-img-p'}> Покупайте лотерейные билеты на сумму от 300 рублей в
+                                    отделениях «Почты России»* </p>
+                                <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
+                                    Краснодар, Екатеринбург</p>
+                                <div className={'how-tickets-img'}>
+                                    <div className="how-full44-img">
                                         <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
                                            target="_blank"><img
                                             src={howFull3}/></a>
                                     </div>
-                                    <div className={'how-full2-img'}>
+                                    <div className="how-full4-img for-test-img-test">
+                                        <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                            src={howFull5}/></a>
+                                    </div>
+                                    {/*<div className="how-full4-img for-test-img">*/}
+                                    {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
+                                    {/*</div>*/}
+                                    <div className="how-full444-img for-test-img-second">
                                         <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
                                             src={howFull2}/></a>
                                     </div>
-                                    {/*<div className={'how-full1-img how-full1-img-test'}>*/}
-                                    {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img*/}
-                                    {/*        src={howFull6}/></a>*/}
-                                    {/*</div>*/}
+                                    <div className="how-full4444-img for-test-img-third">
+                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            src={howFull1}/></a>
+                                    </div>
+                                    <div className={'how-tickets-img-1'}>
+                                        <div className={'how-full3-img test-for-for-need'}>
+                                            <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
+                                               target="_blank"><img
+                                                src={howFull3}/></a>
+                                        </div>
+                                        <div className={'how-full2-img'}>
+                                            <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                                src={howFull2}/></a>
+                                        </div>
+                                        {/*<div className={'how-full1-img how-full1-img-test'}>*/}
+                                        {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img*/}
+                                        {/*        src={howFull6}/></a>*/}
+                                        {/*</div>*/}
 
-                                </div>
-
-                            </div>
-                            <div className={'how-tickets-img-2'}>
-                                {/*<div className={'how-full2-img'}>*/}
-                                {/*    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img*/}
-                                {/*        src={howFull2}/></a>*/}
-                                {/*</div>*/}
-                                <div className={'how-full5-img'}>
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
-                                        src={howFull5}/> </a>
-                                </div>
-                                <div className={'how-full1-img'}>
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={howFull1}/></a>
-                                </div>
-                            </div>
-                            <div className={'how-tickets-img-3'}>
-                                {/*<div className={'how-full1-img'}>*/}
-                                {/*    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img*/}
-                                {/*        src={howFull1}/></a>*/}
-                                {/*</div>*/}
-                            </div>
-
-                            <div className={'how-tickets-img'}>
-                                <div className="how-full44-img for-test-img-test-mini">
-                                    <a href="https://nloto.ru/lottery/mechtallion" className={"#"} target="_blank"><img
-                                        src={mini1}/></a>
-                                </div>
-                                <div className="how-full4-img for-test-img-test-mini2">
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
-                                        src={mini2}/></a>
-                                </div>
-                                {/*<div className="how-full4-img for-test-img">*/}
-                                {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
-                                {/*</div>*/}
-                                <div className="how-full444-img for-test-img-second-mini">
-                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
-                                        src={mini3}/></a>
-                                </div>
-                                <div className="how-full4444-img for-test-img-third-mini">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={mini4}/></a>
-                                </div>
-                                <div className="how-full4444-img for-test-img-4-mini">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={mini5}/></a>
-                                </div>
-                                <div className="how-full4444-img for-test-img-5-mini">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={mini6}/></a>
-                                </div>
-                                <div className="how-full4444-img for-test-img-6-mini">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={mini7}/></a>
-                                </div>
-
-                            </div>
-
-
-                            <div className={'prizes-content-box-title-bot1-second'}>
-                                {/*<div className={'how-tickets-img-second'}>*/}
-                                {/*<div className="how-full44-img-second" onMouseEnter={handleMouseEnter3}*/}
-                                {/*         onMouseLeave={handleMouseLeave3}>*/}
-                                {/*        <a><img*/}
-                                {/*            src={hovered3 ? magnitNew : magnit}/></a>*/}
-                                {/*    </div>*/}
-                                {/*    <div className="how-full4-img-second" onMouseEnter={handleMouseEnter1}*/}
-                                {/*         onMouseLeave={handleMouseLeave1}>*/}
-                                {/*        <a className={"#"}><img src={hovered1 ? ka5New : ka5}/></a>*/}
-                                {/*    </div>*/}
-                                {/*    /!*<div className="how-full412-img-second">*!/*/}
-                                {/*    /!*    <a className={"#"}><img src={perekrestok}/></a>*!/*/}
-                                {/*    /!*</div>*!/*/}
-
-                                {/*    <div className="how-full444-img-second" onMouseEnter={handleMouseEnter2}*/}
-                                {/*         onMouseLeave={handleMouseLeave2}>*/}
-                                {/*        <a><img*/}
-                                {/*            src={hovered2 ? lentaNew : lenta}/></a>*/}
-                                {/*    </div>*/}
-                                {/*    /!*<div className="how-full44445-img-second"  onMouseEnter={handleMouseEnter}*!/*/}
-                                {/*    /!*     onMouseLeave={handleMouseLeave}>*!/*/}
-                                {/*    /!*    <a><img src={hovered ? diksiNew : diksi}/></a>*!/*/}
-                                {/*    /!*</div>*!/*/}
-                                {/*    <div className="how-full4444-img-second" onMouseEnter={handleMouseEnter4}*/}
-                                {/*         onMouseLeave={handleMouseLeave4}>*/}
-                                {/*        <a><img*/}
-                                {/*            src={hovered4 ? pochtaNew : pochta}/></a>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
-                                {/*<div className={'how-tickets-img-second-1'}>*/}
-                                {/*    <div className={'how-tickets-img-1-test'}>*/}
-                                {/*        <div className={'how-full2-img bonus-magnit'}>*/}
-                                {/*            <a><img*/}
-                                {/*                src={magnit}/></a>*/}
-                                {/*        </div>*/}
-                                {/*        <div className={'how-full1-img bonus-ka5'}><img*/}
-                                {/*            src={ka5}/>*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
-                                <div className={'how-tickets-img-second-2'}>
-                                    {/*<div className={'how-full5-img bonus-perek'}>*/}
-                                    {/*    <a><img*/}
-                                    {/*        src={perekrestok}/> </a>*/}
-                                    {/*</div>*/}
-                                    <div className="how-full1-img bonus-pochta">
-                                        <a><img
-                                            src={pochta}/></a>
                                     </div>
 
-                                    <div className={'how-full3-img bonus-lenta'}>
-                                        <a className={"#"}><img
-                                            src={lenta}/></a>
+                                </div>
+                                <div className={'how-tickets-img-2'}>
+                                    {/*<div className={'how-full2-img'}>*/}
+                                    {/*    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img*/}
+                                    {/*        src={howFull2}/></a>*/}
+                                    {/*</div>*/}
+                                    <div className={'how-full5-img'}>
+                                        <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                            src={howFull5}/> </a>
+                                    </div>
+                                    <div className={'how-full1-img'}>
+                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            src={howFull1}/></a>
                                     </div>
                                 </div>
-                                {/*<div className={'how-tickets-img-second-3'}>*/}
-                                {/*    /!*<div className={'how-tickets-img-3'}>*!/*/}
-                                {/*    /!*    /!*<div className={'how-full1-img bonus-diksi'}>*!/*!/*/}
-                                {/*    /!*    /!*    <a className={"/#"}><img*!/*!/*/}
-                                {/*    /!*    /!*        src={diksi}/></a>*!/*!/*/}
-                                {/*    /!*    /!*</div>*!/*!/*/}
-                                {/*    /!*    <div className="how-full1-img bonus-pochta">*!/*/}
-                                {/*    /!*        <a><img*!/*/}
-                                {/*    /!*            src={pochta}/></a>*!/*/}
-                                {/*    /!*    </div>*!/*/}
-                                {/*    /!*</div>*!/*/}
+                                <div className={'how-tickets-img-3'}>
+                                    {/*<div className={'how-full1-img'}>*/}
+                                    {/*    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img*/}
+                                    {/*        src={howFull1}/></a>*/}
+                                    {/*</div>*/}
+                                </div>
+
+                                <div className={'how-tickets-img'}>
+                                    <div className="how-full44-img for-test-img-test-mini">
+                                        <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
+                                           target="_blank"><img
+                                            src={mini1}/></a>
+                                    </div>
+                                    <div className="how-full4-img for-test-img-test-mini2">
+                                        <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                            src={mini2}/></a>
+                                    </div>
+                                    {/*<div className="how-full4-img for-test-img">*/}
+                                    {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
+                                    {/*</div>*/}
+                                    <div className="how-full444-img for-test-img-second-mini">
+                                        <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                            src={mini3}/></a>
+                                    </div>
+                                    <div className="how-full4444-img for-test-img-third-mini">
+                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            src={mini4}/></a>
+                                    </div>
+                                    <div className="how-full4444-img for-test-img-4-mini">
+                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            src={mini5}/></a>
+                                    </div>
+                                    <div className="how-full4444-img for-test-img-5-mini">
+                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            src={mini6}/></a>
+                                    </div>
+                                    <div className="how-full4444-img for-test-img-6-mini">
+                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            src={mini7}/></a>
+                                    </div>
+
+                                </div>
+
+
+                                <div className={'prizes-content-box-title-bot1-second'}>
+                                    {/*<div className={'how-tickets-img-second'}>*/}
+                                    {/*<div className="how-full44-img-second" onMouseEnter={handleMouseEnter3}*/}
+                                    {/*         onMouseLeave={handleMouseLeave3}>*/}
+                                    {/*        <a><img*/}
+                                    {/*            src={hovered3 ? magnitNew : magnit}/></a>*/}
+                                    {/*    </div>*/}
+                                    {/*    <div className="how-full4-img-second" onMouseEnter={handleMouseEnter1}*/}
+                                    {/*         onMouseLeave={handleMouseLeave1}>*/}
+                                    {/*        <a className={"#"}><img src={hovered1 ? ka5New : ka5}/></a>*/}
+                                    {/*    </div>*/}
+                                    {/*    /!*<div className="how-full412-img-second">*!/*/}
+                                    {/*    /!*    <a className={"#"}><img src={perekrestok}/></a>*!/*/}
+                                    {/*    /!*</div>*!/*/}
+
+                                    {/*    <div className="how-full444-img-second" onMouseEnter={handleMouseEnter2}*/}
+                                    {/*         onMouseLeave={handleMouseLeave2}>*/}
+                                    {/*        <a><img*/}
+                                    {/*            src={hovered2 ? lentaNew : lenta}/></a>*/}
+                                    {/*    </div>*/}
+                                    {/*    /!*<div className="how-full44445-img-second"  onMouseEnter={handleMouseEnter}*!/*/}
+                                    {/*    /!*     onMouseLeave={handleMouseLeave}>*!/*/}
+                                    {/*    /!*    <a><img src={hovered ? diksiNew : diksi}/></a>*!/*/}
+                                    {/*    /!*</div>*!/*/}
+                                    {/*    <div className="how-full4444-img-second" onMouseEnter={handleMouseEnter4}*/}
+                                    {/*         onMouseLeave={handleMouseLeave4}>*/}
+                                    {/*        <a><img*/}
+                                    {/*            src={hovered4 ? pochtaNew : pochta}/></a>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className={'how-tickets-img-second-1'}>*/}
+                                    {/*    <div className={'how-tickets-img-1-test'}>*/}
+                                    {/*        <div className={'how-full2-img bonus-magnit'}>*/}
+                                    {/*            <a><img*/}
+                                    {/*                src={magnit}/></a>*/}
+                                    {/*        </div>*/}
+                                    {/*        <div className={'how-full1-img bonus-ka5'}><img*/}
+                                    {/*            src={ka5}/>*/}
+                                    {/*        </div>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    <div className={'how-tickets-img-second-2'}>
+                                        {/*<div className={'how-full5-img bonus-perek'}>*/}
+                                        {/*    <a><img*/}
+                                        {/*        src={perekrestok}/> </a>*/}
+                                        {/*</div>*/}
+                                        <div className="how-full1-img bonus-pochta">
+                                            <a><img
+                                                src={pochta}/></a>
+                                        </div>
+
+                                        <div className={'how-full3-img bonus-lenta'}>
+                                            <a className={"#"}><img
+                                                src={lenta}/></a>
+                                        </div>
+                                    </div>
+                                    {/*<div className={'how-tickets-img-second-3'}>*/}
+                                    {/*    /!*<div className={'how-tickets-img-3'}>*!/*/}
+                                    {/*    /!*    /!*<div className={'how-full1-img bonus-diksi'}>*!/*!/*/}
+                                    {/*    /!*    /!*    <a className={"/#"}><img*!/*!/*/}
+                                    {/*    /!*    /!*        src={diksi}/></a>*!/*!/*/}
+                                    {/*    /!*    /!*</div>*!/*!/*/}
+                                    {/*    /!*    <div className="how-full1-img bonus-pochta">*!/*/}
+                                    {/*    /!*        <a><img*!/*/}
+                                    {/*    /!*            src={pochta}/></a>*!/*/}
+                                    {/*    /!*    </div>*!/*/}
+                                    {/*    /!*</div>*!/*/}
+                                    {/*</div>*/}
+                                </div>
+                                {/*<p className={'how-first-li-2'}>В фирменных точках продаж «Национальная лотерея», на*/}
+                                {/*    сайте <a href={"https://nloto.ru/"} className={'text-nloto'}*/}
+                                {/*             target="_blank">nloto.ru</a> или через мобильное приложение. Скачать:</p>*/}
+                                {/*<div className={'how-download-img'}>*/}
+                                {/*    <a href={'https://nloto.ru/download-app?utm_source=main&utm_medium=bottom&utm_campaign=button'}*/}
+                                {/*       target="_blank" className={"/#"}><img className={'how-appstore'} src={howAppstore}/></a>*/}
+                                {/*    <a href={'https://nloto.ru/download-app?utm_source=main&utm_medium=bottom&utm_campaign=button'}*/}
+                                {/*       target="_blank" className={"/#"}><img className={'how-googleplay'}*/}
+                                {/*                                             src={howGooglePlay}/></a>*/}
                                 {/*</div>*/}
                             </div>
-                            <p className={'how-first-li-2'}>В фирменных точках продаж «Национальная лотерея», на
-                                сайте <a href={"https://nloto.ru/"} className={'text-nloto'}
-                                         target="_blank">nloto.ru</a> или через мобильное приложение. Скачать:</p>
-                            <div className={'how-download-img'}>
-                                <a href={'https://nloto.ru/download-app?utm_source=main&utm_medium=bottom&utm_campaign=button'}
-                                   target="_blank" className={"/#"}><img className={'how-appstore'} src={howAppstore}/></a>
-                                <a href={'https://nloto.ru/download-app?utm_source=main&utm_medium=bottom&utm_campaign=button'}
-                                   target="_blank" className={"/#"}><img className={'how-googleplay'}
-                                                                         src={howGooglePlay}/></a>
+
+                        </div>
+                        <div className={'prizes-content-box2'}>
+                            <img className={'how-center-icon'} src={howCenterIcon}/>
+                            <p className={'how-left-icon-text second'}>2</p>
+                            <div className={'prizes-content-box-title-bot2'}>Зарегистрируйтесь на сайте <a
+                                href={"https://nloto-promo.ru/"} className={'text-nloto'} target="_blank">nloto-promo.ru</a>
+                                <br></br>и
+                                добавьте* номер приобретенного лотерейного билета в период с Х-дата начала и до Х-дата
+                                завершения этапа регистрации
+
+                                <p className={'how-center-p-text'}>*Если лотерейный билет приобретён на сайте или в
+                                    мобильном приложении «Национальная Лотерея», а также в отделении Почты России <a
+                                         className={'text-nloto-blue'}>с указанием номера мобильного
+                                        телефона</a>,
+                                    то регистрировать такой лотерейный билет не нужно.
+                                    После регистрации и/или авторизации на промо-сайте акции при совпадении номера
+                                    мобильного телефона лотерейный билет автоматически зарегистрируется в акции и
+                                    будет отображен в вашем личном кабинете</p>
                             </div>
                         </div>
-
-                    </div>
-                    <div className={'prizes-content-box2'}>
-                        <img className={'how-center-icon'} src={howCenterIcon}/>
-                        <div className={'prizes-content-box-title-bot2'}>Зарегистрируйтесь на сайте Nloto-promo.ru и
-                            добавьте* номер приобретенного лотерейного билета в период c 1 февраля по 31 марта 2024 г.
-
-                            <p className={'how-center-p-text'}>* Если лотерейный билет приобретен на сайте или через
-                                мобильное приложение
-                                Национальная Лотерея, а также приобретен в магазинах партнеров с указанием номера
-                                телефона, то регистрировать номер билета на сайте не нужно. После авторизации на сайте
-                                номер билета автоматически появится в вашем личном кабинете.</p>
+                        <img className={'how-left-icon-3'} src={howCenterIcon}/>
+                        <p className={'how-left-icon-text third'}>3</p>
+                        <div className={'prizes-content-box-title-bot3'}> Участвуйте <br></br>в розыгрышах <br></br>и
+                            получайте призы
                         </div>
                     </div>
-                    {/*<div className={'prizes-content-box3'}>*/}
-                    {/*    <img className={'how-right-icon'} src={howRightIcon}/>*/}
-                    {/*    <div className={'prizes-content-box-title-bot3'}> Участвуйте в розыгрышах и получайте призы*/}
-                    {/*        <p className={'how-third-li-2'}>Получите гарантированный подарок от 585 ЗОЛОТОЙ за каждый*/}
-                    {/*            принятый билет</p>*/}
-                    {/*        <p className={'how-third-li-2'}>Выиграйте медицинскую страховку в ежедневном розыгрыше</p>*/}
-                    {/*        <p className={'how-third-li-2'}>Специальный приз от Почты России — промокод на 3000 рублей*/}
-                    {/*            (только для билетов, купленных в Почте России).</p>*/}
-
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                </div>
                     <div className={'prizes-button'}>
                         <a onClick={handleOnClick} className={'prizes-button-check'}>
-                            <b>Принять участие в акции</b></a>
+                            <b>Зарегистрировать билет</b></a>
                         {isPopupOpen && (
                             <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
                         )}
-                        <div ref={ref}>
-                            <CSSTransition
-                                in={isComponentVisible}
-                                timeout={500} // Продолжительность анимации в миллисекундах
-                                classNames="fade" // CSS классы для анимации
-                                unmountOnExit
-                            >
                                 <div className="spin-block">
                                     <Test/>
                                 </div>
-                        </CSSTransition>
                     </div>
-                    {/*<img className={'snake-left-how'} src={snakeHow}/>*/}
-                    {/*<img className={'pluse-left-how'} src={leftHow}/>*/}
-                    {/*<img className={'circle-right-how'} src={rightHows}/>*/}
+                    <div className={'steps-container'}>
+                        <div className={'first-step'}>1.</div>
+                        <div className="text-block-1">Покупайте лотерейные билеты на сумму не менее 300 рублей и
+                            становитесь участником розыгрышей ценных призов
+                        </div>
+                        <div className={'second-step'}>2.</div>
+                        <div className="text-block-2">Зарегистрируйте приобретенных лотерейные билеты на сайте
+                            промо-акции и испытайте удачу в рулетке с подарками в вашем личном кабинете
+                        </div>
+                        <div className={'third-step'}>3.</div>
+                        <div className="text-block-3">Нажмите кнопку «Разыграть приз» и получите промокод на лотерейный
+                            билет от «Национальная Лотерея»
+                        </div>
+                    </div>
+                </div>
 
-                </div>
-                </div>
             </div>
         </div>
-)
+        )
 }
