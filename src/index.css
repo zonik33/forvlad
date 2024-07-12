@@ -357,7 +357,7 @@ header .button-animation:hover {
 /*}*/
 .main-profile {
   margin-top: 1vw;
-  background-image: linear-gradient(#009640, #03BE53, #009640);
+  /*background-image: linear-gradient(#004382, #004382, #004382);*/
   background-size: cover;
   width: 100%;
   height: auto;
@@ -399,7 +399,7 @@ header .button-animation:hover {
 }
 .main-tickets {
   margin-top: 1vw;
-  background-image: linear-gradient(#009640, #03BE53, #009640);
+  /*background-image: linear-gradient(#009640, #03BE53, #009640);*/
   background-size: cover;
   width: 100%;
   height: auto;
@@ -413,7 +413,7 @@ header .button-animation:hover {
 }
 .main-gifts {
   margin-top: 1vw;
-  background-image: linear-gradient(#009640, #03BE53, #009640);
+  /*background-image: linear-gradient(#009640, #03BE53, #009640);*/
   background-size: cover;
   width: 100%;
   height: auto;
@@ -649,7 +649,7 @@ header .button-animation:hover {
 .left-column-profile {
   display: flex;
   flex-direction: column;
-  margin-left: -4.5vw;
+  margin-left: 17.5vw;
 }
 .right-column-profile {
   display: flex;
@@ -667,25 +667,26 @@ header .button-animation:hover {
   background-size: cover;
 }
 .left-first-profile-p {
-  font-family: "Acrom Medium", Arial, sans-serif;
-  font-size: 1.76vw;
-  line-height: 2.71vw;
+  width: 4vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.75vw;
+  line-height: 2vw;
   color: #FFFFFF;
   font-weight: 400;
-  margin-left: -1.9vw;
-  margin-top: 1.8vw;
+  margin-left: 5.85vw;
+  margin-top: -4.8vw;
 }
 .left-first-profile-p2 {
-  font-family: "Acrom Medium", Arial, sans-serif;
-  font-size: 4.39vw;
-  line-height: 0.07vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 2.928vw;
+  line-height: 4.100vw;
   font-weight: 400;
-  margin-top: 3.4vw;
-  margin-left: -15.6vw;
+  margin-top: -5.8vw;
+  margin-left: -21.3vw;
   color: #FFFFFF;
 }
 .left-first-profile-p2-p2 {
-  font-family: "Acrom Medium", Arial, sans-serif;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-size: 3.39vw;
   line-height: 0.07vw;
   font-weight: 400;
@@ -707,7 +708,7 @@ header .button-animation:hover {
   line-height: 1.46vw;
 }
 .left-first-profile-a2 {
-  font-family: "Acrom Medium", Arial, sans-serif;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-size: 1.02vw;
   line-height: 1.39vw;
   font-weight: 400;
@@ -729,20 +730,39 @@ header .button-animation:hover {
 .left-first-profile-p3 {
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.32vw;
-  line-height: 1.83vw;
-  margin-left: 2.5vw;
-  margin-top: 0.85vw;
-  margin-bottom: -0.2vw;
+  font-size: 1.75vw;
+  line-height: 2vw;
+  width: 18vw;
+  margin-left: 5.75vw;
+  margin-top: -0.2vw;
+  margin-bottom: 1.5vw;
+  text-align: left;
+  color: #FFFFFF;
+}
+.left-first-profile-p3-count {
+  position: absolute;
+  font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2.928vw;
+  line-height: 4.100vw;
+  width: 18vw;
+  margin-left: 1.65vw;
+  margin-top: -0.25vw;
+  margin-bottom: 1.5vw;
   text-align: left;
   color: #FFFFFF;
 }
 .white-line {
   height: 0.07vw;
   width: 21.60vw;
-  background-color: white;
-  margin-top: -0.1vw;
-  margin-left: 2vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.75vw;
+  line-height: 2vw;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-top: -1.6vw;
+  margin-left: -6.3vw;
+  margin-bottom: 3.5vw;
 }
 .left-second-profile {
   position: relative;
@@ -750,8 +770,8 @@ header .button-animation:hover {
   min-height: 26vw;
   height: auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: #FFFFFF4D solid 0.15vw;
+  /*background-color: rgba(255, 255, 255, 0.15);*/
+  /*border: #FFFFFF4D solid 0.15vw;*/
   border-radius: 1.46vw;
   z-index: 11;
   background-size: cover;
@@ -938,21 +958,47 @@ header .button-animation:hover {
 .right-column-profile {
   display: flex;
   flex-direction: column;
-  margin-left: 1.35vw;
+  margin-left: 0.55vw;
 }
 .right-first-profile {
   position: relative;
   display: flex;
 }
 .right-first-block {
-  width: 13.1vw;
-  height: 4.32vw;
+  width: 17.1vw;
+  margin-top: 0.7vw;
+  height: 4.782vw;
+  margin-left: 0vw;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 1.8vw 1.8vw 0 0;
+  background-image: linear-gradient(to right, #00438280, #00438280);
+  /* border-radius: 1.8vw 1.8vw 0 0; */
   z-index: 11;
   background-size: cover;
-  margin-right: 0.965vw;
+  margin-right: 0vw;
+  border: 1px solid #E1F2FD;
+
+}
+.items-block-profile {
+  overflow: hidden;
+  margin-top: 0vw;
+  margin-left: 8vw;
+  position: absolute;
+  width: 83.81vw;
+  height: 73.6vw;
+  border-radius: 0 0 1.46vw 1.46vw;
+  background-color: #023d6c;
+  z-index: 1;
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+  margin-bottom: 28vw;
+}
+.right-first-block.first-block {
+  border-radius: 1.4vw 0vw 0vw 1.4vw;
+}
+.right-first-block.second-block {
+  /*border-radius: 1.8vw 0vw 0vw 1.8vw;*/
+}
+.right-first-block.third-block {
+  border-radius: 0vw 1.4vw 1.4vw 0vw;
 }
 .content-from-left {
   float: left;
@@ -979,7 +1025,7 @@ header .button-animation:hover {
 }
 .right-first-profile {
   font-family: "Acrom Medium", Arial, sans-serif;
-  font-size: 1.17vw;
+  font-size: 1.27vw;
   font-weight: 400;
   line-height: 1.63vw;
   text-transform: uppercase;
@@ -987,23 +1033,23 @@ header .button-animation:hover {
 }
 
 .right-first-block.active {
-  background-color: white;
+  background-image: linear-gradient(to right, #7CC6FC 0%, #2361F9 100%);
 }
 .right-first-block.active .p-main-profile-color {
-  color: #007E36;
+  color: white;
 }
 .right-second-block.active .p-main-profile-color {
-  color: #007E36;
+  color: white;
 }
 .right-third-block.active .p-main-profile-color {
-  color: #007E36;
+  background-image: linear-gradient(to right, #7CC6FC 0%, #2361F9 100%);
 }
 .p-main-profile-color {
-  margin-top: 1.2vw;
+  margin-top: 1.6vw;
 }
 
 .right-second-block.active {
-  background-color: white;
+  background-image: linear-gradient(to right, #7CC6FC 0%, #2361F9 100%);
 }
 .right-second-block.active .p-main-profile-color {
   color: #007E36;
@@ -1064,11 +1110,11 @@ header .button-animation:hover {
 .right-second-profile {
   position: relative;
   width: 55.12vw;
-  height: 25.65vw;
+  height: 60.65vw;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: #FFFFFF4D solid 0.15vw;
-  border-radius: 0 0 1.73vw 1.73vw;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  /* border: #FFFFFF4D solid 0.15vw; */
+  /* border-radius: 0 0 1.73vw 1.73vw; */
   z-index: 11;
   background-size: cover;
 }
@@ -1089,10 +1135,10 @@ header .button-animation:hover {
   position: relative;
   width: 55.12vw;
   height: auto;
-  min-height: 30vw;
+  min-height: 55.7vw;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: #FFFFFF4D solid 0.15vw;
+  /*background-color: rgba(255, 255, 255, 0.15);*/
+  /*border: #FFFFFF4D solid 0.15vw;*/
   border-radius: 0 0 1.73vw 1.73vw;
   z-index: 11;
   background-size: cover;
@@ -1102,10 +1148,10 @@ header .button-animation:hover {
   position: relative;
   width: 55.12vw;
   height: auto;
-  min-height: 30vw;
+  min-height: 50.7vw;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: #FFFFFF4D solid 0.15vw;
+  /*background-color: rgba(255, 255, 255, 0.15);*/
+  /*border: #FFFFFF4D solid 0.15vw;*/
   border-radius: 0 0 0.73vw 0.73vw;
   z-index: 11;
   background-size: cover;
@@ -1152,13 +1198,14 @@ header .button-animation:hover {
   margin-top: 1.8vw;
 }
 .right-second-profile-p2 {
-  font-family: "Acrom Medium", Arial, sans-serif;
-  font-size: 0.88vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.318vw;
   font-weight: 400;
   color: #FFFFFF;
-  line-height: 1.24vw;
-  text-transform: uppercase;
-  margin-left: -8.75vw;
+  line-height: 1.757vw;
+  /*text-transform: uppercase;*/
+  margin-left: -10.2vw;
+  margin-top: 3.1vw;
 }
 .right-second-profile-p3 {
   font-family: "Acrom Medium", Arial, sans-serif;
@@ -1473,30 +1520,38 @@ header .button-animation:hover {
   background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
   transition: background-image 0.8s ease-in-out;
 }
-.button-animation-text-profile{
+.button-animation-text-profile {
   position: absolute;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.6vw 2.4vw;
+  padding: 1.8vw 1.86vw;
   border-radius: 1.23vw;
   background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
-  margin-left: -11.2vw;
-  margin-top: 2.2vw;
+  margin-left: 66vw;
+  margin-top: 6.88vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
   border: 0.15vw solid #FFFFFF80;
-  z-index: 55555;
+  z-index: 5;
+}
+.button-animation-text-profile.click-spin {
+  margin-left: -9.4vw;
+  margin-top: -2.9vw;
+  padding: 1.8vw 2.86vw;
+}
+.global-name-move {
+  margin: 6.5vw 0vw 0vw -20.7vw;
 }
 .button-animation-text-profile:hover {
   background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
   transition: background-image 0.8s ease-in-out;
 }
-.button-animation-text-profile b{
+.button-animation-text-profile b {
   color: #FFFFFF;
   line-height: 1.17vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.17vw;
+  font-size: 1.27vw;
 
 }
 .button-animation-text:hover {
@@ -2016,6 +2071,12 @@ header .button-animation:hover {
   height: auto;
   margin: 6.5vw 0vw 0vw 39.4vw;
 }
+.users-logo-spin.spin-test {
+  position: absolute;
+  width: 22vw;
+  height: auto;
+  margin: 1.5vw 0vw 0vw 1.7vw;
+}
 #spin, #reset {
   position: absolute;
   display: none;
@@ -2156,6 +2217,13 @@ canvas#wheel {
   height: 46.722vw;
   margin: -1vw 0vw 0vw 32vw;
 }
+canvas#wheel-profile {
+  position: relative;
+  z-index: 5;
+  width: 32.722vw;
+  height: 32.722vw;
+  margin: -4vw 0vw 0vw -3.6vw;
+}
 .spin-block {
   opacity: 1;
   transition: opacity 0.5s ease;
@@ -2228,12 +2296,20 @@ canvas#wheel {
   position: absolute;
   display: none;
 }
-#selectorspin{
+#selectorspin {
   color: #d52976;
   position: absolute;
   margin-top: -1.14vw;
   margin-left: 14.6vw;
   font-size: 5.678vw;
+  z-index: 6;
+}
+#selectorspintest {
+  color: #d52976;
+  position: absolute;
+  margin-top: -5.67vw;
+  margin-left: -27.4vw;
+  font-size: 4.378vw;
   z-index: 6;
 }
 #wheel-center {
@@ -2282,6 +2358,54 @@ canvas#wheel {
   background: #3e023e;
   margin-top: 17.4vw;
   margin-left: 17.4vw;
+  z-index: 101;
+}
+#wheel-center-test {
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 1em;
+  background: purple;
+  margin-top: 7.2vw;
+  margin-left: -25.3vw;
+  z-index: 104;
+}
+#wheel-center-2-test {
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 2em;
+  background: #3e023e;
+  margin-top: 7.2vw;
+  margin-left: -25.3vw;
+  z-index: 103;
+}
+#wheel-center-3-test {
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 2em;
+  background: purple;
+  margin-top: 7.2vw;
+  margin-left: -25.3vw;
+  z-index: 102;
+}
+#wheel-center-4-test {
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 4.3em;
+  height: 4.3em;
+  border-radius: 2em;
+  background: #3e023e;
+  margin-top: 7.2vw;
+  margin-left: -25.32vw;
   z-index: 101;
 }
 .wheel-center-container {
@@ -2440,6 +2564,11 @@ canvas#wheel {
   width: 13%;
   margin-left: 2.5vw;
   margin-top: -5.3vw;
+}
+.how-left-icon.profile {
+  width: 21%;
+  margin-left: -21.2vw;
+  margin-top: 0.1vw;
 }
 .img-mc-block{
   width: 31.09vw;
@@ -2778,6 +2907,78 @@ canvas#wheel {
 
 
 }
+.prizes-container {
+  display: flex;
+}
+
+.prize-column, .draw-date-column {
+  flex: 1;
+}
+
+.prize-item {
+  margin-bottom: 1.830vw;
+}
+
+.prize-name {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 9vw;
+}
+
+.prize-code {
+  display: block;
+  color: #888;
+  text-align: left;
+  margin-left: 9vw;
+  margin-bottom: 3vw;
+}
+
+.get-ticket-btn {
+  position: absolute;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.366vw 0.732vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.025vw;
+  margin: -6.707vw 6.146vw;
+  cursor: pointer;
+  border-radius: 0.366vw;
+}
+
+.draw-date {
+  font-style: italic;
+}
+.gifts-prizes-name {
+  position: absolute;
+  margin: -1vw 0vw 0vw -18vw;
+}
+.gifts-prizes-data {
+  position: absolute;
+  margin: -1vw 1vw 0vw 10vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .prizes-items11 {
   display: flex;
   flex-flow: row nowrap;
@@ -4055,8 +4256,8 @@ canvas#wheel {
   padding-top: 1.56vw;
 }
 .winners-tabs-content-ticket {
-  margin-left: 3.2vw;
-  margin-top: -1.3vw;
+  margin-left: 0.2vw;
+  margin-top: 1.7vw;
 }
 .table-ticket {
   border-radius: 0.520833333333333vw;
@@ -4671,8 +4872,8 @@ canvas#wheel {
 }
 .head-colm-phone-ticket {
   min-width: 16.614583333333332vw;
-  margin-top: -0.35vw;
-  margin-left: -0.2vw;
+  margin-top: -0.25vw;
+  margin-left: -3.9vw;
 }
 .head-colm-phone {
   min-width: 16.614583vw;
@@ -4682,7 +4883,7 @@ canvas#wheel {
 .head-colm-date-ticket {
   min-width: 5.364583vw;
   margin-top: -0.3vw;
-  margin-left: -2.7vw;
+  margin-left: -0vw;
 
 }
 .head-colm-date {
@@ -4691,9 +4892,64 @@ canvas#wheel {
 
 }
 .head-colm-prize1-ticket {
-  min-width: 13.427083333333336vw;
+  min-width: 17.227083vw;
   /* margin-top: 1.7vw; */
-  margin-left: -0.9vw;
+  margin-left: -25.9vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.757vw;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 2.343vw;
+}
+.line-true {
+  margin: 3vw 0vw 0vw 3vw;
+  position: absolute;
+  width: 51.318vw;
+  height: 0.146vw;
+  background-color: #93CFFC;
+  opacity: 50%;
+}
+.table-cell.number {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+
+}
+.table-cell.data {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2vw;
+
+}
+.table-cell.status{
+  width: 22vw;
+  display: block;
+  font-weight: bold;
+  text-align: left;
+
+}
+.table-cell {
+  display: inline-block;
+  width: 30%;
+  box-sizing: border-box;
+}
+.number, .data, .status {
+  display: block;
+  padding: 10px; /* Add padding as needed */
+}
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -11vw;
+}
+.line-true.gifts {
+  margin: 3vw 0vw 0vw 1vw;
+  position: absolute;
+  width: 51.318vw;
+  height: 0.146vw;
+  background-color: #93CFFC;
+  opacity: 50%;
 }
 .head-colm-prize1 {
   width: 15.427083vw;
@@ -4704,6 +4960,11 @@ canvas#wheel {
   min-width: 17.364583333333332vw;
   /* margin-top: 0.75vw; */
   margin-left: -0.9vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.757vw;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 2.343vw;
 }
 .head-colm-phone1 {
   min-width: 17.364583333333332vw;
@@ -4711,9 +4972,15 @@ canvas#wheel {
   margin-left: 1.1vw;
 }
 .head-colm-date1-ticket {
+  margin: 0vw 1vw 0vw -5vw;
+  width: 27vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
   min-width: 15.364583vw;
   height: auto;
-  margin-top: 1.65vw;
+  /*margin-top: 1.65vw;*/
 }
 .head-colm-date1 {
   min-width: 20.364583vw;
@@ -4724,9 +4991,9 @@ canvas#wheel {
   text-transform: uppercase;
 }
 .colm-text-ticket {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 1.17vw;
-  font-family: "Acrom Medium", Arial, sans-serif;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-weight: 400;
   line-height: 1.63vw;
 }
@@ -4762,12 +5029,13 @@ canvas#wheel {
   display: none;
 }
 .colm-text1-ticket {
-  margin-left: 3vw;
-  margin-top: 0vw;
+  margin-left: 27vw;
+  margin-top: -2.35vw;
 }
 .colm-text1-data-ticket {
-  margin-left: -4.3vw;
-  margin-top: 0vw;
+  margin-left: 3.7vw;
+  margin-top: -2.35vw;
+  text-align: left;
 }
 .centered-ticket-wrapper {
   display: flex;
@@ -4856,6 +5124,7 @@ canvas#wheel {
   line-height: 1.041666666666667vw;
   margin-left: 0vw;
   margin-top: 0.6vw;
+  /*margin-bottom: 3vw;*/
 }
 .table-body {
   color: #eef3ec;
@@ -6877,17 +7146,17 @@ button[type="submit"] {
   outline: none;
 }
 .popupCode-input-profile {
-  margin: -0.5vw 0 1.46vw 3.5vw;
+  margin: -1.15vw 0 1.46vw -1vw;
   padding: 1.5vw 0.6vw 1.5vw 1.19vw;
   border-radius: 0.9vw;
   border: 0.14vw;
   width: 19.7vw;
   height: 0.7vw;
-  font-size: 1.17vw;
+  font-size: 2.343vw;
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.635vw;
-  color: #2A60AA;
+  line-height: 2.928vw;
+  color: white;
   outline: none;
 }
 .popupCode-form-label {
@@ -9131,6 +9400,7 @@ iframe {
     box-sizing: border-box;
     transition: background 0.3s;
     background-color: #007E36;
+    box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
   }
   .header-error {
     position: absolute;
@@ -9142,7 +9412,7 @@ iframe {
     z-index: 99;
     box-sizing: border-box;
     transition: background 0.3s;
-    background-color: #007E36;
+    background-color: #023d6c;
     box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
   }
 
@@ -9571,7 +9841,7 @@ iframe {
     position: relative;
     width: 88.8vw;
     height: auto;
-    min-height: 68vw;
+    min-height: 51vw;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.15);
     border: #FFFFFF4D solid 0.15vw;
@@ -9931,7 +10201,7 @@ iframe {
     position: relative;
     width: 88.8vw;
     height: auto;
-    min-height: 68vw;
+    min-height: 67.7vw;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.15);
     border: #FFFFFF4D solid 0.15vw;
@@ -11570,7 +11840,8 @@ iframe {
     z-index: 99;
     box-sizing: border-box;
     transition: background 0.3s;
-    background-color: #007E36;
+    background-color: #023d6c;
+    box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
   }
   .main-error {
     margin-top: 21vw;

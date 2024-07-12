@@ -25,6 +25,9 @@ import PopupVideos from "../Winners-videos/PopupVideos";
 import PopupEnd from "../PopupTicket/PopupEnd";
 import prizesCenterCard from "../../image/mv-card.png";
 import bgImagese from "../../image/bg-image.png";
+import howCenterIcon from "../../image/img_58.png";
+import Test from "../test";
+import TestForSpin from "../TestSpinProfile";
 
 
 
@@ -195,14 +198,14 @@ export default function Profile(props){
             <div className={'container'}>
                 <div className={'content'}>
                     <div className={'logo-content'}>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                         <img className={'logo'} src={ticket}
                              alt="Logo"
                              onMouseOver={() => { /* Обработчик наведения на картинку */
                              }}
                              onClick={handleImageClick}/>
                         </Link>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                         <img className={'logo-text'} src={tickettext}
                              alt="Logo"
                              onMouseOver={() => { /* Обработчик наведения на картинку */
@@ -219,20 +222,20 @@ export default function Profile(props){
                         </div>
                     </div>
                     <div className={'menu'}>
-                        <div className={'menu-content-profile'}>
+                        <div className={'menu-content-profile error-menu-profile'}>
                             <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToPrizes(event)
                             }}> Призы </a>
-                            <a className="smooth" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToWinners(event)
-                            }}>Победители</a>
+                            {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
+                            {/*    closeMenu();*/}
+                            {/*    handleGoToWinners(event)*/}
+                            {/*}}>Победители</a>*/}
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToFaq(event)
-                            }}> Faq </a>
+                            }}> Вопрос-ответ </a>
                             <a className="smooth backFaq" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToSupport(event)
@@ -248,81 +251,94 @@ export default function Profile(props){
             <main>
                 <div className={'main-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
+                        <div className={'items-block-profile'}></div>
                         <div className={'global-name'}>
-                            <p>Личный кабинет</p>
+                            <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
+                        <a onClick={openPopup} className={'button-animation-text-profile'}>
+                            <b>Зарегистрировать билет</b> </a>
                         <div className="container-profile">
                             <div className="left-column-profile">
-                                <div className={'left-first-profile'}>
-                                    <div>
-                                        <img className={'for-he4lth-profile'} src={prizesCenterCard}/>
-                                        <img className={'for-he4lth-bg-profile'} src={bgImagese}/>
-                                    </div>
-                                    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз
-                                        от Мвидео!</p>
-                                    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>
-                                    <div className="notification">Ссылка скопирована!</div>
-                                    <p className={'left-first-profile-p2-p2'}>
-                                        {profile && profile.countReferrals}
-                                        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся
-                                            реферальной ссылкой</a>
-                                    </p>
-                                    {profile && profile.countReferrals > 0 ? (
-                                        <>
-                                            <p className={'left-first-profile-p2-p2-p2'}>
-                                                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому вы сможете принять участие в дополнительном розыгрыше призов в конце акции.
-                                            </p>
+                                {/*<div className={'left-first-profile'}>*/}
+                                {/*    /!*<div>*!/*/}
+                                {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
+                                {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
+                                {/*    /!*</div>*!/*/}
+                                {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
+                                {/*        от Мвидео!</p>*/}
+                                {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
+                                {/*    <div className="notification">Ссылка скопирована!</div>*/}
+                                {/*    <p className={'left-first-profile-p2-p2'}>*/}
+                                {/*        {profile && profile.countReferrals}*/}
+                                {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
+                                {/*            реферальной ссылкой</a>*/}
+                                {/*    </p>*/}
+                                {/*    {profile && profile.countReferrals > 0 ? (*/}
+                                {/*        <>*/}
+                                {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
+                                {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
+                                {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
+                                {/*                акции.*/}
+                                {/*            </p>*/}
 
-                                        </>
-                                    ) : null}
+                                {/*        </>*/}
+                                {/*    ) : null}*/}
 
-                                </div>
-                                <div className={'backdrop-profile1'}></div>
+                                {/*</div>*/}
+                                {/*<div className={'backdrop-profile1'}></div>*/}
                                 <div className={'profile-right-float-img'}>
-                                    <img className={'profile-snake-left'} src={snake}/>
-                                    <img className={'profile-rings'} src= {rings}/>
-                                    <img className={'profile-full-hearth'} src= {fullhearth}/>
-                                    <img className={'profile-pluse1'} src= {pluse1}/>
-                                    <img className={'profile-left-half-ring'} src= {leftring}/>
-                                    <img className={'profile-center-hearth'} src= {centerhearth}/>
-                                    <img className={'profile-right-ring'} src= {rightRing}/>
+                                    {/*<img className={'profile-snake-left'} src={snake}/>*/}
+                                    {/*<img className={'profile-rings'} src={rings}/>*/}
+                                    {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
+                                    {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
+                                    {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
+                                    {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
+                                    {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
                                 </div>
                                 <div className={'left-second-profile'}>
-                                    <p className={'left-first-profile-p'}>Вы зарегистрировали</p>
+                                    <img className={'how-left-icon profile'} src={howCenterIcon}/>
+                                    <p className={'left-first-profile-p'}>Зарегистрировано билетов</p>
                                     <p className={'left-first-profile-p2'}>
-                                        {profile && profile.countTicketsTotal}
-                                        <a className={'left-first-profile-a2'}>{getTicketForm(profile && profile.countTicketsTotal)}</a>
+                                        {/*{profile && profile.countTicketsTotal}*/}
+                                        9
+                                        <a className={'left-first-profile-a2'}></a>
                                     </p>
-                                    <div className="white-line"></div>
+                                    <div className="white-line">из них:</div>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        {profile && profile.countTicketsApproved}
+                                        6
+                                    </p>
                                     <p className={'left-first-profile-p3'}>
-                                        {profile && profile.countTicketsApproved} {getTicketForm(profile && profile.countTicketsApproved)} {getStatusForm(profile && profile.countTicketsApproved)}
+
+                                        приняли участие <br></br>в
+                                        розыгрыше
+                                    </p>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        {profile && profile.countTicketsRejected}
+                                        3
                                     </p>
                                     <p className={'left-first-profile-p3'}>
-                                        {profile && profile.countTicketsRejected} {getTicketForm(profile && profile.countTicketsRejected)} {getStatusFormOtc(profile && profile.countTicketsRejected)}
+                                        могут принять <br></br>участие в
+                                        розыгрыше
                                     </p>
-                                    <a onClick={openPopup} className={'button-animation-text-profile'}>
-                                        <b>Зарегистрировать билет</b> </a>
+                                    <div className="spin-block">
+                                        <TestForSpin/>
+                                    </div>
+                                    <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
+                                        <b>Разыграть приз</b> </a>
                                 </div>
                             </div>
                             <div className="right-column-profile">
                                 <div className={'right-first-profile'}>
-                                    <div className={`right-first-block ${location.pathname === '/profile' ? 'active' : ''}`}>
+                                    <div className={'right-first-profile'}>
                                         <NavLink
                                             to="/profile"
                                             activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/profile'}>
-                                            <p className={'p-main-profile-color'}>Профиль</p>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/gifts"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/gifts'}
-                                            className={`right-first-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                            isactive={() => location.pathname === '/profile'}
+                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
                                         >
                                             <div className={'p-main-profile-color'}>
-                                                Подарки
+                                                Профиль
                                             </div>
                                         </NavLink>
                                     </div>
@@ -331,10 +347,22 @@ export default function Profile(props){
                                             to="/tickets"
                                             activeclassname="active-subsection"
                                             isactive={() => location.pathname === '/tickets'}
-                                            className={`right-first-block ${location.pathname === '/tickets' ? 'active' : ''}`}
+                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
                                         >
                                             <div className={'p-main-profile-color'}>
                                                 Билеты
+                                            </div>
+                                        </NavLink>
+                                    </div>
+                                    <div className={'right-first-profile'}>
+                                        <NavLink
+                                            to="/gifts"
+                                            activeclassname="active-subsection"
+                                            isactive={() => location.pathname === '/gifts'}
+                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                        >
+                                            <div className={'p-main-profile-color'}>
+                                                Призы
                                             </div>
                                         </NavLink>
                                     </div>
@@ -353,13 +381,16 @@ export default function Profile(props){
                                 </div>
                                 <div className={'right-second-profile'}>
                                     <div className={'content-from-left'}>
-                                    <p className={'right-second-profile-p'}>Данные профиля</p>
-                                    <p className={'right-second-profile-p2'}>Номер телефона</p>
-                                        <input className={'popupCode-input-profile'} type="tel" value={profile && profile.login} readOnly />
-                                    {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
+                                        {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
+                                        <p className={'right-second-profile-p2'}>Номер телефона</p>
+                                        <input className={'popupCode-input-profile'} type="tel"
+                                               defaultValue={'+7 977 302 84 57'} value={profile && profile.login} readOnly
+                                               style={{backgroundColor: '#023d6c'}}
+                                        />
+                                        {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
                                     </div>
                                 </div>
-                                <div className={'backdrop-profile2'}></div>
+                                {/*<div className={'backdrop-profile2'}></div>*/}
                             </div>
                         </div>
 
@@ -368,7 +399,10 @@ export default function Profile(props){
                 </div>
             </main>
             <footer className={'footer'}>
+                <div className="myElementFooter">
+                </div>
                 <div className="footer-left">
+
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
                             <img className={'footer-logo'} src={ticketText}/>
@@ -376,43 +410,39 @@ export default function Profile(props){
                     </div>
                     <div className={'footer-medium'}>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>
+                            {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
                         </div>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`} target="_blank">Политика обработки персональных данных</a>
+                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
+                               target="_blank">Конфиденциальность</a>
                         </div>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`} target="_blank">Обработка персональных данных третьими лицами</a>
+                            <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
+                               target="_blank">Пользовательское соглашение</a>
                         </div>
                     </div>
                 </div>
                 <div className="footer-right">
                     <div className={'footer-row1'}>
-                        <a>Общий срок проведения акции с «01» февраля 2024 года по «30» апреля 2024. Подробную информацию об организаторе акции,
-                            о правилах ее проведения, количестве призов по результатам акции, сроках, месте и порядке их
-                            вручения, уточняйте на сайте <a className={"text-nloto"} href={'https://nloto-promo.ru/'}>https://nloto-promo.ru</a> или по телефону
-                            горячей линии 8 (800) 333-7-333.
+                        <a>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения выигрышей № 4 («Мечталлион»),
+                            срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
+                            телефону 8 800 333-7-333.
                         </a>
                     </div>
-                    {/*<div className={'footer-row2'}>*/}
-                    {/*    <a>Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской Федерации от*/}
-                    {/*        29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г. Информация об */}
-                    {/*        организаторе лотерей, правилах их проведения, призовом фонде лотерей, количестве призов */}
-                    {/*        или выигрышей, сроках, месте и порядке их получения - на сайте www.nloto.ru и по телефону */}
-                    {/*        8 800 333-7-333. </a>*/}
-                    {/*</div>*/}
+                    <div className={'footer-row2'}>
+                        <a>Специальные призы от Redmond разыгрываются только среди билетов, купленных в «Почте
+                            России». </a>
+
+                    </div>
                     <div className={'footer-row3'}>
-                        <a>*Внешний вид подарка может отличаться от изображений, представленных в рекламных материалах.
-                            Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской Федерации
-                            от 29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г.
-                            Информация об организаторе лотерей, правилах их проведения, призовом фонде лотерей,
-                            количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a className={"text-nloto"} href={'https://nloto.ru/'} target="_blank">www.nloto.ru</a> и по телефону 8 (800) 333-7-333. </a>
+                        <a>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022
+                            г.,
+                            включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
                     </div>
                     <div className={'footer-row4'}>
-                        <a>Реклама. Рекламодатель: ООО «Спортивные Лотереи», ОГРН 1195027010386, ИНН 5003133760</a>
+                        <a>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН: 1195027010386, ИНН: 5003133760).</a>
                     </div>
                 </div>
-
                 <PopupTicket1/>
                 <PopupTicket2/>
                 <PopupTicket3/>

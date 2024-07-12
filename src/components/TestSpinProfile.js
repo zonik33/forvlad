@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import spin from '../image/spin-img.png'
 
-class Test extends React.Component {
+class TestForSpin extends React.Component {
     state = {
         availableTickets: 3, // Изначально у пользователя нет билетов
         list: [
@@ -79,8 +79,9 @@ class Test extends React.Component {
     };
 
     renderSector(index, text, start, arc, color) {
-        let canvas = document.getElementById("wheel");
+        let canvas = document.getElementById("wheel-profile");
         let ctx = canvas.getContext("2d");
+
 
         let borderColor = "black";  // Default border color
         let borderWidth = 4; // Default border width
@@ -220,17 +221,17 @@ class Test extends React.Component {
         return (
             <div className="Appspin">
                 <div className={'selectorspin-container'}>
-                    <span id="selectorspin">&#9660;</span>
+                    <span id="selectorspintest">&#9660;</span>
                 </div>
                 <div className={'wheel-center-container'}>
-                    <span id="wheel-center"></span>
-                    <span id="wheel-center-2"></span>
-                    <span id="wheel-center-3"></span>
-                    <span id="wheel-center-4"></span>
+                    <span id="wheel-center-test"></span>
+                    <span id="wheel-center-2-test"></span>
+                    <span id="wheel-center-3-test"></span>
+                    <span id="wheel-center-4-test"></span>
                 </div>
-                <img className={'users-logo-spin'} src={spin}/>
+                <img className={'users-logo-spin spin-test'} src={spin}/>
                 <canvas
-                    id="wheel"
+                    id="wheel-profile"
                     width="500"
                     height="500"
                     style={{
@@ -260,4 +261,4 @@ class Test extends React.Component {
     }
 }
 
-export default Test;
+export default TestForSpin;

@@ -21,6 +21,9 @@ import ticket from "../../image/ticket.png";
 import PopupVideos from "../Winners-videos/PopupVideos";
 import prizesCenterCard from "../../image/mv-card.png";
 import bgImagese from "../../image/bg-image.png";
+import PopupEnd from "../PopupTicket/PopupEnd";
+import howCenterIcon from "../../image/img_58.png";
+import TestForSpin from "../TestSpinProfile";
 
 
 export default function Tickets(){
@@ -129,6 +132,10 @@ export default function Tickets(){
         event.preventDefault();
         navigate("/?section=winners"); // Передаем параметр "section" в URL
     };
+    const handleGoToSupport = (event) => {
+        event.preventDefault();
+        navigate("/?section=support"); // Передаем параметр "section" в URL
+    };
     const handleGoToFaq = (event) => {
         event.preventDefault();
         navigate("/?section=faq"); // Передаем параметр "section" в URL
@@ -175,14 +182,14 @@ export default function Tickets(){
             <div className={'container'}>
                 <div className={'content'}>
                     <div className={'logo-content'}>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                             <img className={'logo'} src={ticket}
                                  alt="Logo"
                                  onMouseOver={() => { /* Обработчик наведения на картинку */
                                  }}
                                  onClick={handleImageClick}/>
                         </Link>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                             <img className={'logo-text'} src={tickettext}
                                  alt="Logo"
                                  onMouseOver={() => { /* Обработчик наведения на картинку */
@@ -194,24 +201,28 @@ export default function Tickets(){
                         </div>
                     </div>
                     <div className={'menu'}>
-                        <div className={'menu-content-profile'}>
+                        <div className={'menu-content-profile error-menu-profile'}>
                             <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToPrizes(event)
                             }}> Призы </a>
+                            {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
+                            {/*    closeMenu();*/}
+                            {/*    handleGoToWinners(event)*/}
+                            {/*}}>Победители</a>*/}
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
-                                handleGoToWinners(event)
-                            }}>Победители</a>
-                            <a className="smooth" href={'#'} onClick={(event) => {
+                                handleGoToFaq(event)
+                            }}> Вопрос-ответ </a>
+                            <a className="smooth backFaq" href={'#'} onClick={(event) => {
                                 closeMenu();
-                                handleGoToQuestion(event)
-                            }}> Faq </a>
-                            <a className="smooth backFaq" href={'#'} onClick={handleGoToQuestion}> Обратная связь </a>
+                                handleGoToSupport(event)
+                            }}> Обратная связь </a>
                             <SelectProfile/>
                             <img className={'users-logo'} src={users}/>
-                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать билет</b> </a>
+                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать
+                                билет</b> </a>
                         </div>
                     </div>
                 </div>
@@ -219,62 +230,81 @@ export default function Tickets(){
             <main>
                 <div className={'main-tickets main-items-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
+                        <div className={'items-block-profile'}></div>
                         <div className={'global-name'}>
-                            <p>Личный кабинет</p>
+                            <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
+                        <a onClick={openPopup} className={'button-animation-text-profile'}>
+                            <b>Зарегистрировать билет</b> </a>
                         <div className="container-profile">
                             <div className="left-column-profile">
-                                <div className={'left-first-profile'}>
-                                    <div>
-                                        <img className={'for-he4lth-profile'} src={prizesCenterCard}/>
-                                        <img className={'for-he4lth-bg-profile'} src={bgImagese}/>
-                                    </div>
-                                    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз
-                                        от Мвидео!</p>
-                                    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>
-                                    <div className="notification">Ссылка скопирована!</div>
-                                    <p className={'left-first-profile-p2-p2'}>
-                                        {profile && profile.countReferrals}
-                                        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся
-                                            реферальной ссылкой</a>
-                                    </p>
-                                    {profile && profile.countReferrals > 0 ? (
-                                        <>
-                                            <p className={'left-first-profile-p2-p2-p2'}>
-                                                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому
-                                                вы сможете принять участие в дополнительном розыгрыше призов в конце
-                                                акции.
-                                            </p>
+                                {/*<div className={'left-first-profile'}>*/}
+                                {/*    /!*<div>*!/*/}
+                                {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
+                                {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
+                                {/*    /!*</div>*!/*/}
+                                {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
+                                {/*        от Мвидео!</p>*/}
+                                {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
+                                {/*    <div className="notification">Ссылка скопирована!</div>*/}
+                                {/*    <p className={'left-first-profile-p2-p2'}>*/}
+                                {/*        {profile && profile.countReferrals}*/}
+                                {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
+                                {/*            реферальной ссылкой</a>*/}
+                                {/*    </p>*/}
+                                {/*    {profile && profile.countReferrals > 0 ? (*/}
+                                {/*        <>*/}
+                                {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
+                                {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
+                                {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
+                                {/*                акции.*/}
+                                {/*            </p>*/}
 
-                                        </>
-                                    ) : null}
+                                {/*        </>*/}
+                                {/*    ) : null}*/}
 
-                                </div>
-                                <div className={'backdrop-profile1'}></div>
+                                {/*</div>*/}
+                                {/*<div className={'backdrop-profile1'}></div>*/}
                                 <div className={'profile-right-float-img'}>
-                                    <img className={'profile-snake-left'} src={snake}/>
-                                    <img className={'profile-rings'} src={rings}/>
-                                    <img className={'profile-full-hearth'} src={fullhearth}/>
-                                    <img className={'profile-pluse1'} src={pluse1}/>
-                                    <img className={'profile-left-half-ring'} src={leftring}/>
-                                    <img className={'profile-center-hearth'} src={centerhearth}/>
-                                    <img className={'profile-right-ring'} src={rightRing}/>
+                                    {/*<img className={'profile-snake-left'} src={snake}/>*/}
+                                    {/*<img className={'profile-rings'} src={rings}/>*/}
+                                    {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
+                                    {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
+                                    {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
+                                    {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
+                                    {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
                                 </div>
                                 <div className={'left-second-profile'}>
-                                    <p className={'left-first-profile-p'}>Вы зарегистрировали</p>
+                                    <img className={'how-left-icon profile'} src={howCenterIcon}/>
+                                    <p className={'left-first-profile-p'}>Зарегистрировано билетов</p>
                                     <p className={'left-first-profile-p2'}>
-                                        {profile && profile.countTicketsTotal}
-                                        <a className={'left-first-profile-a2'}>{getTicketForm(profile && profile.countTicketsTotal)}</a>
+                                        {/*{profile && profile.countTicketsTotal}*/}
+                                        9
+                                        <a className={'left-first-profile-a2'}></a>
                                     </p>
-                                    <div className="white-line"></div>
+                                    <div className="white-line">из них:</div>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        {profile && profile.countTicketsApproved}
+                                        6
+                                    </p>
                                     <p className={'left-first-profile-p3'}>
-                                        {profile && profile.countTicketsApproved} {getTicketForm(profile && profile.countTicketsApproved)} {getStatusForm(profile && profile.countTicketsApproved)}
+
+                                        приняли участие <br></br>в
+                                        розыгрыше
+                                    </p>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        {profile && profile.countTicketsRejected}
+                                        3
                                     </p>
                                     <p className={'left-first-profile-p3'}>
-                                        {profile && profile.countTicketsRejected} {getTicketForm(profile && profile.countTicketsRejected)} {getStatusFormOtc(profile && profile.countTicketsRejected)}
+                                        могут принять <br></br>участие в
+                                        розыгрыше
                                     </p>
-                                    <a onClick={openPopup} className={'button-animation-text-profile'}>
-                                        <b>Зарегистрировать билет</b> </a>
+                                    <div className="spin-block">
+                                        <TestForSpin/>
+                                    </div>
+                                    <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
+                                        <b>Разыграть приз</b> </a>
                                 </div>
                             </div>
                             <div className="right-column-profile">
@@ -284,7 +314,7 @@ export default function Tickets(){
                                             to="/profile"
                                             activeclassname="active-subsection"
                                             isactive={() => location.pathname === '/profile'}
-                                            className={`right-first-block ${location.pathname === '/profile' ? 'active' : ''}`}
+                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
                                         >
                                             <div className={'p-main-profile-color'}>
                                                 Профиль
@@ -293,123 +323,89 @@ export default function Tickets(){
                                     </div>
                                     <div className={'right-first-profile'}>
                                         <NavLink
-                                            to="/gifts"
+                                            to="/tickets"
                                             activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/gifts'}
-                                            className={`right-first-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                            isactive={() => location.pathname === '/tickets'}
+                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
                                         >
                                             <div className={'p-main-profile-color'}>
-                                                Подарки
+                                                Билеты
                                             </div>
                                         </NavLink>
                                     </div>
-                                    <div
-                                        className={`right-third-block ${location.pathname === '/tickets' ? 'active' : ''}`}>
+                                    <div className={'right-first-profile'}>
                                         <NavLink
-                                            to="/tickets"
+                                            to="/gifts"
                                             activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/tickets'}>
-                                            <p className={'p-main-profile-color'}>Билеты</p>
+                                            isactive={() => location.pathname === '/gifts'}
+                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                        >
+                                            <div className={'p-main-profile-color'}>
+                                                Призы
+                                            </div>
                                         </NavLink>
                                     </div>
+                                    {/*<div className={'right-first-profile'}>*/}
+                                    {/*    <NavLink*/}
+                                    {/*        to="/videos"*/}
+                                    {/*        activeclassname="active-subsection"*/}
+                                    {/*        isactive={() => location.pathname === '/videos'}*/}
+                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                    {/*    >*/}
+                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                    {/*        /!*    Розыгрыши*!/*/}
+                                    {/*        /!*</div>*!/*/}
+                                    {/*    </NavLink>*/}
+                                    {/*</div>*/}
                                 </div>
                                 <div className={'right-second-profile-tickets'}>
                                     <div className={'content-from-left'}>
-                                        <p className={'right-second-tickets-p'}>Ваши билеты</p>
+                                        {/*<p className={'right-second-tickets-p'}>Ваши билеты</p>*/}
                                         <div className={'winners-tabs-content-ticket'}>
                                             <div className={'tab'}>
                                                 <div className={'tab-inner'}>
                                                     <div className={'table-ticket'}>
                                                         <div className={'table-head-ticket'}>
                                                             <div className={'head-colm-prize-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Билет</div>
+                                                                <div className={'colm-text-ticket'}> номер билета</div>
                                                             </div>
                                                             <div className={'head-colm-phone-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Дата</div>
+                                                                <div className={'colm-text-ticket'}> дата</div>
                                                             </div>
                                                             <div className={'head-colm-date-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Статус</div>
+                                                                <div className={'colm-text-ticket'}> статус</div>
                                                             </div>
                                                         </div>
                                                         <div className={'table-body-ticket'}>
-                                                            {profile && profile.tickets && profile.tickets.map((ticket, index) => (
-                                                                <div className={'table-body-winners-ticket'}
-                                                                     key={index}>
-                                                                    <div className={'centered-ticket-wrapper'}>
-                                                                        <div className={'centered-ticket'}>
-                                                                            <div className={'head-colm-prize1-ticket'}>
-                                                                                <div
-                                                                                    className={'colm-ticket-none'}> Билет:
-                                                                                </div>
-                                                                                <div
-                                                                                    className={'colm-text1-ticket'}> {ticket.number} </div>
-                                                                            </div>
-                                                                            <div className={'head-colm-phone1-ticket'}>
-                                                                                <div
-                                                                                    className={'colm-data-ticket-none'}> Дата:
-                                                                                </div>
-                                                                                <div
-                                                                                    className={'colm-text1-data-ticket'}> {ticket.date} </div>
-                                                                            </div>
-                                                                        </div>
+                                                            <div className={'centered-ticket-wrapper'}>
+                                                                <div className="table-row">
+                                                                    <div className="table-cell number">221234567890
                                                                     </div>
-                                                                    <div className={'head-colm-date1-ticket'}>
-                                                                        <div
-                                                                            className={'colm-status-ticket-none'}> Статус:
-                                                                        </div>
-                                                                        {ticket.status.id === 0 &&
-                                                                            <div className={'centered-ticket-wrapper'}>
-                                                                                <div className={'centered-ticket'}>
-                                                                                    <div
-                                                                                        className={'custom-status-pending'}>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        className={'colm-text1-status-ticket1-check'}>
-                                                                                        <div dangerouslySetInnerHTML=
-                                                                                                 {{__html: ticket.status.name}}>
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                            </div>}
-                                                                        {ticket.status.id === 1 &&
-                                                                            <div className={'centered-ticket-wrapper'}>
-                                                                                <div className={'centered-ticket'}>
-                                                                                    <div className={'custom-status-ok'}>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        className={'colm-text1-status-ticket1-complete'}>
-                                                                                        <div
-                                                                                            className={'massive-text-agree'}
-                                                                                            dangerouslySetInnerHTML=
-                                                                                                {{__html: ticket.status.text}}>
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>}
-                                                                        {ticket.status.id === 2 &&
-                                                                            <div className={'centered-ticket-wrapper'}>
-                                                                                <div className={'centered-ticket'}>
-                                                                                    <div
-                                                                                        className={'custom-status-neok'}>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        className={'colm-text1-status-ticket1-fail'}>
-                                                                                        <div
-                                                                                            className={'massive-text-not-agree'}
-                                                                                            dangerouslySetInnerHTML=
-                                                                                                {{__html: ticket.status.text}}>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                            </div>}
+                                                                    <div className="table-cell data">10.06.2024</div>
+                                                                    <div className="table-cell status">Принял участие в
+                                                                        розыгрыше
+                                                                        <br></br> Дата розыграша: 1.06.2024
                                                                     </div>
                                                                 </div>
-                                                            ))}
+                                                                <div className={'line-true'}></div>
+                                                            </div>
                                                         </div>
+                                                        <div className={'table-body-ticket'}>
+                                                            <div className={'centered-ticket-wrapper'}>
+                                                                <div className="table-row">
+                                                                    <div className="table-cell number">2212345412
+                                                                    </div>
+                                                                    <div className="table-cell data">1.06.2024</div>
+                                                                    <div className="table-cell status">Принял участие в
+                                                                        розыгрыше
+                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                    </div>
+                                                                </div>
+                                                                <div className={'line-true'}></div>
+                                                            </div>
+                                                        </div>
+
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -425,7 +421,10 @@ export default function Tickets(){
                 </div>
             </main>
             <footer className={'footer'}>
+                <div className="myElementFooter">
+                </div>
                 <div className="footer-left">
+
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
                             <img className={'footer-logo'} src={ticketText}/>
@@ -433,57 +432,46 @@ export default function Tickets(){
                     </div>
                     <div className={'footer-medium'}>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>
+                            {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
                         </div>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`} target="_blank">Политика
-                                обработки персональных данных</a>
+                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
+                               target="_blank">Конфиденциальность</a>
                         </div>
                         <div className={'footer-row-left'}>
                             <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
-                               target="_blank">Обработка персональных данных третьими лицами</a>
+                               target="_blank">Пользовательское соглашение</a>
                         </div>
                     </div>
                 </div>
                 <div className="footer-right">
                     <div className={'footer-row1'}>
-                        <a>Общий срок проведения акции с «01» февраля 2024 года по «30» апреля 2024. Подробную
-                            информацию об организаторе акции,
-                            о правилах ее проведения, количестве призов по результатам акции, сроках, месте и порядке их
-                            вручения, уточняйте на сайте <a className={"text-nloto"}
-                                                            href={'https://nloto-promo.ru/'}>https://nloto-promo.ru</a> или
-                            по телефону
-                            горячей линии 8 (800) 333-7-333.
+                        <a>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения выигрышей № 4 («Мечталлион»),
+                            срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
+                            телефону 8 800 333-7-333.
                         </a>
                     </div>
-                    {/*<div className={'footer-row2'}>*/}
-                    {/*    <a>Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской Федерации от*/}
-                    {/*        29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г. Информация об */}
-                    {/*        организаторе лотерей, правилах их проведения, призовом фонде лотерей, количестве призов */}
-                    {/*        или выигрышей, сроках, месте и порядке их получения - на сайте www.nloto.ru и по телефону */}
-                    {/*        8 800 333-7-333. </a>*/}
-                    {/*</div>*/}
+                    <div className={'footer-row2'}>
+                        <a>Специальные призы от Redmond разыгрываются только среди билетов, купленных в «Почте
+                            России». </a>
+
+                    </div>
                     <div className={'footer-row3'}>
-                        <a>*Внешний вид подарка может отличаться от изображений, представленных в рекламных материалах.
-                            Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской
-                            Федерации
-                            от 29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г.
-                            Информация об организаторе лотерей, правилах их проведения, призовом фонде лотерей,
-                            количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a
-                                className={"text-nloto"} href={'https://nloto.ru/'} target="_blank">www.nloto.ru</a> и
-                            по телефону 8 (800) 333-7-333. </a>
+                        <a>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022
+                            г.,
+                            включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
                     </div>
                     <div className={'footer-row4'}>
-                        <a>Реклама. Рекламодатель: ООО «Спортивные Лотереи», ОГРН 1195027010386, ИНН 5003133760</a>
+                        <a>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН: 1195027010386, ИНН: 5003133760).</a>
                     </div>
                 </div>
-
                 <PopupTicket1/>
                 <PopupTicket2/>
                 <PopupTicket3/>
                 <PopupTicket4/>
                 <PopupTicket5/>
                 <PopupVideos/>
+                <PopupEnd/>
             </footer>
         </header>
 

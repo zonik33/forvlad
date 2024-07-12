@@ -28,8 +28,11 @@ import html2canvas from 'html2canvas';
 import ticket from "../../image/ticket.png";
 import PopupVideos from "../Winners-videos/PopupVideos";
 import prizesCenterCard from "../../image/mv-card.png";
+import PopupEnd from "../PopupTicket/PopupEnd";
+import howCenterIcon from "../../image/img_58.png";
+import TestForSpin from "../TestSpinProfile";
 
-export default function Gifts(){
+export default function Gifts() {
 
     function openPopup() {
         document.getElementById("popup-ticket1").style.display = "block";
@@ -42,12 +45,14 @@ export default function Gifts(){
         const navList = document.querySelector('header .menu');
         navList.classList.toggle('show');
     }
+
     function closeMenu() {
         const navLists = document.querySelector('.header-burger');
         navLists.classList.remove('active');
         const navList = document.querySelector('header .menu');
         navList.classList.remove('show');
     }
+
     function toggleMenu() {
         const navLists = document.querySelector('.header-profile .header-burger');
         navLists.classList.toggle('active');
@@ -57,7 +62,6 @@ export default function Gifts(){
         document.body.classList.toggle('menu-open');
 
     }
-
 
 
     const [profile, setProfile] = useState(null);
@@ -110,6 +114,7 @@ export default function Gifts(){
         }
         return 'билетов';
     }
+
     function getStatusForm(number) {
         const lastDigit = number % 10;
         if (number > 10 && number < 20) {
@@ -123,6 +128,7 @@ export default function Gifts(){
         }
         return 'о' + 'добрено';
     }
+
     function getStatusFormOtc(number) {
         const lastDigit = number % 10;
         if (number > 10 && number < 20) {
@@ -136,6 +142,7 @@ export default function Gifts(){
         }
         return 'о' + 'тклонено';
     }
+
     const handleImageClick = () => {
         window.location.href = '/'
     };
@@ -154,14 +161,18 @@ export default function Gifts(){
         event.preventDefault();
         navigate("/?section=faq"); // Передаем параметр "section" в URL
     };
-const barcodeRef = useRef(null);
-const barcodeRefs = useRef([]);
+    const handleGoToSupport = (event) => {
+        event.preventDefault();
+        navigate("/?section=support"); // Передаем параметр "section" в URL
+    };
+    const barcodeRef = useRef(null);
+    const barcodeRefs = useRef([]);
 
     const handleBarcodeDownload = (index) => { // Добавляем параметр `index`
         const barcodeRef = barcodeRefs.current[index]; // Получаем ссылку на нужный блок штрих-кода
 
         if (barcodeRef) {
-            html2canvas(barcodeRef, { useCORS: true })
+            html2canvas(barcodeRef, {useCORS: true})
                 .then((canvas) => {
                     const url = canvas.toDataURL('image/png');
                     const link = document.createElement('a');
@@ -191,19 +202,19 @@ const barcodeRefs = useRef([]);
     useEffect(() => {
         if (activeSection === 'prizes' && prizesRef.current) {
             setTimeout(() => {
-                prizesRef.current.scrollIntoView({ behavior: 'smooth' });
+                prizesRef.current.scrollIntoView({behavior: 'smooth'});
             }, 0);
         } else if (activeSection === 'winners' && winnersRef.current) {
             setTimeout(() => {
-                winnersRef.current.scrollIntoView({ behavior: 'smooth' });
+                winnersRef.current.scrollIntoView({behavior: 'smooth'});
             }, 0);
         } else if (activeSection === 'faq' && faqRef.current) {
             setTimeout(() => {
-                faqRef.current.scrollIntoView({ behavior: 'smooth' });
+                faqRef.current.scrollIntoView({behavior: 'smooth'});
             }, 0);
         } else if (activeSection === 'question-here' && questionRef.current) {
             setTimeout(() => {
-                questionRef.current.scrollIntoView({ behavior: 'smooth' });
+                questionRef.current.scrollIntoView({behavior: 'smooth'});
             }, 0);
         }
     }, [activeSection]);
@@ -214,14 +225,14 @@ const barcodeRefs = useRef([]);
             <div className={'container'}>
                 <div className={'content'}>
                     <div className={'logo-content'}>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                             <img className={'logo'} src={ticket}
                                  alt="Logo"
                                  onMouseOver={() => { /* Обработчик наведения на картинку */
                                  }}
                                  onClick={handleImageClick}/>
                         </Link>
-                        <Link to="/path-to-target-page">
+                        <Link to="">
                             <img className={'logo-text'} src={tickettext}
                                  alt="Logo"
                                  onMouseOver={() => { /* Обработчик наведения на картинку */
@@ -233,24 +244,28 @@ const barcodeRefs = useRef([]);
                         </div>
                     </div>
                     <div className={'menu'}>
-                        <div className={'menu-content-profile'}>
+                        <div className={'menu-content-profile error-menu-profile'}>
                             <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
                                 handleGoToPrizes(event)
                             }}> Призы </a>
+                            {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
+                            {/*    closeMenu();*/}
+                            {/*    handleGoToWinners(event)*/}
+                            {/*}}>Победители</a>*/}
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
-                                handleGoToWinners(event)
-                            }}>Победители</a>
-                            <a className="smooth" href={'#'} onClick={(event) => {
+                                handleGoToFaq(event)
+                            }}> Вопрос-ответ </a>
+                            <a className="smooth backFaq" href={'#'} onClick={(event) => {
                                 closeMenu();
-                                handleGoToQuestion(event)
-                            }}> Faq </a>
-                            <a className="smooth backFaq" href={'#'} onClick={handleGoToQuestion}> Обратная связь </a>
+                                handleGoToSupport(event)
+                            }}> Обратная связь </a>
                             <SelectProfile/>
                             <img className={'users-logo'} src={users}/>
-                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать билет</b> </a>
+                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать
+                                билет</b> </a>
                         </div>
                     </div>
                 </div>
@@ -258,62 +273,81 @@ const barcodeRefs = useRef([]);
             <main>
                 <div className={'main-gifts'} id={'main-gifts'}>
                     <div className={'main-items main-items-profile'}>
+                        <div className={'items-block-profile'}></div>
                         <div className={'global-name'}>
-                            <p>Личный кабинет</p>
+                            <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
+                        <a onClick={openPopup} className={'button-animation-text-profile'}>
+                            <b>Зарегистрировать билет</b> </a>
                         <div className="container-profile">
                             <div className="left-column-profile">
-                                <div className={'left-first-profile'}>
-                                    <div>
-                                        <img className={'for-he4lth-profile'} src={prizesCenterCard}/>
-                                        <img className={'for-he4lth-bg-profile'} src={bgImagese}/>
-                                    </div>
-                                    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз
-                                        от Мвидео!</p>
-                                    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>
-                                    <div className="notification">Ссылка скопирована!</div>
-                                    <p className={'left-first-profile-p2-p2'}>
-                                        {profile && profile.countReferrals}
-                                        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся
-                                            реферальной ссылкой</a>
-                                    </p>
-                                    {profile && profile.countReferrals > 0 ? (
-                                        <>
-                                            <p className={'left-first-profile-p2-p2-p2'}>
-                                                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому
-                                                вы сможете принять участие в дополнительном розыгрыше призов в конце
-                                                акции.
-                                            </p>
+                                {/*<div className={'left-first-profile'}>*/}
+                                {/*    /!*<div>*!/*/}
+                                {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
+                                {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
+                                {/*    /!*</div>*!/*/}
+                                {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
+                                {/*        от Мвидео!</p>*/}
+                                {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
+                                {/*    <div className="notification">Ссылка скопирована!</div>*/}
+                                {/*    <p className={'left-first-profile-p2-p2'}>*/}
+                                {/*        {profile && profile.countReferrals}*/}
+                                {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
+                                {/*            реферальной ссылкой</a>*/}
+                                {/*    </p>*/}
+                                {/*    {profile && profile.countReferrals > 0 ? (*/}
+                                {/*        <>*/}
+                                {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
+                                {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
+                                {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
+                                {/*                акции.*/}
+                                {/*            </p>*/}
 
-                                        </>
-                                    ) : null}
+                                {/*        </>*/}
+                                {/*    ) : null}*/}
 
-                                </div>
-                                <div className={'backdrop-profile1'}></div>
+                                {/*</div>*/}
+                                {/*<div className={'backdrop-profile1'}></div>*/}
                                 <div className={'profile-right-float-img'}>
-                                    <img className={'profile-snake-left'} src={snake}/>
-                                    <img className={'profile-rings'} src={rings}/>
-                                    <img className={'profile-full-hearth'} src={fullhearth}/>
-                                    <img className={'profile-pluse1'} src={pluse1}/>
-                                    <img className={'profile-left-half-ring'} src={leftring}/>
-                                    <img className={'profile-center-hearth'} src={centerhearth}/>
-                                    <img className={'profile-right-ring'} src={rightRing}/>
+                                    {/*<img className={'profile-snake-left'} src={snake}/>*/}
+                                    {/*<img className={'profile-rings'} src={rings}/>*/}
+                                    {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
+                                    {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
+                                    {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
+                                    {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
+                                    {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
                                 </div>
                                 <div className={'left-second-profile'}>
-                                    <p className={'left-first-profile-p'}>Вы зарегистрировали</p>
+                                    <img className={'how-left-icon profile'} src={howCenterIcon}/>
+                                    <p className={'left-first-profile-p'}>Зарегистрировано билетов</p>
                                     <p className={'left-first-profile-p2'}>
-                                        {profile && profile.countTicketsTotal}
-                                        <a className={'left-first-profile-a2'}>{getTicketForm(profile && profile.countTicketsTotal)}</a>
+                                        {/*{profile && profile.countTicketsTotal}*/}
+                                        9
+                                        <a className={'left-first-profile-a2'}></a>
                                     </p>
-                                    <div className="white-line"></div>
+                                    <div className="white-line">из них:</div>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        {profile && profile.countTicketsApproved}
+                                        6
+                                    </p>
                                     <p className={'left-first-profile-p3'}>
-                                        {profile && profile.countTicketsApproved} {getTicketForm(profile && profile.countTicketsApproved)} {getStatusForm(profile && profile.countTicketsApproved)}
+
+                                        приняли участие <br></br>в
+                                        розыгрыше
+                                    </p>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        {profile && profile.countTicketsRejected}
+                                        3
                                     </p>
                                     <p className={'left-first-profile-p3'}>
-                                        {profile && profile.countTicketsRejected} {getTicketForm(profile && profile.countTicketsRejected)} {getStatusFormOtc(profile && profile.countTicketsRejected)}
+                                        могут принять <br></br>участие в
+                                        розыгрыше
                                     </p>
-                                    <a onClick={openPopup} className={'button-animation-text-profile'}>
-                                        <b>Зарегистрировать билет</b> </a>
+                                    <div className="spin-block">
+                                        <TestForSpin/>
+                                    </div>
+                                    <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
+                                        <b>Разыграть приз</b> </a>
                                 </div>
                             </div>
                             <div className="right-column-profile">
@@ -323,20 +357,11 @@ const barcodeRefs = useRef([]);
                                             to="/profile"
                                             activeclassname="active-subsection"
                                             isactive={() => location.pathname === '/profile'}
-                                            className={`right-first-block ${location.pathname === '/profile' ? 'active' : ''}`}
+                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
                                         >
                                             <div className={'p-main-profile-color'}>
                                                 Профиль
                                             </div>
-                                        </NavLink>
-                                    </div>
-                                    <div
-                                        className={`right-second-block ${location.pathname === '/gifts' ? 'active' : ''}`}>
-                                        <NavLink
-                                            to="/gifts"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/gifts'}>
-                                            <p className={'p-main-profile-color'}>Подарки</p>
                                         </NavLink>
                                     </div>
                                     <div className={'right-first-profile'}>
@@ -344,122 +369,94 @@ const barcodeRefs = useRef([]);
                                             to="/tickets"
                                             activeclassname="active-subsection"
                                             isactive={() => location.pathname === '/tickets'}
-                                            className={`right-first-block ${location.pathname === '/tickets' ? 'active' : ''}`}
+                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
                                         >
                                             <div className={'p-main-profile-color'}>
                                                 Билеты
                                             </div>
                                         </NavLink>
                                     </div>
+                                    <div className={'right-first-profile'}>
+                                        <NavLink
+                                            to="/gifts"
+                                            activeclassname="active-subsection"
+                                            isactive={() => location.pathname === '/gifts'}
+                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                        >
+                                            <div className={'p-main-profile-color'}>
+                                                Призы
+                                            </div>
+                                        </NavLink>
+                                    </div>
+                                    {/*<div className={'right-first-profile'}>*/}
+                                    {/*    <NavLink*/}
+                                    {/*        to="/videos"*/}
+                                    {/*        activeclassname="active-subsection"*/}
+                                    {/*        isactive={() => location.pathname === '/videos'}*/}
+                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                    {/*    >*/}
+                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                    {/*        /!*    Розыгрыши*!/*/}
+                                    {/*        /!*</div>*!/*/}
+                                    {/*    </NavLink>*/}
+                                    {/*</div>*/}
                                 </div>
                                 <div className={'right-second-profile-gifts'}>
                                     <p className={'right-second-gifts-p'}>Ваши подарки</p>
-                                    <div className={'prizes-items11-gifts'}>
-                                        {profile && profile.prizes && profile.prizes.map((prize, index) => (
-                                            <div className={'gifts-content-box11'} key={index}>
-                                                {prize && prize.type === 1 && (
-                                                    <div className='content-for-big'>
-                                                        <div className={'gifts-content-box-title-middle1'}>
-                                                            <p>Гарантированный приз</p></div>
-                                                        <img className={'gifts-content-box1-img11'} src={prizesLeft}/>
-                                                        <img className={'gifts-bg-image1'} src={bgImagese}/>
-                                                        <div className={'gifts-content-box-title-bot33'}><p>от 585
-                                                            ЗОЛОТОЙ</p></div>
-                                                        <div className={'gifts-content-box-title-bot11'}>
-                                                            <p>Ваш промо-код для оформления
-                                                                подписки: {prize && prize.code}</p></div>
-                                                        <div>
-                                                            {prize && (
-                                                                <div className="barcode-block"
-                                                                     ref={el => (barcodeRefs.current[index] = el)}>
-                                                                    <Barcode
-                                                                        value={String(prize.code)}
-                                                                        style={{
-                                                                            width: '40vw',
-                                                                            height: '10vw',
-                                                                        }}
-                                                                    />
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                        <div className={'qr-code-number-block'}>
-                                                        </div>
-                                                        <a className="gifts-download-qr-code"
-                                                           onClick={() => handleBarcodeDownload(index)}>
-                                                            Скачать Штрих код
-                                                        </a>
-                                                        <div className={'gifts-content-box-title-bot22'}>
-                                                            <p>Штрих код нужно показать продавцу-консультанту в любом из
-                                                                магазинов 585 ЗОЛОТОЙ</p></div>
-                                                    </div>)}
-
-                                                {prize && prize.type === 2 && (
-
-                                                    <div>
-                                                        <div className={'gifts-content-box-title-middle1'}><p>Ежедневный
-                                                            приз </p></div>
-                                                        <img className={'gifts-content-box2-img22'} src={prizesCenter}/>
-                                                        <img className={'gifts-bg-image2'} src={bgImagese}/>
-                                                        <div className={'gifts-content-box-title-bot222'}>
-                                                            <p>МЕДИЦИНСКАЯ</p></div>
-                                                        <div className={'gifts-content-box-title-bot333'}>
-                                                            <p>СТРАХОВКА</p></div>
-                                                        <div className={'gifts-content-box-title-bot111'}>
-                                                            <p>Мы свяжемся с вами в ближайшее время и сообщим
-                                                                информацию,
-                                                                как получить приз</p></div>
-                                                    </div>)}
-                                                {prize && prize.type === 4 && (
-                                                    <div>
-                                                        <div className={'gifts-content-box-title-middle1'}>
-                                                            <p>Специальный приз
-                                                            </p></div>
-                                                        <img className={'gifts-content-box2-img22 nvidiaImage'}
-                                                             src={prizesNvidia}/>
-                                                        <img className={'gifts-bg-image2 nvidiaImage'} src={bgImagese}/>
-                                                        <div className={'gifts-content-box-title-bot222'}>
-                                                            <p>Сертификат</p></div>
-                                                        <div className={'gifts-content-box-title-bot333'}><p>на 10000
-                                                            рублей от М.Видео</p></div>
-                                                        <div className={'gifts-content-box-title-bot111'}>
-                                                            <p>Мы свяжемся с вами в ближайшее время и сообщим
-                                                                информацию,
-                                                                как получить приз</p></div>
-                                                    </div>)}
-                                                {prize && prize.type === 3 && (
-                                                    <div>
-                                                        <div className={'gifts-content-box-title-middle1'}>
-                                                            <p>Специальный приз</p></div>
-                                                        <img className={'gifts-content-box3-img33'} src={prizesRight}/>
-                                                        <img className={'gifts-bg-image3'} src={bgImagese}/>
-
-                                                        <div className={'gifts-content-box-title-bot2222'}>Промокод
-                                                        </div>
-                                                        <div className={'gifts-content-box-title-bot3333'}>на 3000
-                                                            рублей
-                                                        </div>
-                                                        <div className={'qr-code-number-block'}>
-                                                            {/*<a className={'qr-code-number for-special'}>{prize && prize.code || '21321521'}</a>*/}
-                                                        </div>
-                                                        <div className={'gifts-content-box-title-bot1111'}><p>Мы
-                                                            свяжемся с вами в ближайшее время и сообщим информацию,
-                                                            как получить приз</p></div>
-                                                    </div>)}
+                                    <span className={'gifts-prizes-name'}>приз</span>
+                                    <span className={'gifts-prizes-data'}>дата розыгрыша</span>
+                                    <div className="prizes-container">
+                                        <div className="prize-column">
+                                            <div className="prize-item">
+                                                <span className="prize-name">Мечталион</span>
+                                                <span className="prize-code">221234567890</span>
+                                                <button className="get-ticket-btn">Получить билет</button>
                                             </div>
-                                        ))}
+                                        </div>
+                                        <div className="draw-date-column">
+                                            <div className="draw-date">10.06.2024</div>
+                                        </div>
+                                        <div className={'line-true gifts'}></div>
                                     </div>
 
+                                    <div className="prizes-container">
+                                        <div className="prize-column">
+                                            <div className="prize-item">
+                                                <span className="prize-name">Пять-О-Пять</span>
+                                                <span className="prize-code">221234567890</span>
+                                                <button className="get-ticket-btn">Получить билет</button>
+                                            </div>
+                                        </div>
+                                        <div className="draw-date-column">
+                                            <div className="draw-date">10.06.2024</div>
+                                        </div>
+                                        <div className={'line-true gifts'}></div>
+                                    </div>
+
+                                    <div className="prizes-container">
+                                        <div className="prize-column">
+                                            <div className="prize-item">
+                                                <span className="prize-name">Великолепная 8</span>
+                                                <span className="prize-code">221234567890</span>
+                                                <button className="get-ticket-btn">Получить билет</button>
+                                            </div>
+                                        </div>
+                                        <div className="draw-date-column">
+                                            <div className="draw-date">10.06.2024</div>
+                                        </div>
+                                        <div className={'line-true gifts'}></div>
+                                    </div>
                                 </div>
-                                <div className={'backdrop-profile2 gifts-backdrop2'}></div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </main>
             <footer className={'footer'}>
+                <div className="myElementFooter">
+                </div>
                 <div className="footer-left">
+
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
                             <img className={'footer-logo'} src={ticketText}/>
@@ -467,57 +464,46 @@ const barcodeRefs = useRef([]);
                     </div>
                     <div className={'footer-medium'}>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>
+                            {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
                         </div>
                         <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`} target="_blank">Политика
-                                обработки персональных данных</a>
+                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
+                               target="_blank">Конфиденциальность</a>
                         </div>
                         <div className={'footer-row-left'}>
                             <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
-                               target="_blank">Обработка персональных данных третьими лицами</a>
+                               target="_blank">Пользовательское соглашение</a>
                         </div>
                     </div>
                 </div>
                 <div className="footer-right">
                     <div className={'footer-row1'}>
-                        <a>Общий срок проведения акции с «01» февраля 2024 года по «30» апреля 2024. Подробную
-                            информацию об организаторе акции,
-                            о правилах ее проведения, количестве призов по результатам акции, сроках, месте и порядке их
-                            вручения, уточняйте на сайте <a className={"text-nloto"}
-                                                            href={'https://nloto-promo.ru/'}>https://nloto-promo.ru</a> или
-                            по телефону
-                            горячей линии 8 (800) 333-7-333.
+                        <a>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения выигрышей № 4 («Мечталлион»),
+                            срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
+                            телефону 8 800 333-7-333.
                         </a>
                     </div>
-                    {/*<div className={'footer-row2'}>*/}
-                    {/*    <a>Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской Федерации от*/}
-                    {/*        29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г. Информация об */}
-                    {/*        организаторе лотерей, правилах их проведения, призовом фонде лотерей, количестве призов */}
-                    {/*        или выигрышей, сроках, месте и порядке их получения - на сайте www.nloto.ru и по телефону */}
-                    {/*        8 800 333-7-333. </a>*/}
-                    {/*</div>*/}
+                    <div className={'footer-row2'}>
+                        <a>Специальные призы от Redmond разыгрываются только среди билетов, купленных в «Почте
+                            России». </a>
+
+                    </div>
                     <div className={'footer-row3'}>
-                        <a>*Внешний вид подарка может отличаться от изображений, представленных в рекламных материалах.
-                            Лотереи, которые проводятся в соответствии с распоряжением Правительства Российской
-                            Федерации
-                            от 29 августа 2019 г. № 1921-р. Срок проведения лотерей – до 29.08.2034 г.
-                            Информация об организаторе лотерей, правилах их проведения, призовом фонде лотерей,
-                            количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a
-                                className={"text-nloto"} href={'https://nloto.ru/'} target="_blank">www.nloto.ru</a> и
-                            по телефону 8 (800) 333-7-333. </a>
+                        <a>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022
+                            г.,
+                            включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
                     </div>
                     <div className={'footer-row4'}>
-                        <a>Реклама. Рекламодатель: ООО «Спортивные Лотереи», ОГРН 1195027010386, ИНН 5003133760</a>
+                        <a>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН: 1195027010386, ИНН: 5003133760).</a>
                     </div>
                 </div>
-
                 <PopupTicket1/>
                 <PopupTicket2/>
                 <PopupTicket3/>
                 <PopupTicket4/>
                 <PopupTicket5/>
                 <PopupVideos/>
+                <PopupEnd/>
             </footer>
         </header>
 
