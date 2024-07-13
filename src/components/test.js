@@ -6,14 +6,14 @@ class Test extends React.Component {
     state = {
         availableTickets: 3, // Изначально у пользователя нет билетов
         list: [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
+            "Форсаж 75",
+            "Великолепная 8",
+            "Топ 12",
+            "Мечталион",
+            "Большая 8",
+            "Премьер",
+            "4х4",
+            "5из37"
         ],
         // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
         // list: ["$100","$500","$9,999","$1","$60"],
@@ -142,24 +142,25 @@ class Test extends React.Component {
 
     getColor = (index) => {
         switch(this.state.list[index]){
-            case "1":
+            case "Форсаж 75":
                 return "blue"; // синий
-            case "2":
+            case "Великолепная 8":
                 return "red"; // красный
-            case "3":
+            case "Топ 12":
                 return "yellow"; // желтый
-            case "4":
+            case "Мечталион":
                 return "blue"; // зеленый
-            case "5":
+            case "Большая 8":
                 return "red"; // зеленый
-            case "6":
+            case "Премьер":
                 return "yellow"; // зеленый
-            case "7":
+            case "4х4":
                 return "blue"; // зеленый
-            case "8":
+            case "5из37":
                 return "red"; // зеленый
             case "9":
                 return "yellow"; // зеленый
+
 
 
             default:

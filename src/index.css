@@ -544,7 +544,7 @@ header .button-animation:hover {
   font-weight: 400;
   text-align: center;
   line-height: 4.03vw;
-  z-index: 111;
+  z-index: 5;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-left: 32.2vw;
@@ -553,8 +553,8 @@ header .button-animation:hover {
 .container-profile {
   display: flex;
   flex-direction: row;
-  margin-top: 15vw;
-  margin-left: -55vw;
+  margin-top: 2.2vw;
+  margin-left: -15.7vw;
 }
 .how-button-animation-text {
   display: none;
@@ -982,14 +982,15 @@ header .button-animation:hover {
   overflow: hidden;
   margin-top: 0vw;
   margin-left: 8vw;
-  position: absolute;
+  /*position: absolute;*/
   width: 83.81vw;
-  height: 73.6vw;
+  height: auto;
+  min-height: 71vw;
   border-radius: 0 0 1.46vw 1.46vw;
   background-color: #023d6c;
   z-index: 1;
   box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
-  margin-bottom: 28vw;
+  margin-bottom: 8vw;
 }
 .right-first-block.first-block {
   border-radius: 1.4vw 0vw 0vw 1.4vw;
@@ -1155,7 +1156,8 @@ header .button-animation:hover {
   border-radius: 0 0 0.73vw 0.73vw;
   z-index: 11;
   background-size: cover;
-  margin-bottom: 10vw;
+  margin-bottom: 8vw;
+  margin-top: 2vw;
 }
 .right-second-profile-p {
   font-family: "Acrom Medium", Arial, sans-serif;
@@ -1501,7 +1503,7 @@ header .button-animation:hover {
   width: 15vw;
 }
 
-.button-animation-text{
+.button-animation-text {
   position: absolute;
   z-index: 6;
   cursor: pointer;
@@ -1509,7 +1511,7 @@ header .button-animation:hover {
   text-decoration: none;
   padding: 1.5vw 2.2vw;
   border-radius: 1.23vw;
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#DA4DA3, #783185);
   margin-left: -10.3vw;
   margin-top: 6.5vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
@@ -1517,7 +1519,7 @@ header .button-animation:hover {
   transition: background-image 0.3s ease;
 }
 .button-animation-text:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
   transition: background-image 0.8s ease-in-out;
 }
 .button-animation-text-profile {
@@ -1527,23 +1529,28 @@ header .button-animation:hover {
   text-decoration: none;
   padding: 1.8vw 1.86vw;
   border-radius: 1.23vw;
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
-  margin-left: 66vw;
-  margin-top: 6.88vw;
+  background-image: linear-gradient(#DA4DA3, #783185);
+  margin-left: 58vw;
+  margin-top: -6.12vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
   border: 0.15vw solid #FFFFFF80;
-  z-index: 5;
+  z-index: 6;
 }
 .button-animation-text-profile.click-spin {
   margin-left: -9.4vw;
   margin-top: -2.9vw;
   padding: 1.8vw 2.86vw;
 }
+.button-animation-text-profile.click-ticket-prizes {
+  margin-left: 1.6vw;
+  margin-top: -5.2vw;
+  padding: 1.1vw 1.35vw;
+}
 .global-name-move {
-  margin: 6.5vw 0vw 0vw -20.7vw;
+  margin: 8.8vw 0vw 0vw -73.4vw;
 }
 .button-animation-text-profile:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
   transition: background-image 0.8s ease-in-out;
 }
 .button-animation-text-profile b {
@@ -2537,15 +2544,15 @@ canvas#wheel-profile {
   margin-left: -26.3vw;
   border-radius: 1.21875vw;
   cursor: pointer;
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2b40a1);
+  background-image: linear-gradient(#DA4DA3, #783185);
   border: 0.15vw solid #FFFFFF80;
 
 }
 .prizes-button-check:hover {
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2b40a1);
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
 }
 .question-button-check:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
 }
 .prizes-button-check b {
   color: #FFFFFF;
@@ -2556,7 +2563,7 @@ canvas#wheel-profile {
   font-size: 1.46vw;
 }
 .prizes-button-check:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
   transition: background-image 5s ease-in-out;
 }
 
@@ -2909,6 +2916,8 @@ canvas#wheel-profile {
 }
 .prizes-container {
   display: flex;
+  margin-top: 3vw;
+  margin-bottom: -2.4vw;
 }
 
 .prize-column, .draw-date-column {
@@ -2920,45 +2929,81 @@ canvas#wheel-profile {
 }
 
 .prize-name {
+  color: white;
   display: block;
-  font-weight: bold;
   text-align: left;
-  margin-left: 9vw;
+  margin-left: 0.34vw;
+  margin-top: 0.34vw;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 
 .prize-code {
+  color: white;
   display: block;
-  color: #888;
   text-align: left;
-  margin-left: 9vw;
-  margin-bottom: 3vw;
+  margin-left: 0.34vw;
+  margin-top: 0.5vw;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+}
+.gifts-b {
+  color: #FFFFFF;
+  line-height: 1.464vw !important;
+  font-family: 'Acrom Medium', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.171vw !important;
 }
 
 .get-ticket-btn {
   position: absolute;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 0.366vw 0.732vw;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.025vw;
-  margin: -6.707vw 6.146vw;
   cursor: pointer;
-  border-radius: 0.366vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.2vw 2.26vw;
+  border-radius: 1.23vw;
+  background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
+  margin-left: 1.7vw;
+  margin-top: -5.2vw;
+  color: white;
+  font-family: 'Acrom Medium', Arial, sans-serif;
+  border: 0.15vw solid #FFFFFF80;
+  z-index: 5;
 }
 
 .draw-date {
-  font-style: italic;
+  color: white;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  margin-left: -9.46vw;
+  margin-top: 0.4vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .gifts-prizes-name {
+  color: white;
   position: absolute;
-  margin: -1vw 0vw 0vw -18vw;
+  margin: 1vw 0vw 0vw -27.3vw;
+  font-size: 1.318vw;
+  font-weight: 400;
+  line-height: 1.757vw;
+  color: white;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+
+
 }
 .gifts-prizes-data {
+  color: white;
   position: absolute;
-  margin: -1vw 1vw 0vw 10vw;
+  margin: 1vw 1vw 0vw 4.8vw;
+  font-size: 1.318vw;
+  font-weight: 400;
+  line-height: 1.757vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 
 
@@ -3746,7 +3791,7 @@ canvas#wheel-profile {
 
 }
 .select-profile.is-active .select-body-profile:hover {
-  background-color: #b7efb7;
+  background-color: #cedbf3;
   transition: background-color 0.3s ease;
 }
 
@@ -4909,42 +4954,67 @@ canvas#wheel-profile {
   background-color: #93CFFC;
   opacity: 50%;
 }
+.line-true-tickets {
+  margin: 7vw 0vw 0vw 1vw;
+  position: absolute;
+  width: 51.318vw;
+  height: 0.146vw;
+  background-color: #93CFFC;
+  opacity: 50%;
+}
 .table-cell.number {
   display: block;
-  font-weight: bold;
   text-align: left;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin-left: 3.4vw;
+  margin-right: 1.3vw;
 
 }
 .table-cell.data {
   display: block;
-  font-weight: bold;
   text-align: left;
-  margin-left: 2vw;
+  margin-left: -2vw;
+  margin-right: -3vw;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 
 }
-.table-cell.status{
-  width: 22vw;
+.table-cell.status {
+  width: 33vw;
   display: block;
-  font-weight: bold;
   text-align: left;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 
 }
 .table-cell {
   display: inline-block;
   width: 30%;
   box-sizing: border-box;
+  font-size: 1.757vw;
+  font-weight: 400;
+  line-height: 2.343vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .number, .data, .status {
   display: block;
-  padding: 10px; /* Add padding as needed */
+  padding: 0.732vw;
+
 }
 .table-row {
   display: flex;
   justify-content: space-between;
-  margin-left: -11vw;
+  margin-left: -3vw;
 }
 .line-true.gifts {
-  margin: 3vw 0vw 0vw 1vw;
+  margin: 7vw 0vw 0vw 1vw;
   position: absolute;
   width: 51.318vw;
   height: 0.146vw;
@@ -4992,10 +5062,11 @@ canvas#wheel-profile {
 }
 .colm-text-ticket {
   /*text-transform: uppercase;*/
-  font-size: 1.17vw;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.318vw;
   font-weight: 400;
-  line-height: 1.63vw;
+  line-height: 1.757vw;
+  color: white;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .colm-ticket-none {
   display: none;

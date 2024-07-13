@@ -1,6 +1,6 @@
 import tickettext from "../../image/tickettext.png";
 import ticketText from "../../image/tickettext.png";
-import users from "../../image/users-logo.png";
+import users from "../../image/img_71.png";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import React, {useEffect, useRef, useState} from "react";
 import snake from "../../image/snake.png";

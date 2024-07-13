@@ -1,6 +1,6 @@
 import tickettext from "../../image/tickettext.png";
 import ticketText from "../../image/tickettext.png";
-import users from "../../image/users-logo.png";
+import users from "../../image/img_71.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
 import fullhearth from "../../image/full-hearth.png";
@@ -251,7 +251,7 @@ export default function Profile(props){
             <main>
                 <div className={'main-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
-                        <div className={'items-block-profile'}></div>
+                        <div className={'items-block-profile'}>
                         <div className={'global-name'}>
                             <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
@@ -394,7 +394,7 @@ export default function Profile(props){
                             </div>
                         </div>
 
-
+                        </div>
                     </div>
                 </div>
             </main>

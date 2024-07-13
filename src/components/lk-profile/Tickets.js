@@ -1,6 +1,6 @@
 import tickettext from "../../image/tickettext.png";
 import ticketText from "../../image/tickettext.png";
-import users from "../../image/users-logo.png";
+import users from "../../image/img_71.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
 import fullhearth from "../../image/full-hearth.png";
@@ -230,7 +230,7 @@ export default function Tickets(){
             <main>
                 <div className={'main-tickets main-items-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
-                        <div className={'items-block-profile'}></div>
+                        <div className={'items-block-profile'}>
                         <div className={'global-name'}>
                             <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
@@ -387,24 +387,65 @@ export default function Tickets(){
                                                                         <br></br> Дата розыграша: 1.06.2024
                                                                     </div>
                                                                 </div>
-                                                                <div className={'line-true'}></div>
+                                                                <div className={'line-true-tickets'}></div>
                                                             </div>
                                                         </div>
                                                         <div className={'table-body-ticket'}>
                                                             <div className={'centered-ticket-wrapper'}>
                                                                 <div className="table-row">
-                                                                    <div className="table-cell number">2212345412
+                                                                    <div className="table-cell number">221234567890
                                                                     </div>
-                                                                    <div className="table-cell data">1.06.2024</div>
+                                                                    <div className="table-cell data">10.06.2024</div>
                                                                     <div className="table-cell status">Принял участие в
                                                                         розыгрыше
                                                                         <br></br> Дата розыграша: 1.06.2024
                                                                     </div>
                                                                 </div>
-                                                                <div className={'line-true'}></div>
+                                                                <div className={'line-true-tickets'}></div>
                                                             </div>
                                                         </div>
-
+                                                        <div className={'table-body-ticket'}>
+                                                            <div className={'centered-ticket-wrapper'}>
+                                                                <div className="table-row">
+                                                                    <div className="table-cell number">221234567890
+                                                                    </div>
+                                                                    <div className="table-cell data">10.06.2024</div>
+                                                                    <div className="table-cell status">Принял участие в
+                                                                        розыгрыше
+                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                    </div>
+                                                                </div>
+                                                                <div className={'line-true-tickets'}></div>
+                                                            </div>
+                                                        </div>
+                                                        <div className={'table-body-ticket'}>
+                                                            <div className={'centered-ticket-wrapper'}>
+                                                                <div className="table-row">
+                                                                    <div className="table-cell number">221234567890
+                                                                    </div>
+                                                                    <div className="table-cell data">10.06.2024</div>
+                                                                    <div className="table-cell status">Принял участие в
+                                                                        розыгрыше
+                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                    </div>
+                                                                </div>
+                                                                <div className={'line-true-tickets'}></div>
+                                                            </div>
+                                                        </div>
+                                                        <div className={'table-body-ticket'}>
+                                                            <div className={'centered-ticket-wrapper'}>
+                                                                <div className="table-row">
+                                                                    <div className="table-cell number">221234567890
+                                                                    </div>
+                                                                    <div className="table-cell data">10.06.2024</div>
+                                                                    <div className="table-cell status">Принял участие в
+                                                                        розыгрыше
+                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                    </div>
+                                                                </div>
+                                                                <div className={'line-true-tickets'}></div>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
                                                 </div>
@@ -416,7 +457,7 @@ export default function Tickets(){
                             </div>
                         </div>
 
-
+                    </div>
                     </div>
                 </div>
             </main>

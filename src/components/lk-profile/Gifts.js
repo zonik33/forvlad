@@ -1,6 +1,6 @@
 import tickettext from "../../image/tickettext.png";
 import ticketText from "../../image/tickettext.png";
-import users from "../../image/users-logo.png";
+import users from "../../image/img_71.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
 import fullhearth from "../../image/full-hearth.png";
@@ -273,7 +273,7 @@ export default function Gifts() {
             <main>
                 <div className={'main-gifts'} id={'main-gifts'}>
                     <div className={'main-items main-items-profile'}>
-                        <div className={'items-block-profile'}></div>
+                        <div className={'items-block-profile'}>
                         <div className={'global-name'}>
                             <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
@@ -402,7 +402,7 @@ export default function Gifts() {
                                     {/*</div>*/}
                                 </div>
                                 <div className={'right-second-profile-gifts'}>
-                                    <p className={'right-second-gifts-p'}>Ваши подарки</p>
+                                    {/*<p className={'right-second-gifts-p'}>Ваши подарки</p>*/}
                                     <span className={'gifts-prizes-name'}>приз</span>
                                     <span className={'gifts-prizes-data'}>дата розыгрыша</span>
                                     <div className="prizes-container">
@@ -410,7 +410,8 @@ export default function Gifts() {
                                             <div className="prize-item">
                                                 <span className="prize-name">Мечталион</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <button className="get-ticket-btn">Получить билет</button>
+                                                <button className="button-animation-text-profile click-ticket-prizes">
+                                                    <b className={'gifts-b'}>Получить билет</b></button>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
@@ -424,7 +425,8 @@ export default function Gifts() {
                                             <div className="prize-item">
                                                 <span className="prize-name">Пять-О-Пять</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <button className="get-ticket-btn">Получить билет</button>
+                                                <button className="button-animation-text-profile click-ticket-prizes">
+                                                    <b className={'gifts-b'}>Получить билет</b></button>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
@@ -438,17 +440,19 @@ export default function Gifts() {
                                             <div className="prize-item">
                                                 <span className="prize-name">Великолепная 8</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <button className="get-ticket-btn">Получить билет</button>
+                                                <button className="button-animation-text-profile click-ticket-prizes">
+                                                    <b className={'gifts-b'}>Получить билет</b></button>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
-                                            <div className="draw-date">10.06.2024</div>
+                                        <div className="draw-date">10.06.2024</div>
                                         </div>
                                         <div className={'line-true gifts'}></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </main>

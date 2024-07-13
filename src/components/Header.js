@@ -1,4 +1,4 @@
-import users from '../image/users-logo.png'
+import users from '../image/img_71.png'
 import ticket from '../image/ticket.png'
 import tickettext from '../image/tickettext.png'
 import ScrollPrizes from "./Scroll/ScrollPrizes";
@@ -12,7 +12,7 @@ import PopupPassRecovery from "./PopapAuth/PopupPassRecovery";
 import {Link} from "react-router-dom";
 import Main from "./Main";
 import Footer from "./Footer";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import PopupRegisterCopy from "./PopupReg/PopupRegisterCopy";
 import PopupEnd from "./PopupTicket/PopupEnd";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
@@ -114,14 +114,29 @@ export default function Header (props){
             checkGuestStatus();
         }
     }, []);
+    const handleImageClick = () => {
+        window.location.href = '/'
+    };
     return(
 
         <header className={'header'}>
             <div className={'container'}>
                 <div className={'content'}>
                     <div className={'logo-content'}>
-                        <img className={'logo'} src={ticket}/>
-                        <img className={'logo-text'} src={tickettext}/>
+                        <Link to="">
+                            <img className={'logo'} src={ticket}
+                                 alt="Logo"
+                                 onMouseOver={() => { /* Обработчик наведения на картинку */
+                                 }}
+                                 onClick={handleImageClick}/>
+                        </Link>
+                        <Link to="">
+                            <img className={'logo-text'} src={tickettext}
+                                 alt="Logo"
+                                 onMouseOver={() => { /* Обработчик наведения на картинку */
+                                 }}
+                                 onClick={handleImageClick}/>
+                        </Link>
                         <div className={'header-burger'} onClick={toggleMenu}>
                             <span className={'span-burger'}></span>
                         </div>
