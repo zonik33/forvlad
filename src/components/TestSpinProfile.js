@@ -6,14 +6,14 @@ class TestForSpin extends React.Component {
     state = {
         availableTickets: 3, // Изначально у пользователя нет билетов
         list: [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
+            "Форсаж 75",
+            "Великолепная 8",
+            "Топ 12",
+            "Мечталион",
+            "Большая 8",
+            "Премьер",
+            "4х4",
+            "5из37"
         ],
         // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
         // list: ["$100","$500","$9,999","$1","$60"],
@@ -88,16 +88,36 @@ class TestForSpin extends React.Component {
         let hubRadius = 10;  // Adjust the hub radius as needed
 
         switch (color) {
-            case "blue":
-                borderColor = "blue";
+            case "fors":
+                borderColor = "#7642d0";
                 borderWidth = 55;
                 break;
-            case "red":
-                borderColor = "red";
+            case "vel8":
+                borderColor = "#019221";
                 borderWidth = 55;
                 break;
-            case "yellow":
-                borderColor = "yellow";
+            case "top12":
+                borderColor = "#70c8eb";
+                borderWidth = 55;
+                break;
+            case "mecht":
+                borderColor = "#0059a7";
+                borderWidth = 55;
+                break;
+            case "big8":
+                borderColor = "#fcb600";
+                borderWidth = 55;
+                break;
+            case "prem":
+                borderColor = "#5e67fd";
+                borderWidth = 55;
+                break;
+            case "4x4":
+                borderColor = "#00e0d6";
+                borderWidth = 55;
+                break;
+            case "5z37":
+                borderColor = "#5e67fd";
                 borderWidth = 55;
                 break;
             default:
@@ -134,24 +154,24 @@ class TestForSpin extends React.Component {
 
     getColor = (index) => {
         switch(this.state.list[index]){
-            case "1":
-                return "blue"; // синий
-            case "2":
-                return "red"; // красный
-            case "3":
-                return "yellow"; // желтый
-            case "4":
-                return "blue"; // зеленый
-            case "5":
-                return "red"; // зеленый
-            case "6":
-                return "yellow"; // зеленый
-            case "7":
-                return "blue"; // зеленый
-            case "8":
-                return "red"; // зеленый
+            case "Форсаж 75":
+                return "fors"; // синий
+            case "Великолепная 8":
+                return "vel8"; // красный
+            case "Топ 12":
+                return "top12"; // желтый
+            case "Мечталион":
+                return "mecht"; // зеленый
+            case "Большая 8":
+                return "big8"; // зеленый
+            case "Премьер":
+                return "prem"; // зеленый
+            case "4х4":
+                return "4x4"; // зеленый
+            case "5из37":
+                return "5z37"; // зеленый
             case "9":
-                return "yellow"; // зеленый
+                return "9"; // зеленый
 
 
             default:

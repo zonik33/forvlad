@@ -2326,7 +2326,7 @@ canvas#wheel-profile {
   width: 0.5em;
   height: 0.5em;
   border-radius: 1em;
-  background: purple;
+  background: #9665d7;
   margin-top: 17.4vw;
   margin-left: 17.4vw;
   z-index: 104;
@@ -2338,7 +2338,7 @@ canvas#wheel-profile {
   width: 2em;
   height: 2em;
   border-radius: 1em;
-  background: #3e023e;
+  background: #5e3692;
   margin-top: 17.4vw;
   margin-left: 17.4vw;
   z-index: 103;
@@ -2350,7 +2350,7 @@ canvas#wheel-profile {
   width: 5em;
   height: 5em;
   border-radius: 2.5em;
-  background: purple;
+  background: #7a3bcb;
   margin-top: 17.4vw;
   margin-left: 17.4vw;
   z-index: 102;
@@ -2362,7 +2362,7 @@ canvas#wheel-profile {
   width: 6em;
   height: 6em;
   border-radius: 3em;
-  background: #3e023e;
+  background: #4f2d7a;
   margin-top: 17.4vw;
   margin-left: 17.4vw;
   z-index: 101;
@@ -2374,7 +2374,7 @@ canvas#wheel-profile {
   width: 0.5em;
   height: 0.5em;
   border-radius: 1em;
-  background: purple;
+  background: #9665d7;
   margin-top: 7.2vw;
   margin-left: -25.3vw;
   z-index: 104;
@@ -2386,7 +2386,7 @@ canvas#wheel-profile {
   width: 1.5em;
   height: 1.5em;
   border-radius: 2em;
-  background: #3e023e;
+  background: #5e3692;
   margin-top: 7.2vw;
   margin-left: -25.3vw;
   z-index: 103;
@@ -2398,7 +2398,7 @@ canvas#wheel-profile {
   width: 3.5em;
   height: 3.5em;
   border-radius: 2em;
-  background: purple;
+  background: #7a3bcb;
   margin-top: 7.2vw;
   margin-left: -25.3vw;
   z-index: 102;
@@ -2410,7 +2410,7 @@ canvas#wheel-profile {
   width: 4.3em;
   height: 4.3em;
   border-radius: 2em;
-  background: #3e023e;
+  background: #4f2d7a;
   margin-top: 7.2vw;
   margin-left: -25.32vw;
   z-index: 101;
