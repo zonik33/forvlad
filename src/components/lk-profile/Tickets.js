@@ -304,7 +304,7 @@ export default function Tickets(){
                                         <TestForSpin/>
                                     </div>
                                     <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
-                                        <b>Разыграть приз</b> </a>
+                                        <b>Крутануть</b> </a>
                                 </div>
                             </div>
                             <div className="right-column-profile">
@@ -367,13 +367,13 @@ export default function Tickets(){
                                                     <div className={'table-ticket'}>
                                                         <div className={'table-head-ticket'}>
                                                             <div className={'head-colm-prize-ticket'}>
-                                                                <div className={'colm-text-ticket'}> номер билета</div>
+                                                                <div className={'colm-text-ticket'}> Номер билета</div>
                                                             </div>
                                                             <div className={'head-colm-phone-ticket'}>
-                                                                <div className={'colm-text-ticket'}> дата</div>
+                                                                <div className={'colm-text-ticket'}> Дата</div>
                                                             </div>
                                                             <div className={'head-colm-date-ticket'}>
-                                                                <div className={'colm-text-ticket'}> статус</div>
+                                                                <div className={'colm-text-ticket'}> Статус</div>
                                                             </div>
                                                         </div>
                                                         <div className={'table-body-ticket'}>

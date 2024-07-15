@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component, useEffect, useRef, useState} from 'react'
 
 import spin from '../image/spin-img.png'
+import spinmain from '../image/spin-main.png'
 import vel8 from '../image/img_78.png'
 import top12 from '../image/img_79.png'
 import mecht from '../image/img_77.png'
@@ -9,8 +10,32 @@ import prem from '../image/img_75.png'
 import m4x4 from '../image/img_74.png'
 import m5x37 from '../image/img_72.png'
 import fors from '../image/img_73.png'
+const RotatingImage = ({ src }) => {
+    const imageRef = useRef();
+    const [rotation, setRotation] = useState(0);
+    const [isRotating, setIsRotating] = useState(true);
 
+    const rotateImage = () => {
+        if (isRotating) {
+            const newRotation = (rotation + 1) % 360;
+            setRotation(newRotation);
+            imageRef.current.style.transform = `rotate(${newRotation}deg)`;
+            requestAnimationFrame(rotateImage);
+        }
+    };
+
+    useEffect(() => {
+        rotateImage();
+    }, [isRotating]); // Запускать/останавливать анимацию в зависимости от isRotating
+
+    const toggleRotation = () => {
+        setIsRotating(!isRotating);
+    };
+}
 class Test extends React.Component {
+
+
+
     state = {
         availableTickets: 3, // Изначально у пользователя нет билетов
         list: [
@@ -39,7 +64,7 @@ class Test extends React.Component {
     componentDidMount() {
         // generate canvas wheel on load
         this.renderWheel();
-        this.autoSpinInterval = setInterval(this.spin, 5000); // каждые 5 секунд
+        // this.autoSpinInterval = setInterval(this.spin, 5000); // каждые 5 секунд
     }
     componentWillUnmount() {
         clearInterval(this.autoSpinInterval); // Очистить интервал перед размонтированием компонента
@@ -353,8 +378,12 @@ class Test extends React.Component {
             spinning: false
         });
     };
+
+
+
     render() {
         return (
+
             <div className="Appspin">
                 <div className={'selectorspin-container'}>
                     <span id="selectorspin">&#9660;</span>
@@ -366,8 +395,11 @@ class Test extends React.Component {
                     <span id="wheel-center-4"></span>
                 </div>
                 <img className={'users-logo-spin'} src={spin}/>
+                <img className={'users-logo-spin spin-main rotating-img'} id={'wheel-test-spin-1'} src={spinmain}
+                     alt="Rotating Image"/>
                 <canvas
                     id="wheel"
+                    width="500"
                     width="500"
                     height="500"
                     style={{

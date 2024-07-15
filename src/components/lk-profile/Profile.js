@@ -336,7 +336,7 @@ export default function Profile(props){
                                     <a
                                         onClick={() => openPopup('AddCode')}
                                         className={'button-animation-text-profile click-spin'}>
-                                        <b>Разыграть приз</b> </a>
+                                        <b>Крутануть</b> </a>
                                     {isPopupOpen === 'AddCode' &&
                                         <PopupAddSpin showPopup={true} closeModal={closePopup}/>}
                                 </div>

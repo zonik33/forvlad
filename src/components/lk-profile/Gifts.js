@@ -347,7 +347,7 @@ export default function Gifts() {
                                         <TestForSpin/>
                                     </div>
                                     <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
-                                        <b>Разыграть приз</b> </a>
+                                        <b>Крутануть</b> </a>
                                 </div>
                             </div>
                             <div className="right-column-profile">
@@ -403,8 +403,8 @@ export default function Gifts() {
                                 </div>
                                 <div className={'right-second-profile-gifts'}>
                                     {/*<p className={'right-second-gifts-p'}>Ваши подарки</p>*/}
-                                    <span className={'gifts-prizes-name'}>приз</span>
-                                    <span className={'gifts-prizes-data'}>дата розыгрыша</span>
+                                    <span className={'gifts-prizes-name'}>Приз</span>
+                                    <span className={'gifts-prizes-data'}>Итоги розыгрыша рулетки</span>
                                     <div className="prizes-container">
                                         <div className="prize-column">
                                             <div className="prize-item">

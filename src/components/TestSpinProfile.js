@@ -9,6 +9,7 @@ import prem from '../image/img_75.png'
 import m4x4 from '../image/img_74.png'
 import m5x37 from '../image/img_72.png'
 import fors from '../image/img_73.png'
+import spinmain from "../image/spin-main.png";
 
 class TestForSpin extends React.Component {
     state = {
@@ -365,6 +366,8 @@ class TestForSpin extends React.Component {
                     <span id="wheel-center-4-test"></span>
                 </div>
                 <img className={'users-logo-spin spin-test'} src={spin}/>
+                {/*<img className={'users-logo-spin spin-main-profile rotating-img'} id={'wheel-test-spin-1'} src={spinmain}*/}
+                {/*     alt="Rotating Image"/>*/}
                 <canvas
                     id="wheel-profile"
                     width="500"

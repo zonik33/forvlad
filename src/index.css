@@ -980,7 +980,7 @@ header .button-animation:hover {
 }
 .items-block-profile {
   overflow: hidden;
-  margin-top: 0vw;
+  margin-top: 0.1vw;
   margin-left: 8vw;
   /*position: absolute;*/
   width: 83.81vw;
@@ -1537,7 +1537,7 @@ header .button-animation:hover {
   z-index: 6;
 }
 .button-animation-text-profile.click-spin {
-  margin-left: -9.4vw;
+  margin-left: -7.7vw;
   margin-top: -2.9vw;
   padding: 1.8vw 2.86vw;
 }
@@ -2078,6 +2078,77 @@ header .button-animation:hover {
   height: auto;
   margin: 6.5vw 0vw 0vw 39.4vw;
 }
+.users-logo-spin.spin-main {
+  width: 28.2vw;
+  margin: 8.3vw 0vw 0vw 41.2vw;
+  z-index: 515;
+}
+.users-logo-spin.spin-main-profile {
+  width: 22.2vw;
+  margin: 2.3vw 0vw 0vw 41.2vw;
+  z-index: 515;
+}
+@keyframes rotateWithDelay {
+  0% {
+    transform: rotate(0deg); /* Начинаем с 0 градусов */
+  }
+  9% {
+    transform: rotate(0deg); /* Задержка после первого цикла */
+  }
+  12% {
+    transform: rotate(77deg); /* Начало второго цикла */
+  }
+  21% {
+    transform: rotate(77deg); /* Задержка после второго цикла */
+  }
+  24% {
+    transform: rotate(111deg); /* Начало третьего цикла */
+  }
+  33% {
+    transform: rotate(111deg); /* Задержка после третьего цикла */
+  }
+  36% {
+    transform: rotate(144deg); /* Начало четвертого цикла */
+  }
+  45% {
+    transform: rotate(144deg); /* Задержка после четвертого цикла */
+  }
+  48% {
+    transform: rotate(199deg); /* Начало пятого цикла */
+  }
+  57% {
+    transform: rotate(199deg); /* Задержка после пятого цикла */
+  }
+  60% {
+    transform: rotate(233deg); /* Начало шестого цикла */
+  }
+  69% {
+    transform: rotate(233deg); /* Задержка после шестого цикла */
+  }
+  72% {
+    transform: rotate(288deg); /* Начало седьмого цикла */
+  }
+  81% {
+    transform: rotate(288deg); /* Задержка после седьмого цикла */
+  }
+  84% {
+    transform: rotate(322deg); /* Начало восьмого цикла */
+  }
+  93% {
+    transform: rotate(322deg); /* Задержка после восьмого цикла */
+  }
+  100% {
+    transform: rotate(360deg); /* Завершение вращения */
+  }
+}
+
+.rotating-img {
+  animation: rotateWithDelay 30s ease-in-out infinite; /* Анимация воспроизводится восемь раз от 0 до 360 градусов с общим временем анимации 36 секунд */
+}
+
+.rotating-img:nth-child(2) {
+  animation-delay: 2s; /* Задержка в 5 секунд после начала анимации для второго изображения */
+}
 .users-logo-spin.spin-test {
   position: absolute;
   width: 22vw;
@@ -2197,7 +2268,7 @@ header .button-animation:hover {
 }
 .items-block-how-error {
   overflow: hidden;
-  margin-top: 0vw;
+  margin-top: 0.1vw;
   margin-left: 8vw;
   position: absolute;
   width: 83.81vw;
@@ -2309,7 +2380,7 @@ canvas#wheel-profile {
   margin-top: -1.14vw;
   margin-left: 14.6vw;
   font-size: 5.678vw;
-  z-index: 6;
+  z-index: 516;
 }
 #selectorspintest {
   color: #d52976;
@@ -2368,7 +2439,7 @@ canvas#wheel-profile {
   z-index: 101;
 }
 #wheel-center-test {
-  cursor: pointer;
+  /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   width: 0.5em;
@@ -2380,7 +2451,7 @@ canvas#wheel-profile {
   z-index: 104;
 }
 #wheel-center-2-test {
-  cursor: pointer;
+  /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   width: 1.5em;
@@ -2392,7 +2463,7 @@ canvas#wheel-profile {
   z-index: 103;
 }
 #wheel-center-3-test {
-  cursor: pointer;
+  /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   width: 3.5em;
@@ -2404,7 +2475,7 @@ canvas#wheel-profile {
   z-index: 102;
 }
 #wheel-center-4-test {
-  cursor: pointer;
+  /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   width: 4.3em;
@@ -4351,7 +4422,7 @@ canvas#wheel-profile {
 .popup-start {
   background-color: #FFFFFF4D;
   width: 34.6vw;
-  height: 30.99vw;
+  height: 25.99vw;
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
@@ -4646,17 +4717,17 @@ canvas#wheel-profile {
 
 #tooltip {
   position: absolute;
-  top: 0;
+  top: 4vw;
   right: 0;
   transform: translate(-100%, -83%);
   width: 25.33vw;
-  height: 10.86vw;
+  height: 10.36vw;
   background-color: #fff;
   border: 0.15vw solid #ccc;
   border-right: none;
   border-radius: 1.5vw;
   padding: 0.73vw;
-  background-image: url("./image/img_20.png");
+  background-image: url("./image/img_83.png");
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0; /* Начальная непрозрачность блока */
@@ -4772,7 +4843,7 @@ canvas#wheel-profile {
   margin-bottom: 3vw;
 }
 .popup .popup-h1 {
-  margin-bottom: 3vw;
+  margin-bottom: 0vw;
 }
 
 .popup-end .popup-h1 {
@@ -4860,7 +4931,7 @@ canvas#wheel-profile {
   font-size: 1.46vw;
   line-height: 1.46vw;
   font-weight: 400;
-  margin-top: -2vw;
+  margin-top: -3vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
