@@ -6,7 +6,7 @@ import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
 
 export default function PopupAddSpin(props) {
-    const { showPopup, closeModal } = props;
+    const { isOpen, closeModal } = props;
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [registrationError, setRegistrationError] = useState('');
     const [registrationErrorEm, setRegistrationErrorEm] = useState('');
@@ -65,11 +65,11 @@ export default function PopupAddSpin(props) {
                ref={popupRef}
                className={{
                    base: 'Modal-add',
-                   afterOpen: showPopup ? 'ReactModal__Overlay--after-open' : '',
-                   beforeClose: showPopup ? 'ReactModal__Overlay--before-close' : '',
+                   afterOpen: isOpen ? 'ReactModal__Overlay--after-open' : '',
+                   beforeClose: isOpen ? 'ReactModal__Overlay--before-close' : '',
                }}
                overlayClassName="Overlay"
-               isOpen={showPopup}
+               isOpen={isOpen}
                onRequestClose={closeModal}
                style={{
                    overlay: {

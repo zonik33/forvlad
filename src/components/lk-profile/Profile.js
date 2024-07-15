@@ -29,6 +29,7 @@ import howCenterIcon from "../../image/img_58.png";
 import Test from "../test";
 import TestForSpin from "../TestSpinProfile";
 import PopupAddSpin from "../PopupTicket/PopupAddSpin";
+import Popup from "../PopupReg/Popup";
 
 
 
@@ -198,6 +199,9 @@ export default function Profile(props){
         document.getElementById("popup-ticket1").style.display = "block";
         document.body.classList.add("no-scroll");
     }
+    function openPopup1() {
+        setIsPopupOpen(true);
+    }
     const closePopup = () => {
         setIsPopupOpen(false);
         document.body.classList.remove("no-scroll");
@@ -334,11 +338,11 @@ export default function Profile(props){
                                         <TestForSpin/>
                                     </div>
                                     <a
-                                        onClick={() => openPopup('AddCode')}
+                                        onClick={openPopup1}
                                         className={'button-animation-text-profile click-spin'}>
                                         <b>Крутануть</b> </a>
-                                    {isPopupOpen === 'AddCode' &&
-                                        <PopupAddSpin showPopup={true} closeModal={closePopup}/>}
+                                    {isPopupOpen &&
+                                        <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
                                 </div>
                             </div>
                             <div className="right-column-profile">
