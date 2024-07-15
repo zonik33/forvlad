@@ -199,38 +199,38 @@ export default function PopupTicket1 (props) {
             <div className={'blur-filter'}>
                 <div className="popup-ticket1 popup-start" id={'popup-content'}>
                     <span className="close" onClick={closePopup2}>&times;</span>
-                    <form id={'form-add-ticket4'} className={'form-register'}>
-                        <label className={'bilet-ticket-5-p try-fix'}>Регистрация пользователей и билетов
-                            завершена.</label>
-                    </form>
-
-
-                    {/*<form action={'https://nloto-promo.ru/backend/api/ticket'}*/}
-                    {/*      id={'form-add-ticket1'} className={'form-register'}*/}
-                    {/*    onSubmit={addTicket}>*/}
-                    {/*    <h1 className={'popup-h1'}>Регистрация билета</h1>*/}
-                    {/*    <div className={'form-group-password'}>*/}
-                    {/*        <div>*/}
-                    {/*            <label className={'left-label'}>Введите номер билета</label>*/}
-                    {/*            <label className={'right-label'}>*/}
-                    {/*                <a onClick={toggleTooltip}> Где найти номер?</a>*/}
-                    {/*            </label>*/}
-
-                    {/*        </div>*/}
-                    {/*        <TicketInput registrationError={registrationError}/>*/}
-                    {/*        {registrationError &&  <div className={'error-block-for-ticket'} style={{color: '#FFFFFF'}}>{registrationError}</div>}*/}
-                    {/*        <span id="nameError" className="error"></span>*/}
-                    {/*    </div>*/}
-                    {/*    <a className={'decl-text decl-pluse'}> Если при покупке лотерейного билета вы <br></br>указали свой номер*/}
-                    {/*        мобильного телефона,*/}
-                    {/*        <br></br>то такой билет участвует в акции <br></br>«Отмечайте на здоровье»*/}
-                    {/*        <br></br>автоматически и уже отображается*/}
-                    {/*        <br></br>в <a href={'https://nloto-promo.ru/profile'} className={'text-nloto'}>личном кабинете</a>.*/}
-                    {/*    </a>*/}
-                    {/*    <button type={'submit'} id={'submit-add-ticket'}*/}
-                    {/*            className={'button-animation-code'}>ЗАРЕГИСТРИРОВАТЬ БИЛЕТ</button>*/}
-
+                    {/*<form id={'form-add-ticket4'} className={'form-register'}>*/}
+                    {/*    <label className={'bilet-ticket-5-p try-fix'}>Регистрация пользователей и билетов*/}
+                    {/*        завершена.</label>*/}
                     {/*</form>*/}
+
+
+                    <form action={'https://nloto-proasdasmo.ru/backend/api/ticket'}
+                          id={'form-add-ticket1'} className={'form-register'}
+                        onSubmit={addTicket}>
+                        <h1 className={'popup-h1'}>Регистрация билета</h1>
+                        <div className={'form-group-password'}>
+                            <div>
+                                <label className={'left-label'}>Введите номер билета</label>
+                                <label className={'right-label'}>
+                                    <a onClick={toggleTooltip}> Где найти номер?</a>
+                                </label>
+
+                            </div>
+                            <TicketInput registrationError={registrationError}/>
+                            {registrationError &&  <div className={'error-block-for-ticket'} style={{color: '#FFFFFF'}}>{registrationError}</div>}
+                            <span id="nameError" className="error"></span>
+                        </div>
+                        {/*<a className={'decl-text decl-pluse'}> Если при покупке лотерейного билета вы <br></br>указали свой номер*/}
+                        {/*    мобильного телефона,*/}
+                        {/*    <br></br>то такой билет участвует в акции <br></br>«Отмечайте на здоровье»*/}
+                        {/*    <br></br>автоматически и уже отображается*/}
+                        {/*    <br></br>в <a href={'https://nloto-promo.ru/profile'} className={'text-nloto'}>личном кабинете</a>.*/}
+                        {/*</a>*/}
+                        <button type={'submit'} id={'submit-add-ticket'}
+                                className={'button-animation-code'}>ЗАРЕГИСТРИРОВАТЬ БИЛЕТ</button>
+
+                    </form>
 
 
                 </div>

@@ -1,19 +1,27 @@
 import React, { Component } from 'react'
 
 import spin from '../image/spin-img.png'
+import vel8 from '../image/img_78.png'
+import top12 from '../image/img_79.png'
+import mecht from '../image/img_77.png'
+import big8 from '../image/img_76.png'
+import prem from '../image/img_75.png'
+import m4x4 from '../image/img_74.png'
+import m5x37 from '../image/img_72.png'
+import fors from '../image/img_73.png'
 
 class TestForSpin extends React.Component {
     state = {
         availableTickets: 3, // Изначально у пользователя нет билетов
         list: [
-            "Форсаж 75",
-            "Великолепная 8",
-            "Топ 12",
-            "Мечталион",
-            "Большая 8",
-            "Премьер",
-            "4х4",
-            "5из37"
+            top12,
+            mecht,
+            big8,
+            prem,
+            m4x4,
+            m5x37,
+            fors,
+            vel8,
         ],
         // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
         // list: ["$100","$500","$9,999","$1","$60"],
@@ -32,6 +40,14 @@ class TestForSpin extends React.Component {
         // generate canvas wheel on load
         this.renderWheel();
     }
+    componentWillUnmount() {
+        clearInterval(this.autoSpinInterval); // Очистить интервал перед размонтированием компонента
+    }
+    autoSpin = () => {
+        if (!this.state.spinning) { // если вращение уже не происходит
+            this.spin();
+        }
+    }
 
     renderWheel() {
         let numOptions = this.state.list.length;
@@ -44,8 +60,8 @@ class TestForSpin extends React.Component {
 
         let angle = 0;
         for (let i = 0; i < numOptions; i++) {
-            let text = this.state.list[i];
-            this.renderSector(i + 1, text, angle, arcSize, this.getColor(i));
+            let imageUrl = this.state.list[i]; // Получаем URL-адрес изображения из вашего списка
+            this.renderSector(i + 1, imageUrl, angle, arcSize, this.getColor(i));
             angle += arcSize;
         }
     }
@@ -78,10 +94,9 @@ class TestForSpin extends React.Component {
         });
     };
 
-    renderSector(index, text, start, arc, color) {
+    renderSector(index, image, start, arc, color) {
         let canvas = document.getElementById("wheel-profile");
         let ctx = canvas.getContext("2d");
-
 
         let borderColor = "black";  // Default border color
         let borderWidth = 4; // Default border width
@@ -91,34 +106,125 @@ class TestForSpin extends React.Component {
             case "fors":
                 borderColor = "#7642d0";
                 borderWidth = 55;
+
+                let img1 = new Image();
+                img1.src = image;
+                img1.onload = function() {
+                    ctx.save(); // Save the current state of the context
+                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
+                    ctx.rotate(Math.PI / 100 * -6); // Rotate the context by a small angle (-4 degrees in this example)
+                    let percentageWidth = 110; // Percentage of the canvas width
+                    let percentageHeight = 135; // Percentage of the canvas height
+                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
+                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
+                    ctx.drawImage(img1, - -13, -120, width, height); // Draw the image with the calculated size and offset
+                    ctx.restore(); // Restore the saved state
+                };
                 break;
             case "vel8":
                 borderColor = "#019221";
                 borderWidth = 55;
+                let img2 = new Image();
+                img2.src = image;
+                img2.onload = function() {
+                    ctx.drawImage(img2, x - -35, y - 55, 100, 50);
+                };
+
                 break;
             case "top12":
                 borderColor = "#70c8eb";
                 borderWidth = 55;
+                let img3 = new Image();
+                img3.src = image;
+                img3.onload = function() {
+                    ctx.drawImage(img3, x - -45, y - -10, 80, 55);
+                };
                 break;
             case "mecht":
                 borderColor = "#0059a7";
                 borderWidth = 55;
+                let img4 = new Image();
+                img4.src = image;
+                img4.onload = function() {
+                    ctx.save(); // Save the current state of the context
+                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
+                    ctx.rotate(Math.PI / 100 * 2); // Rotate the context by a small angle (-4 degrees in this example)
+                    let percentageWidth = 110; // Percentage of the canvas width
+                    let percentageHeight = 135; // Percentage of the canvas height
+                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
+                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
+                    ctx.drawImage(img4, - -10, - -40, width, height); // Draw the image with the calculated size and offset
+                    ctx.restore(); // Restore the saved state
+                };
                 break;
             case "big8":
                 borderColor = "#fcb600";
                 borderWidth = 55;
+                let img5 = new Image();
+                img5.src = image;
+                img5.onload = function() {
+                    ctx.save(); // Save the current state of the context
+                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
+                    ctx.rotate(Math.PI / 100 * -2); // Rotate the context by a small angle (-4 degrees in this example)
+                    let percentageWidth = 150; // Percentage of the canvas width
+                    let percentageHeight = 135; // Percentage of the canvas height
+                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
+                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
+                    ctx.drawImage(img5, - 93, - -35, width, height); // Draw the image with the calculated size and offset
+                    ctx.restore(); // Restore the saved state
+                };
                 break;
             case "prem":
                 borderColor = "#5e67fd";
                 borderWidth = 55;
+                let img6 = new Image();
+                img6.src = image;
+                img6.onload = function() {
+                    ctx.save(); // Save the current state of the context
+                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
+                    ctx.rotate(Math.PI / 100 * 5); // Rotate the context by a small angle (-4 degrees in this example)
+                    let percentageWidth = 150; // Percentage of the canvas width
+                    let percentageHeight = 100; // Percentage of the canvas height
+                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
+                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
+                    ctx.drawImage(img6, - 130, - -15, width, height); // Draw the image with the calculated size and offset
+                    ctx.restore(); // Restore the saved state
+                };
                 break;
-            case "4x4":
+
+            case "m4x4":
                 borderColor = "#00e0d6";
                 borderWidth = 55;
+                let img7 = new Image();
+                img7.src = image;
+                img7.onload = function() {
+                    ctx.save(); // Save the current state of the context
+                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
+                    ctx.rotate(Math.PI / 100 * 5); // Rotate the context by a small angle (-4 degrees in this example)
+                    let percentageWidth = 120; // Percentage of the canvas width
+                    let percentageHeight = 60; // Percentage of the canvas height
+                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
+                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
+                    ctx.drawImage(img7, - 130, - 40, width, height); // Draw the image with the calculated size and offset
+                    ctx.restore(); // Restore the saved state
+                };
                 break;
-            case "5z37":
+            case "m5x37":
                 borderColor = "#5e67fd";
                 borderWidth = 55;
+                let img8 = new Image();
+                img8.src = image;
+                img8.onload = function() {
+                    ctx.save(); // Save the current state of the context
+                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
+                    ctx.rotate(Math.PI / 100 * -1); // Rotate the context by a small angle (-4 degrees in this example)
+                    let percentageWidth = 24; // Percentage of the canvas width
+                    let percentageHeight = 23; // Percentage of the canvas height
+                    let width = canvas.width * (percentageWidth / 200); // Calculate the width based on a percentage of the canvas width
+                    let height = canvas.height * (percentageHeight / 200); // Calculate the height based on a percentage of the canvas height
+                    ctx.drawImage(img8, - 62, - 115, width, height); // Draw the image with the calculated size and offset
+                    ctx.restore(); // Restore the saved state
+                };
                 break;
             default:
                 break;
@@ -138,40 +244,49 @@ class TestForSpin extends React.Component {
 
         let angle = index * arc;
         let baseSize = radius * 3.32;
-        let textRadius = baseSize - 150;
+        let imageRadius = baseSize - 150;
 
-        ctx.save();
-        ctx.translate(
-            baseSize + Math.cos(angle - arc / 2) * textRadius,
-            baseSize + Math.sin(angle - arc / 2) * textRadius
-        );
-        ctx.rotate(angle - arc / 2 + Math.PI / 2);
-        ctx.font = "17px Arial";
-        ctx.fillStyle = "black";
-        ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
-        ctx.restore();
+        let img = new Image();
+        img.src = image;
+        img.width = 0; // фиксированная ширина
+        img.height = 0; // фиксированная высота
+        img.onload = function() {
+            let aspectRatio = img.height / img.width;
+            let newHeight = img.width * aspectRatio;
+
+            ctx.save();
+            ctx.translate(baseSize + Math.cos(angle - arc / 2) * imageRadius, baseSize + Math.sin(angle - arc / 2) * imageRadius);
+            ctx.rotate(angle - arc / 2 + Math.PI / 1);
+
+            // Поворот изображения на 180 градусов
+            ctx.rotate(Math.PI);
+
+            ctx.drawImage(img, -img.width / 2, -newHeight / 2, img.width, newHeight);
+            ctx.restore();
+        };
     }
 
     getColor = (index) => {
         switch(this.state.list[index]){
-            case "Форсаж 75":
+            case fors:
                 return "fors"; // синий
-            case "Великолепная 8":
+            case vel8:
                 return "vel8"; // красный
-            case "Топ 12":
+            case top12:
                 return "top12"; // желтый
-            case "Мечталион":
+            case mecht:
                 return "mecht"; // зеленый
-            case "Большая 8":
+            case big8:
                 return "big8"; // зеленый
-            case "Премьер":
+            case prem:
                 return "prem"; // зеленый
-            case "4х4":
-                return "4x4"; // зеленый
-            case "5из37":
-                return "5z37"; // зеленый
+            case m4x4:
+                return "m4x4"; // зеленый
+            case m5x37:
+                return "m5x37"; // зеленый
             case "9":
                 return "9"; // зеленый
+
 
 
             default:
@@ -180,10 +295,13 @@ class TestForSpin extends React.Component {
     }
 
     spin = () => {
-        // set random spin degree and ease out time
-        // set state variables to initiate animation
-        if (this.state.availableTickets < 3) {
-            alert(`У вас сейчас ${this.state.availableTickets} шт. Вам нужно как минимум 3 билета, чтобы начать вращение колеса.`);
+        if (!this.state.spinning && this.state.availableTickets >= 3) {
+            let randomSpin = Math.floor(Math.random() * 900) + 500;
+            this.setState({
+                rotate: randomSpin,
+                easeOut: 2,
+                spinning: true
+            });
             return;
         }
         let randomSpin = Math.floor(Math.random() * 900) + 500;
@@ -200,9 +318,6 @@ class TestForSpin extends React.Component {
     };
 
     getResult = spin => {
-        // find net rotation and add to offset angle
-        // repeat substraction of inner angle amount from total distance traversed
-        // use count as an index to find value of result from state list
         const { angle, top, offset, list } = this.state;
         let netRotation = ((spin % 360) * Math.PI) / 180; // RADIANS
         let travel = netRotation + offset;

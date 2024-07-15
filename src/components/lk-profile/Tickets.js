@@ -453,7 +453,6 @@ export default function Tickets(){
                                         </div>
                                     </div>
                                 </div>
-                                <div className={'backdrop-profile2 ticket-backdrop'}></div>
                             </div>
                         </div>
 

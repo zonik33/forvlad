@@ -384,7 +384,7 @@ header .button-animation:hover {
 }
 .main-videos {
   margin-top: 1vw;
-  background-image: linear-gradient(#009640, #009640, #03BE53);
+  /*background-image: linear-gradient(#009640, #009640, #03BE53);*/
   background-size: cover;
   width: 100%;
   min-height: 50vw;
@@ -4351,10 +4351,22 @@ canvas#wheel-profile {
 .popup-start {
   background-color: #FFFFFF4D;
   width: 34.6vw;
-  height: 10.99vw;
+  height: 30.99vw;
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
+}
+.popup-spin {
+  width: 55.6vw;
+  height: 35.99vw;
+  padding: 0.6vw 0.94vw;
+  border-radius: 1.27vw;
+  margin-top: 0vw;
+}
+.popup-spin.form-register {
+  width: 55vw;
+  margin-left: 2vw;
+  margin-top: 3vw;
 }
 .popup-start .form-register {
   width: 25vw;
@@ -7412,7 +7424,8 @@ iframe {
     z-index: 99;
     box-sizing: border-box;
     transition: background 0.3s;
-    background-color: #007E36;
+    background-color: #023d6c;
+
 
   }
 
@@ -7436,7 +7449,7 @@ iframe {
     width: 100vw;
     right: 0;
     overflow-y: auto;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    background-image: linear-gradient(#023d6c, #124670, #365e7e);
     opacity: 1;
     transition: opacity 0.3s ease;
   }
@@ -7742,9 +7755,9 @@ iframe {
     line-height: 1.5;
     margin-top: -7.5vw;
     padding-top: 1.46vw;
-    background-color: #03BE53;
+    /*background-color: #03BE53;*/
     z-index: 10;
-    background-image: linear-gradient(#03BE53, #00622A, #009640);
+    /*background-image: linear-gradient(#03BE53, #00622A, #009640);*/
   }
 
   .wrapper-how {
@@ -8025,7 +8038,7 @@ iframe {
     scroll-behavior: smooth;
     font-size: 0.83vw;
     line-height: 1.5;
-    background-image: linear-gradient(#009640, #03BE53, #00622A);
+    /*background-image: linear-gradient(#009640, #03BE53, #00622A);*/
   }
 
   .backdrop11 {
@@ -8864,7 +8877,7 @@ iframe {
 
   .faq {
     position: relative;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     height: 310.59vw;
     margin-top: -2.2vw;
   }
@@ -9265,7 +9278,7 @@ iframe {
     height: 128vw;
     padding-top: 8.46vw;
     padding-bottom: 7.5vw;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     margin-top: -9.5vw;
     border-radius: 10.67vw 10.67vw 0 0;
   }
@@ -9278,7 +9291,7 @@ iframe {
     height: 110vw;
     padding-top: 8.46vw;
     padding-bottom: 7.5vw;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     margin-top: 8.5vw;
     border-radius: 10.67vw 10.67vw 0 0;
   }
@@ -9470,7 +9483,7 @@ iframe {
     z-index: 99;
     box-sizing: border-box;
     transition: background 0.3s;
-    background-color: #007E36;
+    background-color: #023d6c;
     box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
   }
   .header-error {
@@ -9489,7 +9502,7 @@ iframe {
 
   .main-profile {
     margin-top: 21vw;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     background-size: cover;
     width: 100%;
     height: auto;
@@ -9882,7 +9895,7 @@ iframe {
 
   .main-gifts {
     margin-top: 21vw;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     background-size: cover;
     width: 100%;
     height: auto;
@@ -10256,7 +10269,7 @@ iframe {
 
   .main-tickets {
     margin-top: 21vw;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     background-size: cover;
     width: 100%;
     height: auto;

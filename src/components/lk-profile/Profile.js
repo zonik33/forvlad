@@ -28,15 +28,11 @@ import bgImagese from "../../image/bg-image.png";
 import howCenterIcon from "../../image/img_58.png";
 import Test from "../test";
 import TestForSpin from "../TestSpinProfile";
+import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 
 
 
 export default function Profile(props){
-
-    function openPopup() {
-        document.getElementById("popup-ticket1").style.display = "block";
-        document.body.classList.add("no-scroll"); // Добавить класс "no-scroll" к <body>
-    }
     function closeMenu() {
         const navLists = document.querySelector('.header-burger');
         navLists.classList.remove('active');
@@ -193,6 +189,19 @@ export default function Profile(props){
             }, 0);
         }
     }, [activeSection]);
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    // const openPopup = (popupName) => {
+    //     setIsPopupOpen(popupName);
+    //     document.body.classList.add("no-scroll");
+    // };
+    function openPopup() {
+        document.getElementById("popup-ticket1").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+    const closePopup = () => {
+        setIsPopupOpen(false);
+        document.body.classList.remove("no-scroll");
+    };
     return (
         <header className={'header-profile'}>
             <div className={'container'}>
@@ -324,8 +333,12 @@ export default function Profile(props){
                                     <div className="spin-block">
                                         <TestForSpin/>
                                     </div>
-                                    <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
+                                    <a
+                                        onClick={() => openPopup('AddCode')}
+                                        className={'button-animation-text-profile click-spin'}>
                                         <b>Разыграть приз</b> </a>
+                                    {isPopupOpen === 'AddCode' &&
+                                        <PopupAddSpin showPopup={true} closeModal={closePopup}/>}
                                 </div>
                             </div>
                             <div className="right-column-profile">
@@ -450,6 +463,7 @@ export default function Profile(props){
                 <PopupTicket5/>
                 <PopupVideos/>
                 <PopupEnd/>
+                <PopupAddSpin/>
             </footer>
         </header>
 
