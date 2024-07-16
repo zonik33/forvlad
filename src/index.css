@@ -650,6 +650,7 @@ header .button-animation:hover {
   display: flex;
   flex-direction: column;
   margin-left: 17.5vw;
+  margin-bottom: 2vw;
 }
 .right-column-profile {
   display: flex;
@@ -667,23 +668,25 @@ header .button-animation:hover {
   background-size: cover;
 }
 .left-first-profile-p {
-  width: 4vw;
+  width: 20vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.75vw;
+  text-align: left;
+  line-height: 2vw;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-left: 1.6vw;
+  margin-top: -4vw;
+}
+.left-first-profile-p2 {
+  width: 19vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-size: 1.75vw;
   line-height: 2vw;
   color: #FFFFFF;
   font-weight: 400;
-  margin-left: 5.85vw;
-  margin-top: -4.8vw;
-}
-.left-first-profile-p2 {
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 2.928vw;
-  line-height: 4.100vw;
-  font-weight: 400;
-  margin-top: -5.8vw;
-  margin-left: -21.3vw;
-  color: #FFFFFF;
+  margin-left: 0.55vw;
+  margin-top: -1.7vw;
 }
 .left-first-profile-p2-p2 {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
@@ -699,13 +702,13 @@ header .button-animation:hover {
   width: 19.73vw;
   height: 7.32vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.17vw;
+  font-size: 1.464vw;
   font-weight: 400;
-  margin-top: -0.6vw;
-  margin-left: 2vw;
+  margin-top: 8.8vw;
+  margin-left: 1.5vw;
   text-align: left;
   color: #FFFFFF;
-  line-height: 1.46vw;
+  line-height: 2.050vw;
 }
 .left-first-profile-a2 {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
@@ -740,17 +743,15 @@ header .button-animation:hover {
   color: #FFFFFF;
 }
 .left-first-profile-p3-count {
-  position: absolute;
-  font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 2.928vw;
-  line-height: 4.100vw;
-  width: 18vw;
-  margin-left: 1.65vw;
-  margin-top: -0.25vw;
-  margin-bottom: 1.5vw;
+  width: 16vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.464vw;
   text-align: left;
+  line-height: 2.050vw;
   color: #FFFFFF;
+  font-weight: 400;
+  margin-left: 1.6vw;
+  margin-top: -1.9vw;
 }
 .white-line {
   height: 0.07vw;
@@ -1111,7 +1112,7 @@ header .button-animation:hover {
 .right-second-profile {
   position: relative;
   width: 55.12vw;
-  height: 60.65vw;
+  height: 54.65vw;
   text-align: center;
   /* background-color: rgba(255, 255, 255, 0.15); */
   /* border: #FFFFFF4D solid 0.15vw; */
@@ -1537,8 +1538,8 @@ header .button-animation:hover {
   z-index: 6;
 }
 .button-animation-text-profile.click-spin {
-  margin-left: -7.7vw;
-  margin-top: -2.9vw;
+  margin-left: -11.7vw;
+  margin-top: 0.4vw;
   padding: 1.8vw 2.86vw;
 }
 .button-animation-text-profile.click-ticket-prizes {
@@ -2652,7 +2653,7 @@ canvas#wheel-profile-popup {
   color: #FFFFFF;
 }
 .spin-block {
-  margin: 0vw 0vw 0vw 0vw;
+  margin: -2vw 0vw 0vw -0.2vw;
 }
 
 .prizes-button {
@@ -2703,6 +2704,7 @@ canvas#wheel-profile-popup {
   margin-top: -5.3vw;
 }
 .how-left-icon.profile {
+  display: none;
   width: 21%;
   margin-left: -21.2vw;
   margin-top: 0.1vw;
@@ -4479,22 +4481,23 @@ canvas#wheel-profile-popup {
   margin-top: 0vw;
 }
 .popup-start {
-  background-color: #FFFFFF4D;
+  background-color: #00438280;
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
   width: 34.6vw;
-  height: 25.99vw;
+  height: 23.99vw;
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
 }
 .popup-spin {
-  width: 55.6vw;
-  height: 35.99vw;
+  width: 57.101vw;
+  height: 36.603vw;
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
-  margin-top: 0vw;
+  margin-top: -3.3vw;
 }
 .popup-spin.form-register {
-  width: 55vw;
+  width: 38vw;
   margin-left: 2vw;
   margin-top: 3vw;
 }
@@ -4786,7 +4789,7 @@ canvas#wheel-profile-popup {
   border-right: none;
   border-radius: 1.5vw;
   padding: 0.73vw;
-  background-image: url("./image/img_83.png");
+  background-image: url("./image/img_84.png");
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0; /* Начальная непрозрачность блока */
@@ -4859,7 +4862,7 @@ canvas#wheel-profile-popup {
   line-height: 1.77vw;
   font-family: 'Acrom Medium', sans-serif;
   font-weight: 400;
-  margin-top: 3.1vw;
+  margin-top: 1.1vw;
   margin-left: 3.7vw;
   color: #FFFFFF;
 }
@@ -5058,9 +5061,10 @@ canvas#wheel-profile-popup {
   margin-top: -0.7vw;
 }
 .head-colm-phone-ticket {
-  min-width: 16.614583333333332vw;
+  min-width: 1.614583vw;
+  margin-right: -2.3vw;
   margin-top: -0.25vw;
-  margin-left: -3.9vw;
+  margin-left: -2.9vw;
 }
 .head-colm-phone {
   min-width: 16.614583vw;
@@ -5127,6 +5131,7 @@ canvas#wheel-profile-popup {
 
 }
 .table-cell.status {
+  margin-left: 1.3vw;
   width: 33vw;
   display: block;
   text-align: left;
@@ -5153,7 +5158,7 @@ canvas#wheel-profile-popup {
 .table-row {
   display: flex;
   justify-content: space-between;
-  margin-left: -3vw;
+  margin-left: -2vw;
 }
 .line-true.gifts {
   margin: 7vw 0vw 0vw 1vw;
@@ -5203,6 +5208,9 @@ canvas#wheel-profile-popup {
   text-transform: uppercase;
 }
 .colm-text-ticket {
+  margin-left: 1vw;
+  text-align: left;
+  width: 14vw;
   /*text-transform: uppercase;*/
   font-size: 1.318vw;
   font-weight: 400;
@@ -5881,12 +5889,12 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  background-color: #FFFFFF4D;
   width: 33.28vw;
   height: 25.49vw;
   padding: 1.46vw;
   border-radius: 1.37vw;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #00438280;
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
   max-height: 90vh;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -12269,13 +12277,13 @@ iframe {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background-color: #FFFFFF4D;
+    background-color: #00438280;
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
     width: 89.33vw;
     height: auto;
     min-height: 89vw;
     padding: 1.46vw;
     border-radius: 0.37vw;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
   .content-container-modal {
     margin-left: 5vw;
@@ -13114,7 +13122,7 @@ iframe {
   #tooltip {
     position: absolute;
     top: 30vw;
-    right: -34.68vw;
+    right: -34.88vw;
     transform: translate(-100%, -50%);
     width: 68.33vw;
     height: 28.86vw;
@@ -13314,13 +13322,14 @@ iframe {
   }
 
   .popup-start {
-    background-color: #FFFFFF4D;
+    background-color: #00438280;
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
     width: 84.6vw;
-    height: 12.99vw;
+    height: 55.99vw;
     padding: 0.6vw 0.94vw;
     border-radius: 1.27vw;
     margin-top: 0vw;
-    min-height: 45vw;
+    min-height: 90vw;
   }
   .popup-start .form-register {
     width: 73vw;

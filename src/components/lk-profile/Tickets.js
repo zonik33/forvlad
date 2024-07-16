@@ -24,6 +24,7 @@ import bgImagese from "../../image/bg-image.png";
 import PopupEnd from "../PopupTicket/PopupEnd";
 import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
+import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 
 
 export default function Tickets(){
@@ -177,6 +178,15 @@ export default function Tickets(){
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    function openPopup1() {
+        setIsPopupOpen(true);
+    }
+    const closePopup = () => {
+        setIsPopupOpen(false);
+        document.body.classList.remove("no-scroll");
+    };
+    let onlyTest = 5
     return (
         <header className={'header-profile'}>
             <div className={'container'}>
@@ -275,36 +285,57 @@ export default function Tickets(){
                                     {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
                                 </div>
                                 <div className={'left-second-profile'}>
-                                    <img className={'how-left-icon profile'} src={howCenterIcon}/>
-                                    <p className={'left-first-profile-p'}>Зарегистрировано билетов</p>
-                                    <p className={'left-first-profile-p2'}>
-                                        {/*{profile && profile.countTicketsTotal}*/}
-                                        9
-                                        <a className={'left-first-profile-a2'}></a>
-                                    </p>
-                                    <div className="white-line">из них:</div>
-                                    <p className={'left-first-profile-p3-count'}>
-                                        {profile && profile.countTicketsApproved}
-                                        6
-                                    </p>
-                                    <p className={'left-first-profile-p3'}>
-
-                                        приняли участие <br></br>в
-                                        розыгрыше
-                                    </p>
-                                    <p className={'left-first-profile-p3-count'}>
-                                        {profile && profile.countTicketsRejected}
-                                        3
-                                    </p>
-                                    <p className={'left-first-profile-p3'}>
-                                        могут принять <br></br>участие в
-                                        розыгрыше
-                                    </p>
+                                    {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
                                     <div className="spin-block">
                                         <TestForSpin/>
                                     </div>
-                                    <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
-                                        <b>Крутануть</b> </a>
+                                    <p className={'left-first-profile-p'}>Вы зарегистрировали
+                                        <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                                        <br></br>на сумму
+                                        {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+
+                                    </p>
+
+                                    <div className="white-line"></div>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
+                                    </p>
+                                    {/*{profile && profile.countReferrals > 0 ? (*/}
+
+                                    {/*<p className={'left-first-profile-p3'}>*/}
+
+                                    {/*    приняли участие <br></br>в*/}
+                                    {/*    розыгрыше*/}
+                                    {/*</p>*/}
+                                    {/*<p className={'left-first-profile-p3-count'}>*/}
+                                    {/*    {profile && profile.countTicketsRejected}*/}
+                                    {/*    3*/}
+                                    {/*</p>*/}
+                                    {/*<p className={'left-first-profile-p3'}>*/}
+                                    {/*    могут принять <br></br>участие в*/}
+                                    {/*    розыгрыше*/}
+                                    {/*</p>*/}
+                                    <a
+                                        onClick={openPopup1}
+                                        className={'button-animation-text-profile click-spin'}>
+                                        <b>Крутить</b> </a>
+                                    {isPopupOpen &&
+                                        <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
+
+                                    {onlyTest > 6 ? (
+                                        <>
+                                            <p className={'left-first-profile-p2-p2-p2'}>
+                                                Осталось {onlyTest} раз
+                                            </p>
+
+                                        </>
+                                    ) : <p className={'left-first-profile-p2-p2-p2'}>
+                                        Хотите крутануть колесо? Купите лотерейные билеты на сумму от 300 рублей.
+                                        <br></br>
+                                        <br></br>
+                                        За каждые 300 рублей вы получите 1 (одну) попытку.
+                                    </p>
+                                    }
                                 </div>
                             </div>
                             <div className="right-column-profile">
@@ -367,13 +398,21 @@ export default function Tickets(){
                                                     <div className={'table-ticket'}>
                                                         <div className={'table-head-ticket'}>
                                                             <div className={'head-colm-prize-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Номер билета</div>
+                                                                <div className={'colm-text-ticket'}> Номер лотерейного
+                                                                    билета
+                                                                </div>
                                                             </div>
                                                             <div className={'head-colm-phone-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Дата</div>
+                                                                <div className={'colm-text-ticket'}> Дата
+                                                                    регистрации <br></br>
+                                                                    в акции
+                                                                </div>
                                                             </div>
                                                             <div className={'head-colm-date-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Статус</div>
+                                                                <div className={'colm-text-ticket'}>Статус
+                                                                    участия <br></br>
+                                                                    в рулетке
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div className={'table-body-ticket'}>
@@ -446,6 +485,21 @@ export default function Tickets(){
                                                                 <div className={'line-true-tickets'}></div>
                                                             </div>
                                                         </div>
+                                                        <div className={'table-body-ticket'}>
+                                                            <div className={'centered-ticket-wrapper'}>
+                                                                <div className="table-row">
+                                                                    <div className="table-cell number">221234567890
+                                                                    </div>
+                                                                    <div className="table-cell data">10.06.2024</div>
+                                                                    <div className="table-cell status">Принял участие в
+                                                                        розыгрыше
+                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                    </div>
+                                                                </div>
+                                                                <div className={'line-true-tickets'}></div>
+                                                            </div>
+                                                        </div>
+
 
                                                     </div>
                                                 </div>
@@ -456,7 +510,7 @@ export default function Tickets(){
                             </div>
                         </div>
 
-                    </div>
+                        </div>
                     </div>
                 </div>
             </main>

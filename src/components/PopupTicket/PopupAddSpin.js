@@ -13,6 +13,8 @@ export default function PopupAddSpin(props) {
     const [registrationErrorEm, setRegistrationErrorEm] = useState('');
     const popupRef = useRef(null);
 
+    let onlyTest = 5
+
     function openPopup2() {
         closeModal();
         document.getElementById("popup-complete").style.display = "block";
@@ -88,7 +90,7 @@ export default function PopupAddSpin(props) {
                        backgroundColor: '#00438280',
                        padding: '1.60vw',
                        borderRadius: '2.08vw',
-                       boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                       boxShadow: '0vw 1vw 3.5vw 1.7vw #3979dc',
                        width: 'auto', // Ширина модального окна
                        height: 'auto', // Высота модального окна
 
@@ -107,31 +109,46 @@ export default function PopupAddSpin(props) {
                         <span className="close close-for-popup-first" onClick={closeModal}>&times;</span>
                     </div>
                     <div className={'left-second-profile'}>
-                        {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
-                        {/*<p className={'left-first-profile-p'}>Зарегистрировано билетов</p>*/}
-                        {/*<p className={'left-first-profile-p2'}>*/}
-                        {/*    /!*{profile && profile.countTicketsTotal}*!/*/}
-                        {/*    9*/}
-                        {/*    <a className={'left-first-profile-a2'}></a>*/}
-                        {/*</p>*/}
-                        {/*<div className="white-line">из них:</div>*/}
-                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                        {/*    /!*{profile && profile.countTicketsApproved}*!/*/}
-                        {/*    6*/}
-                        {/*</p>*/}
+                        <p className={'left-first-profile-p'}>Вы зарегистрировали
+                            <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                            <br></br>на сумму
+                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+
+                        </p>
+
+                        <div className="white-line"></div>
+                        <p className={'left-first-profile-p3-count'}>
+                            За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
+                        </p>
+                        {/*{profile && profile.countReferrals > 0 ? (*/}
+
                         {/*<p className={'left-first-profile-p3'}>*/}
 
                         {/*    приняли участие <br></br>в*/}
                         {/*    розыгрыше*/}
                         {/*</p>*/}
                         {/*<p className={'left-first-profile-p3-count'}>*/}
-                        {/*    /!*{profile && profile.countTicketsRejected}*!/*/}
+                        {/*    {profile && profile.countTicketsRejected}*/}
                         {/*    3*/}
                         {/*</p>*/}
                         {/*<p className={'left-first-profile-p3'}>*/}
                         {/*    могут принять <br></br>участие в*/}
                         {/*    розыгрыше*/}
                         {/*</p>*/}
+                        {onlyTest > 0 ? (
+                            <>
+                                <p className={'left-first-profile-p2-p2-p2'}>
+                                    Осталось {onlyTest} раз
+                                </p>
+
+                            </>
+                        ) : <p className={'left-first-profile-p2-p2-p2'}>
+                            Хотите крутануть колесо? Купите лотерейные билеты на сумму от 300 рублей.
+                            <br></br>
+                            <br></br>
+                            За каждые 300 рублей вы получите 1 (одну) попытку.
+                        </p>
+                        }
                         <div className="spin-block">
                             <SpinForPopup/>
                         </div>

@@ -31,6 +31,7 @@ import prizesCenterCard from "../../image/mv-card.png";
 import PopupEnd from "../PopupTicket/PopupEnd";
 import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
+import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 
 export default function Gifts() {
 
@@ -218,6 +219,15 @@ export default function Gifts() {
             }, 0);
         }
     }, [activeSection]);
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
+    function openPopup1() {
+        setIsPopupOpen(true);
+    }
+    const closePopup = () => {
+        setIsPopupOpen(false);
+        document.body.classList.remove("no-scroll");
+    };
+    let onlyTest = 5
 
 
     return (
@@ -318,36 +328,57 @@ export default function Gifts() {
                                     {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
                                 </div>
                                 <div className={'left-second-profile'}>
-                                    <img className={'how-left-icon profile'} src={howCenterIcon}/>
-                                    <p className={'left-first-profile-p'}>Зарегистрировано билетов</p>
-                                    <p className={'left-first-profile-p2'}>
-                                        {/*{profile && profile.countTicketsTotal}*/}
-                                        9
-                                        <a className={'left-first-profile-a2'}></a>
-                                    </p>
-                                    <div className="white-line">из них:</div>
-                                    <p className={'left-first-profile-p3-count'}>
-                                        {profile && profile.countTicketsApproved}
-                                        6
-                                    </p>
-                                    <p className={'left-first-profile-p3'}>
-
-                                        приняли участие <br></br>в
-                                        розыгрыше
-                                    </p>
-                                    <p className={'left-first-profile-p3-count'}>
-                                        {profile && profile.countTicketsRejected}
-                                        3
-                                    </p>
-                                    <p className={'left-first-profile-p3'}>
-                                        могут принять <br></br>участие в
-                                        розыгрыше
-                                    </p>
+                                    {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
                                     <div className="spin-block">
                                         <TestForSpin/>
                                     </div>
-                                    <a onClick={openPopup} className={'button-animation-text-profile click-spin'}>
-                                        <b>Крутануть</b> </a>
+                                    <p className={'left-first-profile-p'}>Вы зарегистрировали
+                                        <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                                        <br></br>на сумму
+                                        {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+
+                                    </p>
+
+                                    <div className="white-line"></div>
+                                    <p className={'left-first-profile-p3-count'}>
+                                        За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
+                                    </p>
+                                    {/*{profile && profile.countReferrals > 0 ? (*/}
+
+                                    {/*<p className={'left-first-profile-p3'}>*/}
+
+                                    {/*    приняли участие <br></br>в*/}
+                                    {/*    розыгрыше*/}
+                                    {/*</p>*/}
+                                    {/*<p className={'left-first-profile-p3-count'}>*/}
+                                    {/*    {profile && profile.countTicketsRejected}*/}
+                                    {/*    3*/}
+                                    {/*</p>*/}
+                                    {/*<p className={'left-first-profile-p3'}>*/}
+                                    {/*    могут принять <br></br>участие в*/}
+                                    {/*    розыгрыше*/}
+                                    {/*</p>*/}
+                                    <a
+                                        onClick={openPopup1}
+                                        className={'button-animation-text-profile click-spin'}>
+                                        <b>Крутить</b> </a>
+                                    {isPopupOpen &&
+                                        <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
+
+                                    {onlyTest > 0 ? (
+                                        <>
+                                            <p className={'left-first-profile-p2-p2-p2'}>
+                                                Осталось {onlyTest} раз
+                                            </p>
+
+                                        </>
+                                    ) : <p className={'left-first-profile-p2-p2-p2'}>
+                                        Хотите крутануть колесо? Купите лотерейные билеты на сумму от 300 рублей.
+                                        <br></br>
+                                        <br></br>
+                                        За каждые 300 рублей вы получите 1 (одну) попытку.
+                                    </p>
+                                    }
                                 </div>
                             </div>
                             <div className="right-column-profile">
