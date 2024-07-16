@@ -7622,7 +7622,8 @@ iframe {
     position: absolute;
     flex-direction: column;
     row-gap: 8.6vw;
-    margin-top: 32vw;
+    margin-top: 39vw;
+    margin-left: -8vw;
     align-items: initial;
   }
 
@@ -7729,7 +7730,7 @@ iframe {
     /*background-image: linear-gradient(#00622A, #009640);*/
     background-size: cover;
     width: 100%;
-    height: 18vw;
+    height: 3vw;
     font-family: 'Circe', sans-serif;
     font-weight: 700;
     scroll-behavior: smooth;
@@ -7774,8 +7775,8 @@ iframe {
     flex: 1 1;
     height: auto;
     width: 93.3%;
-    margin-left: -58.4vw;
-    margin-top: -18.5vw;
+    margin-left: -117.4vw;
+    margin-top: 9.5vw;
     z-index: 6;
   }
   .stars-man {
@@ -9578,7 +9579,7 @@ iframe {
     border-radius: 4.27vw;
     background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
     margin-left: -15.2vw;
-    margin-top: 92.2vw;
+    margin-top: 80.2vw;
     font-family: 'Acrom Medium', Arial, sans-serif;
     border: 0.055vw solid #FFFFFF4D;
     transition: background-image 0.3s ease;
@@ -10777,7 +10778,7 @@ iframe {
   }
   .how-tickets-img-second-2 {
     width: 90vw;
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 5vw 0vw 0vw -2.5vw;
@@ -12240,12 +12241,12 @@ iframe {
     background-size: contain;
   }
   .top-side {
-    margin-top: 60vw;
-    margin-left: 22.5vw;
+    margin-top: 48vw;
+    margin-left: 24.5vw;
   }
   .random-block {
-    margin-left: 5vw;
-    margin-top: 22.65vw;
+    margin-left: 6vw;
+    margin-top: 24.65vw;
   }
   .for-winners-videos {
     margin-left: 12.5vw;
@@ -13166,6 +13167,17 @@ iframe {
   .right-block-margin {
     margin-left: 10vw;
     margin-top: 20vw;
+  }
+  .overlay {
+    position: absolute;
+    margin: 88.43vw 0vw 0vw -44vw;
+    width: 36vw;
+    height: 46vw;
+    /* background-color: rgba(0, 0, 0, 1); */
+    border-radius: 23% 38% 144% 18%;
+    z-index: 19;
+    background-color: #023d6c;
+    transform: rotate(68deg);
   }
   .popupAuth-input.error {
     border: 1px solid red;
