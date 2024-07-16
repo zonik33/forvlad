@@ -138,18 +138,18 @@ export default function PopupAddSpin(props) {
                         {/*    <b>Крутануть</b> </a>*/}
                     </div>
                     <p className={'register-inputs-text code-left'}>:</p>
-                    <input type="text" id={'addCode'}
-                           required
-                           className={`register-inputs code-bottom ${registrationErrorEm ? 'error' : ''}`}
-                           maxLength={11}
-                           placeholder="Ваш код"/>
-                    {registrationErrorEm && <div className={'error-block-phone test-code-add'}
-                                                 style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}
-                    <span id="phoneError" className="error"></span>
-                    <div className="register-button-container">
-                        <button type={'submit'} id={'submit-add'} className={'register-button code-down'}>Отправить
-                        </button>
-                    </div>
+                    {/*<input type="text" id={'addCode'}*/}
+                    {/*       required*/}
+                    {/*       className={`register-inputs code-bottom ${registrationErrorEm ? 'error' : ''}`}*/}
+                    {/*       maxLength={11}*/}
+                    {/*       placeholder="Ваш код"/>*/}
+                    {/*{registrationErrorEm && <div className={'error-block-phone test-code-add'}*/}
+                    {/*                             style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}*/}
+                    {/*<span id="phoneError" className="error"></span>*/}
+                    {/*<div className="register-button-container">*/}
+                        {/*<button type={'submit'} id={'submit-add'} className={'register-button code-down'}>Отправить*/}
+                        {/*</button>*/}
+                    {/*</div>*/}
                 </div>
             </form>
             {/*<button onClick={togglePopup}>Закрыть</button>*/}

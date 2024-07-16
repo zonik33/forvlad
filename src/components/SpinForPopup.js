@@ -302,6 +302,7 @@ class SpinForPopup extends React.Component {
             let randomSpin = Math.floor(Math.random() * 900) + 500;
             this.setState({
                 rotating: true,
+                showFullSizeImage: true
             });
 
             // Выбранная часть: Добавляем showPhoto и showImage
