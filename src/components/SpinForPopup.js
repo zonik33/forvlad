@@ -10,6 +10,8 @@ import m4x4 from '../image/img_74.png'
 import m5x37 from '../image/img_72.png'
 import fors from '../image/img_73.png'
 import animal from '../image/img_80.png'
+import lefthand from '../image/img_81.png'
+import righthand from '../image/img_82.png'
 import spinmain from "../image/spin-main.png";
 
 
@@ -308,11 +310,29 @@ class SpinForPopup extends React.Component {
             // Выбранная часть: Добавляем showPhoto и showImage
             this.setState({
                 showPhoto: true,
+                showNewPhoto: true,
             }, () => {
-                const imageElement = document.getElementById('yourImageId');  // Замените 'yourImageId' на реальный идентификатор вашего изображения
+                const imageElement = document.getElementById('yourImageId');
+                setTimeout(() => {
+                    document.getElementById('yourImageId').classList.add('animate');
+                }, 100); // Delay in milliseconds
+                // Замените 'yourImageId' на реальный идентификатор вашего изображения
                 imageElement.classList.add('show-image');
+                const imageElements = document.getElementById('yourImageId2');
+                setTimeout(() => {
+                    document.getElementById('yourImageId2').classList.add('animate');
+                }, 1100); // Delay in milliseconds
+                // Замените 'yourImageId' на реальный идентификатор вашего изображения
+                imageElements.classList.add('show-image');
+                const imageElements2 = document.getElementById('yourImageId3');
+                setTimeout(() => {
+                    document.getElementById('yourImageId3').classList.add('animate');
+                }, 1100); // Delay in milliseconds
+                // Замените 'yourImageId' на реальный идентификатор вашего изображения
+                imageElements2.classList.add('show-image');
             });
-            // Конец выбранной части
+
+
 
             setTimeout(() => {
                 this.setState({
@@ -321,8 +341,8 @@ class SpinForPopup extends React.Component {
                 });
                 setTimeout(() => {
                     this.getResult(randomSpin);
-                }, 2000);
-            }, 2000);
+                }, 4000);
+            }, 4000);
         }
     };
 
@@ -365,16 +385,16 @@ class SpinForPopup extends React.Component {
     render() {
         return (
             <div className="Appspin">
-                <div className={'selectorspin-container'}>
+                <div className={'selectorspin-container-popup'}>
                     <span id="selectorspintest">&#9660;</span>
                 </div>
-                <div className={'wheel-center-container'}>
+                <div className={'wheel-center-container-popup'}>
                     <span id="wheel-center-test"></span>
                     <span id="wheel-center-2-test"></span>
                     <span id="wheel-center-3-test"></span>
                     <span id="wheel-center-4-test"></span>
                 </div>
-                <img className={'users-logo-spin spin-test'} src={spin}/>
+                <img className={'users-logo-spin spin-test-popup'} src={spin}/>
 
                 {/*<img className={'users-logo-spin spin-main-profile rotating-img'} id={'wheel-test-spin-1'} src={spinmain}*/}
                 {/*     alt="Rotating Image"/>*/}
@@ -400,6 +420,8 @@ class SpinForPopup extends React.Component {
                             Крутануть
                         </button>
                         {this.state.showPhoto && <img id="yourImageId" className={'users-logo-spin spin-test-animal'} src={animal} alt="Фото"/>}
+                        {this.state.showNewPhoto && <img id="yourImageId2" className={'users-logo-spin hand-left'} src={lefthand} alt="Новая Фото"/>}
+                        {this.state.showNewPhoto && <img id="yourImageId3" className={'users-logo-spin hand-right'} src={righthand} alt="Новая Фото"/>}
                     </div>
                 )}
                 <div className="displayspin">

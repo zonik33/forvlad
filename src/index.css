@@ -678,6 +678,51 @@ header .button-animation:hover {
   margin-left: 1.6vw;
   margin-top: -4vw;
 }
+.left-first-profile-p.spin-p {
+  width: 20vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.75vw;
+  text-align: left;
+  line-height: 2vw;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-left: -0.4vw;
+  margin-top: -0.5vw;
+}
+.left-first-profile-p3-count.spin-p {
+  width: 16vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.464vw;
+  text-align: left;
+  line-height: 2.050vw;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-left: -0.4vw;
+  margin-top: -1.9vw;
+}
+.left-first-profile-p3-count.spin-p-test {
+  width: 16vw;
+  font-family: "Acrom Medium", Arial, sans-serif;
+  font-size: 1.611vw;
+  text-align: left;
+  line-height: 3.050vw;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-left: -0.4vw;
+  margin-top: 1.1vw;
+}
+.left-first-profile-p2-p2-p2.spin-p {
+  width: 19.73vw;
+  height: 7.32vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.464vw;
+  font-weight: 400;
+  margin-top: 8.8vw;
+  margin-left: 1.5vw;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 2.050vw;
+}
 .left-first-profile-p2 {
   width: 19vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
@@ -706,6 +751,18 @@ header .button-animation:hover {
   font-weight: 400;
   margin-top: 8.8vw;
   margin-left: 1.5vw;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 2.050vw;
+}
+.left-first-profile-p2-p2-p2.p-popup {
+  width: 19.73vw;
+  height: 7.32vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-size: 1.464vw;
+  font-weight: 400;
+  margin-top: 6.8vw;
+  margin-left: 0vw;
   text-align: left;
   color: #FFFFFF;
   line-height: 2.050vw;
@@ -2156,14 +2213,58 @@ header .button-animation:hover {
   height: auto;
   margin: 1.5vw 0vw 0vw 1.7vw;
 }
+.users-logo-spin.spin-test-popup {
+  position: absolute;
+  width: 22vw;
+  height: auto;
+  margin: -25.5vw 0vw 0vw 24.75vw;
+}
 .users-logo-spin.spin-test-animal {
   position: absolute;
-  width: 9vw;
+  width: 6vw;
   height: auto;
-  margin: -39.5vw 0vw 0vw -6vw;
-  z-index: 4;
-  opacity: 0; /* Начальное значение нулевой прозрачности */
-  transition: opacity 0.5s; /* Добавление анимации перехода для свойства прозрачности */
+  margin: -43.5vw 0vw 0vw 16.2vw;
+  z-index: -1;
+  opacity: 0;
+  transition: transform 1s ease-out, width 1s ease-out; /* Добавьте плавные переходы для изменения позиции и размера */
+  transform: translateY(200px) scale(0.2); /* Начальное положение и размер */
+}
+.users-logo-spin.spin-test-animal.animate {
+  transform: translateY(0) scale(1); /* Задайте конечное положение и размер */
+  width: 10vw;
+}
+
+.users-logo-spin.hand-left {
+  position: absolute;
+  width: 4vw;
+  height: auto;
+  margin: -28.7vw 0vw 0vw 17vw;
+  z-index: -1;
+  opacity: 0;
+  transition: transform 1s ease-out, width 1s ease-out; /* Добавьте плавные переходы для изменения позиции и размера */
+  transform: translateY(0px) scale(1); /* Начальное положение и размер */
+}
+.users-logo-spin.hand-left.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Задайте конечное положение и размер */
+  width: 4vw;
+  z-index: 5;
+}
+.users-logo-spin.hand-right {
+  position: absolute;
+  width: 4vw;
+  height: auto;
+  margin: -28.7vw 0vw 0vw 24vw;
+  z-index: -1;
+  opacity: 0;
+  transition: transform 1s ease-out, width 1s ease-out; /* Добавьте плавные переходы для изменения позиции и размера */
+  transform: translateY(0px) scale(1); /* Начальное положение и размер */
+}
+.users-logo-spin.hand-right.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Задайте конечное положение и размер */
+  width: 4vw;
+  z-index: 5;
 }
 .full-size-image-overlay {
   position: fixed;
@@ -2187,6 +2288,9 @@ header .button-animation:hover {
 .show-image.users-logo-spin.spin-test-animal {
   opacity: 1;
 }
+.show-image.users-logo-spin.hand-left {
+  /*opacity: 1;*/
+}
 #spin, #reset {
   position: absolute;
   display: none;
@@ -2202,8 +2306,8 @@ header .button-animation:hover {
   font-family: 'Acrom Medium', Arial, sans-serif;
   border: 0.15vw solid #FFFFFF80;
   z-index: 6;
-  margin-left: 6.3vw;
-  margin-top: -2.9vw;
+  margin-left: 0vw;
+  margin-top: -14.65vw;
   padding: 1.8vw 2.86vw;
   color: #FFFFFF;
   line-height: 1.07vw;
@@ -2360,7 +2464,7 @@ canvas#wheel-profile-popup {
   z-index: 5;
   width: 32.722vw;
   height: 32.722vw;
-  margin: -4vw 0vw 0vw -3.6vw;
+  margin: -31vw 0vw 0vw 19.4vw;
 }
 .spin-block {
   opacity: 1;
@@ -2550,9 +2654,17 @@ canvas#wheel-profile-popup {
   position: absolute;
   margin: 5.3vw 0vw 0vw 38vw;
 }
+.wheel-center-container-popup {
+  position: absolute;
+  margin: -21.7vw 0vw 0vw 61vw;
+}
 .selectorspin-container {
   position: absolute;
   margin: 5.3vw 0vw 0vw 38vw;
+}
+.selectorspin-container-popup {
+  position: absolute;
+  margin: -21.7vw 0vw 0vw 61vw;
 }
 .how-first-li {
   font-size: 1.61vw;
@@ -4497,8 +4609,9 @@ canvas#wheel-profile-popup {
   margin-top: -3.3vw;
 }
 .popup-spin.form-register {
-  width: 38vw;
+  width: 50vw;
   margin-left: 2vw;
+  height: 29vw;
   margin-top: 3vw;
 }
 .popup-start .form-register {
@@ -4604,6 +4717,34 @@ canvas#wheel-profile-popup {
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
   color: #FFFFFF;
+}
+.popup-spin .close {
+  position: absolute;
+  cursor: pointer;
+  margin: -7.4vw 0.35vw 0.35vw 46.78vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: #FFFFFF1A;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0.07vw solid;
+  color: #FFFFFF;
+}
+.popup-spin .close:hover {
+  position: absolute;
+  cursor: pointer;
+  margin: -7.4vw 0.35vw 0.35vw 46.78vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: #FFFFFF1A;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0.07vw solid;
+  color: #FFFFFF4D;
 }
 .popup-winners-videos .close {
   position: absolute;
@@ -5161,7 +5302,7 @@ canvas#wheel-profile-popup {
   margin-left: -2vw;
 }
 .line-true.gifts {
-  margin: 7vw 0vw 0vw 1vw;
+  margin: 7vw 0vw 0vw 0.3vw;
   position: absolute;
   width: 51.318vw;
   height: 0.146vw;
@@ -10715,6 +10856,7 @@ iframe {
     color: #FFFFFF;
     line-height: 5.33vw;
   }
+
   .form-group-3 {
     position: relative;
     width: 26.35vw;

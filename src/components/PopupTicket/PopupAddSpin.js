@@ -105,11 +105,14 @@ export default function PopupAddSpin(props) {
                   className={'form-register popup-spin'}>
 
                 <div className={'container-register-modal popup-spin'}>
-                    <div><span className={'register-main-text'}>Розыгрыш приза</span>
+                    <div>
+                        <p className={'left-first-profile-p3-count spin-p-test'}>
+                            Розыгрыш приза
+                        </p>
                         <span className="close close-for-popup-first" onClick={closeModal}>&times;</span>
                     </div>
                     <div className={'left-second-profile'}>
-                        <p className={'left-first-profile-p'}>Вы зарегистрировали
+                        <p className={'left-first-profile-p spin-p'}>Вы зарегистрировали
                             <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
                             <br></br>на сумму
                             {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
@@ -117,7 +120,7 @@ export default function PopupAddSpin(props) {
                         </p>
 
                         <div className="white-line"></div>
-                        <p className={'left-first-profile-p3-count'}>
+                        <p className={'left-first-profile-p3-count spin-p'}>
                             За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
                         </p>
                         {/*{profile && profile.countReferrals > 0 ? (*/}
@@ -135,18 +138,17 @@ export default function PopupAddSpin(props) {
                         {/*    могут принять <br></br>участие в*/}
                         {/*    розыгрыше*/}
                         {/*</p>*/}
-                        {onlyTest > 0 ? (
+                        {onlyTest > 6 ? (
                             <>
-                                <p className={'left-first-profile-p2-p2-p2'}>
+                                <p className={'left-first-profile-p2-p2-p2 p-popup'}>
                                     Осталось {onlyTest} раз
                                 </p>
 
                             </>
-                        ) : <p className={'left-first-profile-p2-p2-p2'}>
+                        ) : <p className={'left-first-profile-p2-p2-p2 p-popup'}>
                             Хотите крутануть колесо? Купите лотерейные билеты на сумму от 300 рублей.
                             <br></br>
                             <br></br>
-                            За каждые 300 рублей вы получите 1 (одну) попытку.
                         </p>
                         }
                         <div className="spin-block">
