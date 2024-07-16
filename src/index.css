@@ -5865,6 +5865,10 @@ button[type="submit"] {
   /*z-index: 4;*/
   /*overflow: hidden;*/
 }
+input:focus,
+button:focus {
+  outline: none;
+}
 
 .ReactModal__Overlay--before-close{
   opacity: 0;

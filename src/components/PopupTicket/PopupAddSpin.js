@@ -14,9 +14,11 @@ export default function PopupAddSpin(props) {
     const popupRef = useRef(null);
 
     function openPopup2() {
-        closeModal()
+        closeModal();
         document.getElementById("popup-complete").style.display = "block";
         document.body.classList.add("no-scroll");
+        // Добавить следующую строку для удаления фокуса с любого активного элемента при открытии
+        document.activeElement.blur();
     }
     let isRequestPending = false;
 
@@ -137,7 +139,7 @@ export default function PopupAddSpin(props) {
                         {/*    className={'button-animation-text-profile click-spin'}>*/}
                         {/*    <b>Крутануть</b> </a>*/}
                     </div>
-                    <p className={'register-inputs-text code-left'}>:</p>
+                    {/*<p className={'register-inputs-text code-left'}>:</p>*/}
                     {/*<input type="text" id={'addCode'}*/}
                     {/*       required*/}
                     {/*       className={`register-inputs code-bottom ${registrationErrorEm ? 'error' : ''}`}*/}
