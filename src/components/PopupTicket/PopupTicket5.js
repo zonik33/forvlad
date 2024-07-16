@@ -66,7 +66,7 @@ export default function PopupTicket5 ({number,text}) {
                         <h1 className={'popup-h1'}>Регистрация билета</h1>
                         <label className={'bilet-ticket-5-p'}>Поздравляем!</label>
                         <label className={'bilet-ticket-5-p2'} id={'ticket-for-number5'}></label>
-                        <label className={'bilet-ticket-5-p3'}>зарегистрирован в акции и отображается в Личном кабинете. <br></br>Получите гарантированный подарок <a href={"https://nloto-promo.ru/gifts"} className={"text-nloto"}>здесь</a>.</label>
+                        <label className={'bilet-ticket-5-p3'}>зарегистрирован в акции и отображается в Личном кабинете</label>
                     </form>
 
                 </div>

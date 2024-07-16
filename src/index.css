@@ -2155,10 +2155,45 @@ header .button-animation:hover {
   height: auto;
   margin: 1.5vw 0vw 0vw 1.7vw;
 }
+.users-logo-spin.spin-test-animal {
+  position: absolute;
+  width: 9vw;
+  height: auto;
+  margin: -39.5vw 0vw 0vw -6vw;
+  z-index: 4;
+  opacity: 0; /* Начальное значение нулевой прозрачности */
+  transition: opacity 0.5s; /* Добавление анимации перехода для свойства прозрачности */
+}
+
+
+.show-image.users-logo-spin.spin-test-animal {
+  opacity: 1;
+}
 #spin, #reset {
   position: absolute;
   display: none;
 }
+#spin-popup {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 1.23vw;
+  background-image: linear-gradient(#DA4DA3, #783185);
+  font-family: 'Acrom Medium', Arial, sans-serif;
+  border: 0.15vw solid #FFFFFF80;
+  z-index: 6;
+  margin-left: 6.3vw;
+  margin-top: -2.9vw;
+  padding: 1.8vw 2.86vw;
+  color: #FFFFFF;
+  line-height: 1.07vw;
+  font-family: 'Acrom Medium', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.07vw;
+}
+
 .steps-container {
   display: flex;
   justify-content: space-between;
@@ -2296,6 +2331,13 @@ canvas#wheel {
   margin: -1vw 0vw 0vw 32vw;
 }
 canvas#wheel-profile {
+  position: relative;
+  z-index: 5;
+  width: 32.722vw;
+  height: 32.722vw;
+  margin: -4vw 0vw 0vw -3.6vw;
+}
+canvas#wheel-profile-popup {
   position: relative;
   z-index: 5;
   width: 32.722vw;

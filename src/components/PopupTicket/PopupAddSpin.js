@@ -4,6 +4,7 @@ import React, {useRef, useState} from "react";
 import axios from "axios";
 import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
+import SpinForPopup from "../SpinForPopup";
 
 export default function PopupAddSpin(props) {
     const { isOpen, closeModal } = props;
@@ -74,9 +75,10 @@ export default function PopupAddSpin(props) {
                style={{
                    overlay: {
                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                       zIndex: 9999,
+                       zIndex: 111,
                    },
                    content: {
+                       zIndex: 5,
                        position: 'absolute',
                        top: '50%',
                        left: '50%',
@@ -103,37 +105,37 @@ export default function PopupAddSpin(props) {
                         <span className="close close-for-popup-first" onClick={closeModal}>&times;</span>
                     </div>
                     <div className={'left-second-profile'}>
-                        <img className={'how-left-icon profile'} src={howCenterIcon}/>
-                        <p className={'left-first-profile-p'}>Зарегистрировано билетов</p>
-                        <p className={'left-first-profile-p2'}>
-                            {/*{profile && profile.countTicketsTotal}*/}
-                            9
-                            <a className={'left-first-profile-a2'}></a>
-                        </p>
-                        <div className="white-line">из них:</div>
-                        <p className={'left-first-profile-p3-count'}>
-                            {/*{profile && profile.countTicketsApproved}*/}
-                            6
-                        </p>
-                        <p className={'left-first-profile-p3'}>
+                        {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
+                        {/*<p className={'left-first-profile-p'}>Зарегистрировано билетов</p>*/}
+                        {/*<p className={'left-first-profile-p2'}>*/}
+                        {/*    /!*{profile && profile.countTicketsTotal}*!/*/}
+                        {/*    9*/}
+                        {/*    <a className={'left-first-profile-a2'}></a>*/}
+                        {/*</p>*/}
+                        {/*<div className="white-line">из них:</div>*/}
+                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                        {/*    /!*{profile && profile.countTicketsApproved}*!/*/}
+                        {/*    6*/}
+                        {/*</p>*/}
+                        {/*<p className={'left-first-profile-p3'}>*/}
 
-                            приняли участие <br></br>в
-                            розыгрыше
-                        </p>
-                        <p className={'left-first-profile-p3-count'}>
-                            {/*{profile && profile.countTicketsRejected}*/}
-                            3
-                        </p>
-                        <p className={'left-first-profile-p3'}>
-                            могут принять <br></br>участие в
-                            розыгрыше
-                        </p>
+                        {/*    приняли участие <br></br>в*/}
+                        {/*    розыгрыше*/}
+                        {/*</p>*/}
+                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                        {/*    /!*{profile && profile.countTicketsRejected}*!/*/}
+                        {/*    3*/}
+                        {/*</p>*/}
+                        {/*<p className={'left-first-profile-p3'}>*/}
+                        {/*    могут принять <br></br>участие в*/}
+                        {/*    розыгрыше*/}
+                        {/*</p>*/}
                         <div className="spin-block">
-                            <TestForSpin/>
+                            <SpinForPopup/>
                         </div>
-                        <a
-                            className={'button-animation-text-profile click-spin'}>
-                            <b>Разыграть приз</b> </a>
+                        {/*<a*/}
+                        {/*    className={'button-animation-text-profile click-spin'}>*/}
+                        {/*    <b>Крутануть</b> </a>*/}
                     </div>
                     <p className={'register-inputs-text code-left'}>:</p>
                     <input type="text" id={'addCode'}

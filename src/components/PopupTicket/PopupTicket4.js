@@ -66,8 +66,8 @@ export default function PopupTicket4 ({number,text}) {
                         <h1 className={'popup-h1'}>Регистрация билета</h1>
                         <label className={'bilet-ticket-2-p'}>Билет</label>
                         <label className={'bilet-ticket-2-p2'} id='ticket-for-number4'>{number}</label>
-                        <label className={'bilet-ticket-2-p3'}>не продан: регистрация невозможна. </label>
-                        <p className={'bilet-ticket-2-p5'}>Проверьте корректность ввода номера билета или обратитесь в точку продаж.</p>
+                        <label className={'bilet-ticket-2-p3'}>не продан: регистрация невозможна </label>
+                        <p className={'bilet-ticket-2-p5'}>Проверьте корректность ввода номера лотерейного билета или обратитесь в точку продаж</p>
                     </form>
 
                 </div>
