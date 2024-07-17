@@ -2240,15 +2240,36 @@ header .button-animation:hover {
   height: auto;
   margin: -28.7vw 0vw 0vw 17vw;
   z-index: -1;
-  opacity: 0;
-  transition: transform 1s ease-out, width 1s ease-out; /* Добавьте плавные переходы для изменения позиции и размера */
-  transform: translateY(0px) scale(1); /* Начальное положение и размер */
+  opacity: 0; /* Начальная непрозрачность будет анимирована при показе hand-left */
+  transform: translateY(0px); /* Начальное положение, когда hand-left скрыт */
+  animation: appearAndShake 1s forwards; /* Начальная анимация появления с задержкой */
 }
 .users-logo-spin.hand-left.animate {
   opacity: 1;
-  transform: translateY(0) scale(1); /* Задайте конечное положение и размер */
+  transform: translateY(0px); /* Изменение положения при появлении hand-left */
   width: 4vw;
-  z-index: 5;
+  animation: appearAndRotate 0.5s both ease-in-out;
+  transform-origin: bottom center; /* Изменение точки вращения к левому нижнему углу руки */
+  z-index: 5; /* Это сохранит изображение "hand-left" над другими элементами */
+}
+.users-logo-spin.hand-left.animate.shake-animation {
+  transform: translateY(-30px) rotate(120deg); /* Изменение положения при появлении hand-left */
+  animation: shake 1s 1s forwards; /* Анимация тряски с задержкой после появления */
+}
+
+@keyframes appearAndRotate {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  50% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-30px) rotate(120deg); }
+}
+
+@keyframes shake {
+  0% { transform: translateY(-30px) rotate(120deg); }
+  25% { transform: translateY(-25px) rotate(125deg); }
+  50% { transform: translateY(-35px) rotate(115deg); }
+  75% { transform: translateY(-28px) rotate(123deg); }
+  100% { transform: translateY(-30px) rotate(120deg); }
+
 }
 .users-logo-spin.hand-right {
   position: absolute;
@@ -2314,6 +2335,21 @@ header .button-animation:hover {
   font-family: 'Acrom Medium', Arial, sans-serif;
   font-weight: 400;
   font-size: 1.07vw;
+}
+#spin-popup:hover {
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
+  transition: background-image 0.8s ease-in-out;
+}
+#spin-popup:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+#spin-popup.disabled {
+  opacity: 0.6; /* This reduces the opacity of the button to visually indicate that it's disabled */
+  pointer-events: none; /* Prevent the button from being clicked while disabled */
+  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
+  border: 0.15vw solid #CCCCCC; /* Match the border color to the background color */
+  cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
 }
 
 .steps-container {
@@ -2650,6 +2686,54 @@ canvas#wheel-profile-popup {
   margin-left: -25.32vw;
   z-index: 101;
 }
+#wheel-center-test-popup {
+  /*cursor: pointer;*/
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 1em;
+  background: #9665d7;
+  margin-top: 7.2vw;
+  margin-left: -25.3vw;
+  z-index: 104;
+}
+#wheel-center-2-test-popup {
+  /*cursor: pointer;*/
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 1em;
+  height: 1em;
+  border-radius: 2em;
+  background: #5e3692;
+  margin-top: 7.2vw;
+  margin-left: -25.3vw;
+  z-index: 103;
+}
+#wheel-center-3-test-popup {
+  /*cursor: pointer;*/
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 2em;
+  background: #7a3bcb;
+  margin-top: 7.2vw;
+  margin-left: -25.3vw;
+  z-index: 102;
+}
+#wheel-center-4-test-popup{
+  /*cursor: pointer;*/
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 3.3em;
+  height: 3.3em;
+  border-radius: 2em;
+  background: #4f2d7a;
+  margin-top: 7.2vw;
+  margin-left: -25.32vw;
+  z-index: 101;
+}
 .wheel-center-container {
   position: absolute;
   margin: 5.3vw 0vw 0vw 38vw;
@@ -2783,7 +2867,7 @@ canvas#wheel-profile-popup {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.439583vw 2.13125vw;
-  margin-top: 6.75vw;
+  margin-top: 7.75vw;
   margin-left: -26.3vw;
   border-radius: 1.21875vw;
   cursor: pointer;

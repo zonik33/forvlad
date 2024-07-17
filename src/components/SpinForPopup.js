@@ -38,7 +38,8 @@ class SpinForPopup extends React.Component {
         offset: null, // RADIANS
         net: null, // RADIANS
         result: null, // INDEX
-        spinning: false
+        spinning: false,
+        buttonDisabled: false, // Начальное состояние кнопки
     };
 
     componentDidMount() {
@@ -303,6 +304,7 @@ class SpinForPopup extends React.Component {
         if (!this.state.spinning && this.state.availableTickets >= 3) {
             let randomSpin = Math.floor(Math.random() * 900) + 500;
             this.setState({
+                buttonDisabled: true,
                 rotating: true,
                 showFullSizeImage: true
             });
@@ -321,15 +323,19 @@ class SpinForPopup extends React.Component {
                 const imageElements = document.getElementById('yourImageId2');
                 setTimeout(() => {
                     document.getElementById('yourImageId2').classList.add('animate');
-                }, 1100); // Delay in milliseconds
+                }, 1500); // Delay in milliseconds
                 // Замените 'yourImageId' на реальный идентификатор вашего изображения
                 imageElements.classList.add('show-image');
                 const imageElements2 = document.getElementById('yourImageId3');
                 setTimeout(() => {
                     document.getElementById('yourImageId3').classList.add('animate');
-                }, 1100); // Delay in milliseconds
-                // Замените 'yourImageId' на реальный идентификатор вашего изображения
+                }, 1500); // Delay in milliseconds
                 imageElements2.classList.add('show-image');
+                const imageElements22 = document.getElementById('yourImageId3');
+                setTimeout(() => {
+                    document.getElementById('yourImageId2').classList.add('shake-animation');
+                }, 2800); // Delay in milliseconds
+                imageElements22.classList.add('shake-animation');
             });
 
 
@@ -341,8 +347,16 @@ class SpinForPopup extends React.Component {
                 });
                 setTimeout(() => {
                     this.getResult(randomSpin);
-                }, 4000);
+                    this.setState({
+                        buttonDisabled: false,
+                    });
+                }, 3000);
             }, 4000);
+            setTimeout(() => {
+                this.setState({
+                    showNewPhoto: false,
+                });
+            }, 6500); // Delay after the spin animation is completed
         }
     };
 
@@ -389,10 +403,10 @@ class SpinForPopup extends React.Component {
                     <span id="selectorspintest">&#9660;</span>
                 </div>
                 <div className={'wheel-center-container-popup'}>
-                    <span id="wheel-center-test"></span>
-                    <span id="wheel-center-2-test"></span>
-                    <span id="wheel-center-3-test"></span>
-                    <span id="wheel-center-4-test"></span>
+                    <span id="wheel-center-test-popup"></span>
+                    <span id="wheel-center-2-test-popup"></span>
+                    <span id="wheel-center-3-test-popup"></span>
+                    <span id="wheel-center-4-test-popup"></span>
                 </div>
                 <img className={'users-logo-spin spin-test-popup'} src={spin}/>
 
@@ -416,11 +430,20 @@ class SpinForPopup extends React.Component {
                     </button>
                 ) : (
                     <div>
-                        <button type="button" id="spin-popup" onClick={this.spin}>
-                            Крутануть
+                        <button
+                            type="button"
+                            id="spin-popup"
+                            onClick={this.spin}
+                            disabled={this.state.buttonDisabled}
+                            className={this.state.buttonDisabled ? 'disabled' : ''}
+                        >
+                            {this.state.spinning ? 'Крутится...' : 'Крутить'}
                         </button>
-                        {this.state.showPhoto && <img id="yourImageId" className={'users-logo-spin spin-test-animal'} src={animal} alt="Фото"/>}
-                        {this.state.showNewPhoto && <img id="yourImageId2" className={'users-logo-spin hand-left'} src={lefthand} alt="Новая Фото"/>}
+                        {this.state.showPhoto &&
+                            <img id="yourImageId" className={'users-logo-spin spin-test-animal'} src={animal}
+                                 alt="Фото"/>}
+                        {this.state.showNewPhoto &&
+                            <img id="yourImageId2" className={'users-logo-spin hand-left'} src={lefthand} alt="Новая Фото"/>}
                         {this.state.showNewPhoto && <img id="yourImageId3" className={'users-logo-spin hand-right'} src={righthand} alt="Новая Фото"/>}
                     </div>
                 )}

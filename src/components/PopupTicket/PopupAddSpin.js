@@ -138,7 +138,7 @@ export default function PopupAddSpin(props) {
                         {/*    могут принять <br></br>участие в*/}
                         {/*    розыгрыше*/}
                         {/*</p>*/}
-                        {onlyTest > 6 ? (
+                        {onlyTest > 0 ? (
                             <>
                                 <p className={'left-first-profile-p2-p2-p2 p-popup'}>
                                     Осталось {onlyTest} раз
