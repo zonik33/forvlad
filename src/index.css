@@ -2243,6 +2243,7 @@ header .button-animation:hover {
   opacity: 0; /* Начальная непрозрачность будет анимирована при показе hand-left */
   transform: translateY(0px); /* Начальное положение, когда hand-left скрыт */
   animation: appearAndShake 1s forwards; /* Начальная анимация появления с задержкой */
+
 }
 .users-logo-spin.hand-left.animate {
   opacity: 1;
@@ -2250,17 +2251,33 @@ header .button-animation:hover {
   width: 4vw;
   animation: appearAndRotate 0.5s both ease-in-out;
   transform-origin: bottom center; /* Изменение точки вращения к левому нижнему углу руки */
-  z-index: 5; /* Это сохранит изображение "hand-left" над другими элементами */
+  z-index: 10; /* Это сохранит изображение "hand-left" над другими элементами */
 }
 .users-logo-spin.hand-left.animate.shake-animation {
   transform: translateY(-30px) rotate(120deg); /* Изменение положения при появлении hand-left */
   animation: shake 1s 1s forwards; /* Анимация тряски с задержкой после появления */
+}
+.users-logo-spin.hand-left.animateback {
+  opacity: 1;
+  transform: translateY(0px); /* Изменение положения при появлении hand-left */
+  width: 4vw;
+  animation: appearAndRotateBack 0.5s both ease-in-out;
+  transform-origin: bottom center; /* Изменение точки вращения к левому нижнему углу руки */
+  z-index: 10; /* Это сохранит изображение "hand-left" над другими элементами */
 }
 
 @keyframes appearAndRotate {
   0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
   50% { transform: translateY(0px) rotate(0deg); opacity: 1; }
   100% { transform: translateY(-30px) rotate(120deg); }
+}
+@keyframes appearAndRotateBack {
+  0% { transform: translateY(-30px) rotate(120deg); opacity: 0; }
+  50% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+*:focus {
+  outline: none;
 }
 
 @keyframes shake {

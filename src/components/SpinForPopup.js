@@ -313,6 +313,7 @@ class SpinForPopup extends React.Component {
             this.setState({
                 showPhoto: true,
                 showNewPhoto: true,
+                showNewPhotoRight: true
             }, () => {
                 const imageElement = document.getElementById('yourImageId');
                 setTimeout(() => {
@@ -444,7 +445,7 @@ class SpinForPopup extends React.Component {
                                  alt="Фото"/>}
                         {this.state.showNewPhoto &&
                             <img id="yourImageId2" className={'users-logo-spin hand-left'} src={lefthand} alt="Новая Фото"/>}
-                        {this.state.showNewPhoto && <img id="yourImageId3" className={'users-logo-spin hand-right'} src={righthand} alt="Новая Фото"/>}
+                        {this.state.showNewPhotoRight && <img id="yourImageId3" className={'users-logo-spin hand-right'} src={righthand} alt="Новая Фото"/>}
                     </div>
                 )}
                 <div className="displayspin">
