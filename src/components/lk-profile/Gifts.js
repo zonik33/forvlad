@@ -32,11 +32,17 @@ import PopupEnd from "../PopupTicket/PopupEnd";
 import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
 import PopupAddSpin from "../PopupTicket/PopupAddSpin";
+import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
 
 export default function Gifts() {
 
     function openPopup() {
         document.getElementById("popup-ticket1").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+
+    function openPopupTakeGifts() {
+        document.getElementById("popup-take-gifts").style.display = "block";
         document.body.classList.add("no-scroll");
     }
 
@@ -441,8 +447,8 @@ export default function Gifts() {
                                             <div className="prize-item">
                                                 <span className="prize-name">Мечталион</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <button className="button-animation-text-profile click-ticket-prizes">
-                                                    <b className={'gifts-b'}>Получить билет</b></button>
+                                                <a className="button-animation-text-profile click-ticket-prizes" onClick={openPopupTakeGifts}>
+                                                    <b className={'gifts-b'}>Получить билет</b></a>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
@@ -456,12 +462,13 @@ export default function Gifts() {
                                             <div className="prize-item">
                                                 <span className="prize-name">Пять-О-Пять</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <button className="button-animation-text-profile click-ticket-prizes">
-                                                    <b className={'gifts-b'}>Получить билет</b></button>
+                                                <a className="button-animation-text-profile click-ticket-prizes"
+                                                   onClick={openPopupTakeGifts}>
+                                                    <b className={'gifts-b'}>Получить билет</b></a>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
-                                            <div className="draw-date">10.06.2024</div>
+                                        <div className="draw-date">10.06.2024</div>
                                         </div>
                                         <div className={'line-true gifts'}></div>
                                     </div>
@@ -471,8 +478,9 @@ export default function Gifts() {
                                             <div className="prize-item">
                                                 <span className="prize-name">Великолепная 8</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <button className="button-animation-text-profile click-ticket-prizes">
-                                                    <b className={'gifts-b'}>Получить билет</b></button>
+                                                <a className="button-animation-text-profile click-ticket-prizes"
+                                                   onClick={openPopupTakeGifts}>
+                                                    <b className={'gifts-b'}>Получить билет</b></a>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
@@ -539,6 +547,7 @@ export default function Gifts() {
                 <PopupTicket5/>
                 <PopupVideos/>
                 <PopupEnd/>
+                <PopupTakeGifts/>
             </footer>
         </header>
 

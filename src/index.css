@@ -700,6 +700,27 @@ header .button-animation:hover {
   margin-left: -0.4vw;
   margin-top: -1.9vw;
 }
+.popup-take-gifts {
+  background-color: #00438280;
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+  width: 34.6vw;
+  height: 23.99vw;
+  padding: 0.6vw 0.94vw;
+  border-radius: 1.27vw;
+  margin-top: 0vw;
+}
+.popup-take-gifts-bonus {
+  background-color: #FFFFFF4D;
+  width: 34.6vw;
+  height: 37.99vw;
+  padding: 0.6vw 0.94vw;
+  border-radius: 1.27vw;
+  margin-top: 0vw;
+}
+.popup-take-gifts .form-register {
+  width: 25vw;
+  margin-left: 2vw;
+}
 .left-first-profile-p3-count.spin-p-test {
   width: 16vw;
   font-family: "Acrom Medium", Arial, sans-serif;
@@ -707,7 +728,7 @@ header .button-animation:hover {
   text-align: left;
   line-height: 3.050vw;
   color: #FFFFFF;
-  font-weight: 400;
+  font-weight: 700;
   margin-left: -0.4vw;
   margin-top: 1.1vw;
 }
@@ -1604,6 +1625,12 @@ header .button-animation:hover {
   margin-top: -5.2vw;
   padding: 1.1vw 1.35vw;
 }
+.button-animation-text-profile.click-take-gifts {
+  margin-left: 1.2vw;
+  margin-top: 18.8vw;
+  padding: 1.5vw 2.35vw;
+}
+
 .global-name-move {
   margin: 8.8vw 0vw 0vw -73.4vw;
 }
@@ -4819,6 +4846,34 @@ canvas#wheel-profile-popup {
   border: #FFFFFF4D 0.07vw solid;
   color: #FFFFFF;
 }
+.popup-take-gifts .close {
+  position: absolute;
+  cursor: pointer;
+  margin: 0.6vw 0.35vw 0.35vw 30.38vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: #FFFFFF1A;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0.07vw solid;
+  color: #FFFFFF;
+}
+.popup-take-gifts .close:hover {
+  position: absolute;
+  cursor: pointer;
+  margin: 0.6vw 0.35vw 0.35vw 30.38vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: #FFFFFF1A;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0.07vw solid;
+  color: #FFFFFF4D;
+}
 .popup-spin .close {
   position: absolute;
   cursor: pointer;
@@ -4896,6 +4951,32 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 500;
+  color: #FFFFFF;
+}
+.bilet-ticket-2-p2.take-gifts {
+  margin-left: -1.5vw;
+  width: 26.35vw;
+  height: 1.90vw;
+  display: block;
+  text-align: center;
+  font-size: 1.32vw;
+  line-height: 1.76vw;
+  font-family: "Halvar Mittelschrift Rg", sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.bilet-ticket-2-p.take-gifts {
+  margin-left: 1.4vw;
+  width: 20.35vw;
+  height: 1.90vw;
+  margin-bottom: 3vw;
+  display: block;
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 1.32vw;
+  line-height: 1.76vw;
+  font-family: "Halvar Mittelschrift Rg", sans-serif;
+  font-weight: 400;
   color: #FFFFFF;
 }
 .bilet-ticket-2-p3 {
