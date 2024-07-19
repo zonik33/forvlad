@@ -2263,7 +2263,7 @@ header .button-animation:hover {
   position: absolute;
   width: 6vw;
   height: auto;
-  margin: -43.5vw 0vw 0vw 16.2vw;
+  margin: -42.2vw 0vw 0vw 16.5vw;
   z-index: -1;
   opacity: 0;
   transition: transform 1s ease-out, width 1s ease-out; /* Добавьте плавные переходы для изменения позиции и размера */
@@ -2271,7 +2271,7 @@ header .button-animation:hover {
 }
 .users-logo-spin.spin-test-animal.animate {
   transform: translateY(0) scale(1); /* Задайте конечное положение и размер */
-  width: 10vw;
+  width: 9.5vw;
 }
 
 .users-logo-spin.hand-left {
