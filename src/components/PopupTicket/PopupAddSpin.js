@@ -84,7 +84,7 @@ export default function PopupAddSpin(props) {
                    content: {
                        zIndex: 5,
                        position: 'absolute',
-                       top: '50%',
+                       top: '53%',
                        left: '50%',
                        transform: 'translate(-50%, -50%)',
                        backgroundColor: '#00438280',
@@ -141,7 +141,7 @@ export default function PopupAddSpin(props) {
                         {onlyTest > 0 ? (
                             <>
                                 <p className={'left-first-profile-p2-p2-p2 p-popup'}>
-                                    Осталось {onlyTest} раз
+                                    Осталось прокрутить {onlyTest} раз
                                 </p>
 
                             </>
