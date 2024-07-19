@@ -442,17 +442,22 @@ export default function Gifts() {
                                     {/*<p className={'right-second-gifts-p'}>Ваши подарки</p>*/}
                                     <span className={'gifts-prizes-name'}>Приз</span>
                                     <span className={'gifts-prizes-data'}>Итоги розыгрыша рулетки</span>
+                                    <span className={'gifts-prizes-data-add'}>Срок <br></br>действия до</span>
                                     <div className="prizes-container">
                                         <div className="prize-column">
                                             <div className="prize-item">
                                                 <span className="prize-name">Мечталион</span>
                                                 <span className="prize-code">221234567890</span>
-                                                <a className="button-animation-text-profile click-ticket-prizes" onClick={openPopupTakeGifts}>
+                                                <a className="button-animation-text-profile click-ticket-prizes"
+                                                   onClick={openPopupTakeGifts}>
                                                     <b className={'gifts-b'}>Получить билет</b></a>
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
                                             <div className="draw-date">10.06.2024</div>
+                                        </div>
+                                        <div className="draw-date-prizes-column">
+                                            <div className="draw-date">10.08.2024</div>
                                         </div>
                                         <div className={'line-true gifts'}></div>
                                     </div>
@@ -468,7 +473,10 @@ export default function Gifts() {
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
-                                        <div className="draw-date">10.06.2024</div>
+                                            <div className="draw-date">10.06.2024</div>
+                                        </div>
+                                        <div className="draw-date-prizes-column">
+                                            <div className="draw-date">10.08.2024</div>
                                         </div>
                                         <div className={'line-true gifts'}></div>
                                     </div>
@@ -484,14 +492,17 @@ export default function Gifts() {
                                             </div>
                                         </div>
                                         <div className="draw-date-column">
-                                        <div className="draw-date">10.06.2024</div>
+                                            <div className="draw-date">10.06.2024</div>
+                                        </div>
+                                        <div className="draw-date-prizes-column">
+                                            <div className="draw-date">5.08.2024</div>
                                         </div>
                                         <div className={'line-true gifts'}></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </main>

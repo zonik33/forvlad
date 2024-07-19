@@ -350,7 +350,7 @@ export default function Profile(props){
                                     {onlyTest > 0 ? (
                                         <>
                                             <p className={'left-first-profile-p2-p2-p2'}>
-                                                Осталось {onlyTest} раз
+                                                Осталось прокрутить {onlyTest} раз
                                             </p>
 
                                         </>

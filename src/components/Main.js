@@ -67,12 +67,16 @@ export default function Main (props) {
                     <div className={'myELementSecond'}>
                         <img className={'man'} src={man}/>
                         <div className={'overlay'}></div>
+                        <div className={'overlay-low'}></div>
                     </div>
                     <div className={'main-text-text'}>
                         <img className={'man logo-pochta'} src={logopochta}/>
-                        <div className={'main-text'}> Покупайте лотерейные билеты в отделениях «Почты России» и
-                            участвуйте в розыгрыше призов от Национальной Лотереи
+                        <div className={'main-text'}> Покупайте лотерейные билеты <br></br>в отделениях «Почты России»*
+                            <br></br>и участвуйте в розыгрыше призов от Национальной Лотереи
+                            <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
+                                Краснодар, Екатеринбург</p>
                         </div>
+
                         {/*<div className={'main-text'}>*/}
                         {/*    <div className={'buy-block'}>*/}
                         {/*        <a className={'buy-block-a'}>КУПИТЕ</a>*/}
