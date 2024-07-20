@@ -12,7 +12,7 @@ import PopupTicket3 from "./PopupTicket/PopupTicket3";
 import PopupTicket4 from "./PopupTicket/PopupTicket4";
 import PopupTicket5 from "./PopupTicket/PopupTicket5";
 import Popup from "./PopupReg/Popup";
-import {useState} from "react";
+import React, {useState} from "react";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
 
 
@@ -58,21 +58,21 @@ export default function Main (props) {
         <main>
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
-                    <div className={'bottle-left'}>
-                        <img className={'bottle-float-left'} src={wintohealth}/>
-                    </div>
-                    <div className="myElement">
-                        <img className={'bottle-float-left main-test-55'} src={img55}/>
-                    </div>
+                    {/*<div className={'bottle-left'}>*/}
+                    {/*    <img className={'bottle-float-left'} src={wintohealth}/>*/}
+                    {/*</div>*/}
+                    {/*<div className="myElement">*/}
+                    {/*    <img className={'bottle-float-left main-test-55'} src={img55}/>*/}
+                    {/*</div>*/}
                     <div className={'myELementSecond'}>
                         <img className={'man'} src={man}/>
-                        <div className={'overlay'}></div>
-                        <div className={'overlay-low'}></div>
+                        {/*<div className={'overlay'}></div>*/}
+                        {/*<div className={'overlay-low'}></div>*/}
                     </div>
                     <div className={'main-text-text'}>
                         <img className={'man logo-pochta'} src={logopochta}/>
-                        <div className={'main-text'}> Покупайте лотерейные билеты <br></br>в отделениях «Почты России»*
-                            <br></br>и участвуйте в розыгрыше призов от Национальной Лотереи
+                        <div className={'main-text'}> Покупайте лотерейные билеты в отделениях <br></br>«Почты России»*
+                            и участвуйте в розыгрыше призов <br></br>от Национальной Лотереи
                             <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
                                 Краснодар, Екатеринбург</p>
                         </div>
@@ -114,18 +114,22 @@ export default function Main (props) {
                     </div>
                 </div>
             </div>
-            <How/>
-            <Prizes/>
-            {/*<Winners/>*/}
-            <Questions/>
-        <Footer/>
-            <PopupPasswordCopy/>
-            <PopupTicket1/>
-            <PopupTicket2/>
-            <PopupTicket3/>
-            <PopupTicket4/>
-            <PopupTicket5/>
+                <How/>
+                <Prizes/>
+                {/*<Winners/>*/}
+            <div className={'items-block-how qouest'}>
+                <div className={'question-block'} id={'support'}>Вопросы и ответы</div>
+                <Questions/>
+            </div>
+                <Footer/>
+                <PopupPasswordCopy/>
+                <PopupTicket1/>
+                <PopupTicket2/>
+                <PopupTicket3/>
+                <PopupTicket4/>
+                <PopupTicket5/>
         </main>
 
-    )
+
+)
 }

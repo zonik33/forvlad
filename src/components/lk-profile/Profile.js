@@ -1,6 +1,6 @@
 import tickettext from "../../image/tickettext.png";
 import ticketText from "../../image/tickettext.png";
-import users from "../../image/img_71.png";
+import users from "../../image/img_98.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
 import fullhearth from "../../image/full-hearth.png";
@@ -21,6 +21,7 @@ import { useNavigate } from 'react-router-dom';
 import ScrollPrizes from "../Scroll/ScrollPrizes";
 import scrollToPrizes from "../Scroll/ScrollToPrizes";
 import ticket from "../../image/ticket.png";
+import tickets from "../../image/img_101.png";
 import PopupVideos from "../Winners-videos/PopupVideos";
 import PopupEnd from "../PopupTicket/PopupEnd";
 import prizesCenterCard from "../../image/mv-card.png";
@@ -30,6 +31,7 @@ import Test from "../test";
 import TestForSpin from "../TestSpinProfile";
 import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 import Popup from "../PopupReg/Popup";
+import ticketTextRight from "../../image/img_100.png";
 
 
 
@@ -265,219 +267,225 @@ export default function Profile(props){
             <main>
                 <div className={'main-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
+                        {/*<img className={'tsxt'} src={tickets}/>*/}
                         <div className={'items-block-profile'}>
-                        <div className={'global-name'}>
-                            <p className={'global-name-move'}>Личный кабинет</p>
-                        </div>
-                        <a onClick={openPopup} className={'button-animation-text-profile'}>
-                            <b>Зарегистрировать билет</b> </a>
-                        <div className="container-profile">
-                            <div className="left-column-profile">
-                                {/*<div className={'left-first-profile'}>*/}
-                                {/*    /!*<div>*!/*/}
-                                {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
-                                {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
-                                {/*    /!*</div>*!/*/}
-                                {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
-                                {/*        от Мвидео!</p>*/}
-                                {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
-                                {/*    <div className="notification">Ссылка скопирована!</div>*/}
-                                {/*    <p className={'left-first-profile-p2-p2'}>*/}
-                                {/*        {profile && profile.countReferrals}*/}
-                                {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
-                                {/*            реферальной ссылкой</a>*/}
-                                {/*    </p>*/}
-                                {/*    {profile && profile.countReferrals > 0 ? (*/}
-                                {/*        <>*/}
-                                {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
-                                {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
-                                {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
-                                {/*                акции.*/}
-                                {/*            </p>*/}
-
-                                {/*        </>*/}
-                                {/*    ) : null}*/}
-
-                                {/*</div>*/}
-                                {/*<div className={'backdrop-profile1'}></div>*/}
-                                <div className={'profile-right-float-img'}>
-                                    {/*<img className={'profile-snake-left'} src={snake}/>*/}
-                                    {/*<img className={'profile-rings'} src={rings}/>*/}
-                                    {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
-                                    {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
-                                    {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
-                                    {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
-                                    {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
-                                </div>
-                                <div className={'left-second-profile'}>
-                                    {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
-                                    <div className="spin-block">
-                                        <TestForSpin/>
-                                    </div>
-                                    <p className={'left-first-profile-p'}>Вы зарегистрировали
-                                        <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
-                                        <br></br>на сумму
-                                        {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
-
-                                    </p>
-
-                                    <div className="white-line"></div>
-                                    <p className={'left-first-profile-p3-count'}>
-                                        За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
-                                    </p>
-                                    {/*{profile && profile.countReferrals > 0 ? (*/}
-
-                                    {/*<p className={'left-first-profile-p3'}>*/}
-
-                                    {/*    приняли участие <br></br>в*/}
-                                    {/*    розыгрыше*/}
-                                    {/*</p>*/}
-                                    {/*<p className={'left-first-profile-p3-count'}>*/}
-                                    {/*    {profile && profile.countTicketsRejected}*/}
-                                    {/*    3*/}
-                                    {/*</p>*/}
-                                    {/*<p className={'left-first-profile-p3'}>*/}
-                                    {/*    могут принять <br></br>участие в*/}
-                                    {/*    розыгрыше*/}
-                                    {/*</p>*/}
-                                    <a
-                                        onClick={openPopup1}
-                                        className={'button-animation-text-profile click-spin'}>
-                                        <b>Крутить</b> </a>
-                                    {isPopupOpen &&
-                                        <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
-
-                                    {onlyTest > 0 ? (
-                                        <>
-                                            <p className={'left-first-profile-p2-p2-p2'}>
-                                                Осталось прокрутить {onlyTest} раз
-                                            </p>
-
-                                        </>
-                                    ) : <p className={'left-first-profile-p2-p2-p2'}>
-                                        Хотите крутануть колесо? Купите лотерейные билеты на сумму от 300 рублей.
-                                        <br></br>
-                                        <br></br>
-                                        За каждые 300 рублей вы получите 1 (одну) попытку.
-                                    </p>
-                                    }
-                                </div>
+                            <div className={'global-name'}>
+                                <p className={'global-name-move'}>Личный кабинет</p>
                             </div>
-                            <div className="right-column-profile">
-                            <div className={'right-first-profile'}>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/profile"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/profile'}
-                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Профиль
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/tickets"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/tickets'}
-                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Билеты
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/gifts"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/gifts'}
-                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Призы
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    {/*<div className={'right-first-profile'}>*/}
-                                    {/*    <NavLink*/}
-                                    {/*        to="/videos"*/}
-                                    {/*        activeclassname="active-subsection"*/}
-                                    {/*        isactive={() => location.pathname === '/videos'}*/}
-                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
-                                    {/*    >*/}
-                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
-                                    {/*        /!*    Розыгрыши*!/*/}
-                                    {/*        /!*</div>*!/*/}
-                                    {/*    </NavLink>*/}
+                            <a onClick={openPopup} className={'button-animation-text-profile'}>
+                                <b>Зарегистрировать билет</b> </a>
+                            <div className="container-profile">
+                                <div className="left-column-profile">
+                                    {/*<div className={'left-first-profile'}>*/}
+                                    {/*    /!*<div>*!/*/}
+                                    {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
+                                    {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
+                                    {/*    /!*</div>*!/*/}
+                                    {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
+                                    {/*        от Мвидео!</p>*/}
+                                    {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
+                                    {/*    <div className="notification">Ссылка скопирована!</div>*/}
+                                    {/*    <p className={'left-first-profile-p2-p2'}>*/}
+                                    {/*        {profile && profile.countReferrals}*/}
+                                    {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
+                                    {/*            реферальной ссылкой</a>*/}
+                                    {/*    </p>*/}
+                                    {/*    {profile && profile.countReferrals > 0 ? (*/}
+                                    {/*        <>*/}
+                                    {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
+                                    {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
+                                    {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
+                                    {/*                акции.*/}
+                                    {/*            </p>*/}
+
+                                    {/*        </>*/}
+                                    {/*    ) : null}*/}
+
                                     {/*</div>*/}
-                                </div>
-                                <div className={'right-second-profile'}>
-                                    <div className={'content-from-left'}>
-                                        {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
-                                        <p className={'right-second-profile-p2'}>Номер телефона</p>
-                                        <input className={'popupCode-input-profile'} type="tel"
-                                               defaultValue={'+7 977 302 84 57'} value={profile && profile.login} readOnly
-                                               style={{backgroundColor: '#023d6c'}}
-                                        />
-                                        {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
+                                    {/*<div className={'backdrop-profile1'}></div>*/}
+                                    <div className={'profile-right-float-img'}>
+                                        {/*<img className={'profile-snake-left'} src={snake}/>*/}
+                                        {/*<img className={'profile-rings'} src={rings}/>*/}
+                                        {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
+                                        {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
+                                        {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
+                                        {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
+                                        {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
+                                    </div>
+                                    <div className={'left-second-profile'}>
+                                        {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
+                                        <div className="spin-block">
+                                            <TestForSpin/>
+                                        </div>
+                                        <p className={'left-first-profile-p'}>Вы зарегистрировали
+                                            <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                                            <br></br>на сумму
+                                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+
+                                        </p>
+
+                                        <div className="white-line"></div>
+                                        <p className={'left-first-profile-p3-count'}>
+                                            За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
+                                        </p>
+                                        {/*{profile && profile.countReferrals > 0 ? (*/}
+
+                                        {/*<p className={'left-first-profile-p3'}>*/}
+
+                                        {/*    приняли участие <br></br>в*/}
+                                        {/*    розыгрыше*/}
+                                        {/*</p>*/}
+                                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                                        {/*    {profile && profile.countTicketsRejected}*/}
+                                        {/*    3*/}
+                                        {/*</p>*/}
+                                        {/*<p className={'left-first-profile-p3'}>*/}
+                                        {/*    могут принять <br></br>участие в*/}
+                                        {/*    розыгрыше*/}
+                                        {/*</p>*/}
+                                        <a
+                                            onClick={openPopup1}
+                                            className={'button-animation-text-profile click-spin'}>
+                                            <b>Крутить</b> </a>
+                                        {isPopupOpen &&
+                                            <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
+
+                                        {onlyTest > 0 ? (
+                                            <>
+                                                <p className={'left-first-profile-p2-p2-p2'}>
+                                                    Осталось прокрутить {onlyTest} раз
+                                                </p>
+
+                                            </>
+                                        ) : <p className={'left-first-profile-p2-p2-p2'}>
+                                            Хотите крутануть колесо? Купите лотерейные билеты на сумму от 300 рублей.
+                                            <br></br>
+                                            <br></br>
+                                            За каждые 300 рублей вы получите 1 (одну) попытку.
+                                        </p>
+                                        }
                                     </div>
                                 </div>
-                                {/*<div className={'backdrop-profile2'}></div>*/}
+                                <div className="right-column-profile">
+                                    <div className={'right-first-profile'}>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/profile"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/profile'}
+                                                className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Профиль
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/tickets"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/tickets'}
+                                                className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Билеты
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/gifts"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/gifts'}
+                                                className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Призы
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        {/*<div className={'right-first-profile'}>*/}
+                                        {/*    <NavLink*/}
+                                        {/*        to="/videos"*/}
+                                        {/*        activeclassname="active-subsection"*/}
+                                        {/*        isactive={() => location.pathname === '/videos'}*/}
+                                        {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                        {/*    >*/}
+                                        {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                        {/*        /!*    Розыгрыши*!/*/}
+                                        {/*        /!*</div>*!/*/}
+                                        {/*    </NavLink>*/}
+                                        {/*</div>*/}
+                                    </div>
+                                    <div className={'right-second-profile'}>
+                                        <div className={'content-from-left'}>
+                                            {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
+                                            <p className={'right-second-profile-p2'}>Номер телефона</p>
+                                            <input className={'popupCode-input-profile'} type="tel"
+                                                   defaultValue={'+7 977 302 84 57'} value={profile && profile.login}
+                                                   readOnly
+                                                   style={{backgroundColor: '#023d6c'}}
+                                            />
+                                            {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
+                                        </div>
+                                    </div>
+                                    {/*<div className={'backdrop-profile2'}></div>*/}
+                                </div>
                             </div>
-                        </div>
 
                         </div>
                     </div>
                 </div>
             </main>
             <footer className={'footer'}>
-                <div className="myElementFooter">
-                </div>
                 <div className="footer-left">
 
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
-                            <img className={'footer-logo'} src={ticketText}/>
-                        </div>
-                    </div>
-                    <div className={'footer-medium'}>
-                        <div className={'footer-row-left'}>
-                            {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
-                        </div>
-                        <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
-                               target="_blank">Конфиденциальность</a>
-                        </div>
-                        <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
-                               target="_blank">Пользовательское соглашение</a>
+                        <img className={'footer-logo'} src={ticketText}/>
+                            <img className={'footer-logo right'} src={ticketTextRight}/>
                         </div>
                     </div>
                 </div>
                 <div className="footer-right">
                     <div className={'footer-row1'}>
-                        <a>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения выигрышей № 4 («Мечталлион»),
+                        <a className={'footer-color-size'}>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения
+                            выигрышей № 4 («Мечталлион»),
                             срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
                             телефону 8 800 333-7-333.
                         </a>
                     </div>
                     <div className={'footer-row2'}>
-                        <a>Специальные призы от Redmond разыгрываются только среди билетов, купленных в «Почте
-                            России». </a>
+                        <a className={'footer-color-size'}>Специальные призы от Redmond разыгрываются только среди
+                            билетов, купленных в «Почте России». </a>
 
                     </div>
                     <div className={'footer-row3'}>
-                        <a>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022
-                            г.,
+                        <a className={'footer-color-size'}>Рекламная акция «Мечталлион. С нами миллионы!», срок
+                            проведения с 03.10.2022 по 30.11.2022 г.,
                             включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
                     </div>
                     <div className={'footer-row4'}>
-                        <a>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН: 1195027010386, ИНН: 5003133760).</a>
+                        <a className={'footer-color-size'}>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН:
+                            1195027010386, ИНН: 5003133760).</a>
+                    </div>
+                    <div className={'footer-row-left'}>
+                        {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
+                    </div>
+                    <div className="container-footer-bottom">
+                        <div className={'footer-row-left'}>
+                            <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
+                               target="_blank" className={'footer-color-size left'}>Пользовательское соглашение</a>
+                        </div>
+                        <div className={'footer-row-left'}>
+                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
+                               target="_blank" className={'footer-color-size left'}>Конфиденциальность</a>
+                        </div>
+
                     </div>
                 </div>
+
+
                 <PopupTicket1/>
                 <PopupTicket2/>
                 <PopupTicket3/>

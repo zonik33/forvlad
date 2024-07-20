@@ -18,17 +18,18 @@ import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
 import {CSSTransition} from "react-transition-group";
-import mini1 from "../image/img_63.png";
+import mini1 from "../image/img_89.png";
 import mini2 from "../image/img_64.png";
 import mini3 from "../image/img_65.png";
 import mini4 from "../image/img_66.png";
-import mini5 from "../image/img_67.png";
-import mini6 from "../image/img_68.png";
-import mini7 from "../image/img_69.png";
-import howFull1 from "../image/img_59.png";
-import howFull2 from "../image/img_62.png";
-import howFull3 from "../image/img_60.png";
-import howFull5 from "../image/img_61.png";
+import mini5 from "../image/img_87.png";
+import mini6 from "../image/img_88.png";
+import mini7 from "../image/img_89.png";
+import howFull1 from "../image/img_90.png";
+import howFull2 from "../image/img_91.png";
+import howFull3 from "../image/img_94.png";
+import howFull5 from "../image/img_93.png";
+import howFull6 from "../image/img_92.png";
 
 export default function Prizes (props) {
 
@@ -93,23 +94,28 @@ export default function Prizes (props) {
         return (
             <div className={'prizes'} id={'prizes'} ref={prizesRef}>
                 <div className={'wrapper'}>
-                            <div className={'prizes-text11'}>
-                                Призы розыгрышей
-                            </div>
                     <div className={'prizes-items11'}>
-                        <div className={'prizes-content-box-title-bot2-prizes'}>За участие в розыгрышах рулетки с
-                            подарками вы
-                            получите промокод* на лотерейный билет для участия в будущих тиражах от
-                            «Национальная Лотерея»
 
-
-                            <p className={'how-center-p-text-prizes'}>Для применения промокода перейдите на сайт
-                                nloto.ru из
-                                вашего личного кабинета на сайте акции. Пройдите авторизацию и/или регистрацию. При
-                                необходимости подтвердите Email <br></br>и в разделе «Мои билеты» вы увидите лотерейный
-                                билет,
-                                зарегистрированный на тираж</p>
-                            <p className={'how-center-p-text-prizes-2'}>*Промокод на следующие лотерейные билеты:</p>
+                        <div className={'prizes-content-box-title-bot2-prizes'}>
+                            <div className={'prizes-text11'}>
+                                Призы
+                            </div>
+                            <p className={'how-center-p-text bonus-prizes'}> За участие в розыгрышах рулетки с подарками
+                                вы получите промокод* на лотерейный билет для участия в будущих тиражах от «Национальная Лотерея».
+                            </p>
+                            <p className={'how-center-p-text-first bonus-prizes'}>
+                                Для применения промокода перейдите на сайт nloto.ru из вашего личного кабинета
+                                на сайте акции.
+                                Пройдите авторизацию и/или регистрацию. При необходимости подтвердите e-mail
+                                и в разделе «Мои билеты» вы увидите лотерейный билет, зарегистрированный на тираж.
+                            </p>
+                            {/*<p className={'how-center-p-text-prizes bonus-prizes'}>Для применения промокода перейдите на сайт*/}
+                            {/*    nloto.ru из*/}
+                            {/*    вашего личного кабинета на сайте акции. Пройдите авторизацию и/или регистрацию. При*/}
+                            {/*    необходимости подтвердите Email <br></br>и в разделе «Мои билеты» вы увидите лотерейный*/}
+                            {/*    билет,*/}
+                            {/*    зарегистрированный на тираж</p>*/}
+                            {/*<p className={'how-center-p-text-prizes-2'}>*Промокод на следующие лотерейные билеты:</p>*/}
                             <div className={'how-tickets-img'}>
                                 <div className="how-full44-img for-test-img-test-mini-prizes">
                                     <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
@@ -120,34 +126,32 @@ export default function Prizes (props) {
                                     <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
                                         src={mini6}/></a>
                                 </div>
-                                {/*<div className="how-full4-img for-test-img">*/}
-                                {/*    <a href={"https://nloto.ru/lottery/bingo-4x4-womanDay2024"} className={"#"} target="_blank"><img src={howFull6}/></a>*/}
-                                {/*</div>*/}
                                 <div className="how-full444-img for-test-img-second-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
                                         src={mini1}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-third-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={howFull5}/></a>
+                                        src={howFull1}/></a>
                                 </div>
+                            </div>
+                            <div className={'how-tickets-img'}>
                                 <div className="how-full4444-img for-test-img-4-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
                                         src={howFull2}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-5-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={mini7}/></a>
+                                        src={howFull6}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-6-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
-                                        src={howFull1}/></a>
+                                        src={howFull5}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
                                         src={howFull3}/></a>
                                 </div>
-
                             </div>
                         </div>
 

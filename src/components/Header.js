@@ -1,4 +1,4 @@
-import users from '../image/img_71.png'
+import users from '../image/img_98.png'
 import ticket from '../image/ticket.png'
 import tickettext from '../image/tickettext.png'
 import ScrollPrizes from "./Scroll/ScrollPrizes";
@@ -16,6 +16,7 @@ import React, {useEffect, useState} from "react";
 import PopupRegisterCopy from "./PopupReg/PopupRegisterCopy";
 import PopupEnd from "./PopupTicket/PopupEnd";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
+import ScrollSupport from "./Scroll/ScrollSupport";
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
@@ -147,7 +148,7 @@ export default function Header (props){
                             <a className="smooth" href={'#prizes'} onClick={(event) => {closeMenu(); ScrollPrizes(event); }}>Призы</a>
                             {/*<a className="smooth" href={'#winners'} onClick={(event) => {closeMenu(); ScrollWinners(event); }}> Победители </a>*/}
                             <a className="smooth" href={'#faq'} onClick={(event) => {closeMenu(); ScrollFaq(event); }}> Вопрос-ответ </a>
-                            <a className="smooth backFaq" href={'#faq'} onClick={ScrollFaq}> Обратная связь </a>
+                            <a className="smooth backFaq" href={'#faq'} onClick={ScrollSupport}> Обратная связь </a>
                             <div className={'random-block'}>
                                 {isAuthenticated ? (
                                     <button id="profile-button"  onClick={redirectToProfile} className="button-animation">
