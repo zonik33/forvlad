@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -14,6 +14,11 @@ import owntreep from "../image/img_36.png";
 import phone from "../image/img_95.png";
 import sms from "../image/img_96.png";
 import write from "../image/img_97.png";
+import {useLocation} from "react-router-dom";
+
+
+
+
 
 const useStyles = makeStyles((theme) => ({
     circleIcon: {
@@ -44,8 +49,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Faq() {
 
+export default function Faq() {
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const activeSection = params.get("section"); // Получаем значение параметра "section" из URL
+    const supportRef = useRef(null);
+
+    useEffect(() => {
+        if (activeSection === "support" && supportRef.current) {
+            setTimeout(() => {
+                supportRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+
+        }
+    }, [activeSection]);
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const [panelNumber, setPanelNumber] = React.useState(1); // Хранит текущий номер панели
@@ -162,7 +180,7 @@ export default function Faq() {
             {/*<div className={'example-all-test'}>*/}
             {/*    <a className={'winners-all-a faq'} href={'faq'}>Все вопросы</a>*/}
             {/*</div>*/}
-            <div className={'question-block faq-bonus1'} id={'support'}>
+            <div className={'question-block faq-bonus1'} id={'support'} ref={supportRef}>
                 Не нашли ответа на интересующий
                 <br></br>Вас вопрос?
             </div>

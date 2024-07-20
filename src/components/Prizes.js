@@ -92,12 +92,12 @@ export default function Prizes (props) {
     // }, [prizesTextInView]);
 
         return (
-            <div className={'prizes'} id={'prizes'} ref={prizesRef}>
+            <div className={'prizes'}>
                 <div className={'wrapper'}>
                     <div className={'prizes-items11'}>
 
                         <div className={'prizes-content-box-title-bot2-prizes'}>
-                            <div className={'prizes-text11'}>
+                            <div className={'prizes-text11'} id={'prizes'} ref={prizesRef}>
                                 Призы
                             </div>
                             <p className={'how-center-p-text bonus-prizes'}> За участие в розыгрышах рулетки с подарками

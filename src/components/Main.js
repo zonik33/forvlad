@@ -12,8 +12,9 @@ import PopupTicket3 from "./PopupTicket/PopupTicket3";
 import PopupTicket4 from "./PopupTicket/PopupTicket4";
 import PopupTicket5 from "./PopupTicket/PopupTicket5";
 import Popup from "./PopupReg/Popup";
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
+import {useLocation} from "react-router-dom";
 
 
 function openPopup2() {
@@ -53,6 +54,20 @@ export default function Main (props) {
     function openPopupPasswordCopy() {
         document.getElementById("popup-password-copy").style.display = "block";
     }
+
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const activeSection = params.get("section"); // Получаем значение параметра "section" из URL
+    const faqqRef = useRef(null);
+
+    useEffect(() => {
+        if (activeSection === "faq" && faqqRef.current) {
+            setTimeout(() => {
+                faqqRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 0);
+
+        }
+    }, [activeSection]);
 
     return (
         <main>
@@ -118,7 +133,7 @@ export default function Main (props) {
                 <Prizes/>
                 {/*<Winners/>*/}
             <div className={'items-block-how qouest'}>
-                <div className={'question-block'} id={'support'}>Вопросы и ответы</div>
+                <div className={'question-block'} id={'faq'} ref={faqqRef}>Вопросы и ответы</div>
                 <Questions/>
             </div>
                 <Footer/>
