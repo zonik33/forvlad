@@ -1,5 +1,5 @@
+import ticketText from "../../image/img_99.png";
 import tickettext from "../../image/tickettext.png";
-import ticketText from "../../image/tickettext.png";
 import users from "../../image/img_98.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
@@ -364,99 +364,99 @@ export default function Profile(props){
                                             За каждые 300 рублей вы получите 1 (одну) попытку.
                                         </p>
                                         }
-                                    </div>
-                                </div>
-                                <div className="right-column-profile">
-                                    <div className={'right-first-profile'}>
-                                        <div className={'right-first-profile'}>
-                                            <NavLink
-                                                to="/profile"
-                                                activeclassname="active-subsection"
-                                                isactive={() => location.pathname === '/profile'}
-                                                className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
-                                            >
-                                                <div className={'p-main-profile-color'}>
-                                                    Профиль
-                                                </div>
-                                            </NavLink>
-                                        </div>
-                                        <div className={'right-first-profile'}>
-                                            <NavLink
-                                                to="/tickets"
-                                                activeclassname="active-subsection"
-                                                isactive={() => location.pathname === '/tickets'}
-                                                className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
-                                            >
-                                                <div className={'p-main-profile-color'}>
-                                                    Билеты
-                                                </div>
-                                            </NavLink>
-                                        </div>
-                                        <div className={'right-first-profile'}>
-                                            <NavLink
-                                                to="/gifts"
-                                                activeclassname="active-subsection"
-                                                isactive={() => location.pathname === '/gifts'}
-                                                className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
-                                            >
-                                                <div className={'p-main-profile-color'}>
-                                                    Призы
-                                                </div>
-                                            </NavLink>
-                                        </div>
-                                        {/*<div className={'right-first-profile'}>*/}
-                                        {/*    <NavLink*/}
-                                        {/*        to="/videos"*/}
-                                        {/*        activeclassname="active-subsection"*/}
-                                        {/*        isactive={() => location.pathname === '/videos'}*/}
-                                        {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
-                                        {/*    >*/}
-                                        {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
-                                        {/*        /!*    Розыгрыши*!/*/}
-                                        {/*        /!*</div>*!/*/}
-                                        {/*    </NavLink>*/}
-                                        {/*</div>*/}
-                                    </div>
-                                    <div className={'right-second-profile'}>
-                                        <div className={'content-from-left'}>
-                                            {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
-                                            <p className={'right-second-profile-p2'}>Номер телефона</p>
-                                            <input className={'popupCode-input-profile'} type="tel"
-                                                   defaultValue={'+7 977 302 84 57'} value={profile && profile.login}
-                                                   readOnly
-                                                   style={{backgroundColor: '#023d6c'}}
-                                            />
-                                            {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
-                                        </div>
-                                    </div>
-                                    {/*<div className={'backdrop-profile2'}></div>*/}
                                 </div>
                             </div>
-
+                            <div className="right-column-profile">
+                                <div className={'right-first-profile'}>
+                                    <div className={'right-first-profile'}>
+                                        <NavLink
+                                            to="/profile"
+                                            activeclassname="active-subsection"
+                                            isactive={() => location.pathname === '/profile'}
+                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
+                                        >
+                                            <div className={'p-main-profile-color'}>
+                                                Профиль
+                                            </div>
+                                        </NavLink>
+                                    </div>
+                                    <div className={'right-first-profile'}>
+                                        <NavLink
+                                            to="/tickets"
+                                            activeclassname="active-subsection"
+                                            isactive={() => location.pathname === '/tickets'}
+                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
+                                        >
+                                            <div className={'p-main-profile-color'}>
+                                                Билеты
+                                            </div>
+                                        </NavLink>
+                                    </div>
+                                    <div className={'right-first-profile'}>
+                                        <NavLink
+                                            to="/gifts"
+                                            activeclassname="active-subsection"
+                                            isactive={() => location.pathname === '/gifts'}
+                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                        >
+                                            <div className={'p-main-profile-color'}>
+                                                Призы
+                                            </div>
+                                        </NavLink>
+                                    </div>
+                                    {/*<div className={'right-first-profile'}>*/}
+                                    {/*    <NavLink*/}
+                                    {/*        to="/videos"*/}
+                                    {/*        activeclassname="active-subsection"*/}
+                                    {/*        isactive={() => location.pathname === '/videos'}*/}
+                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                    {/*    >*/}
+                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                    {/*        /!*    Розыгрыши*!/*/}
+                                    {/*        /!*</div>*!/*/}
+                                    {/*    </NavLink>*/}
+                                    {/*</div>*/}
+                                </div>
+                                <div className={'right-second-profile'}>
+                                    <div className={'content-from-left'}>
+                                        {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
+                                        <p className={'right-second-profile-p2'}>Номер телефона</p>
+                                        <input className={'popupCode-input-profile'} type="tel"
+                                               defaultValue={'+7 977 302 84 57'} value={profile && profile.login}
+                                               readOnly
+                                               style={{backgroundColor: '#edf0fa'}}
+                                        />
+                                        {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
+                                    </div>
+                                </div>
+                                {/*<div className={'backdrop-profile2'}></div>*/}
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </main>
-            <footer className={'footer'}>
-                <div className="footer-left">
+            </div>
+        </main>
+    <footer className={'footer'}>
+        <div className="footer-left">
 
-                    <div className={'footer-row'}>
-                        <div className={'footer-colm'}>
-                        <img className={'footer-logo'} src={ticketText}/>
-                            <img className={'footer-logo right'} src={ticketTextRight}/>
-                        </div>
-                    </div>
+            <div className={'footer-row'}>
+                <div className={'footer-colm'}>
+                    <img className={'footer-logo'} src={ticketText}/>
+                    <img className={'footer-logo right'} src={ticketTextRight}/>
                 </div>
-                <div className="footer-right">
-                    <div className={'footer-row1'}>
-                        <a className={'footer-color-size'}>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения
-                            выигрышей № 4 («Мечталлион»),
-                            срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
-                            телефону 8 800 333-7-333.
-                        </a>
-                    </div>
-                    <div className={'footer-row2'}>
-                        <a className={'footer-color-size'}>Специальные призы от Redmond разыгрываются только среди
+            </div>
+        </div>
+        <div className="footer-right">
+            <div className={'footer-row1'}>
+                <a className={'footer-color-size'}>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения
+                    выигрышей № 4 («Мечталлион»),
+                    срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
+                    телефону 8 800 333-7-333.
+                </a>
+            </div>
+            <div className={'footer-row2'}>
+                <a className={'footer-color-size'}>Специальные призы от Redmond разыгрываются только среди
                             билетов, купленных в «Почте России». </a>
 
                     </div>

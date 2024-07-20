@@ -1,5 +1,5 @@
+import ticketText from "../../image/img_99.png";
 import tickettext from "../../image/tickettext.png";
-import ticketText from "../../image/tickettext.png";
 import users from "../../image/img_98.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
@@ -290,7 +290,7 @@ export default function Gifts() {
             <main>
                 <div className={'main-gifts'} id={'main-gifts'}>
                     <div className={'main-items main-items-profile'}>
-                        <div className={'items-block-profile'}>
+                        <div className={'items-block-profile gifts-items-block'}>
                         <div className={'global-name'}>
                             <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
@@ -375,7 +375,7 @@ export default function Gifts() {
                                     {onlyTest > 0 ? (
                                         <>
                                             <p className={'left-first-profile-p2-p2-p2'}>
-                                                Осталось {onlyTest} раз
+                                                Осталось прокрутить {onlyTest} раз
                                             </p>
 
                                         </>

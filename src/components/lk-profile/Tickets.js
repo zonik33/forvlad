@@ -1,6 +1,6 @@
+import ticketText from "../../image/img_99.png";
 import tickettext from "../../image/tickettext.png";
-import ticketText from "../../image/tickettext.png";
-import users from "../../image/img_98.png";
+import users from "../../image/img_71.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
 import fullhearth from "../../image/full-hearth.png";
@@ -241,7 +241,7 @@ export default function Tickets(){
             <main>
                 <div className={'main-tickets main-items-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
-                        <div className={'items-block-profile'}>
+                        <div className={'items-block-profile tickets-items-block'}>
                         <div className={'global-name'}>
                             <p className={'global-name-move'}>Личный кабинет</p>
                         </div>
@@ -326,7 +326,7 @@ export default function Tickets(){
                                     {onlyTest > 6 ? (
                                         <>
                                             <p className={'left-first-profile-p2-p2-p2'}>
-                                                Осталось {onlyTest} раз
+                                                Осталось прокрутить {onlyTest} раз
                                             </p>
 
                                         </>
@@ -564,14 +564,14 @@ export default function Tickets(){
                 </div>
 
 
-                <PopupTicket1/>
-                <PopupTicket2/>
-                <PopupTicket3/>
-                <PopupTicket4/>
-                <PopupTicket5/>
-                <PopupVideos/>
-                <PopupEnd/>
             </footer>
+            <PopupTicket1/>
+            <PopupTicket2/>
+            <PopupTicket3/>
+            <PopupTicket4/>
+            <PopupTicket5/>
+            <PopupVideos/>
+            <PopupEnd/>
         </header>
 
 

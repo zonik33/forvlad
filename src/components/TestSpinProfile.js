@@ -359,7 +359,7 @@ class TestForSpin extends React.Component {
                 <div className={'selectorspin-container'}>
                     <span id="selectorspintest">&#9660;</span>
                 </div>
-                <div className={'wheel-center-container'}>
+                <div className={'wheel-center-container-profile'}>
                     <span id="wheel-center-test"></span>
                     <span id="wheel-center-2-test"></span>
                     <span id="wheel-center-3-test"></span>

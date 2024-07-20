@@ -569,14 +569,15 @@ header .menu-content a:hover {
 }
 .global-name {
   position: relative;
-  font-family: "Acrom Medium", Arial, sans-serif;
-  font-size: 3.66vw;
+  font-family: 'Halvar Breit Bd', sans-serif;
+  font-size: 1.667vw;
   font-weight: 400;
   text-align: center;
-  line-height: 4.03vw;
+  line-height: 1.823vw;
   z-index: 5;
+  letter-spacing: -0.02vw;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #364059;
   margin-left: 32.2vw;
   margin-top: 2.2vw;
 }
@@ -700,13 +701,13 @@ header .menu-content a:hover {
 .left-first-profile-p {
   width: 20vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.75vw;
+  font-size: 1.250vw;
   text-align: left;
-  line-height: 2vw;
-  color: #FFFFFF;
+  line-height: 1.458vw;
+  color: #364059;
   font-weight: 400;
-  margin-left: 1.6vw;
-  margin-top: -4vw;
+  margin-left: 4.7vw;
+  margin-top: -2.9vw;
 }
 .left-first-profile-p.spin-p {
   width: 20vw;
@@ -771,7 +772,7 @@ header .menu-content a:hover {
   margin-top: 8.8vw;
   margin-left: 1.5vw;
   text-align: left;
-  color: #FFFFFF;
+  color: #364059;
   line-height: 2.050vw;
 }
 .left-first-profile-p2 {
@@ -779,7 +780,7 @@ header .menu-content a:hover {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-size: 1.75vw;
   line-height: 2vw;
-  color: #FFFFFF;
+  color: #364059;
   font-weight: 400;
   margin-left: 0.55vw;
   margin-top: -1.7vw;
@@ -792,19 +793,19 @@ header .menu-content a:hover {
   margin-top: 1.5vw;
   margin-left: 1.6vw;
   text-align: left;
-  color: #FFFFFF;
+  color: #364059;
 }
 .left-first-profile-p2-p2-p2 {
   width: 19.73vw;
   height: 7.32vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.464vw;
+  font-size: 1.042vw;
+  text-align: left;
+  line-height: 1.458vw;
   font-weight: 400;
   margin-top: 8.8vw;
-  margin-left: 1.5vw;
-  text-align: left;
-  color: #FFFFFF;
-  line-height: 2.050vw;
+  margin-left: 4.5vw;
+  color: #364059;
 }
 .left-first-profile-p2-p2-p2.p-popup {
   width: 19.73vw;
@@ -815,7 +816,7 @@ header .menu-content a:hover {
   margin-top: 6.8vw;
   margin-left: 0vw;
   text-align: left;
-  color: #FFFFFF;
+  color: #364059;
   line-height: 2.050vw;
 }
 .left-first-profile-a2 {
@@ -853,12 +854,12 @@ header .menu-content a:hover {
 .left-first-profile-p3-count {
   width: 16vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.464vw;
+  font-size: 1.042vw;
   text-align: left;
-  line-height: 2.050vw;
-  color: #FFFFFF;
+  line-height: 1.458vw;
+  color: #364059;
   font-weight: 400;
-  margin-left: 1.6vw;
+  margin-left: 4.6vw;
   margin-top: -1.9vw;
 }
 .white-line {
@@ -1067,16 +1068,16 @@ header .menu-content a:hover {
 .right-column-profile {
   display: flex;
   flex-direction: column;
-  margin-left: 0.55vw;
+  margin-left: -0.95vw;
 }
 .right-first-profile {
   position: relative;
   display: flex;
 }
 .right-first-block {
-  width: 17.1vw;
-  margin-top: 0.7vw;
-  height: 4.782vw;
+  width: 14.1vw;
+  margin-top: 1.7vw;
+  height: 1.782vw;
   margin-left: 0vw;
   text-align: center;
   background-image: linear-gradient(to right, #00438280, #00438280);
@@ -1092,7 +1093,7 @@ header .menu-content a:hover {
   margin-top: 5.1vw;
   margin-left: 13vw;
   /* position: absolute; */
-  width: 73.81vw;
+  width: 73.333vw;
   height: auto;
   min-height: 1vw;
   border-radius: 1.46vw 1.46vw 1.46vw 1.46vw;
@@ -1101,6 +1102,12 @@ header .menu-content a:hover {
   z-index: 5;
   box-shadow: 0 32px 80px 0 rgba(197, 205, 228, 1);
   margin-bottom: 8vw;
+}
+.items-block-profile.gifts-items-block {
+  margin-top: 4.1vw;
+}
+.items-block-profile.tickets-items-block {
+  margin-top: 4.1vw;
 }
 .right-first-block.first-block {
   border-radius: 1.4vw 0vw 0vw 1.4vw;
@@ -1158,19 +1165,19 @@ header .menu-content a:hover {
 }
 
 .right-first-block.active {
-  background-image: linear-gradient(to right, #7CC6FC 0%, #2361F9 100%);
+  background-image: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%);
 }
 .right-first-block.active .p-main-profile-color {
-  color: white;
+  color: #2F41B0;
 }
 .right-second-block.active .p-main-profile-color {
-  color: white;
+  color: #2F41B0;
 }
 .right-third-block.active .p-main-profile-color {
   background-image: linear-gradient(to right, #7CC6FC 0%, #2361F9 100%);
 }
 .p-main-profile-color {
-  margin-top: 1.6vw;
+  margin-top: 0.2vw;
 }
 
 .right-second-block.active {
@@ -1235,7 +1242,7 @@ header .menu-content a:hover {
 .right-second-profile {
   position: relative;
   width: 55.12vw;
-  height: 54.65vw;
+  height: auto;
   text-align: center;
   /* background-color: rgba(255, 255, 255, 0.15); */
   /* border: #FFFFFF4D solid 0.15vw; */
@@ -1325,10 +1332,10 @@ header .menu-content a:hover {
 }
 .right-second-profile-p2 {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
+  font-size: 0.938vw;
   font-weight: 400;
-  color: #FFFFFF;
-  line-height: 1.757vw;
+  color: #364059;
+  line-height: 1.250vw;
   /*text-transform: uppercase;*/
   margin-left: -14.2vw;
   margin-top: 3.1vw;
@@ -1807,20 +1814,25 @@ header .menu-content a:hover {
 }
 .button-animation-text-profile {
   position: absolute;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.8vw 1.86vw;
-  border-radius: 1.23vw;
-  background-image: linear-gradient(#DA4DA3, #783185);
-  margin-left: 58vw;
-  margin-top: -6.12vw;
-  font-family: 'Acrom Medium', Arial, sans-serif;
-  border: 0.15vw solid #FFFFFF80;
   z-index: 6;
+  color: #EEF3EC;
+  font-weight: 700;
+  font-size: 1.04vw;
+  line-height: 1.15vw;
+  text-align: center;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  padding: 0.439583vw 3.33125vw;
+  margin-top: -1.8vw;
+  margin-left: 51.1vw;
+  border-radius: 0.71875vw;
+  cursor: pointer;
+  /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
+  border: 0.15vw solid #AF21C9CC;
 }
+
 .button-animation-text-profile.click-spin {
-  margin-left: -11.7vw;
+  margin-left: -8.7vw;
   margin-top: 0.4vw;
   padding: 1.8vw 2.86vw;
 }
@@ -1836,18 +1848,19 @@ header .menu-content a:hover {
 }
 
 .global-name-move {
-  margin: 8.8vw 0vw 0vw -73.4vw;
+  margin: 3.4vw 0vw 0vw -75.1vw;
 }
 .button-animation-text-profile:hover {
   background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
   transition: background-image 0.8s ease-in-out;
 }
 .button-animation-text-profile b {
-  color: #FFFFFF;
-  line-height: 1.17vw;
-  font-family: 'Acrom Medium', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.27vw;
+  color: #AF21C9;
+  line-height: 1.042vw;
+  margin-left: 0.05vw;
+  font-family: 'Halvar Mittelschrift', sans-serif;
+  font-weight: 500;
+  font-size: 0.833vw;
 
 }
 .button-animation-text:hover {
@@ -2450,9 +2463,9 @@ header .menu-content a:hover {
 }
 .users-logo-spin.spin-test {
   position: absolute;
-  width: 22vw;
+  width: 15.7vw;
   height: auto;
-  margin: 1.5vw 0vw 0vw 1.7vw;
+  margin: 2.5vw 0vw 0vw 2.9vw;
 }
 .users-logo-spin.spin-test-popup {
   position: absolute;
@@ -2795,9 +2808,9 @@ canvas#wheel {
 canvas#wheel-profile {
   position: relative;
   z-index: 5;
-  width: 32.722vw;
-  height: 32.722vw;
-  margin: -4vw 0vw 0vw -3.6vw;
+  width: 22.722vw;
+  height: 22.722vw;
+  margin: -1vw 0vw 0vw -0.6vw;
 }
 canvas#wheel-profile-popup {
   position: relative;
@@ -2889,9 +2902,9 @@ canvas#wheel-profile-popup {
 #selectorspintest {
   color: #d52976;
   position: absolute;
-  margin-top: -5.67vw;
-  margin-left: -27.4vw;
-  font-size: 4.378vw;
+  margin-top: -4.27vw;
+  margin-left: -26.7vw;
+  font-size: 3.378vw;
   z-index: 6;
 }
 #wheel-center {
@@ -2958,8 +2971,8 @@ canvas#wheel-profile-popup {
   /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   border-radius: 2em;
   background: #5e3692;
   margin-top: 7.2vw;
@@ -2970,8 +2983,8 @@ canvas#wheel-profile-popup {
   /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  width: 3.5em;
-  height: 3.5em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 2em;
   background: #7a3bcb;
   margin-top: 7.2vw;
@@ -2982,8 +2995,8 @@ canvas#wheel-profile-popup {
   /*cursor: pointer;*/
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  width: 4.3em;
-  height: 4.3em;
+  width: 3.3em;
+  height: 3.3em;
   border-radius: 2em;
   background: #4f2d7a;
   margin-top: 7.2vw;
@@ -3042,6 +3055,10 @@ canvas#wheel-profile-popup {
   display: none;
   position: absolute;
   margin: 5.3vw 0vw 0vw 38vw;
+}
+.wheel-center-container-profile {
+  position: absolute;
+  margin: 3.1vw 0vw 0vw 38.35vw;
 }
 .wheel-center-container-popup {
   position: absolute;
@@ -3637,7 +3654,7 @@ canvas#wheel-profile-popup {
 }
 
 .prize-name {
-  color: white;
+  color: #364059;
   display: block;
   text-align: left;
   margin-left: 0.34vw;
@@ -3649,7 +3666,7 @@ canvas#wheel-profile-popup {
 }
 
 .prize-code {
-  color: white;
+  color: #364059;
   display: block;
   text-align: left;
   margin-left: 0.34vw;
@@ -3684,7 +3701,7 @@ canvas#wheel-profile-popup {
 }
 
 .draw-date {
-  color: white;
+  color: #364059;
   font-size: 1.757vw;
   font-weight: 400;
   line-height: 2.343vw;
@@ -3693,13 +3710,12 @@ canvas#wheel-profile-popup {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .gifts-prizes-name {
-  color: white;
   position: absolute;
   margin: 1vw 0vw 0vw -27.3vw;
   font-size: 1.318vw;
   font-weight: 400;
   line-height: 1.757vw;
-  color: white;
+  color: #364059;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 
 
@@ -3707,7 +3723,7 @@ canvas#wheel-profile-popup {
 .gifts-prizes-data {
   width: 12vw;
   text-align: left;
-  color: white;
+  color: #364059;
   position: absolute;
   margin: 1vw 1vw 0vw -11.6vw;
   font-size: 1.318vw;
@@ -3717,7 +3733,7 @@ canvas#wheel-profile-popup {
 }
 .gifts-prizes-data-add {
   text-align: left;
-  color: white;
+  color: #364059;
   position: absolute;
   margin: 1vw 1vw 0vw 6.1vw;
   font-size: 1.318vw;
@@ -5789,6 +5805,7 @@ canvas#wheel-profile-popup {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   margin-left: 3.4vw;
   margin-right: 1.3vw;
+  color: #364059
 
 }
 .table-cell.data {
@@ -5800,6 +5817,7 @@ canvas#wheel-profile-popup {
   font-weight: 400;
   line-height: 2.343vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  color: #364059
 
 }
 .table-cell.status {
@@ -5811,6 +5829,7 @@ canvas#wheel-profile-popup {
   font-weight: 400;
   line-height: 2.343vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  color: #364059
 
 }
 .table-cell {
@@ -5887,7 +5906,7 @@ canvas#wheel-profile-popup {
   font-size: 1.318vw;
   font-weight: 400;
   line-height: 1.757vw;
-  color: white;
+  color: #364059;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .colm-ticket-none {
@@ -5901,7 +5920,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   margin-bottom: 4.5vw;
   text-align: center;
-  color: white;
+  color: #364059;
   margin-left: -1vw;
 }
 .decl-bonus-text {
@@ -5912,7 +5931,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   margin-bottom: 3.5vw;
   text-align: center;
-  color: white;
+  color: #364059;
   margin-left: -1vw;
 }
 .colm-data-ticket-none {
@@ -8182,7 +8201,7 @@ button:focus {
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
   line-height: 2.928vw;
-  color: white;
+  color: #364059;
   outline: none;
 }
 .popupCode-form-label {
@@ -8949,26 +8968,29 @@ iframe {
   .prizes-button-check {
     position: absolute;
     z-index: 6;
-    cursor: pointer;
-    text-transform: uppercase;
+    color: #EEF3EC;
+    font-weight: 700;
+    font-size: 1.04vw;
+    line-height: 1.15vw;
+    text-align: center;
     text-decoration: none;
-    padding: 6.1vw 6vw;
-    border-radius: 4.5vw;
-    background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
-    margin-left: -44vw;
-    margin-top: 27vw;
-    font-family: 'Acrom Medium', Arial, sans-serif;
-    border: 0.055vw solid #FFFFFF4D;
-    transition: background-image 0.3s ease;
-    margin-bottom: 5vw;
+    /* text-transform: uppercase; */
+    padding: 0.439583vw 3.33125vw;
+    margin-top: -13.05vw;
+    margin-left: -30.5vw;
+    border-radius: 0.71875vw;
+    cursor: pointer;
+    /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
+    border: 0.15vw solid #AF21C9CC;
   }
 
   .prizes-button-check b {
-    color: #FFFFFF;
-    line-height: 5.33vw;
-    font-family: 'Acrom Medium', Arial, sans-serif;
+    color: #AF21C9;
+    line-height: 1.042vw;
+    margin-left: 0.05vw;
+    font-family: 'Halvar Mittelschrift', sans-serif;
     font-weight: 500;
-    font-size: 5.33vw;
+    font-size: 0.833vw;
   }
 
 
@@ -10646,7 +10668,7 @@ iframe {
     font-family: "Acrom Medium", Arial, sans-serif;
     font-size: 6.40vw;
     line-height: 9.07vw;
-    color: #FFFFFF;
+    color: #364059;
     font-weight: 400;
     margin-left: 0.1vw;
     margin-top: 7.8vw;
