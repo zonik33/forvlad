@@ -26,6 +26,7 @@ import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
 import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 import ticketTextRight from "../../image/img_100.png";
+import tickets from "../../image/img_106.png";
 
 
 export default function Tickets(){
@@ -241,267 +242,284 @@ export default function Tickets(){
             <main>
                 <div className={'main-tickets main-items-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
+                        <img className={'tsxt'} src={tickets}/>
                         <div className={'items-block-profile tickets-items-block'}>
-                        <div className={'global-name'}>
-                            <p className={'global-name-move'}>Личный кабинет</p>
-                        </div>
-                        <a onClick={openPopup} className={'button-animation-text-profile'}>
-                            <b>Зарегистрировать билет</b> </a>
-                        <div className="container-profile">
-                            <div className="left-column-profile">
-                                {/*<div className={'left-first-profile'}>*/}
-                                {/*    /!*<div>*!/*/}
-                                {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
-                                {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
-                                {/*    /!*</div>*!/*/}
-                                {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
-                                {/*        от Мвидео!</p>*/}
-                                {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
-                                {/*    <div className="notification">Ссылка скопирована!</div>*/}
-                                {/*    <p className={'left-first-profile-p2-p2'}>*/}
-                                {/*        {profile && profile.countReferrals}*/}
-                                {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
-                                {/*            реферальной ссылкой</a>*/}
-                                {/*    </p>*/}
-                                {/*    {profile && profile.countReferrals > 0 ? (*/}
-                                {/*        <>*/}
-                                {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
-                                {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
-                                {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
-                                {/*                акции.*/}
-                                {/*            </p>*/}
 
-                                {/*        </>*/}
-                                {/*    ) : null}*/}
-
-                                {/*</div>*/}
-                                {/*<div className={'backdrop-profile1'}></div>*/}
-                                <div className={'profile-right-float-img'}>
-                                    {/*<img className={'profile-snake-left'} src={snake}/>*/}
-                                    {/*<img className={'profile-rings'} src={rings}/>*/}
-                                    {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
-                                    {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
-                                    {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
-                                    {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
-                                    {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
-                                </div>
-                                <div className={'left-second-profile'}>
-                                    {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
-                                    <div className="spin-block">
-                                        <TestForSpin/>
-                                    </div>
-                                    <p className={'left-first-profile-p'}>Вы зарегистрировали
-                                        <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
-                                        <br></br>на сумму
-                                        {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
-
-                                    </p>
-
-                                    <div className="white-line"></div>
-                                    <p className={'left-first-profile-p3-count'}>
-                                        За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.
-                                    </p>
-                                    {/*{profile && profile.countReferrals > 0 ? (*/}
-
-                                    {/*<p className={'left-first-profile-p3'}>*/}
-
-                                    {/*    приняли участие <br></br>в*/}
-                                    {/*    розыгрыше*/}
-                                    {/*</p>*/}
-                                    {/*<p className={'left-first-profile-p3-count'}>*/}
-                                    {/*    {profile && profile.countTicketsRejected}*/}
-                                    {/*    3*/}
-                                    {/*</p>*/}
-                                    {/*<p className={'left-first-profile-p3'}>*/}
-                                    {/*    могут принять <br></br>участие в*/}
-                                    {/*    розыгрыше*/}
-                                    {/*</p>*/}
-                                    <a
-                                        onClick={openPopup1}
-                                        className={'button-animation-text-profile click-spin'}>
-                                        <b>Крутить</b> </a>
-                                    {isPopupOpen &&
-                                        <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
-
-                                    {onlyTest > 6 ? (
-                                        <>
-                                            <p className={'left-first-profile-p2-p2-p2'}>
-                                                Осталось прокрутить {onlyTest} раз
-                                            </p>
-
-                                        </>
-                                    ) : <p className={'left-first-profile-p2-p2-p2'}>
-                                        Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму от 300 рублей.
-                                        <br></br>
-                                        <br></br>
-                                        За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
-                                    </p>
-                                    }
-                                </div>
+                            <div className={'global-name'}>
+                                <p className={'global-name-move'}>Личный кабинет</p>
                             </div>
-                            <div className="right-column-profile">
-                                <div className={'right-first-profile'}>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/profile"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/profile'}
-                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Профиль
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/tickets"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/tickets'}
-                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Билеты
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/gifts"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/gifts'}
-                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Призы
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    {/*<div className={'right-first-profile'}>*/}
-                                    {/*    <NavLink*/}
-                                    {/*        to="/videos"*/}
-                                    {/*        activeclassname="active-subsection"*/}
-                                    {/*        isactive={() => location.pathname === '/videos'}*/}
-                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
-                                    {/*    >*/}
-                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
-                                    {/*        /!*    Розыгрыши*!/*/}
-                                    {/*        /!*</div>*!/*/}
-                                    {/*    </NavLink>*/}
+                            <a onClick={openPopup} className={'button-animation-text-profile'}>
+                                <b>Зарегистрировать билет</b> </a>
+                            <div className="container-profile">
+                                <div className="left-column-profile">
+                                    {/*<div className={'left-first-profile'}>*/}
+                                    {/*    /!*<div>*!/*/}
+                                    {/*    /!*    <img className={'for-he4lth-profile'} src={prizesCenterCard}/>*!/*/}
+                                    {/*    /!*    <img className={'for-he4lth-bg-profile'} src={bgImagese}/>*!/*/}
+                                    {/*    /!*</div>*!/*/}
+                                    {/*    <p className={'p-bonus-profile'}>Приглашайте друзей и выигрывайте специальный приз*/}
+                                    {/*        от Мвидео!</p>*/}
+                                    {/*    <a className={'a-bonus-profile copy-link'}>Скопировать ссылку</a>*/}
+                                    {/*    <div className="notification">Ссылка скопирована!</div>*/}
+                                    {/*    <p className={'left-first-profile-p2-p2'}>*/}
+                                    {/*        {profile && profile.countReferrals}*/}
+                                    {/*        <a className={'left-first-profile-a2-a2'}>Количество друзей, воспользовавшихся*/}
+                                    {/*            реферальной ссылкой</a>*/}
+                                    {/*    </p>*/}
+                                    {/*    {profile && profile.countReferrals > 0 ? (*/}
+                                    {/*        <>*/}
+                                    {/*            <p className={'left-first-profile-p2-p2-p2'}>*/}
+                                    {/*                Поздравляем! Вы привлекли новых пользователей на сайт. Благодаря этому*/}
+                                    {/*                вы сможете принять участие в дополнительном розыгрыше призов в конце*/}
+                                    {/*                акции.*/}
+                                    {/*            </p>*/}
+
+                                    {/*        </>*/}
+                                    {/*    ) : null}*/}
+
                                     {/*</div>*/}
+                                    {/*<div className={'backdrop-profile1'}></div>*/}
+                                    <div className={'profile-right-float-img'}>
+                                        {/*<img className={'profile-snake-left'} src={snake}/>*/}
+                                        {/*<img className={'profile-rings'} src={rings}/>*/}
+                                        {/*<img className={'profile-full-hearth'} src={fullhearth}/>*/}
+                                        {/*<img className={'profile-pluse1'} src={pluse1}/>*/}
+                                        {/*<img className={'profile-left-half-ring'} src={leftring}/>*/}
+                                        {/*<img className={'profile-center-hearth'} src={centerhearth}/>*/}
+                                        {/*<img className={'profile-right-ring'} src={rightRing}/>*/}
+                                    </div>
+                                    <div className={'left-second-profile'}>
+                                        {/*<img className={'how-left-icon profile'} src={howCenterIcon}/>*/}
+                                        <div className="spin-block">
+                                            <TestForSpin/>
+                                        </div>
+                                        <p className={'left-first-profile-p'}>Вы зарегистрировали
+                                            <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                                            <br></br>на сумму
+                                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+
+                                        </p>
+
+                                        <div className="white-line"></div>
+                                        <p className={'left-first-profile-p3-count'}>
+                                            За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.
+                                        </p>
+                                        {/*{profile && profile.countReferrals > 0 ? (*/}
+
+                                        {/*<p className={'left-first-profile-p3'}>*/}
+
+                                        {/*    приняли участие <br></br>в*/}
+                                        {/*    розыгрыше*/}
+                                        {/*</p>*/}
+                                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                                        {/*    {profile && profile.countTicketsRejected}*/}
+                                        {/*    3*/}
+                                        {/*</p>*/}
+                                        {/*<p className={'left-first-profile-p3'}>*/}
+                                        {/*    могут принять <br></br>участие в*/}
+                                        {/*    розыгрыше*/}
+                                        {/*</p>*/}
+                                        <a
+                                            onClick={openPopup1}
+                                            className={'button-animation-text-profile click-spin'}>
+                                            <b>Крутить</b> </a>
+                                        {isPopupOpen &&
+                                            <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
+
+                                        {onlyTest > 6 ? (
+                                            <>
+                                                <p className={'left-first-profile-p2-p2-p2'}>
+                                                    Осталось прокрутить {onlyTest} раз
+                                                </p>
+
+                                            </>
+                                        ) : <p className={'left-first-profile-p2-p2-p2'}>
+                                            Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму
+                                            от 300 рублей.
+                                            <br></br>
+                                            <br></br>
+                                            За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                        </p>
+                                        }
+                                    </div>
                                 </div>
-                                <div className={'right-second-profile-tickets'}>
-                                    <div className={'content-from-left'}>
-                                        {/*<p className={'right-second-tickets-p'}>Ваши билеты</p>*/}
-                                        <div className={'winners-tabs-content-ticket'}>
-                                            <div className={'tab'}>
-                                                <div className={'tab-inner'}>
-                                                    <div className={'table-ticket'}>
-                                                        <div className={'table-head-ticket'}>
-                                                            <div className={'head-colm-prize-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Номер лотерейного
-                                                                    билета
-                                                                </div>
-                                                            </div>
-                                                            <div className={'head-colm-phone-ticket'}>
-                                                                <div className={'colm-text-ticket'}> Дата
-                                                                    регистрации <br></br>
-                                                                    в акции
-                                                                </div>
-                                                            </div>
-                                                            <div className={'head-colm-date-ticket'}>
-                                                                <div className={'colm-text-ticket'}>Статус
-                                                                    участия <br></br>
-                                                                    в рулетке
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className={'table-body-ticket'}>
-                                                            <div className={'centered-ticket-wrapper'}>
-                                                                <div className="table-row">
-                                                                    <div className="table-cell number">221234567890
-                                                                    </div>
-                                                                    <div className="table-cell data">10.06.2024</div>
-                                                                    <div className="table-cell status">Принял участие в
-                                                                        розыгрыше
-                                                                        <br></br> Дата розыграша: 1.06.2024
-                                                                    </div>
-                                                                </div>
-                                                                <div className={'line-true-tickets'}></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className={'table-body-ticket'}>
-                                                            <div className={'centered-ticket-wrapper'}>
-                                                                <div className="table-row">
-                                                                    <div className="table-cell number">221234567890
-                                                                    </div>
-                                                                    <div className="table-cell data">10.06.2024</div>
-                                                                    <div className="table-cell status">Принял участие в
-                                                                        розыгрыше
-                                                                        <br></br> Дата розыграша: 1.06.2024
-                                                                    </div>
-                                                                </div>
-                                                                <div className={'line-true-tickets'}></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className={'table-body-ticket'}>
-                                                            <div className={'centered-ticket-wrapper'}>
-                                                                <div className="table-row">
-                                                                    <div className="table-cell number">221234567890
-                                                                    </div>
-                                                                    <div className="table-cell data">10.06.2024</div>
-                                                                    <div className="table-cell status">Принял участие в
-                                                                        розыгрыше
-                                                                        <br></br> Дата розыграша: 1.06.2024
-                                                                    </div>
-                                                                </div>
-                                                                <div className={'line-true-tickets'}></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className={'table-body-ticket'}>
-                                                            <div className={'centered-ticket-wrapper'}>
-                                                                <div className="table-row">
-                                                                    <div className="table-cell number">221234567890
-                                                                    </div>
-                                                                    <div className="table-cell data">10.06.2024</div>
-                                                                    <div className="table-cell status">Принял участие в
-                                                                        розыгрыше
-                                                                        <br></br> Дата розыграша: 1.06.2024
+                                <div className="right-column-profile">
+                                    <div className={'right-first-profile'}>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/profile"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/profile'}
+                                                className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Профиль
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/tickets"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/tickets'}
+                                                className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Билеты
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/gifts"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/gifts'}
+                                                className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Призы
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        {/*<div className={'right-first-profile'}>*/}
+                                        {/*    <NavLink*/}
+                                        {/*        to="/videos"*/}
+                                        {/*        activeclassname="active-subsection"*/}
+                                        {/*        isactive={() => location.pathname === '/videos'}*/}
+                                        {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                        {/*    >*/}
+                                        {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                        {/*        /!*    Розыгрыши*!/*/}
+                                        {/*        /!*</div>*!/*/}
+                                        {/*    </NavLink>*/}
+                                        {/*</div>*/}
+                                    </div>
+                                    <div className={'right-second-profile-tickets'}>
+                                        <div className={'content-from-left'}>
+                                            {/*<p className={'right-second-tickets-p'}>Ваши билеты</p>*/}
+                                            <div className={'winners-tabs-content-ticket'}>
+                                                <div className={'tab'}>
+                                                    <div className={'tab-inner'}>
+                                                        <div className={'table-ticket'}>
+                                                            <div className={'table-head-ticket'}>
+                                                                <div className={'head-colm-prize-ticket'}>
+                                                                    <div className={'colm-text-ticket'}> Номер
+                                                                        лотерейного
+                                                                        билета
                                                                     </div>
                                                                 </div>
-                                                                <div className={'line-true-tickets'}></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className={'table-body-ticket'}>
-                                                            <div className={'centered-ticket-wrapper'}>
-                                                                <div className="table-row">
-                                                                    <div className="table-cell number">221234567890
-                                                                    </div>
-                                                                    <div className="table-cell data">10.06.2024</div>
-                                                                    <div className="table-cell status">Принял участие в
-                                                                        розыгрыше
-                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                <div className={'head-colm-phone-ticket'}>
+                                                                    <div className={'colm-text-ticket'}> Дата
+                                                                        регистрации <br></br>
+                                                                        в акции
                                                                     </div>
                                                                 </div>
-                                                                <div className={'line-true-tickets'}></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className={'table-body-ticket'}>
-                                                            <div className={'centered-ticket-wrapper'}>
-                                                                <div className="table-row">
-                                                                    <div className="table-cell number">221234567890
-                                                                    </div>
-                                                                    <div className="table-cell data">10.06.2024</div>
-                                                                    <div className="table-cell status">Принял участие в
-                                                                        розыгрыше
-                                                                        <br></br> Дата розыграша: 1.06.2024
+                                                                <div className={'head-colm-date-ticket'}>
+                                                                    <div className={'colm-text-ticket'}>Статус
+                                                                        участия <br></br>
+                                                                        в рулетке
                                                                     </div>
                                                                 </div>
-                                                                <div className={'line-true-tickets'}></div>
                                                             </div>
-                                                        </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="table-cell number">221234567890
+                                                                        </div>
+                                                                        <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 1.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="table-cell number">221234567890
+                                                                        </div>
+                                                                        <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 1.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="table-cell number">221234567890
+                                                                        </div>
+                                                                        <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 1.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="table-cell number">221234567890
+                                                                        </div>
+                                                                        <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 1.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="table-cell number">221234567890
+                                                                        </div>
+                                                                        <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 1.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="table-cell number">221234567890
+                                                                        </div>
+                                                                        <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 1.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
 
 
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -509,7 +527,6 @@ export default function Tickets(){
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div>
                     </div>

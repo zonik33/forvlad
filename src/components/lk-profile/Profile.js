@@ -21,7 +21,7 @@ import { useNavigate } from 'react-router-dom';
 import ScrollPrizes from "../Scroll/ScrollPrizes";
 import scrollToPrizes from "../Scroll/ScrollToPrizes";
 import ticket from "../../image/ticket.png";
-import tickets from "../../image/img_101.png";
+import tickets from "../../image/img_106.png";
 import PopupVideos from "../Winners-videos/PopupVideos";
 import PopupEnd from "../PopupTicket/PopupEnd";
 import prizesCenterCard from "../../image/mv-card.png";
@@ -267,7 +267,7 @@ export default function Profile(props){
             <main>
                 <div className={'main-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
-                        {/*<img className={'tsxt'} src={tickets}/>*/}
+                        <img className={'tsxt'} src={tickets}/>
                         <div className={'items-block-profile'}>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>

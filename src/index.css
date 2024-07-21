@@ -402,9 +402,11 @@ header .menu-content-profile a:hover {
 
 }
 .tsxt {
+  margin: 0vw 0vw 0vw 0vw;
   width: 100%;
-  height: auto;
+  height: 50vw;
   position: absolute;
+  z-index: -4;
   overflow: hidden;
 }
 .main-error {
@@ -437,7 +439,6 @@ header .menu-content-profile a:hover {
 
 }
 .main-tickets {
-  margin-top: 1vw;
   /*background-image: linear-gradient(#009640, #03BE53, #009640);*/
   background-size: cover;
   width: 100%;
@@ -451,7 +452,6 @@ header .menu-content-profile a:hover {
 
 }
 .main-gifts {
-  margin-top: 1vw;
   /*background-image: linear-gradient(#009640, #03BE53, #009640);*/
   background-size: cover;
   width: 100%;
@@ -1105,7 +1105,7 @@ header .menu-content-profile a:hover {
 }
 .items-block-profile {
   overflow: hidden;
-  margin-top: 5.1vw;
+  margin-top: 4.1vw;
   margin-left: 13vw;
   /* position: absolute; */
   width: 73.333vw;
@@ -12366,7 +12366,7 @@ iframe {
     font-weight: 400;
     margin-top: -13.9vw;
     margin-left: -1vw;
-    color: #FFFFFF;
+    color: #364059;
   }
 
   .popup-p {
@@ -13328,8 +13328,9 @@ iframe {
     height: 6.66vw;
   }
   .random-block {
-    margin-left: 15.5vw;
-    margin-top: -0.9vw;
+    width: 34vw;
+    margin-left: 50.5vw;
+    margin-top: -25.9vw;
     position: absolute;
   }
   .for-winners-videos {
@@ -13339,9 +13340,8 @@ iframe {
   .random-block-2 {
     position: absolute;
     width: 40vw;
-    margin-left: 34vw;
-    margin-top: -14vw;
-
+    margin-left: -1vw;
+    margin-top: -1.75vw;
   }
   .random-b {
     line-height: 4.53vw;
@@ -13434,7 +13434,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-winners-videos .popup-h2 {
     width: 56.27vw;
@@ -14380,7 +14380,7 @@ iframe {
     line-height: 1.76vw;
     margin-left: -1.8vw;
     margin-top: 10.8vw;
-    color: #FFFFFF;
+    color: #364059;
   }
   .a-bonus-profile-winners-videos:hover {
     background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
@@ -14473,10 +14473,13 @@ iframe {
     background-color: #fff;
     opacity: 1;
     transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: inset 0px 1px 0px 0px #E7EAF5;
+    pointer-events: auto; /* Блокирует события мыши, позволяя кликать на блоки ниже */
   }
   .secret-block.hidden {
     opacity: 0; /* Прозрачность 0 при скрытии */
-    transform: translateY(-100%); /* Задвигаем блок на 100% вверх */
+    transform: translateY(-50%); /* Задвигаем блок на 100% вверх */
+    pointer-events: none; /* Блокирует события мыши, позволяя кликать на блоки ниже */
   }
   .secret-block.scrolled {
     background-color: rgba(0, 0, 0, 0.5); /* Цвет и уровень прозрачности для затемнения */
