@@ -1095,12 +1095,13 @@ header .menu-content-profile a:hover {
   height: 1.782vw;
   margin-left: 0vw;
   text-align: center;
-  background-image: linear-gradient(to right, #00438280, #00438280);
+  /*background-image: linear-gradient(to right, #00438280, #00438280);*/
   /* border-radius: 1.8vw 1.8vw 0 0; */
   z-index: 11;
   background-size: cover;
   margin-right: 0vw;
-  border: 1px solid #E1F2FD;
+  color: #2F41B0;
+  /*border: 1px solid #E1F2FD;*/
 
 }
 .items-block-profile {
@@ -1171,6 +1172,11 @@ header .menu-content-profile a:hover {
   color: #42486C;
 }
 .right-first-profile {
+  width: 43vw;
+  height: 5vw;
+  padding: 0vw;
+  background: #D7DDFF;
+  border-radius: 6vw;
   font-family: "Acrom Medium", Arial, sans-serif;
   font-size: 0.729vw;
   font-weight: 400;
@@ -1181,6 +1187,7 @@ header .menu-content-profile a:hover {
 
 .right-first-block.active {
   background-image: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%);
+  border-radius: 1.8vw;
 }
 .right-first-block.active .p-main-profile-color {
   color: #2F41B0;
