@@ -182,7 +182,7 @@ export default function Faq() {
             {/*</div>*/}
             <div className={'question-block faq-bonus1'} id={'support'} ref={supportRef}>
                 Не нашли ответа на интересующий
-                <br></br>Вас вопрос?
+                Вас вопрос?
             </div>
             <div className={'question-block faq-bonus2'}>
                 Мы будем рады вам помочь! Вы можете:

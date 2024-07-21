@@ -1705,7 +1705,8 @@ header .menu-content-profile a:hover {
   margin-left: -13vw;
 }
 .question-block.faq-bonus1 {
-  margin: 4.4vw 0vw -3.8vw 8.6vw;
+  width: 34vw;
+  margin: 4.4vw 0vw -3.8vw 11.6vw;
   font-size: 1.354vw;
   line-height: 1.490vw;
 }
@@ -8881,7 +8882,7 @@ iframe {
 
   .wrapper-how {
     width: 87.6vw;
-    height: 1350vw;
+    height: auto;
     margin-left: 2.25vw;
     overflow: hidden;
   }
@@ -10450,7 +10451,7 @@ iframe {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    height: 128vw;
+    height: 144vw;
     padding-top: 8.46vw;
     padding-bottom: 7.5vw;
     /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
@@ -10481,9 +10482,9 @@ iframe {
   }
 
   .footer-logo {
-    width: 39%;
-    margin-top: -1.5vw;
-    margin-left: -24.2vw;
+    width: 41%;
+    margin-top: 10.5vw;
+    margin-left: -53.2vw;
     position: absolute;
   }
 
@@ -10521,28 +10522,7 @@ iframe {
 
   }
 
-  .footer-row2 {
-    display: none;
-  }
 
-  .footer-row3 {
-    width: 89.33vw;
-    height: 40.8vw;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    text-align: center;
-    align-items: center;
-    font-size: 3.20vw;
-    line-height: 4.53vw;
-    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
-    font-weight: 400;
-    color: #FFFFFF;
-    margin-bottom: -1vw;
-    margin-top: -4vw;
-    margin-left: -13vw;
-
-  }
 
   .footer-row-left {
     font-family: "Acrom Medium", Arial, sans-serif;
@@ -10554,22 +10534,7 @@ iframe {
     text-align: center;
   }
 
-  .footer-row4 {
-    width: 84vw;
-    height: 9.07vw;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    text-align: center;
-    align-items: center;
-    font-size: 3.20vw;
-    line-height: 4.53vw;
-    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
-    font-weight: 400;
-    margin-top: 36vw;
-    margin-left: -10vw;
-    color: #FFFFFF;
-  }
+
   .how-tickes-img-p {
     text-transform: uppercase;
     width: 94.13vw;
@@ -14672,7 +14637,147 @@ iframe {
     z-index: 55555555555555555 !important;
     width: 91% !important;
   }
+  .question-block.faq-bonus1 {
+    width: 67vw;
+    text-align: left;
+    margin: 13.4vw 0vw 30vw 0.4vw;
+    font-size: 5.556vw;
+    line-height: 6.111vw;
+  }
+  .question-block.faq-bonus2 {
+    width: 66vw;
+    text-align: left;
+    margin: -12.6vw 0vw 12.2vw 0.6vw;
+    text-transform: none;
+    font-size: 5vw;
+    line-height: 6.550vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-weight: 500;
+  }
+  .container-question-help {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Добавлено свойство для размещения элементов в столбик */
+    z-index: 5;
+    width: 68.938vw;
+    margin-bottom: 4vw;
+  }
+  .column-help {
+    width: 100vw;
+    flex: 1 1;
+    margin-top: -1vw;
+    margin-left: 12vw;
+    padding: 2vw 6vw 4vw 0vw;
+    font-size: 4.444vw;
+    line-height: 5.422vw;
+    font-weight: 500;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    text-align: left;
+  }
+  .column-help img {
+    position: absolute;
+    width: 12%;
+    height: auto;
+    margin-left: -11.6vw;
+    margin-top: -1vw;
+  }
+  .question-color-second {
+    color: #5E6976;
+    font-size: 3.333vw;
+    line-height: 4.233vw;
+  }
+  .footer-logo.right {
+    width: 7.4%;
+    margin-top: 11.5vw;
+    margin-left: 30.9vw;
+    position: absolute;
+  }
 
+  .footer-color-size {
+    width: 91vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 3.889vw;
+    font-weight: 400;
+    line-height: 4.939vw;
+    text-decoration: none;
+    color: #42486C99;
+    margin-top: 32vw;
+    margin-left: -1vw;
+    text-align: left;
+  }
+
+  .footer-row2 {
+    width: 91vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 3.889vw;
+    font-weight: 400;
+    line-height: 4.939vw;
+    text-decoration: none;
+    color: #42486C99;
+    margin-top: -21vw;
+    margin-left: -13vw;
+    text-align: left;
+  }
+
+  .footer-row3 {
+    width: 89.33vw;
+    height: 40.8vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    font-size: 3.20vw;
+    line-height: 4.53vw;
+    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: -1vw;
+    margin-top: -24vw;
+    margin-left: -13vw;
+
+  }
+  .footer-row4 {
+    width: 89.33vw;
+    height: 40.8vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    font-size: 3.20vw;
+    line-height: 4.53vw;
+    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: -1vw;
+    margin-top: -19vw;
+    margin-left: -13vw;
+  }
+.container-footer-bottom {
+  display: flex;
+  padding-right: 15vw;
+  flex-direction: column;
+  margin-left: 0.1vw;
+  margin-top: 9vw;
+}
+  .footer-color-size.left {
+    font-size: 4.167vw;
+    line-height: 5.292vw;
+    color: #42486C;
+    text-align: left;
+    width: 50vw;
+  }
+  .footer-row-left {
+    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
+    font-size: 3.47vw;
+    line-height: 4.80vw;
+    font-weight: 400;
+    margin-top: 4vw;
+    margin-left: -13vw;
+    text-align: left;
+    width: 66vw;
+  }
 
 
 
