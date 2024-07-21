@@ -1,6 +1,6 @@
 import ticketText from "../../image/img_99.png";
 import tickettext from "../../image/tickettext.png";
-import users from "../../image/img_71.png";
+import users from "../../image/img_98.png";
 import snake from "../../image/snake.png";
 import rings from "../../image/ring.png";
 import fullhearth from "../../image/full-hearth.png";

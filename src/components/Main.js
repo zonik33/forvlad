@@ -1,6 +1,9 @@
 import wintohealth from '../image/wintohealth.png'
 import img55 from '../image/img_55.png'
 import man from '../image/img_56.png'
+import manisok from '../image/img_105.png'
+import waves from '../image/img_101.png'
+import wavesblur from '../image/img_104.png'
 import logopochta from '../image/img_57.png'
 import How from "./How";
 import Prizes from "./Prizes";
@@ -81,13 +84,16 @@ export default function Main (props) {
                     {/*</div>*/}
                     <div className={'myELementSecond'}>
                         <img className={'man'} src={man}/>
+                        <img className={'man-mobile'} src={manisok}/>
                         {/*<div className={'overlay'}></div>*/}
                         {/*<div className={'overlay-low'}></div>*/}
                     </div>
                     <div className={'main-text-text'}>
                         <img className={'man logo-pochta'} src={logopochta}/>
-                        <div className={'main-text'}> Покупайте лотерейные билеты в отделениях <br></br>«Почты России»*
-                            и участвуйте в розыгрыше призов <br></br>от Национальной Лотереи
+                        <img className={'man waves'} src={waves}/>
+                        <img className={'man waves-blur'} src={wavesblur}/>
+                        <div className={'main-text'}> Покупайте лотерейные билеты в отделениях «Почты России»*
+                            и участвуйте в розыгрыше призов от Национальной Лотереи
                             <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
                                 Краснодар, Екатеринбург</p>
                         </div>

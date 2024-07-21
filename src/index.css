@@ -108,6 +108,9 @@ header .logo-text {
   margin-left: 5.1vw;
   margin-top: 0.2vw;
 }
+header .logo-text-mobile {
+  display: none;
+}
 header .logo-text-profile {
   position: absolute;
   width: 11.5vw;
@@ -272,13 +275,19 @@ header .menu-content-profile a {
   color: #FFFFFF;
 }
 header .button-animation:hover {
-  color: #7e7878;
+  color: #2F41B0B2;
   text-decoration: none;
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
 }
 header .menu-content a:hover {
-  color: #7e7878;
+  color: #2F41B0B2;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+header .menu-content-profile a:hover {
+  color: #2F41B0B2;
   text-decoration: none;
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
@@ -467,7 +476,7 @@ header .menu-content a:hover {
   word-wrap: normal;
   margin-bottom: 3.26vw;
   z-index: 5;
-  width: 33.28vw;
+  width: 28.8vw;
   height: 6.81vw;
 }
 .buy-block {
@@ -676,6 +685,9 @@ header .menu-content a:hover {
   margin-top: -0.6vw;
   margin-left: 2.1vw;
 }
+.how-tickets-img-mobile {
+  display: none;
+}
 
 .left-column-profile {
   display: flex;
@@ -739,6 +751,9 @@ header .menu-content a:hover {
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
+}
+.secret-block {
+  margin-top: -1vw;
 }
 .popup-take-gifts-bonus {
   background-color: #FFFFFF4D;
@@ -1829,6 +1844,7 @@ header .menu-content a:hover {
   cursor: pointer;
   /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
   border: 0.15vw solid #AF21C9CC;
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
 }
 
 .button-animation-text-profile.click-spin {
@@ -1853,7 +1869,9 @@ header .menu-content a:hover {
 .button-animation-text-profile:hover {
   background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
   transition: background-image 0.8s ease-in-out;
+  color: white;
 }
+
 .button-animation-text-profile b {
   color: #AF21C9;
   line-height: 1.042vw;
@@ -1932,7 +1950,9 @@ header .menu-content a:hover {
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
-
+}
+.man-mobile {
+  display: none;
 }
 .man.logo-pochta {
   position: absolute;
@@ -1942,6 +1962,30 @@ header .menu-content a:hover {
   margin-left: -10.2vw;
   margin-top: 13.75vw;
   z-index: 8;
+}
+.man.waves {
+  position: absolute;
+  flex: 1 1;
+  height: auto;
+  width: 101%;
+  margin-left: -24.2vw;
+  margin-top: 4.75vw;
+  z-index: 2;
+}
+.man.waves-blur {
+  position: absolute;
+  flex: 1 1;
+  height: auto;
+  width: 101%;
+  margin-left: -24.2vw;
+  margin-top: 35vw;
+  z-index: 3;
+}
+.question-color {
+  color: #1F48D8;
+}
+.question-color-second {
+  color: #5E6976;
 }
 .rings {
   position: absolute;
@@ -3135,7 +3179,7 @@ canvas#wheel-profile-popup {
 .how-tickes-img-p-right-how {
   position: absolute;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  width: 37.1vw;
+  width: 30.1vw;
   font-weight: 400;
   height: 6.81vw;
   font-size: 0.938vw;
@@ -3218,10 +3262,15 @@ canvas#wheel-profile-popup {
   cursor: pointer;
   /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
   border: 0.15vw solid #AF21C9CC;
-
+  opacity: 1;
+  transition:  background-image 0.2s ease-in-out;
 }
 .prizes-button-check:hover {
-  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+  background-image: linear-gradient(#AF21C9CC, #AF21C9CC); /* Изменение фона при наведении */
+  opacity: 1;
+  border:0.15vw solid #AF21C9CC;
+  transition: background-image 0.2s ease-in-out;
 }
 .question-button-check:hover {
   background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
@@ -3235,8 +3284,19 @@ canvas#wheel-profile-popup {
   font-size: 0.833vw;
 }
 .prizes-button-check:hover {
-  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
-  transition: background-image 5s ease-in-out;
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+  background-image: linear-gradient(#AF21C9CC, #AF21C9CC); /* Изменение фона при наведении */
+}
+.prizes-button-check:hover {
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+}
+
+.prizes-button-check:hover b {
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+}
+
+.prizes-button-check:hover .b {
+  color: #FFFFFF; /* Изменение цвета текста на белый */
 }
 
 .how-left-icon {
@@ -3395,6 +3455,16 @@ canvas#wheel-profile-popup {
   margin-left: 2vw;
   color: #364059;
 }
+.how-center-p-text-first.bonus-style {
+  width: 25vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin-top: 1.15vw;
+  margin-left: 2vw;
+  color: #364059;
+}
 .how-center-p-text-first.bonus-prizes {
   width: 36vw;
   margin-top: -0.3vw;
@@ -3440,6 +3510,7 @@ canvas#wheel-profile-popup {
   color: #364059;
 }
 .how-center-p-text-stap2-second.bonus-how {
+  width: 30vw;
   margin-top: 0.35vw;
   margin-left: 0vw;
 
@@ -5789,9 +5860,9 @@ canvas#wheel-profile-popup {
   opacity: 50%;
 }
 .line-true-tickets {
-  margin: 7vw 0vw 0vw 1vw;
+  margin: 5vw 0vw 0vw -10vw;
   position: absolute;
-  width: 51.318vw;
+  width: 40.318vw;
   height: 0.146vw;
   background-color: #93CFFC;
   opacity: 50%;
@@ -8312,11 +8383,10 @@ iframe {
     animation: burgerAnimation 0.4s;
 
   }
-  header .menu-content{
+  header .menu-content {
     width: auto;
     position: absolute;
-    flex-direction: column;
-    row-gap: 7vw;
+    row-gap: 5vw;
     margin-top: 6.52vw;
   }
   header .menu-content a {
@@ -8336,9 +8406,10 @@ iframe {
     opacity: 0.5; /* устанавливаем полностью прозрачный */
   }
   header .logo.visible  {
-    opacity: 1; /* устанавливаем полностью непрозрачный */
+    opacity: 0; /* устанавливаем полностью непрозрачный */
   }
-  header .logo{
+  header .logo {
+    display: none;
     overflow: hidden;
     position: relative;
     z-index: 6;
@@ -8368,6 +8439,7 @@ iframe {
   }
 
   header .logo-text {
+    display: none;
     position: absolute;
     width: 32.3vw;
     height: auto;
@@ -8375,36 +8447,57 @@ iframe {
     margin-top: 3vw;
     z-index: 51;
   }
+  header .logo-text-mobile {
+    display: block;
+    position: absolute;
+    width: 32.3vw;
+    height: auto;
+    margin-left: -6.7vw;
+    margin-top: 2vw;
+    z-index: 51;
+  }
 
   header {
-    position: absolute;
+    width: 100vw;
+    height: 17.944vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    border-radius: 0 0 0vw 0vw;
+    /*border-bottom: 1px solid #000; !* Замените на нужный цвет *!*/
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 21vw;
     right: 0;
-    z-index: 99;
-    box-sizing: border-box;
-    transition: background 0.3s;
-    background-color: #023d6c;
+    z-index: 1000;
+    background-color: #fff; /* Замените на нужный цвет */
+    transition: background-color 0.3s ease; /* Плавный переход при изменении фона */
+
+    /* Дополнительные стили для анимации скрытия при прокрутке */
+    opacity: 1;
 
 
+  }
+  .header.scrolled {
+    background-color: rgba(85, 80, 80, 0.1); /* Цвет и уровень прозрачности для затемнения */
   }
 
   header .menu {
+    display: block;
     flex-direction: column;
     position: fixed;
-    height: 100%;
+    height: 35vw;
     width: 100%;
     right: 0;
     overflow-y: auto;
-    background-color: #FFFFFF;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    background-color: transparent; /* Сделайте фон меню прозрачным */
+    opacity: 1;
+
   }
 
   header .menu.show {
-    display: flex;
+    display: none; /* При активации '.show' класса меню показывается */
     position: fixed;
     flex-direction: column;
     height: 100%;
@@ -8422,7 +8515,7 @@ iframe {
   }
 
 
-  header .menu.show .logo-content.logo-text {
+  header .menu.show .logo-content.logo-text-mobile {
     display: block;
     text-align: center;
     font-size: 2.5vw;
@@ -8438,19 +8531,18 @@ iframe {
   }
 
   header .menu-content {
-    position: absolute;
-    flex-direction: column;
-    row-gap: 8.6vw;
-    margin-top: 39vw;
-    margin-left: -8vw;
-    align-items: initial;
+    margin-top: 21vw;
+    margin-left: -21vw;
+    display: flex;
+    gap: 6px;
+    margin-right: 10px;
   }
 
   header .menu-content a {
-    font-size: 5.87vw;
-    line-height: 6.40vw;
+    font-size: 3.889vw;
+    line-height: 5.094vw;
     padding: 0;
-    margin-left:8vw;
+    margin-left: 3.2vw; /* Добавляем отступ между ссылками */
   }
 
   header .menu-content.backFaq a {
@@ -8463,11 +8555,11 @@ iframe {
     line-height: 4.53vw;
     text-decoration: none;
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: none;
     border: none;
     background-color: transparent;
     margin-top: -1.2vw;
-    font-size: 4.27vw;
+    font-size: 3.289vw;
     height: 1.1vw;
     font-family: 'Acrom Medium', Arial, sans-serif;
     font-weight: 400;
@@ -8549,7 +8641,7 @@ iframe {
     /*background-image: linear-gradient(#00622A, #009640);*/
     background-size: cover;
     width: 100%;
-    height: 3vw;
+    height: 70vw;
     font-family: 'Circe', sans-serif;
     font-weight: 700;
     scroll-behavior: smooth;
@@ -8559,24 +8651,87 @@ iframe {
   }
   .items-block-how {
     overflow: hidden;
-    margin-top: -39vw;
-    margin-left: -1.3vw;
+    margin-top: -10vw;
+    margin-left: -2.3vw;
     position: absolute;
-    width: auto;
-    height: 922vw;
-    border-radius: 1.46vw;
-    background: linear-gradient(to right, #FFFFFF 50%, #FFFFFF 20%);
-    z-index: 2;
+    width: 100vw;
+    height: 890vw;
+    border-radius: 4.46vw;
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    z-index: 5;
     box-shadow: 1vw 1vw 5.5vw 1.3vw #3979dc;
+  }
+  .items-block-how::after {
+    display: none;
+  }
+  .main::after {
+    display: none;
+  }
+  .man.waves {
+    display: none;
+  }
+  .man.logo-pochta {
+    display: flex;
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 26.8%;
+    margin-left: -18.6vw;
+    margin-top: 1.75vw;
+    z-index: 8;
   }
 
 
   .main-text {
-    display: none;
+    position: relative;
+    text-align: left;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-weight: 500;
+    color: #EEF3EC;
+    font-size: 4.444vw;
+    line-height: 5.867vw;
+    margin-left: -19.3vw;
+    margin-top: 22.85vw;
+    word-wrap: normal;
+    margin-bottom: 3.26vw;
+    z-index: 5;
+    width: 65vw;
+    height: 48.81vw;
   }
-
-  .button-animation-text {
-    display: none;
+    .button-animation-text {
+      position: absolute;
+      z-index: 6;
+      cursor: pointer;
+      /* text-transform: uppercase; */
+      text-decoration: none;
+      padding: 3vw 19vw;
+      border-radius: 3.6763vw;
+      background-image: linear-gradient(#DA4DA3, #783185);
+      margin-left: -21.6vw;
+      margin-top: 15.5vw;
+      font-family: 'Halvar Mittelschrift Rg', sans-serif;
+      border: 0.15vw solid #FFFFFF80;
+      transition: background-image 0.3s ease;
+    }
+  .button-animation-text b {
+    color: #FFFFFF;
+    line-height: 6.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-weight: 500;
+    font-size: 5.556vw;
+  }
+  .how-tickes-img-p-right {
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    width: 88.1vw;
+    font-weight: 400;
+    height: 6.81vw;
+    font-size: 3.889vw;
+    line-height: 5.133vw;
+    margin-left: -0.5vw;
+    margin-top: 56.3vw;
+    margin-bottom: 10vw;
+    text-align: center;
   }
 
   .bottle-float-left {
@@ -8590,6 +8745,7 @@ iframe {
   }
 
   .man {
+    display: none;
     position: absolute;
     flex: 1 1;
     height: auto;
@@ -8709,7 +8865,7 @@ iframe {
   }
 
   .how {
-    height: 903.25vw;
+    height: 552.25vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     min-width: initial;
@@ -8724,9 +8880,9 @@ iframe {
   }
 
   .wrapper-how {
-    width: 100.6vw;
+    width: 87.6vw;
     height: 1350vw;
-    margin-left: -2.75vw;
+    margin-left: 2.25vw;
     overflow: hidden;
   }
 
@@ -8737,11 +8893,15 @@ iframe {
   }
 
   .how-bottle-float-left {
+    display: none;
     width: 86.5%;
     height: 100%;
     margin-top: 14.9vw;
     margin-left: 9.1vw;
     transform: rotate(1.7deg);
+  }
+  .how-main-text-text {
+    display: none;
   }
 
   .how-main-text {
@@ -8797,14 +8957,15 @@ iframe {
   .prizes-text {
     text-transform: uppercase;
     text-align: center;
-    margin: 47.7vw 0 3vw 7.85vw;
+    margin: 6.7vw 0 3vw -8.5vw;
     font-weight: 700;
-    font-family: 'Acrom Medium', Arial, sans-serif;
-    color: #EEF3EC;
-    font-size: 8vw;
-    line-height: 8.80vw;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    color: #364059;
+    font-size: 5.556vw;
+    line-height: 6.111vw;
     width: 90.13vw;
     height: 17.60vw;
+    letter-spacing: -0.1vw;
   }
 
   .prizes-items {
@@ -8859,11 +9020,25 @@ iframe {
     width: 73.47vw;
     height: 16.53vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin: 9vw 0 0 -20.35vw;
+    margin: 8vw 0 0 -20.35vw;
     font-size: 5.87vw;
     line-height: 8.27vw;
     text-align: left;
     color: #FFFFFF;
+  }
+  .how-tickes-img-p-right-how {
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    width: 91.1vw;
+    font-weight: 400;
+    height: 11.81vw;
+    font-size: 4.444vw;
+    line-height: 5.822vw;
+    margin-left: -2.8vw;
+    margin-top: -44.5vw;
+    margin-bottom: 10vw;
+    color: #364059;
+    text-align: left;
   }
   .how-first-li {
     width: 90.13vw;
@@ -8881,7 +9056,7 @@ iframe {
   }
 
   .prizes-content-box2 {
-    margin-top: 48.75vw;
+    margin-top: -83vw;
     margin-left: -6.5vw;
     width: 91vw;
     height: 226vw;
@@ -8892,9 +9067,9 @@ iframe {
   }
 
   .how-center-icon {
-    width: 41%;
-    margin-top: 47.3vw;
-    margin-left: 10.55vw
+    width: 94%;
+    margin-top: -93.5vw;
+    margin-left: 7vw;
   }
 
   .prizes-content-box-title-bot2 {
@@ -8909,11 +9084,14 @@ iframe {
     color: #FFFFFF;
   }
   .how-center-p-text {
-    width: 86.13vw;
-    font-size: 5.87vw;
+    width: 91vw;
+    font-size: 4.444vw;
     font-weight: 400;
-    line-height: 8.27vw;
+    line-height: 5.833vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-top: -2.15vw;
+    margin-left: -2.2vw;
+    color: #364059;
   }
   .prizes-content-box3 {
     width: 88.79vw;
@@ -8931,14 +9109,19 @@ iframe {
 
   .prizes-content-box-title-bot3 {
     font-weight: 400;
-    width: 85.47vw;
+    width: 91.47vw;
     height: 16.53vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin: 10.5vw 0 0 -0.35vw;
+    margin: 486vw 0 0 -0.35vw;
     font-size: 6.40vw;
     line-height: 8.53vw;
     text-align: left;
     color: #FFFFFF;
+  }
+  .how-center-p-text-stap2-second.bonus-how {
+    width: 91.47vw;
+    margin-top: 0.35vw;
+    margin-left: 0vw;
   }
   .under-text-quest {
     position: relative;
@@ -8975,10 +9158,10 @@ iframe {
     text-align: center;
     text-decoration: none;
     /* text-transform: uppercase; */
-    padding: 0.439583vw 3.33125vw;
-    margin-top: -13.05vw;
-    margin-left: -30.5vw;
-    border-radius: 0.71875vw;
+    padding: 2.839583vw 19.83125vw;
+    margin-top: -104.05vw;
+    margin-left: -45.5vw;
+    border-radius: 2.71875vw;
     cursor: pointer;
     /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
     border: 0.15vw solid #AF21C9CC;
@@ -8986,18 +9169,40 @@ iframe {
 
   .prizes-button-check b {
     color: #AF21C9;
-    line-height: 1.042vw;
     margin-left: 0.05vw;
     font-family: 'Halvar Mittelschrift', sans-serif;
     font-weight: 500;
-    font-size: 0.833vw;
+    font-size: 4.444vw;
+    line-height: 5.467vw;
   }
+  .prizes-button-check b:hover {
+    color: white;
 
+  }
+  .users-logo-spin.spin-main {
+    width: 73.5vw;
+    margin: -69.1vw 0vw 0vw -36.2vw;
+    z-index: 515;
+  }
+  .users-logo-spin {
+    position: absolute;
+    width: 84vw;
+    height: auto;
+    margin: -74.2vw 0vw 0vw -41.45vw;
+  }
+  #selectorspin {
+    color: #d52976;
+    position: absolute;
+    margin-top: -85.54vw;
+    margin-left: -2.4vw;
+    font-size: 14.678vw;
+    z-index: 516;
+  }
 
   .prizes {
     margin-top: -0.5vw;
     background-size: cover;
-    height: 100.25vw;
+    height: 322.25vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     min-width: initial;
@@ -9028,13 +9233,17 @@ iframe {
   .prizes-text11 {
     text-transform: uppercase;
     text-align: center;
-    margin: 0vw 0vw 3vw 5vw;
-    font-weight: 400;
-    font-family: 'Acrom Medium', Arial, sans-serif;
-    color: #EEF3EC;
-    font-size: 8vw;
-    line-height: 8.80vw;
-    letter-spacing: -0.005vw;
+    margin: 0vw 0vw 3vw -15vw;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-size: 7.222vw;
+    line-height: 7.778vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+  }
+  .how-center-p-text.bonus-prizes {
+    margin-top: 7.3vw;
+    margin-left: -10.2vw;
   }
 
   .pluse-left-how {
@@ -10363,27 +10572,63 @@ iframe {
   }
   .how-tickes-img-p {
     text-transform: uppercase;
-    width: 90.13vw;
+    width: 94.13vw;
     height: 57.81vw;
-    font-size: 5.87vw;
-    line-height: 8.27vw;
+    font-size: 5.000vw;
+    line-height: 8.111vw;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    padding-left: 0.9vw;
+    margin-top: 2.5vw;
+    margin-left: -3.5vw;
+  }
+  .how-center-p-text-stap2 {
+    text-transform: uppercase;
+    width: 38vw;
+    font-size: 5.000vw;
+    line-height: 8.111vw;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    margin-top: -7.8vw;
+    margin-left: 0.4vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+  }
+  .how-center-p-text-stap2.bonus-steps12 {
+    text-transform: uppercase;
+    width: 38vw;
+    font-size: 5.000vw;
+    line-height: 8.111vw;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    margin-top: -7.8vw;
+    margin-left: -2vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+  }
+  .how-center-p-text-stap2-second {
+    text-transform: uppercase;
+    width: 82vw;
+    font-size: 5.000vw;
+    font-weight: 700;
+    line-height: 5.556vw;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    margin-top: -3.85vw;
+    margin-left: -2vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+  }
+  .how-center-p-text-first {
+    width: 95vw;
+    font-size: 4.444vw;
     font-weight: 400;
+    line-height: 5.833vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    padding-left: 14.9vw;
-    margin-top: -0.5vw;
+    margin-top: 2.15vw;
+    margin-left: -2.2vw;
+    color: #364059;
   }
-  .how-full4-img {
-    display: none;
-  }
-  .how-full44-img {
-    display: none;
-  }
-  .how-full4444-img {
-    display: none;
-  }
-  .how-full444-img {
-    display: none;
-  }
+
 
   .how-tickets-img {
     display: flex;
@@ -10731,6 +10976,17 @@ iframe {
   }
   .button-animation-text-profile:hover {
 
+  }
+  .button-animation-text-profile:hover {
+    color: #FFFFFF; /* Изменение цвета текста на белый */
+  }
+
+  .button-animation-text-profile:hover b {
+    color: #FFFFFF; /* Изменение цвета текста на белый */
+  }
+
+  .button-animation-text-profile:hover .b {
+    color: #FFFFFF; /* Изменение цвета текста на белый */
   }
 
   .button-animation-text-profile b {
@@ -11583,7 +11839,7 @@ iframe {
     line-height: 4.80vw;
   }
   .how-tickets-img-second {
-    display: none;
+    display: flex;
   }
   .how-tickets-img-second-1 {
     width: 90vw;
@@ -13065,12 +13321,16 @@ iframe {
     background-size: contain;
   }
   .top-side {
-    margin-top: 48vw;
-    margin-left: 24.5vw;
+    position: absolute;
+    margin-top: -27vw;
+    margin-left: 43.5vw;
+    width: 6.66vw;
+    height: 6.66vw;
   }
   .random-block {
     margin-left: 15.5vw;
     margin-top: -0.9vw;
+    position: absolute;
   }
   .for-winners-videos {
     margin-left: 12.5vw;
@@ -13078,8 +13338,10 @@ iframe {
   }
   .random-block-2 {
     position: absolute;
-    width: 58vw;
-    margin-left: -2vw;
+    width: 40vw;
+    margin-left: 34vw;
+    margin-top: -14vw;
+
   }
   .random-b {
     line-height: 4.53vw;
@@ -14125,9 +14387,9 @@ iframe {
     transition: background-image 0.8s ease-in-out;
   }
   .how-left-icon {
-    width: 56%;
-    margin-left: -3.8vw;
-    margin-top: -7.3vw;
+    width: 92%;
+    margin-left: -13.8vw;
+    margin-top: -17.3vw;
   }
   .right-label-popupCode {
     width: 76.53vw;
@@ -14195,11 +14457,218 @@ iframe {
   .bonus-perek {
     margin-left: 1vw;
   }
+  .secret-block {
+    width: 100vw;
+    height: 13.944vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    border-radius: 0 0 5.556vw 5.556vw;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    margin-top: 3.8vw;
+    margin-left: -6.9vw;
+    z-index: 1000;
+    background-color: #fff;
+    opacity: 1;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .secret-block.hidden {
+    opacity: 0; /* Прозрачность 0 при скрытии */
+    transform: translateY(-100%); /* Задвигаем блок на 100% вверх */
+  }
+  .secret-block.scrolled {
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет и уровень прозрачности для затемнения */
+  }
+
+  .man-mobile {
+    display: flex;
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 83%;
+    margin-left: -98.2vw;
+    margin-top: -2vw;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .how-center-p-text-first.bonus-style {
+    width: 88vw;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-top: 2.15vw;
+    margin-left: 0.5vw;
+    color: #364059;
+  }
+  .prizes-content-box-title-bot2-prizes {
+    position: relative;
+    width: 73.13vw;
+    height: 300.54vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin: -2.48vw 0 0 4.6vw;
+    font-size: 2.928vw;
+    font-weight: 400;
+    line-height: 3.514vw;
+    text-align: left;
+    color: #FFFFFF;
+    z-index: 0;
+  }
+  .how-center-p-text-first.bonus-prizes {
+    width: 93vw;
+    margin-top: -2.3vw;
+    margin-left: -10vw;
+    margin-bottom: 8vw;
+  }
+  .for-test-img-test-mini-prizes img {
+    border-radius: 5vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -11.6vw;
+  }
+  .for-test-img-test-mini2-prizes img {
+    border-radius: 4vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -1.5vw;
+  }
+  .for-test-img-second-mini-prizes img {
+    border-radius: 5vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -11.6vw;
+  }
+  .for-test-img-third-mini-prizes img {
+    border-radius: 4vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -1.5vw;
+  }
+
+  .for-test-img-4-mini-prizes img {
+    border-radius: 5vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -11.6vw;
+  }
+  .for-test-img-5-mini-prizes img {
+    border-radius: 4vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -1.5vw;
+  }
+  .for-test-img-6-mini-prizes img {
+    border-radius: 5vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -11.6vw;
+  }
+  .for-test-img-7-mini-prizes img {
+    border-radius: 4vw;
+    width: 123%;
+    margin-top: -0.55vw;
+    margin-left: -1.5vw;
+  }
+  .how-tickets-img-mobile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2vw 0vw 0vw 0vw;
+  }
+  .how-tickets-img {
+    display: none;
+  }
+
+  .how-full4-img {
+
+  }
+  .how-full44-img {
+
+  }
+  .how-full4444-img {
+
+  }
+  .how-full444-img {
+  }
 
 
-
-
-
+  .items-block-how.qouest {
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    position: relative;
+    border-radius: 0vw 0vw 1.46vw 1.46vw;
+    margin-top: -37vw;
+    margin-left: 0.5vw;
+    width: 99.21vw;
+    height: auto;
+    z-index: 6;
+    box-shadow: 0 0 0 0;
+  }
+  .question-block {
+    position: relative;
+    z-index: 5;
+    margin: 6.5vw 0vw 7.2vw -3.4vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    color: #364059;
+    font-size: 5.556vw;
+    line-height: 6.111vw;
+    width: 83.75vw;
+    height: 8.05vw;
+    letter-spacing: -0.04vw;
+  }
+  .MuiSvgIcon-root {
+    font-size: 1rem !important;
+  }
+  .heading-name {
+    margin-left: 1vw;
+    margin-top: -6.5vw;
+    font-weight: 500;
+    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
+    font-size: 5.000vw;
+    line-height: 6.550vw;
+    color: #364059;
+    margin-bottom: 0vw;
+  }
+  .MuiIconButton-edgeEnd {
+    margin-right: 0.72vw !important;
+    margin-top: -1vw !important;
+  }
+  .MuiAccordion-rounded {
+    z-index: 5;
+    margin-bottom: 2vw;
+    color: white !important;
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    transition: background-color 0.3s !important;
+    border: 2px solid #364059 !important;
+    border-radius: 3.5vw !important;
+  }
+  .MuiAccordion-root:first-child {
+    z-index: 5;
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    transition: background-color 0.3s;
+    border-top-left-radius: 3.5vw !important;
+    border-top-right-radius: 3.5vw !important;
+    border-bottom-right-radius: 3.5vw !important;
+    border-bottom-left-radius: 3.5vw !important;
+  }
+  .MuiTypography-body1 {
+    font-size: 4.444vw !important;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 5.644vw !important;
+    letter-spacing: 0.00938em;
+    text-align: left !important;
+  }
+  .centered-container {
+    margin-left: 17vw;
+    z-index: 55555555555555555 !important;
+    width: 91% !important;
+  }
 
 
 

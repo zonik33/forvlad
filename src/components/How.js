@@ -212,7 +212,7 @@ export default function How (props) {
                                 <div className={'prizes-content-box-title-bot1'}>
                                     <p className={'how-tickes-img-p'}> Шаг 1. <br></br> Купите лотерейный билет </p>
                                     <p className={'how-tickes-img-p-right-how'}>
-                                        Покупайте лотерейные билеты на сумму от 300 ₽ в отделениях <br></br>«Почты
+                                        Покупайте лотерейные билеты на сумму от 300 ₽ в отделениях «Почты
                                         России».
                                         <br></br> <br></br>Города-участники: Москва, Санкт-Петербург,
                                         Краснодар, Екатеринбург</p>
@@ -399,7 +399,7 @@ export default function How (props) {
                                 {/*<p className={'how-left-icon-text second'}>2</p>*/}
 
                                 <div className={'prizes-content-box-title-bot2'}>
-                                    <p className={'how-center-p-text-stap2'}> Шаг 2.
+                                    <p className={'how-center-p-text-stap2 bonus-steps12'}> Шаг 2.
                                         <br></br>
                                     </p>
                                     <p className={'how-center-p-text-stap2-second'}> Зарегистрируйтесь или авторизуйтесь
@@ -425,10 +425,10 @@ export default function How (props) {
                                 <p className={'how-center-p-text-stap2'}> Шаг 3.
                                     <br></br>
                                     <p className={'how-center-p-text-stap2-second bonus-how'}> Участвуйте в розыгрышах и
-                                        <br></br>получайте призы</p>
+                                        получайте призы</p>
                                 </p>
-                                <p className={'how-center-p-text-first'}>
-                                    Нажмите кнопку «Разыграть приз» и получите промокод <br></br>
+                                <p className={'how-center-p-text-first bonus-style'}>
+                                    Нажмите кнопку «Разыграть приз» и получите промокод
                                     на лотерейный билет от «Национальная Лотерея».
                                 </p>
                             </div>

@@ -1,6 +1,7 @@
 import users from '../image/img_98.png'
 import ticket from '../image/ticket.png'
 import tickettext from '../image/tickettext.png'
+import tickettextblue from '../image/img_99.png'
 import ScrollPrizes from "./Scroll/ScrollPrizes";
 import ScrollWinners from "./Scroll/ScrollWinners";
 import ScrollFaq from "./Scroll/ScrollFaq";
@@ -62,11 +63,10 @@ export default function Header (props){
 
     function toggleMenu() {
         const navLists = document.querySelector('.header-burger');
-        navLists.classList.toggle('active');
+        // Не выполняйте здесь toggle для navLists
         const navList = document.querySelector('header .menu');
-        navList.classList.toggle('show');
-        document.documentElement.classList.toggle('menu-open');
-        document.body.classList.toggle('menu-open');
+        navList.classList.toggle('show'); // Просто добавьте/удалите класс show
+        // Удалите toggle для document.documentElement и document.body
     }
     function closeMenu() {
         const navLists = document.querySelector('.header-burger');
@@ -118,6 +118,26 @@ export default function Header (props){
     const handleImageClick = () => {
         window.location.href = '/'
     };
+
+    const [isBlockVisible, setBlockVisibility] = useState(true);
+
+    useEffect(() => {
+        let prevScrollPos = window.pageYOffset;
+
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const scrollingDown = prevScrollPos < currentScrollPos;
+
+            setBlockVisibility(!scrollingDown);
+            prevScrollPos = currentScrollPos;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return(
 
         <header className={'header'}>
@@ -125,53 +145,55 @@ export default function Header (props){
                 <div className={'content'}>
                     <div className={'logo-content'}>
                         <Link to="">
-                            <img className={'logo'} src={ticket}
-                                 alt="Logo"
-                                 onMouseOver={() => { /* Обработчик наведения на картинку */
-                                 }}
-                                 onClick={handleImageClick}/>
+                            <img className={'logo'} src={ticket} alt="Logo" onClick={handleImageClick}/>
                         </Link>
                         <Link to="">
-                            <img className={'logo-text'} src={tickettext}
-                                 alt="Logo"
-                                 onMouseOver={() => { /* Обработчик наведения на картинку */
-                                 }}
-                                 onClick={handleImageClick}/>
+                            <img className={'logo-text'} src={tickettext} alt="Logo" onClick={handleImageClick}/>
                         </Link>
-                        <div className={'header-burger'} onClick={toggleMenu}>
-                            <span className={'span-burger'}></span>
-                        </div>
+                        <Link to="">
+                            <img className={'logo-text-mobile'} src={tickettextblue} alt="Logo" onClick={handleImageClick}/>
+                        </Link>
                     </div>
                     <div className={'menu'}>
                         <div className={'menu-content'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
-                            <a className="smooth" href={'#prizes'} onClick={(event) => {closeMenu(); ScrollPrizes(event); }}>Призы</a>
-                            {/*<a className="smooth" href={'#winners'} onClick={(event) => {closeMenu(); ScrollWinners(event); }}> Победители </a>*/}
-                            <a className="smooth" href={'#faq'} onClick={(event) => {closeMenu(); ScrollFaq(event); }}> Вопрос-ответ </a>
-                            <a className="smooth backFaq" href={'#faq'} onClick={ScrollSupport}> Обратная связь </a>
+                            <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
+                                <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
+                                <a className="smooth" href={'#prizes'} onClick={(event) => {
+                                    ScrollPrizes(event);
+                                }}>
+                                    Призы
+                                </a>
+                                <a className="smooth" href={'#faq'} onClick={(event) => {
+                                    ScrollFaq(event);
+                                }}>
+                                    Вопрос-ответ
+                                </a>
+                                <a className="smooth" href={'#faq'} onClick={ScrollSupport}>
+                                    Обратная связь
+                                </a>
+                            </div>
                             <div className={'random-block'}>
                                 {isAuthenticated ? (
-                                    <button id="profile-button"  onClick={redirectToProfile} className="button-animation">
+                                    <button id="profile-button" onClick={redirectToProfile}
+                                            className="button-animation">
                                         Личный кабинет
                                     </button>
                                 ) : (
                                     <div className={'random-block-2'}>
-                                        <button id="registration-button" onClick={openPopup} className="button-animation">
+                                        <button id="registration-button" onClick={openPopup}
+                                                className="button-animation">
                                             Вход / Регистрация
                                         </button>
-                                        {isPopupOpen && (
-                                            <Popup isOpen={isPopupOpen} closeModal={closePopup} />
-                                        )}
+                                        {isPopupOpen && <Popup isOpen={isPopupOpen} closeModal={closePopup}/>}
                                     </div>
                                 )}
                             </div>
                             <img className={'users-logo top-side'} src={users}/>
-                            <a onClick={handleOnClick} className={'shadow-button-animation-text'}> <b>Принять участие в акции</b> </a>
-
+                            {/*<a onClick={handleOnClick} className={'shadow-button-animation-text'}> <b>Принять участие в*/}
+                            {/*    акции</b> </a>*/}
                         </div>
                     </div>
                 </div>
-
             </div>
             <Popup/>
             <PopupCode/>

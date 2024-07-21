@@ -101,7 +101,8 @@ export default function Prizes (props) {
                                 Призы
                             </div>
                             <p className={'how-center-p-text bonus-prizes'}> За участие в розыгрышах рулетки с подарками
-                                вы получите промокод* на лотерейный билет для участия в будущих тиражах от «Национальная Лотерея».
+                                вы получите промокод* на лотерейный билет для участия в будущих тиражах от «Национальная
+                                Лотерея».
                             </p>
                             <p className={'how-center-p-text-first bonus-prizes'}>
                                 Для применения промокода перейдите на сайт nloto.ru из вашего личного кабинета
@@ -144,6 +145,49 @@ export default function Prizes (props) {
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
                                         src={howFull6}/></a>
                                 </div>
+                                <div className="how-full4444-img for-test-img-6-mini-prizes">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={howFull5}/></a>
+                                </div>
+                                <div className="how-full4444-img for-test-img-7-mini-prizes">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={howFull3}/></a>
+                                </div>
+                            </div>
+
+
+                            <div className={'how-tickets-img-mobile'}>
+                                <div className="how-full44-img for-test-img-test-mini-prizes">
+                                    <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
+                                       target="_blank"><img
+                                        src={mini5}/></a>
+                                </div>
+                                <div className="how-full4-img for-test-img-test-mini2-prizes">
+                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                        src={mini6}/></a>
+                                </div>
+                            </div>
+                            <div className={'how-tickets-img-mobile'}>
+                            <div className="how-full444-img for-test-img-second-mini-prizes">
+                                <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                    src={mini1}/></a>
+                            </div>
+                            <div className="how-full4444-img for-test-img-third-mini-prizes">
+                                <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    src={howFull1}/></a>
+                            </div>
+                            </div>
+                            <div className={'how-tickets-img-mobile'}>
+                                <div className="how-full4444-img for-test-img-4-mini-prizes">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={howFull2}/></a>
+                                </div>
+                                <div className="how-full4444-img for-test-img-5-mini-prizes">
+                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        src={howFull6}/></a>
+                                </div>
+                            </div>
+                            <div className={'how-tickets-img-mobile'}>
                                 <div className="how-full4444-img for-test-img-6-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
                                         src={howFull5}/></a>

@@ -190,19 +190,19 @@ export default function Faq() {
             <div className="container-question-help">
                 <div className="column-help">
                     <img src={phone} alt="Image 1"/>
-                    Позвонить по номеру 8 800 333-7-333
+                    Позвонить по номеру <a className={'question-color'}>8 800 333-7-333</a>
                     <br></br>
-                    24/7 Звонок по России бесплатный
+                    <a className={'question-color-second'}>24/7 Звонок по России бесплатный</a>
                 </div>
                 <div className="column-help">
                     <img src={sms} alt="Image 2"/>
-                    Написать в чат на сайте nloto.ru
+                    Написать в чат на сайте <a className={'question-color'}>nloto.ru</a>
                     <br></br>
-                    Поддержка 24/7
+                    <a className={'question-color-second'}>Поддержка 24/7</a>
                 </div>
                 <div className="column-help">
                     <img src={write} alt="Image 3"/>
-                    Написать на support@nloto.ru
+                    Написать на <a className={'question-color'}>support@nloto.ru</a>
                 </div>
             </div>
 
