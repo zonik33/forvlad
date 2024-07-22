@@ -152,7 +152,7 @@ export default function NotFoundPage(props){
                         </div>
                     </div>
                     <div className={'menu'}>
-                        <div className={'menu-content-profile error-menu-profile'}>
+                        <div className={'menu-content-profile error-menu-profile-test'}>
                             <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                             <a className="smooth" href={'#'} onClick={(event) => {
                                 closeMenu();
