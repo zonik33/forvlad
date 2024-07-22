@@ -1683,11 +1683,16 @@ header .menu-content-profile a:hover {
 .MuiAccordion-root.Mui-expanded .jss3 {
   color: white !important; /* Изменение цвета текста при открытии аккордеона */
 }
+.jss3 {
+  font-size: 0.9375rem;
+  flex-basis: 96.33% !important;
+  flex-shrink: 0;
+}
 .jss5 {
-  width: 77vw !important;
-  margin: 0px 0px 25px 1px !important;
-  border-top: 2px solid #ccc;
-  background-color: #fff;
+  width: 7vw !important;
+  margin: -1.354vw 0px 1.302vw 0.052vw !important;
+  border-top: 1px solid black !important;
+  background-color: black !important;
 }
 .makeStyles-heading-3 {
   flex-basis: 100.33% !important;
@@ -13375,15 +13380,15 @@ iframe {
   }
   .top-side {
     position: absolute;
-    margin-top: -27vw;
-    margin-left: 43.5vw;
+    margin-top: -26vw;
+    margin-left: 44.5vw;
     width: 6.66vw;
     height: 6.66vw;
   }
   .random-block {
     width: 34vw;
-    margin-left: 50.5vw;
-    margin-top: -25.9vw;
+    margin-left: 53.5vw;
+    margin-top: -23.9vw;
     position: absolute;
   }
   .for-winners-videos {
@@ -13391,10 +13396,10 @@ iframe {
     margin-top: 22.65vw;
   }
   .random-block-2 {
+    margin-left: -2vw;
+    margin-top: -1.75vw;
     position: absolute;
     width: 40vw;
-    margin-left: -1vw;
-    margin-top: -1.75vw;
   }
   .random-b {
     line-height: 4.53vw;
@@ -13812,6 +13817,12 @@ iframe {
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
     color: #5E6976;
+  }
+  .jss5 {
+    width: 17vw !important;
+    margin: 0px 0px 25px 5px;
+    border-top: 1px solid black !important;
+    background-color: black !important;
   }
   .popup-ticket1 .close:hover {
     position: absolute;
@@ -14537,6 +14548,11 @@ iframe {
   .secret-block.scrolled {
     background-color: rgba(0, 0, 0, 0.5); /* Цвет и уровень прозрачности для затемнения */
   }
+  .jss3 {
+    font-size: 0.9375rem;
+    flex-basis: 93.33% !important;
+    flex-shrink: 0;
+  }
 
   .man-mobile {
     display: flex;
@@ -14865,6 +14881,10 @@ iframe {
     margin-left: -13vw;
     text-align: left;
     width: 66vw;
+  }
+  .centered-container.jss2 {
+    z-index: 15 !important;
+    width: 91% !important;
   }
 
 
