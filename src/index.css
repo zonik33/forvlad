@@ -418,6 +418,9 @@ header .menu-content-profile a:hover {
   z-index: -4;
   overflow: hidden;
 }
+.tsxt-mobile {
+  display: none;
+}
 .tsxt.error {
   margin: -0.4vw 0vw 0vw 0vw;
   width: 100%;
@@ -1236,7 +1239,8 @@ header .menu-content-profile a:hover {
   background-image: linear-gradient(to right, #7CC6FC 0%, #2361F9 100%);
 }
 .p-main-profile-color {
-  margin-top: 0.2vw;
+  text-transform: none;
+  margin-top: 0.12vw;
 }
 
 .right-second-block.active {
@@ -10817,6 +10821,15 @@ iframe {
     z-index: -4;
     overflow: hidden;
   }
+  .tsxt-mobile {
+    display: flex;
+    margin: -56vw 0vw 0vw 0vw;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -4;
+    overflow: hidden;
+  }
   .main-profile {
     margin-top: 55vw;
     /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
@@ -10832,13 +10845,13 @@ iframe {
   }
   .items-block-profile {
     overflow: hidden;
-    margin-top: 4.1vw;
+    margin-top: 12.1vw;
     margin-left: 0vw;
     /* position: absolute; */
     width: 100vw;
     height: auto;
     min-height: 46.354vw;
-    border-radius: 1.46vw 1.46vw 1.46vw 1.46vw;
+    border-radius: 4.46vw 5.46vw 1.46vw 1.46vw;
     /* box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc; */
     background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
     z-index: 5;
@@ -10889,6 +10902,9 @@ iframe {
   }
 
   .right-first-profile {
+    width: 29.45vw;
+    height: 5vw;
+    margin: 5vw 0vw 0vw 0vw;
     font-family: "Acrom Medium", Arial, sans-serif;
     font-size: 1.17vw;
     font-weight: 400;
@@ -10898,8 +10914,8 @@ iframe {
   }
 
   .right-first-block {
-    width: 21.567vw;
-    height: 10.65vw;
+    width: 28.567vw;
+    height: 8.65vw;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 5.33vw 5.33vw 0 0;
@@ -10932,9 +10948,9 @@ iframe {
   }
 
   .p-main-profile-color {
-    font-size: 2.65vw;
-    margin-top: 5.3vw;
-
+    font-size: 5.000vw;
+    line-height: 6.550vw;
+    margin-top: 1.3vw;
   }
 
   .right-second-profile {
@@ -10942,9 +10958,9 @@ iframe {
     width: 88.8vw;
     height: 64.65vw;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: #FFFFFF4D solid 0.15vw;
-    border-radius: 0 0 5.33vw 5.33vw;
+    /*background-color: rgba(255, 255, 255, 0.15);*/
+    /*border: #FFFFFF4D solid 0.15vw;*/
+    /*border-radius: 0 0 5.33vw 5.33vw;*/
     z-index: 11;
     background-size: cover;
     margin-bottom: 5vw;
@@ -11004,7 +11020,7 @@ iframe {
   .container-profile {
     display: flex;
     flex-flow: column nowrap;
-    margin-top: -15vw;
+    margin-top: 7vw;
     margin-left: -35vw;
   }
 
@@ -13190,14 +13206,22 @@ iframe {
     text-align: center;
     text-decoration: none;
     /* text-transform: uppercase; */
-    padding: 0.439583vw 3.33125vw;
-    margin-top: 48.8vw;
-    margin-left: 3vw;
-    border-radius: 0.71875vw;
+    padding: 2.839583vw 19.83125vw;
+    margin-top: 10.05vw;
+    margin-left: 4.5vw;
+    border-radius: 3.51875vw;
     cursor: pointer;
-    /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
+    background-image: linear-gradient(#edf0fa, #edf0fa);
     border: 0.15vw solid #AF21C9CC;
-    transition: color 0.3s, background-image 0.3s;
+  }
+  .button-animation-text-profile.first-one b {
+    color: #AF21C9;
+    margin-left: 0.05vw;
+    font-family: 'Halvar Mittelschrift', sans-serif;
+    font-weight: 500;
+    font-size: 4.444vw;
+    line-height: 5.467vw;
+    text-transform: none;
   }
   header .logo-text-profile {
     z-index: 51;
@@ -14957,7 +14981,10 @@ iframe {
     width: 91% !important;
   }
 
-
+  .global-name-move {
+    display: none;
+    margin: 3.4vw 0vw 0vw -15.1vw;
+  }
 
 }
 

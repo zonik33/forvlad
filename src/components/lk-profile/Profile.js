@@ -22,6 +22,7 @@ import ScrollPrizes from "../Scroll/ScrollPrizes";
 import scrollToPrizes from "../Scroll/ScrollToPrizes";
 import ticket from "../../image/ticket.png";
 import tickets from "../../image/img_106.png";
+import ticketsmb from "../../image/img_108.png";
 import PopupVideos from "../Winners-videos/PopupVideos";
 import PopupEnd from "../PopupTicket/PopupEnd";
 import prizesCenterCard from "../../image/mv-card.png";
@@ -281,6 +282,7 @@ export default function Profile(props){
                 <div className={''} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
+                        <img className={'tsxt-mobile'} src={ticketsmb}/>
                         <div className={'items-block-profile'}>
                             <div className={'background-container'}></div>
                             <div className={'global-name'}>
