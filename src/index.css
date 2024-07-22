@@ -1005,6 +1005,16 @@ header .menu-content-profile a:hover {
   margin-left: 8.6vw;
   margin-top: -10.5vw;
 }
+.background-container {
+  margin: 9.02vw 0vw 0vw 27vw;
+  position: absolute;
+  width: 40.8vw;
+  height: 2vw;
+  color: #D7DDFF;
+  background-color: #D7DDFF;
+  z-index: -1;
+  border-radius: 2vw;
+}
 .gifts-download-qr-code {
   position: absolute;
   font-size: 1.02vw;
@@ -1092,6 +1102,7 @@ header .menu-content-profile a:hover {
   display: flex;
   flex-direction: column;
   margin-left: -0.95vw;
+  z-index: 7;
 }
 .right-first-profile {
   position: relative;

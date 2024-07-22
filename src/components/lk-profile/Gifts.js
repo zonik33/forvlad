@@ -293,6 +293,7 @@ export default function Gifts() {
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
                         <div className={'items-block-profile gifts-items-block'}>
+                            <div className={'background-container'}></div>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
                             </div>

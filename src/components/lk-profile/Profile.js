@@ -269,6 +269,7 @@ export default function Profile(props){
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
                         <div className={'items-block-profile'}>
+                            <div className={'background-container'}></div>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
                             </div>
@@ -358,86 +359,87 @@ export default function Profile(props){
 
                                             </>
                                         ) : <p className={'left-first-profile-p2-p2-p2'}>
-                                            Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму от 300 рублей.
+                                            Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму
+                                            от 300 рублей.
                                             <br></br>
                                             <br></br>
                                             За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
                                         </p>
                                         }
+                                    </div>
+                                </div>
+                                <div className="right-column-profile">
+                                    <div className={'right-first-profile'}>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/profile"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/profile'}
+                                                className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Профиль
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/tickets"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/tickets'}
+                                                className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Билеты
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        <div className={'right-first-profile'}>
+                                            <NavLink
+                                                to="/gifts"
+                                                activeclassname="active-subsection"
+                                                isactive={() => location.pathname === '/gifts'}
+                                                className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
+                                            >
+                                                <div className={'p-main-profile-color'}>
+                                                    Призы
+                                                </div>
+                                            </NavLink>
+                                        </div>
+                                        {/*<div className={'right-first-profile'}>*/}
+                                        {/*    <NavLink*/}
+                                        {/*        to="/videos"*/}
+                                        {/*        activeclassname="active-subsection"*/}
+                                        {/*        isactive={() => location.pathname === '/videos'}*/}
+                                        {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
+                                        {/*    >*/}
+                                        {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
+                                        {/*        /!*    Розыгрыши*!/*/}
+                                        {/*        /!*</div>*!/*/}
+                                        {/*    </NavLink>*/}
+                                        {/*</div>*/}
+                                    </div>
+                                    <div className={'right-second-profile'}>
+                                        {/*<div className={'background'}></div>*/}
+                                        <div className={'content-from-left'}>
+                                            {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
+                                            <p className={'right-second-profile-p2'}>Номер телефона</p>
+                                            <input className={'popupCode-input-profile'} type="tel"
+                                                   defaultValue={'+7 977 302 84 57'} value={profile && profile.login}
+                                                   readOnly
+                                                   style={{backgroundColor: '#edf0fa'}}
+                                            />
+                                            {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
+                                        </div>
+                                    </div>
+                                    {/*<div className={'backdrop-profile2'}></div>*/}
                                 </div>
                             </div>
-                            <div className="right-column-profile">
-                                <div className={'right-first-profile'}>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/profile"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/profile'}
-                                            className={`right-first-block first-block ${location.pathname === '/profile' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Профиль
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/tickets"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/tickets'}
-                                            className={`right-first-block second-block ${location.pathname === '/tickets' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Билеты
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    <div className={'right-first-profile'}>
-                                        <NavLink
-                                            to="/gifts"
-                                            activeclassname="active-subsection"
-                                            isactive={() => location.pathname === '/gifts'}
-                                            className={`right-first-block third-block ${location.pathname === '/gifts' ? 'active' : ''}`}
-                                        >
-                                            <div className={'p-main-profile-color'}>
-                                                Призы
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                    {/*<div className={'right-first-profile'}>*/}
-                                    {/*    <NavLink*/}
-                                    {/*        to="/videos"*/}
-                                    {/*        activeclassname="active-subsection"*/}
-                                    {/*        isactive={() => location.pathname === '/videos'}*/}
-                                    {/*        className={`right-first-block ${location.pathname === '/videos' ? 'active' : ''}`}*/}
-                                    {/*    >*/}
-                                    {/*        /!*<div className={'p-main-profile-color'}>*!/*/}
-                                    {/*        /!*    Розыгрыши*!/*/}
-                                    {/*        /!*</div>*!/*/}
-                                    {/*    </NavLink>*/}
-                                    {/*</div>*/}
-                                </div>
-                                <div className={'right-second-profile'}>
-                                    {/*<div className={'background'}></div>*/}
-                                    <div className={'content-from-left'}>
-                                        {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
-                                        <p className={'right-second-profile-p2'}>Номер телефона</p>
-                                        <input className={'popupCode-input-profile'} type="tel"
-                                               defaultValue={'+7 977 302 84 57'} value={profile && profile.login}
-                                               readOnly
-                                               style={{backgroundColor: '#edf0fa'}}
-                                        />
-                                        {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
-                                    </div>
-                                </div>
-                                {/*<div className={'backdrop-profile2'}></div>*/}
-                            </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
     <footer className={'footer'}>
         <div className="footer-left">
 
