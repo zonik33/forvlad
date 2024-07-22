@@ -296,7 +296,7 @@ export default function Gifts() {
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
                             </div>
-                            <a onClick={openPopup} className={'button-animation-text-profile'}>
+                            <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
                             <div className="container-profile">
                                 <div className="left-column-profile">
@@ -443,7 +443,7 @@ export default function Gifts() {
                                         {/*</div>*/}
                                     </div>
                                     <div className={'right-second-profile-gifts'}>
-                                        {/*<p className={'right-second-gifts-p'}>Ваши подарки</p>*/}
+                                        {/*<div className={'background'}></div>*/}
                                         <span className={'gifts-prizes-name'}>Приз</span>
                                         <span className={'gifts-prizes-data'}>Итоги розыгрыша рулетки</span>
                                         <span className={'gifts-prizes-data-add'}>Срок <br></br>действия до</span>
@@ -461,7 +461,7 @@ export default function Gifts() {
                                                 <div className="draw-date">10.06.2024</div>
                                             </div>
                                             <div className="draw-date-prizes-column">
-                                                <div className="draw-date">10.08.2024</div>
+                                                <div className="draw-date margin-new">10.08.2024</div>
                                             </div>
                                             <div className={'line-true gifts'}></div>
                                         </div>
@@ -480,7 +480,7 @@ export default function Gifts() {
                                                 <div className="draw-date">10.06.2024</div>
                                             </div>
                                             <div className="draw-date-prizes-column">
-                                                <div className="draw-date">10.08.2024</div>
+                                                <div className="draw-date margin-new">10.08.2024</div>
                                             </div>
                                             <div className={'line-true gifts'}></div>
                                         </div>
@@ -499,7 +499,7 @@ export default function Gifts() {
                                                 <div className="draw-date">10.06.2024</div>
                                             </div>
                                             <div className="draw-date-prizes-column">
-                                                <div className="draw-date">5.08.2024</div>
+                                                <div className="draw-date margin-new">5.08.2024</div>
                                             </div>
                                             <div className={'line-true gifts'}></div>
                                         </div>

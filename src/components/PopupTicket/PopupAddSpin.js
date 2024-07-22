@@ -88,9 +88,10 @@ export default function PopupAddSpin(props) {
                        left: '50%',
                        transform: 'translate(-50%, -50%)',
                        backgroundColor: '#00438280',
+                       backgroundImage: 'linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2)',
                        padding: '1.60vw',
                        borderRadius: '2.08vw',
-                       boxShadow: '0vw 1vw 3.5vw 1.7vw #3979dc',
+                       boxShadow: '0vw 1vw 3.5vw 1.7vw #C5CDE4',
                        width: 'auto', // Ширина модального окна
                        height: 'auto', // Высота модального окна
 

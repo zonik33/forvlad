@@ -196,7 +196,7 @@ export default function Faq() {
                 </div>
                 <div className="column-help">
                     <img src={sms} alt="Image 2"/>
-                    Написать в чат на сайте <a className={'question-color'}>nloto.ru</a>
+                    Написать в чат на сайте <a href={'https://nloto.ru/'} target="_blank"  className={'question-color'}>nloto.ru</a>
                     <br></br>
                     <a className={'question-color-second'}>Поддержка 24/7</a>
                 </div>

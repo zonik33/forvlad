@@ -409,12 +409,20 @@ header .menu-content-profile a:hover {
   z-index: -4;
   overflow: hidden;
 }
+.tsxt.error {
+  margin: -0.4vw 0vw 0vw 0vw;
+  width: 100%;
+  height: 50vw;
+  position: absolute;
+  z-index: -4;
+  overflow: hidden;
+}
 .main-error {
   margin-top: 1vw;
-  /*background-image: linear-gradient(#023d6c, #023d6c, #023d6c);*/
+  /* background-image: linear-gradient(#023d6c, #023d6c, #023d6c); */
   background-size: cover;
   width: 100%;
-  height: 44.8vw;
+  height: 33.8vw;
   font-family: 'Circe', sans-serif;
   font-weight: 700;
   scroll-behavior: smooth;
@@ -727,7 +735,7 @@ header .menu-content-profile a:hover {
   font-size: 1.75vw;
   text-align: left;
   line-height: 2vw;
-  color: #FFFFFF;
+  color: #364059;
   font-weight: 400;
   margin-left: -0.4vw;
   margin-top: -0.5vw;
@@ -738,14 +746,14 @@ header .menu-content-profile a:hover {
   font-size: 1.464vw;
   text-align: left;
   line-height: 2.050vw;
-  color: #FFFFFF;
   font-weight: 400;
   margin-left: -0.4vw;
   margin-top: -1.9vw;
+  color: #364059;
 }
 .popup-take-gifts {
-  background-color: #00438280;
-  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
   width: 34.6vw;
   height: 23.99vw;
   padding: 0.6vw 0.94vw;
@@ -773,7 +781,7 @@ header .menu-content-profile a:hover {
   font-size: 1.611vw;
   text-align: left;
   line-height: 3.050vw;
-  color: #FFFFFF;
+  color: #364059;
   font-weight: 700;
   margin-left: -0.4vw;
   margin-top: 1.1vw;
@@ -829,7 +837,7 @@ header .menu-content-profile a:hover {
   font-size: 1.464vw;
   font-weight: 400;
   margin-top: 6.8vw;
-  margin-left: 0vw;
+  margin-left: -0.5vw;
   text-align: left;
   color: #364059;
   line-height: 2.050vw;
@@ -1172,10 +1180,10 @@ header .menu-content-profile a:hover {
   color: #42486C;
 }
 .right-first-profile {
-  width: 43vw;
+  width: 13.45vw;
   height: 5vw;
   padding: 0vw;
-  background: #D7DDFF;
+  /*background: #D7DDFF;*/
   border-radius: 6vw;
   font-family: "Acrom Medium", Arial, sans-serif;
   font-size: 0.729vw;
@@ -1183,6 +1191,15 @@ header .menu-content-profile a:hover {
   line-height: 1.63vw;
   text-transform: uppercase;
   text-decoration: none;
+  z-index: 15;
+}
+.background {
+  position: absolute;
+  margin: -3.65vw 0vw 0vw -1vw;
+  width: 43vw;
+  height: 2.5vw;
+  border-radius: 6vw;
+  background: #D7DDFF;
 }
 
 .right-first-block.active {
@@ -1854,21 +1871,83 @@ header .menu-content-profile a:hover {
   border: 0.15vw solid #AF21C9CC;
   transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
 }
+.button-animation-text-profile.first-one {
+  position: absolute;
+  z-index: 6;
+  color: #EEF3EC;
+  font-weight: 700;
+  font-size: 1.04vw;
+  line-height: 1.15vw;
+  text-align: center;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  padding: 0.439583vw 3.33125vw;
+  margin-top: -1.8vw;
+  margin-left: 51.1vw;
+  border-radius: 0.71875vw;
+  cursor: pointer;
+  /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
+  border: 0.15vw solid #AF21C9CC;
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
+}
+.button-animation-text-profile.first-one:hover {
+  background-image: linear-gradient(#AF21C9CC, #AF21C9CC, #AF21C9CC);
+  color: white;
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
+}
+.button-animation-text-profile.first-one:hover b {
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
+}
+.button-animation-text-profile.first-one:hover {
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+}
+
+.button-animation-text-profile.first-one:hover b {
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+}
+
+.button-animation-text-profile.first-one:hover .b {
+  color: #FFFFFF; /* Изменение цвета текста на белый */
+}
 
 .button-animation-text-profile.click-spin {
   margin-left: -8.7vw;
   margin-top: 0.4vw;
-  padding: 1.8vw 2.86vw;
+  padding: 0.8vw 1.86vw;
+  background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+  border: 0.15vw solid #AF21C9CC;
+  color: #EEF3EC;
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
+}
+.button-animation-text-profile.click-spin b {
+  color: #EEF3EC;
+  font-size: 1.250vw;
+  line-height: 1.650vw;
 }
 .button-animation-text-profile.click-ticket-prizes {
   margin-left: -7.4vw;
   margin-top: 0.8vw;
   padding: 1.1vw 1.35vw;
+  background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+  border: 0.15vw solid #AF21C9CC;
+  color: #EEF3EC;
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
+}
+.button-animation-text-profile.click-ticket-prizes b {
+  color: #EEF3EC;
+}
+.button-animation-text-profile.click-take-gifts b {
+  color: #EEF3EC;
 }
 .button-animation-text-profile.click-take-gifts {
-  margin-left: 1.2vw;
+  margin-left: 3.2vw;
   margin-top: 18.8vw;
   padding: 1.5vw 2.35vw;
+  background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+  border: 0.15vw solid #AF21C9CC;
+  color: #EEF3EC;
+  transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
+  border-radius: 1.3vw;
 }
 
 .global-name-move {
@@ -3116,6 +3195,14 @@ canvas#wheel-profile-popup {
   position: absolute;
   margin: -21.7vw 0vw 0vw 61vw;
 }
+#selectorspintestpopup {
+  color: #d52976;
+  position: absolute;
+  margin-top: -5.4vw;
+  margin-left: -27.1vw;
+  font-size: 3.878vw;
+  z-index: 6;
+}
 .selectorspin-container {
   position: absolute;
   margin: 5.3vw 0vw 0vw 38vw;
@@ -3738,9 +3825,9 @@ canvas#wheel-profile-popup {
   text-align: left;
   margin-left: 0.34vw;
   margin-top: 0.34vw;
-  font-size: 1.757vw;
+  font-size: 1.250vw;
   font-weight: 400;
-  line-height: 2.343vw;
+  line-height: 1.667vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 
@@ -3749,10 +3836,10 @@ canvas#wheel-profile-popup {
   display: block;
   text-align: left;
   margin-left: 0.34vw;
-  margin-top: 0.5vw;
-  font-size: 1.757vw;
+  margin-top: 0.34vw;
+  font-size: 1.250vw;
   font-weight: 400;
-  line-height: 2.343vw;
+  line-height: 1.667vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .gifts-b {
@@ -3781,43 +3868,48 @@ canvas#wheel-profile-popup {
 
 .draw-date {
   color: #364059;
-  font-size: 1.757vw;
+  font-size: 1.250vw;
   font-weight: 400;
-  line-height: 2.343vw;
-  margin-left: -9.46vw;
+  line-height: 1.667vw;
+  margin-left: -3.15vw;
   margin-top: 0.4vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  text-align: left;
+
+}
+.draw-date.margin-new {
+  margin-left: -9.35vw;
 }
 .gifts-prizes-name {
   position: absolute;
   margin: 1vw 0vw 0vw -27.3vw;
-  font-size: 1.318vw;
+  font-size: 0.938vw;
   font-weight: 400;
-  line-height: 1.757vw;
+  line-height: 1.250vw;
   color: #364059;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 
 
 }
 .gifts-prizes-data {
-  width: 12vw;
+  width: 11vw;
   text-align: left;
   color: #364059;
   position: absolute;
-  margin: 1vw 1vw 0vw -11.6vw;
-  font-size: 1.318vw;
+  margin: 1vw 1vw 0vw -13vw;
+  font-size: 0.938vw;
   font-weight: 400;
-  line-height: 1.757vw;
+  line-height: 1.250vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 .gifts-prizes-data-add {
   text-align: left;
   color: #364059;
   position: absolute;
-  margin: 1vw 1vw 0vw 6.1vw;
-  font-size: 1.318vw;
+  margin: 1vw 1vw 0vw -1.5vw;
+  font-size: 0.938vw;
   font-weight: 400;
-  line-height: 1.757vw;
+  line-height: 1.250vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
 }
 
@@ -4270,8 +4362,8 @@ canvas#wheel-profile-popup {
 }
 .select-body-profile {
   display: none;
-  margin-top: 1.9vw;
-  margin-left: -5.5vw;
+  margin-top: 0.8vw;
+  margin-left: -3.5vw;
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -4728,10 +4820,11 @@ canvas#wheel-profile-popup {
   color: #FFFFFF;
 }
 .select-current-profile {
+  text-transform: none;
   font-size: 0.833vw;
   line-height: 1.094vw;
-  font-family: "Acrom Medium", Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-weight: 500;
   margin-left: 2vw;
 }
 .gifts-content-box-title-bot222 {
@@ -5165,8 +5258,8 @@ canvas#wheel-profile-popup {
   margin-top: 0vw;
 }
 .popup-start {
-  background-color: #00438280;
-  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
   width: 34.6vw;
   height: 23.99vw;
   padding: 0.6vw 0.94vw;
@@ -5288,7 +5381,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF;
+  color: #5E6976;
 }
 .popup-take-gifts .close {
   position: absolute;
@@ -5302,7 +5395,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF;
+  color: #5E6976;
 }
 .popup-take-gifts .close:hover {
   position: absolute;
@@ -5316,7 +5409,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF4D;
+  color: #bebec5;
 }
 .popup-spin .close {
   position: absolute;
@@ -5330,7 +5423,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF;
+  color: #5E6976;
 }
 .popup-spin .close:hover {
   position: absolute;
@@ -5344,7 +5437,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF4D;
+  color: #bebec5;
 }
 .popup-winners-videos .close {
   position: absolute;
@@ -5358,7 +5451,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF;
+  color: #5E6976;
 }
 .popup-end .close {
   position: absolute;
@@ -5372,7 +5465,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF;
+  color: #5E6976;
 }
 .bilet-ticket-2-p {
   width: 26.35vw;
@@ -5407,7 +5500,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-2-p.take-gifts {
   margin-left: 1.4vw;
@@ -5421,7 +5514,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-2-p3 {
   width: 26.35vw;
@@ -5444,7 +5537,7 @@ canvas#wheel-profile-popup {
   line-height: 1.61vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-2-p5 {
   margin-top: 0.5vw;
@@ -5592,7 +5685,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF4D;
+  color: #bebec5;
 }
 .popup-winners-videos .close:hover {
   position: absolute;
@@ -5606,7 +5699,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF4D;
+  color: #bebec5;
 }
 .popup-end .close:hover {
   position: absolute;
@@ -5620,7 +5713,7 @@ canvas#wheel-profile-popup {
   text-align: center;
   line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
-  color: #FFFFFF4D;
+  color: #bebec5;
 }
 .popup-ticket1 .popup-h1 {
   width: 18.35vw;
@@ -5696,7 +5789,7 @@ canvas#wheel-profile-popup {
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-size: 1.17vw;
   line-height: 1.625vw;
-  color: #FFFFFF;
+  color: #364059;
 }
 .popup-winners-videos .left-label {
   margin-top: 1.8vw;
@@ -5715,7 +5808,7 @@ canvas#wheel-profile-popup {
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-size: 1.17vw;
   line-height: 1.625vw;
-  color: #FFFFFF;
+  color: #364059;
   cursor: pointer;
 }
 .popup-winners-videos .right-label {
@@ -5931,9 +6024,9 @@ canvas#wheel-profile-popup {
   margin-left: -8vw;
 }
 .line-true.gifts {
-  margin: 11.5vw 0vw 0vw 0.3vw;
+  margin: 10.5vw 0vw 0vw 0.3vw;
   position: absolute;
-  width: 51.318vw;
+  width: 40.318vw;
   height: 0.146vw;
   background-color: #93CFFC;
   opacity: 50%;
@@ -7704,9 +7797,9 @@ button:focus {
 }
 .right-label a{
   text-decoration: none;
-  border-bottom: 0.07vw solid white; /* Измените цвет и стиль на нужные */
+  border-bottom: 0.07vw solid #364059; /* Измените цвет и стиль на нужные */
   margin-bottom: -0.15vw; /* Измените значение, чтобы получить желаемый сдвиг */
-  color: #FFFFFF;
+  color: #364059;
 }
 .left-label {
   margin-top: -1.4vw;
@@ -8202,10 +8295,10 @@ button:focus {
   font-size: 4.60vw;
   border-radius: 50%;
   background-color: #FFFFFF1A;
-  text-align: center;
-  line-height: 3.3vw;
   border: #FFFFFF4D 0.07vw solid;
   color: #5E6976;
+  text-align: center;
+  line-height: 3.3vw;
   z-index: 100;
 }
 .close:hover {
@@ -10946,20 +11039,8 @@ iframe {
     font-family: 'Acrom Medium', Arial, sans-serif;
     border: 0.055vw solid #FFFFFF4D;
   }
-  .button-animation-text-profile:hover {
 
-  }
-  .button-animation-text-profile:hover {
-    color: #FFFFFF; /* Изменение цвета текста на белый */
-  }
 
-  .button-animation-text-profile:hover b {
-    color: #FFFFFF; /* Изменение цвета текста на белый */
-  }
-
-  .button-animation-text-profile:hover .b {
-    color: #FFFFFF; /* Изменение цвета текста на белый */
-  }
 
   .button-animation-text-profile b {
     color: #FFFFFF;
@@ -12025,7 +12106,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .close:hover {
     position: absolute;
@@ -12039,7 +12120,7 @@ iframe {
     text-align: center;
     line-height: 3.3vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF4D;
+    color: #bebec5;
   }
 
   .form-register {
@@ -12600,7 +12681,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-content-code .popup-h1 {
     position: relative;
@@ -12744,7 +12825,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-content-password-copy .close {
     position: absolute;
@@ -12758,7 +12839,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .profile-right-float-img {
     display: none;
@@ -12815,7 +12896,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-content-auth .popup-p {
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
@@ -13406,7 +13487,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #5E6976;
+    color: #FFFFFF4D;
   }
   .popup-winners-videos .popup-h2 {
     width: 56.27vw;
@@ -13702,7 +13783,7 @@ iframe {
     text-align: center;
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-winners-videos .close {
     position: absolute;
@@ -13716,7 +13797,7 @@ iframe {
     text-align: center;
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-end .close {
     position: absolute;
@@ -13730,7 +13811,7 @@ iframe {
     text-align: center;
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #5E6976;
   }
   .popup-ticket1 .close:hover {
     position: absolute;
@@ -13744,7 +13825,7 @@ iframe {
     text-align: center;
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #bebec5;
   }
   .popup-winners-videos .close:hover {
     position: absolute;
@@ -13758,7 +13839,7 @@ iframe {
     text-align: center;
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #bebec5;
   }
   .popup-end .close:hover {
     position: absolute;
@@ -13772,7 +13853,7 @@ iframe {
     text-align: center;
     line-height: 11vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF;
+    color: #bebec5;
   }
   .popup-ticket1 .popup-h1 {
     width: 56.27vw;
@@ -14392,8 +14473,8 @@ iframe {
   }
 
   .popup-start {
-    background-color: #00438280;
-    box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
     width: 84.6vw;
     height: 55.99vw;
     padding: 0.6vw 0.94vw;

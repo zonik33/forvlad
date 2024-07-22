@@ -401,7 +401,7 @@ class SpinForPopup extends React.Component {
         return (
             <div className="Appspin">
                 <div className={'selectorspin-container-popup'}>
-                    <span id="selectorspintest">&#9660;</span>
+                    <span id="selectorspintestpopup">&#9660;</span>
                 </div>
                 <div className={'wheel-center-container-popup'}>
                     <span id="wheel-center-test-popup"></span>

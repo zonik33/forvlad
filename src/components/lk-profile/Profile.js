@@ -272,7 +272,7 @@ export default function Profile(props){
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
                             </div>
-                            <a onClick={openPopup} className={'button-animation-text-profile'}>
+                            <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
                             <div className="container-profile">
                                 <div className="left-column-profile">
@@ -418,6 +418,7 @@ export default function Profile(props){
                                     {/*</div>*/}
                                 </div>
                                 <div className={'right-second-profile'}>
+                                    {/*<div className={'background'}></div>*/}
                                     <div className={'content-from-left'}>
                                         {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
                                         <p className={'right-second-profile-p2'}>Номер телефона</p>

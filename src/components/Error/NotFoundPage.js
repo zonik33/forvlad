@@ -1,6 +1,6 @@
 import tickettext from "../../image/tickettext.png";
-import ticketText from "../../image/tickettext.png";
-import users from "../../image/img_71.png";
+import ticketText from "../../image/img_99.png";
+import users from "../../image/img_98.png";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import React, {useEffect, useRef, useState} from "react";
 import snake from "../../image/snake.png";
@@ -25,6 +25,8 @@ import PopupTicket4 from "../PopupTicket/PopupTicket4";
 import PopupTicket5 from "../PopupTicket/PopupTicket5";
 import PopupVideos from "../Winners-videos/PopupVideos";
 import ticket from "../../image/ticket.png";
+import ticketTextRight from "../../image/img_100.png";
+import tickets from "../../image/img_107.png";
 
 export default function NotFoundPage(props){
     const currentDomain = window.location.origin;
@@ -144,6 +146,11 @@ export default function NotFoundPage(props){
                             <span className={'span-burger'}></span>
                         </div>
                     </div>
+                    <div className={'logo-content'}>
+                        <div className={'header-burger'} onClick={toggleMenu}>
+                            <span className={'span-burger'}></span>
+                        </div>
+                    </div>
                     <div className={'menu'}>
                         <div className={'menu-content-profile error-menu-profile'}>
                             <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
@@ -163,42 +170,25 @@ export default function NotFoundPage(props){
                                 closeMenu();
                                 handleGoToSupport(event)
                             }}> Обратная связь </a>
-                            <div className={'random-block for-error-random-block'}>
+                            <div className={'random-block'}>
                                 {isAuthenticated ? (
-                                    <div className={'left-some'}>
-                                        <SelectProfile/>
-                                    </div>
+                                    <button id="profile-button" onClick={redirectToProfile}
+                                            className="button-animation">
+                                        Личный кабинет
+                                    </button>
                                 ) : (
-                                    <div className={'right-block-margin'}>
-                                        <button id="login-button" onClick={openPopup} className="button-animation">
-                                            Вход
-                                        </button>
-                                        <b className={'random-b'}>/</b>
-                                        <button id="registration-button" onClick={openPopup1}
+                                    <div className={'random-block-2'}>
+                                        <button id="registration-button" onClick={openPopup}
                                                 className="button-animation">
-                                            Регистрация
+                                            Вход / Регистрация
                                         </button>
-                                        {isPopupOpen && (
-                                            <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
-                                        )}
+                                        {isPopupOpen && <Popup isOpen={isPopupOpen} closeModal={closePopup}/>}
                                     </div>
                                 )}
                             </div>
-
-                            <img className={'users-logo user-logo-for-error'} src={users}/>
-                            <a onClick={handleOnClick} className={'shadow-button-animation-text haha-nfp'}> <b>Принять
-                                участие в акции</b> </a>
-                        </div>
-                        <div className={'back-ground-with-img'}>
-                            {/*<img className={'profile-snake-left NFP-snake-left'} src={snake}/>*/}
-                            {/*<img className={'profile-rings NFP-rings'} src={rings}/>*/}
-                            {/*<img className={'profile-full-hearth NFP-full-hearth'} src={fullhearth}/>*/}
-                            {/*<img className={'profile-pluse1 NFP-pluse1'} src={pluse1}/>*/}
-                            {/*<img className={'profile-left-half-ring NFP-left-half-ring'} src={leftring}/>*/}
-                            {/*<img className={'profile-center-hearth NFP-center-hearth'} src={centerhearth}/>*/}
-                            {/*<img className={'profile-right-ring NFP-right-ring'} src={rightRing}/>*/}
-                            {/*<img className={'full-snake NFP-full-snake'} src={snakefulls}/>*/}
-
+                            <img className={'users-logo'} src={users}/>
+                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать
+                                билет</b> </a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +196,8 @@ export default function NotFoundPage(props){
             <main>
                 <div className={'main-error'} id={'main-error'}>
                     <div className={'main-items main-items-profile'}>
-                        <div className={'items-block-how-error'}></div>
+                        <img className={'tsxt error'} src={tickets}/>
+                        {/*<div className={'items-block-how-error'}></div>*/}
                         <div className={'global-name-name'}>
                             <p className={'global-name-biggest'}>
                                 404</p>
@@ -223,48 +214,50 @@ export default function NotFoundPage(props){
 
             </main>
             <footer className={'footer'}>
-                <div className="myElementFooter">
-                </div>
                 <div className="footer-left">
 
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
                             <img className={'footer-logo'} src={ticketText}/>
-                        </div>
-                    </div>
-                    <div className={'footer-medium'}>
-                        <div className={'footer-row-left'}>
-                            {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
-                        </div>
-                        <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
-                               target="_blank">Конфиденциальность</a>
-                        </div>
-                        <div className={'footer-row-left'}>
-                            <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
-                               target="_blank">Пользовательское соглашение</a>
+                            <img className={'footer-logo right'} src={ticketTextRight}/>
                         </div>
                     </div>
                 </div>
                 <div className="footer-right">
                     <div className={'footer-row1'}>
-                        <a>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения выигрышей № 4 («Мечталлион»),
+                        <a className={'footer-color-size'}>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения
+                            выигрышей № 4 («Мечталлион»),
                             срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
                             телефону 8 800 333-7-333.
                         </a>
                     </div>
                     <div className={'footer-row2'}>
-                        <a>Специальные призы от Redmond разыгрываются только среди билетов, купленных в «Почте
-                            России». </a>
+                        <a className={'footer-color-size'}>Специальные призы от Redmond разыгрываются только среди
+                            билетов, купленных в «Почте России». </a>
 
                     </div>
                     <div className={'footer-row3'}>
-                        <a>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022
-                            г.,
+                        <a className={'footer-color-size'}>Рекламная акция «Мечталлион. С нами миллионы!», срок
+                            проведения с 03.10.2022 по 30.11.2022 г.,
                             включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
                     </div>
                     <div className={'footer-row4'}>
-                        <a>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН: 1195027010386, ИНН: 5003133760).</a>
+                        <a className={'footer-color-size'}>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН:
+                            1195027010386, ИНН: 5003133760).</a>
+                    </div>
+                    <div className={'footer-row-left'}>
+                        {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
+                    </div>
+                    <div className="container-footer-bottom">
+                        <div className={'footer-row-left'}>
+                            <a href={`${currentDomain}/Обработка_персональных_данных_третьими_лицами_3.pdf`}
+                               target="_blank" className={'footer-color-size left'}>Пользовательское соглашение</a>
+                        </div>
+                        <div className={'footer-row-left'}>
+                            <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
+                               target="_blank" className={'footer-color-size left'}>Конфиденциальность</a>
+                        </div>
+
                     </div>
                 </div>
                 <PopupTicket1/>

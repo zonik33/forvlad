@@ -248,7 +248,7 @@ export default function Tickets(){
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
                             </div>
-                            <a onClick={openPopup} className={'button-animation-text-profile'}>
+                            <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
                             <div className="container-profile">
                                 <div className="left-column-profile">
@@ -395,6 +395,7 @@ export default function Tickets(){
                                         {/*</div>*/}
                                     </div>
                                     <div className={'right-second-profile-tickets'}>
+                                        {/*<div className={'background'}></div>*/}
                                         <div className={'content-from-left'}>
                                             {/*<p className={'right-second-tickets-p'}>Ваши билеты</p>*/}
                                             <div className={'winners-tabs-content-ticket'}>
