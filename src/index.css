@@ -8699,12 +8699,12 @@ iframe {
     border: none;
     background-color: transparent;
     margin-top: -1.2vw;
-    font-size: 3.289vw;
+    font-size: 3.389vw;
     height: 1.1vw;
-    font-family: 'Acrom Medium', Arial, sans-serif;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-weight: 400;
     color: #2F41B0;
-    margin-left: 1.5vw;
+    margin-left: 4.5vw;
   }
 
   .header-burger {
@@ -13612,10 +13612,10 @@ iframe {
   }
   .top-side {
     position: absolute;
-    margin-top: -26vw;
-    margin-left: 44.5vw;
     width: 6.66vw;
     height: 6.66vw;
+    margin-left: 48vw;
+    margin-top: -25vw;
   }
   .random-block {
     width: 34vw;
