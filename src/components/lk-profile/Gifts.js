@@ -369,9 +369,9 @@ export default function Gifts() {
                                         </p>
 
                                         <div className="white-line"></div>
-                                        <p className={'left-first-profile-p3-count'}>
-                                            За каждые 300 рублей вы можете 1 (один) раз <br></br> прокрутить колесо.
-                                        </p>
+                                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                                        {/*    За каждые 300 рублей вы можете 1 (один) раз <br></br> прокрутить колесо.*/}
+                                        {/*</p>*/}
                                         {/*{profile && profile.countReferrals > 0 ? (*/}
 
                                         {/*<p className={'left-first-profile-p3'}>*/}
@@ -470,6 +470,7 @@ export default function Gifts() {
                                         <div className="prizes-container">
                                             <div className="prize-column">
                                                 <div className="prize-item">
+                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
                                                     <span className="prize-name">Мечталион</span>
                                                     <span className="prize-code">221234567890</span>
                                                     <a className="button-animation-text-profile click-ticket-prizes"
@@ -478,9 +479,13 @@ export default function Gifts() {
                                                 </div>
                                             </div>
                                             <div className="draw-date-column">
+                                                <span
+                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
                                                 <div className="draw-date">10.06.2024</div>
                                             </div>
                                             <div className="draw-date-prizes-column">
+                                                <span
+                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
                                                 <div className="draw-date margin-new">10.08.2024</div>
                                             </div>
                                             <div className={'line-true gifts'}></div>
@@ -489,7 +494,8 @@ export default function Gifts() {
                                         <div className="prizes-container">
                                             <div className="prize-column">
                                                 <div className="prize-item">
-                                                    <span className="prize-name">Пять-О-Пять</span>
+                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                    <span className="prize-name">Мечталион</span>
                                                     <span className="prize-code">221234567890</span>
                                                     <a className="button-animation-text-profile click-ticket-prizes"
                                                        onClick={openPopupTakeGifts}>
@@ -497,9 +503,13 @@ export default function Gifts() {
                                                 </div>
                                             </div>
                                             <div className="draw-date-column">
+                                                <span
+                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
                                                 <div className="draw-date">10.06.2024</div>
                                             </div>
                                             <div className="draw-date-prizes-column">
+                                                <span
+                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
                                                 <div className="draw-date margin-new">10.08.2024</div>
                                             </div>
                                             <div className={'line-true gifts'}></div>
@@ -508,7 +518,8 @@ export default function Gifts() {
                                         <div className="prizes-container">
                                             <div className="prize-column">
                                                 <div className="prize-item">
-                                                    <span className="prize-name">Великолепная 8</span>
+                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                    <span className="prize-name">Мечталион</span>
                                                     <span className="prize-code">221234567890</span>
                                                     <a className="button-animation-text-profile click-ticket-prizes"
                                                        onClick={openPopupTakeGifts}>
@@ -516,10 +527,37 @@ export default function Gifts() {
                                                 </div>
                                             </div>
                                             <div className="draw-date-column">
+                                                <span
+                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
                                                 <div className="draw-date">10.06.2024</div>
                                             </div>
                                             <div className="draw-date-prizes-column">
-                                                <div className="draw-date margin-new">5.08.2024</div>
+                                                <span
+                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                <div className="draw-date margin-new">10.08.2024</div>
+                                            </div>
+                                            <div className={'line-true gifts'}></div>
+                                        </div>
+                                        <div className="prizes-container">
+                                            <div className="prize-column">
+                                                <div className="prize-item">
+                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                    <span className="prize-name">Мечталион</span>
+                                                    <span className="prize-code">221234567890</span>
+                                                    <a className="button-animation-text-profile click-ticket-prizes"
+                                                       onClick={openPopupTakeGifts}>
+                                                        <b className={'gifts-b'}>Получить билет</b></a>
+                                                </div>
+                                            </div>
+                                            <div className="draw-date-column">
+                                                <span
+                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                <div className="draw-date">10.06.2024</div>
+                                            </div>
+                                            <div className="draw-date-prizes-column">
+                                                <span
+                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                <div className="draw-date margin-new">10.08.2024</div>
                                             </div>
                                             <div className={'line-true gifts'}></div>
                                         </div>

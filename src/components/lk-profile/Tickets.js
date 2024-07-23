@@ -321,9 +321,9 @@ export default function Tickets(){
                                         </p>
 
                                         <div className="white-line"></div>
-                                        <p className={'left-first-profile-p3-count'}>
-                                            За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.
-                                        </p>
+                                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                                        {/*    За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.*/}
+                                        {/*</p>*/}
                                         {/*{profile && profile.countReferrals > 0 ? (*/}
 
                                         {/*<p className={'left-first-profile-p3'}>*/}
@@ -445,9 +445,19 @@ export default function Tickets(){
                                                             <div className={'table-body-ticket'}>
                                                                 <div className={'centered-ticket-wrapper'}>
                                                                     <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
                                                                         <div className="table-cell number">221234567890
                                                                         </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
                                                                         <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
                                                                         </div>
                                                                         <div className="table-cell status">Принял
                                                                             участие в
@@ -461,9 +471,45 @@ export default function Tickets(){
                                                             <div className={'table-body-ticket'}>
                                                                 <div className={'centered-ticket-wrapper'}>
                                                                     <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
+                                                                        <div className="table-cell number">221235567120
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
+                                                                        <div className="table-cell data">1.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
+                                                                        </div>
+                                                                        <div className="table-cell status">Принял
+                                                                            участие в
+                                                                            розыгрыше
+                                                                            <br></br> Дата розыграша: 25.06.2024
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className={'line-true-tickets'}></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className={'table-body-ticket'}>
+                                                                <div className={'centered-ticket-wrapper'}>
+                                                                    <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
                                                                         <div className="table-cell number">221234567890
                                                                         </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
                                                                         <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
                                                                         </div>
                                                                         <div className="table-cell status">Принял
                                                                             участие в
@@ -477,9 +523,19 @@ export default function Tickets(){
                                                             <div className={'table-body-ticket'}>
                                                                 <div className={'centered-ticket-wrapper'}>
                                                                     <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
                                                                         <div className="table-cell number">221234567890
                                                                         </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
                                                                         <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
                                                                         </div>
                                                                         <div className="table-cell status">Принял
                                                                             участие в
@@ -493,9 +549,19 @@ export default function Tickets(){
                                                             <div className={'table-body-ticket'}>
                                                                 <div className={'centered-ticket-wrapper'}>
                                                                     <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
                                                                         <div className="table-cell number">221234567890
                                                                         </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
                                                                         <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
                                                                         </div>
                                                                         <div className="table-cell status">Принял
                                                                             участие в
@@ -509,9 +575,19 @@ export default function Tickets(){
                                                             <div className={'table-body-ticket'}>
                                                                 <div className={'centered-ticket-wrapper'}>
                                                                     <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
                                                                         <div className="table-cell number">221234567890
                                                                         </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
                                                                         <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
                                                                         </div>
                                                                         <div className="table-cell status">Принял
                                                                             участие в
@@ -525,9 +601,19 @@ export default function Tickets(){
                                                             <div className={'table-body-ticket'}>
                                                                 <div className={'centered-ticket-wrapper'}>
                                                                     <div className="table-row">
+                                                                        <div className="colm-data-ticket-none">Номер
+                                                                            лотерейного
+                                                                            билета
+                                                                        </div>
                                                                         <div className="table-cell number">221234567890
                                                                         </div>
+                                                                        <div className="colm-data-ticket-none">Дата
+                                                                            регистрации в акции
+                                                                        </div>
                                                                         <div className="table-cell data">10.06.2024
+                                                                        </div>
+                                                                        <div className="colm-data-ticket-none">Статус
+                                                                            участия в рулетке
                                                                         </div>
                                                                         <div className="table-cell status">Принял
                                                                             участие в

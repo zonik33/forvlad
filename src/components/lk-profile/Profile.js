@@ -341,9 +341,9 @@ export default function Profile(props){
                                         </p>
 
                                         <div className="white-line"></div>
-                                        <p className={'left-first-profile-p3-count'}>
-                                            За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.
-                                        </p>
+                                        {/*<p className={'left-first-profile-p3-count'}>*/}
+                                        {/*    За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.*/}
+                                        {/*</p>*/}
                                         {/*{profile && profile.countReferrals > 0 ? (*/}
 
                                         {/*<p className={'left-first-profile-p3'}>*/}
@@ -383,7 +383,7 @@ export default function Profile(props){
                                         }
                                     </div>
                                 </div>
-                                <div className="right-column-profile">
+                                <div className="right-column-profile profile">
                                     <div className={'right-first-profile'}>
                                         <div className={'right-first-profile'}>
                                             <NavLink

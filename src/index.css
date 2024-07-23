@@ -144,7 +144,7 @@ header .error-menu-profile {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.465vw;
+  padding-top: 1.725vw;
   padding-bottom: 0.5vw;
   padding-left: 27.8vw;
 }
@@ -838,7 +838,7 @@ header .menu-content-profile a:hover {
   text-align: left;
   line-height: 1.458vw;
   font-weight: 400;
-  margin-top: 8.8vw;
+  margin-top: 5.8vw;
   margin-left: 4.5vw;
   color: #364059;
 }
@@ -887,6 +887,7 @@ header .menu-content-profile a:hover {
   color: #FFFFFF;
 }
 .left-first-profile-p3-count {
+  display: flex;
   width: 16vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-size: 1.042vw;
@@ -1137,7 +1138,7 @@ header .menu-content-profile a:hover {
 }
 .items-block-profile {
   overflow: hidden;
-  margin-top: 4.1vw;
+  margin-top: 9.1vw;
   margin-left: 13vw;
   /* position: absolute; */
   width: 73.333vw;
@@ -1151,10 +1152,10 @@ header .menu-content-profile a:hover {
   margin-bottom: 8vw;
 }
 .items-block-profile.gifts-items-block {
-  margin-top: 4.1vw;
+  margin-top: 9.1vw;
 }
 .items-block-profile.tickets-items-block {
-  margin-top: 4.1vw;
+  margin-top: 9.1vw;
 }
 .right-first-block.first-block {
   border-radius: 1.4vw 0vw 0vw 1.4vw;
@@ -1733,7 +1734,7 @@ header .menu-content-profile a:hover {
 .question-block {
   position: relative;
   z-index: 5;
-  margin: 18vw 0vw -3.8vw -3.4vw;
+  margin: 30vw 0vw -3.8vw -3.4vw;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -1941,7 +1942,7 @@ header .menu-content-profile a:hover {
 
 .button-animation-text-profile.click-spin {
   margin-left: -8.7vw;
-  margin-top: 0.4vw;
+  margin-top: -2vw;
   padding: 0.8vw 1.86vw;
   background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
   border: 0.15vw solid #AF21C9CC;
@@ -2786,72 +2787,72 @@ header .menu-content-profile a:hover {
 .steps-container {
   display: flex;
   justify-content: space-between;
-  width: 68.892vw;
-  height: 8.699vw;
+  width: 50.892vw;
+  height: 5.699vw;
   padding: 1.757vw 2.489vw;
-  margin: -12vw 0vw 0vw 4.6vw;
+  margin: 29vw 0vw 0vw 6vw;
   border-radius: 1.2vw 1.2vw 1.2vw 1.2vw;
-  background-color: #2564FA;
+  background-color: #FFFFFF;
   opacity: 1;
 }
 .first-step {
-  color: white;
+  color: #364059;
   position: absolute;
-  font-weight: 700;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
-  line-height: 1.757vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
   margin: 0vw 0vw 0vw 0.6vw;
 }
 .second-step {
-  color: white;
+  color: #364059;
   position: absolute;
-  font-weight: 700;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
-  line-height: 1.757vw;
-  margin: 0vw 0vw 0vw 24vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
+  margin: 0vw 0vw 0vw 19vw;
 }
 .third-step {
-  color: white;
+  color: #364059;
   position: absolute;
-  font-weight: 700;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
-  line-height: 1.757vw;
-  margin: 0vw 0vw 0vw 47.5vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
+  margin: 0vw 0vw 0vw 36vw;
 }
 
 .text-block-1 {
-  color: white;
-  width: 20.816vw;
+  color: #364059;
+  width: 15.816vw;
   height: 7.028vw;
-  font-weight: 700;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
-  line-height: 1.757vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
   margin: 0vw 0vw 0vw 2vw;
   letter-spacing: -0.005vw;
 }
 .text-block-2 {
-  color: white;
-  width: 19.816vw;
+  color: #364059;
+  width: 13.816vw;
   height: 7.028vw;
-  font-weight: 700;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
-  line-height: 1.757vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
   margin: 0vw 0vw 0vw -1vw;
   letter-spacing: -0.005vw;
 }
 .text-block-3 {
-  color: white;
-  width: 19.816vw;
+  color: #364059;
+  width: 13.816vw;
   height: 7.028vw;
-  font-weight: 700;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  font-size: 1.318vw;
-  line-height: 1.757vw;
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.146vw;
   letter-spacing: -0.005vw;
 }
 
@@ -3838,6 +3839,15 @@ canvas#wheel-profile-popup {
   margin-top: 5vw;
   margin-bottom: 5.7vw;
 }
+.gifts-prizes-name-none {
+  display: none;
+}
+.gifts-prizes-data-none {
+  display: none;
+}
+.gifts-prizes-data-add-none {
+  display: none;
+}
 
 .prize-column, .draw-date-column, .draw-date-prizes-column {
   flex: 1;
@@ -3965,7 +3975,7 @@ canvas#wheel-profile-popup {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 58vw 0 0 0;
+  margin: 72vw 0 0 0;
   z-index: 5;
   position: relative;
 }
@@ -9186,7 +9196,7 @@ iframe {
   }
 
   .prizes-content-box2 {
-    margin-top: -83vw;
+    margin-top: -100vw;
     margin-left: -6.5vw;
     width: 91vw;
     height: 226vw;
@@ -9242,7 +9252,7 @@ iframe {
     width: 91.47vw;
     height: 16.53vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin: 486vw 0 0 -0.35vw;
+    margin: 475vw 0 0 -0.35vw;
     font-size: 6.40vw;
     line-height: 8.53vw;
     text-align: left;
@@ -9289,7 +9299,7 @@ iframe {
     text-decoration: none;
     /* text-transform: uppercase; */
     padding: 2.839583vw 19.83125vw;
-    margin-top: -104.05vw;
+    margin-top: -112.05vw;
     margin-left: -45.5vw;
     border-radius: 2.71875vw;
     cursor: pointer;
@@ -9311,19 +9321,19 @@ iframe {
   }
   .users-logo-spin.spin-main {
     width: 73.5vw;
-    margin: -69.1vw 0vw 0vw -36.2vw;
+    margin: -77.1vw 0vw 0vw -36.2vw;
     z-index: 515;
   }
   .users-logo-spin {
     position: absolute;
     width: 84vw;
     height: auto;
-    margin: -74.2vw 0vw 0vw -41.45vw;
+    margin: -82.2vw 0vw 0vw -41.45vw;
   }
   #selectorspin {
     color: #d52976;
     position: absolute;
-    margin-top: -85.54vw;
+    margin-top: -93.54vw;
     margin-left: -2.4vw;
     font-size: 14.678vw;
     z-index: 516;
@@ -9389,7 +9399,7 @@ iframe {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 6.5vw 0 0 5vw;
+    margin: 84.5vw 0 0 5vw;
     z-index: 5;
     position: relative;
   }
@@ -10885,6 +10895,10 @@ iframe {
     flex-direction: column;
     margin-left: 40.4vw;
     margin-top: 15.35vw;
+    margin-bottom: 27vw;
+  }
+  .right-column-profile.profile {
+    margin-bottom: 2vw;
   }
 
   .global-name {
@@ -10917,8 +10931,8 @@ iframe {
     width: 28.567vw;
     height: 8.65vw;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 5.33vw 5.33vw 0 0;
+    /*background-color: rgba(255, 255, 255, 0.15);*/
+    /*border-radius: 5.33vw 5.33vw 0 0;*/
     z-index: 11;
     background-size: cover;
     margin-right: 0.965vw;
@@ -10999,7 +11013,7 @@ iframe {
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
     line-height: 5.87vw;
-    color: #2A60AA;
+    color: #364059;
     outline: none;
 
   }
@@ -11106,6 +11120,7 @@ iframe {
   }
 
   .white-line {
+    display: none;
     height: 0.27vw;
     width: 74.13vw;
     background-color: white;
@@ -11305,13 +11320,14 @@ iframe {
 
   .right-second-profile-gifts {
     position: relative;
+    margin: 13vw 0vw 0vw -10vw;
     width: 88.8vw;
     height: auto;
     min-height: 51vw;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: #FFFFFF4D solid 0.15vw;
-    border-radius: 0 0 5.33vw 5.33vw;
+    /*background-color: rgba(255, 255, 255, 0.15);*/
+    /*border: #FFFFFF4D solid 0.15vw;*/
+    /*border-radius: 0 0 5.33vw 5.33vw;*/
     z-index: 11;
     background-size: cover;
   }
@@ -11602,6 +11618,16 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    min-height: 80vw;
+  }
+  .line-true-tickets {
+    margin: 71vw 0vw 0vw -11vw;
+    position: absolute;
+    width: 89.318vw;
+    height: 0.5646vw;
+    background-color: #93CFFC;
+    opacity: 50%;
   }
 
   .centered-ticket {
@@ -11669,11 +11695,12 @@ iframe {
     height: auto;
     min-height: 67.7vw;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: #FFFFFF4D solid 0.15vw;
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    /* border: #FFFFFF4D solid 0.15vw; */
     border-radius: 0 0 5.33vw 5.33vw;
     z-index: 11;
     background-size: cover;
+    margin: 17vw 0vw 0vw 5vw;
   }
 
   .table-body-winners-ticket {
@@ -11860,12 +11887,15 @@ iframe {
   }
 
   .colm-data-ticket-none {
-    width: 12.53vw;
-    height: 5.87vw;
-    display: inline-block;
-    float: left;
+    display: block;
     text-align: left;
-    margin-left: -14.8vw;
+    font-size: 5.000vw;
+    font-weight: 400;
+    line-height: 6.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-left: 2.7vw;
+    margin-right: 0.6vw;
+    color: #364059;
   }
 
   .colm-status-ticket-none {
@@ -12016,6 +12046,7 @@ iframe {
   }
   .left-first-profile-p2-p2-p2 {
     width: 68vw;
+    height: 32vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 5.556vw;
     text-align: left;
@@ -13693,7 +13724,7 @@ iframe {
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0.07vw solid;
-    color: #FFFFFF4D;
+    color: #5E6976;
   }
   .popup-winners-videos .popup-h2 {
     width: 56.27vw;
@@ -14076,7 +14107,7 @@ iframe {
     font-weight: 400;
     margin-top: -7.9vw;
     margin-left: -0.3vw;
-    color: #FFFFFF;
+    color: #364059;
   }
   .popup-winners-videos .popup-h1 {
     width: 56.27vw;
@@ -14138,7 +14169,7 @@ iframe {
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-size: 4.27vw;
     line-height: 5.87vw;
-    color: #FFFFFF;
+    color: #364059;
   }
   .popup-winners-videos .left-label {
     width: 76.53vw;
@@ -14166,13 +14197,13 @@ iframe {
   .right-label a {
     position: absolute;
     text-decoration: none;
-    border-bottom: 0.07vw solid white;
+    border-bottom: 0.07vw solid #364059;
     font-size: 4.27vw;
     line-height: 5.87vw;
     width: 33.53vw;
     margin-top: 18.5vw;
     margin-left: 17vw;
-    color: #FFFFFF;
+    color: #364059;
   }
   .how-tickets-img-1 {
     display: flex;
@@ -14882,7 +14913,7 @@ iframe {
   .question-block {
     position: relative;
     z-index: 5;
-    margin: 6.5vw 0vw 7.2vw -3.4vw;
+    margin: 10.5vw 0vw 7.2vw -3.4vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
@@ -15102,6 +15133,277 @@ iframe {
     z-index: -1;
     border-radius: 2vw;
   }
+  .colm-text-ticket {
+    margin-left: 1vw;
+    text-align: left;
+    width: 11vw;
+    /*text-transform: uppercase;*/
+    font-size: 5.000vw;
+    font-weight: 400;
+    line-height: 6.667vw;
+    color: #364059;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  }
+  .table-cell.number {
+    display: block;
+    text-align: left;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-left: 1.7vw;
+    margin-right: 0.6vw;
+    color: #364059;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  .table-cell.data {
+    display: block;
+    text-align: left;
+    margin-left: 1.7vw;
+    margin-right: -3vw;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    color: #364059;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  .table-cell.status {
+    width: 95vw;
+    margin-left: 2vw;
+    display: block;
+    text-align: left;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    color: #364059;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  .table-row {
+    margin-top: -9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -8vw;
+    flex-wrap: nowrap;
+  }
+  .winners-tabs-content-ticket {
+    margin-left: 19.2vw;
+    margin-top: 1.7vw;
+  }
+  .prizes-container {
+    width: 53vw;
+    display: flex;
+    margin-top: 5vw;
+    margin-bottom: 5.7vw;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8vw;
+    flex-wrap: nowrap;
+  }
+  .prize-item {
+    margin-bottom: 1.830vw;
+  }
+  .button-animation-text-profile.click-ticket-prizes b {
+    color: #EEF3EC;
+    font-size: 5.556vw !important;
+    line-height: 6.778vw !important;
+    text-transform: none;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  }
+  .prize-name {
+    color: #364059;
+    display: block;
+    text-align: left;
+    margin-left: 2.34vw;
+    margin-top: 1.34vw;
+    margin-bottom: 1.34vw;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  }
+  .prize-code {
+    color: #364059;
+    display: block;
+    text-align: left;
+    margin-left: 2.34vw;
+    margin-top: 1.34vw;
+    margin-bottom: 1.34vw;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  }
+  .button-animation-text-profile.click-ticket-prizes {
+    margin-left: -22.4vw;
+    margin-top: 1.8vw;
+    padding: 3.7vw 7.35vw;
+    background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+    border: 0.15vw solid #AF21C9CC;
+    color: #EEF3EC;
+    transition: color 0.3s, background-image 0.3s;
+  }
+  .draw-date-column {
+    margin-top: 20vw;
+  }
+  .draw-date {
+    color: #364059;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    margin-left: 2.35vw;
+    margin-top: 1.34vw;
+    margin-bottom: 1.34vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    text-align: left;
+  }
+
+  .draw-date.margin-new {
+    margin-left: 2.35vw;
+    margin-top: 1.34vw;
+    margin-bottom: 1.34vw;
+  }
+  .line-true.gifts {
+    margin: 95.5vw 0vw 0vw 1vw;
+    position: absolute;
+    width: 91.318vw;
+    height: 0.56vw;
+    background-color: #93CFFC;
+    opacity: 50%;
+  }
+  .gifts-prizes-name {
+    display: none;
+  }
+  .gifts-prizes-name-none {
+    margin-top: 1.34vw;
+    margin-bottom: 1.34vw;
+    display: block;
+    text-align: left;
+    font-size: 5.000vw;
+    font-weight: 400;
+    line-height: 6.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-left: 2.7vw;
+    margin-right: 0.6vw;
+    color: #364059;
+  }
+  .gifts-prizes-data-none {
+    width: 60vw;
+    display: block;
+    text-align: left;
+    font-size: 5.000vw;
+    font-weight: 400;
+    line-height: 6.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-left: 2.7vw;
+    margin-right: 0.6vw;
+    color: #364059;
+  }
+  .gifts-prizes-data-add-none {
+    display: block;
+    text-align: left;
+    font-size: 5.000vw;
+    font-weight: 400;
+    line-height: 6.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-left: 2.7vw;
+    margin-right: 0.6vw;
+    color: #364059;
+  }
+  .gifts-prizes-data {
+    display: none;
+  }
+  .gifts-prizes-data-add {
+    display: none;
+  }
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 86.892vw;
+    height: 75.699vw;
+    padding: 5.757vw 2.489vw;
+    margin: 73vw 0vw 0vw 4vw;
+    border-radius: 4.2vw 4.2vw 4.2vw 4.2vw;
+    background-color: #FFFFFF;
+    opacity: 1;
+  }
+  .first-step {
+    color: #364059;
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    margin: 0vw 0vw 0vw 0.6vw;
+  }
+  .second-step {
+    color: #364059;
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    margin: 28vw 0vw 0vw 0.6vw;
+  }
+  .third-step {
+    color: #364059;
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    margin: 55.94vw 0vw 0vw 0.6vw;
+  }
+
+  .text-block-1 {
+    color: #364059;
+    width: 80.816vw;
+    height: 42.028vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    margin: 0vw 0vw 0vw 6vw;
+    letter-spacing: -0.005vw;
+  }
+  .text-block-2 {
+    color: #364059;
+    width: 80.816vw;
+    height: 42.028vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    margin: 0vw 0vw 0vw 6vw;
+    letter-spacing: -0.005vw;
+  }
+  .text-block-3 {
+    color: #364059;
+    width: 80.816vw;
+    height: 30.028vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 4.444vw;
+    font-weight: 400;
+    line-height: 5.833vw;
+    margin: 0vw 0vw 0vw 6vw;
+    letter-spacing: -0.005vw;
+  }
+
+
+
+
+
+
+
+
+
 
 }
 

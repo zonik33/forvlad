@@ -101,7 +101,7 @@ export default function Prizes (props) {
                                 Призы
                             </div>
                             <p className={'how-center-p-text bonus-prizes'}> За участие в розыгрышах рулетки с подарками
-                                вы получите промокод* на лотерейный билет для участия в будущих тиражах от «Национальная
+                                вы получите промокод** на лотерейный билет для участия в будущих тиражах от «Национальная
                                 Лотерея».
                             </p>
                             <p className={'how-center-p-text-first bonus-prizes'}>
