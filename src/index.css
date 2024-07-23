@@ -10856,7 +10856,7 @@ iframe {
     background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
     z-index: 5;
     box-shadow: 0 32px 80px 0 rgba(197, 205, 228, 1);
-    margin-bottom: 8vw;
+    margin-bottom: 1vw;
   }
 
   header .logo-text-profile {
@@ -10902,9 +10902,9 @@ iframe {
   }
 
   .right-first-profile {
-    width: 29.45vw;
+    width: 30.45vw;
     height: 5vw;
-    margin: 5vw 0vw 0vw 0vw;
+    margin: 4vw 0vw 0vw 0.5vw;
     font-family: "Acrom Medium", Arial, sans-serif;
     font-size: 1.17vw;
     font-weight: 400;
@@ -10948,7 +10948,7 @@ iframe {
   }
 
   .p-main-profile-color {
-    font-size: 5.000vw;
+    font-size: 4.000vw;
     line-height: 6.550vw;
     margin-top: 1.3vw;
   }
@@ -10978,24 +10978,24 @@ iframe {
   }
 
   .right-second-profile-p2 {
-    font-family: "Acrom Medium", Arial, sans-serif;
-    font-size: 3.20vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 5vw;
     font-weight: 400;
-    color: #FFFFFF;
-    line-height: 4.53vw;
-    text-transform: uppercase;
-    margin-left: -37.75vw;
-    margin-top: 6.3vw;
+    line-height: 6.667vw;
+    text-transform: none;
+    margin-left: -35.75vw;
+    margin-top: 19.3vw;
+    color: #364059;
   }
 
   .popupCode-input-profile {
-    margin: -1.5vw 0 1.46vw 6.1vw;
+    margin: -3.5vw 0 1.46vw -4.9vw;
     padding: 1.5vw 0.6vw 1.5vw 4.19vw;
     border-radius: 2.67vw;
     border: 0.14vw;
     width: 71.7vw;
     height: 10.07vw;
-    font-size: 4.27vw;
+    font-size: 8.889vw;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
     line-height: 5.87vw;
@@ -11046,17 +11046,46 @@ iframe {
   }
 
   .left-first-profile-p {
-    font-family: "Acrom Medium", Arial, sans-serif;
-    font-size: 6.40vw;
-    line-height: 9.07vw;
+    width: 84vw;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-size: 6.667vw;
+    line-height: 7.778vw;
     color: #364059;
     font-weight: 400;
-    margin-left: 0.1vw;
-    margin-top: 7.8vw;
+    margin-left: 0.5vw;
+    margin-top: -14.2vw;
+  }
+  .left-first-profile-p3-count {
+    width: 66vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 5.556vw;
+    text-align: left;
+    line-height: 7.778vw;
+    color: #364059;
+    font-weight: 400;
+    margin-left: 0.6vw;
+    margin-top: 12.1vw;
+  }
+  .button-animation-text-profile.click-spin {
+    margin-left: -43.7vw;
+    margin-top: 0.4vw;
+    border-radius: 4vw;
+    padding: 4.4vw 7.46vw;
+    background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+    border: 0.15vw solid #AF21C9CC;
+    color: #EEF3EC;
+    transition: color 0.3s, background-image 0.3s;
+  }
+  .button-animation-text-profile.click-spin b {
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    color: #EEF3EC;
+    font-size: 6.667vw;
+    line-height: 8.800vw;
+    text-transform: none;
   }
 
   .left-first-profile-p2 {
-    font-family: "Acrom Medium", Arial, sans-serif;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-size: 16vw;
     line-height: 22.40vw;
     font-weight: 400;
@@ -11241,7 +11270,7 @@ iframe {
   }
 
   .main-gifts {
-    margin-top: 21vw;
+    margin-top: 55vw;
     /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     background-size: cover;
     width: 100%;
@@ -11252,6 +11281,12 @@ iframe {
     font-size: 0.83vw;
     line-height: 1.5;
 
+  }
+  .items-block-profile.tickets-items-block {
+    margin-top: 12vw;
+  }
+  .items-block-profile.gifts-items-block {
+    margin-top: 12vw;
   }
 
   .left-second-gifts {
@@ -11615,7 +11650,7 @@ iframe {
 
 
   .main-tickets {
-    margin-top: 21vw;
+    margin-top: 55vw;
     /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     background-size: cover;
     width: 100%;
@@ -11862,8 +11897,8 @@ iframe {
     height: auto;
     min-height: 97vw;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: #FFFFFF4D solid 0.15vw;
+    /*background-color: rgba(255, 255, 255, 0.15);*/
+    /*border: #FFFFFF4D solid 0.15vw;*/
     border-radius: 5.33vw;
     z-index: 11;
     background-size: cover;
@@ -11885,8 +11920,81 @@ iframe {
     border: 0.055vw solid #FFFFFF4D;
     font-size: 4.23vw;
   }
+  canvas#wheel-profile {
+    position: relative;
+    z-index: 5;
+    width: 122.722vw;
+    height: 122.722vw;
+    margin: -49vw 0vw 0vw -19vw;
+  }
+  .users-logo-spin.spin-test {
+    position: absolute;
+    width: 83.7vw;
+    height: auto;
+    margin: -29.1vw 0vw 0vw 0.4vw;
+  }
+  #selectorspintest {
+    color: #d52976;
+    position: absolute;
+    margin-top: -40.57vw;
+    margin-left: -2.7vw;
+    font-size: 14.778vw;
+    z-index: 6;
+  }
+  .wheel-center-container-profile {
+    position: absolute;
+    margin: 5.1vw 0vw 0vw 67.35vw;
+  }
+  #wheel-center-test {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 1em;
+    background: #9665d7;
+    margin-top: 7.2vw;
+    margin-left: -25.3vw;
+    z-index: 104;
+  }
+  #wheel-center-2-test {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 5em;
+    height: 5em;
+    border-radius: 2.5em;
+    background: #5e3692;
+    margin-top: 7.2vw;
+    margin-left: -25.3vw;
+    z-index: 103;
+  }
+  #wheel-center-3-test {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 12.5em;
+    height: 12.5em;
+    border-radius: 6em;
+    background: #7a3bcb;
+    margin-top: 7.2vw;
+    margin-left: -25.3vw;
+    z-index: 102;
+  }
+  #wheel-center-4-test {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 16.3em;
+    height: 16.3em;
+    border-radius: 8em;
+    background: #4f2d7a;
+    margin-top: 7.2vw;
+    margin-left: -25.32vw;
+    z-index: 101;
+  }
   .left-first-profile-p2-p2 {
-    font-family: "Acrom Medium", Arial, sans-serif;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-size: 10.67vw;
     line-height: 8.53vw;
     font-weight: 400;
@@ -11907,16 +12015,15 @@ iframe {
     position: absolute;
   }
   .left-first-profile-p2-p2-p2 {
-    width: 72.01vw;
-    height: auto;
+    width: 68vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    font-size: 4.27vw;
-    font-weight: 400;
-    margin-top: -0.6vw;
-    margin-left: 6vw;
+    font-size: 5.556vw;
     text-align: left;
-    color: #FFFFFF;
-    line-height: 5.33vw;
+    line-height: 7.778vw;
+    color: #364059;
+    font-weight: 400;
+    margin-left: 0.6vw;
+    margin-top: 31.1vw;
   }
 
   .form-group-3 {
@@ -14984,6 +15091,16 @@ iframe {
   .global-name-move {
     display: none;
     margin: 3.4vw 0vw 0vw -15.1vw;
+  }
+  .background-container {
+    margin: 30.62vw 0vw 0vw 5.9vw;
+    position: absolute;
+    width: 89.8vw;
+    height: 9.8vw;
+    color: #D7DDFF;
+    background-color: #D7DDFF;
+    z-index: -1;
+    border-radius: 2vw;
   }
 
 }

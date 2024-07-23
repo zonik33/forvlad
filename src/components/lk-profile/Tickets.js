@@ -27,6 +27,8 @@ import TestForSpin from "../TestSpinProfile";
 import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_106.png";
+import tickettextblue from "../../image/img_99.png";
+import ticketsmb from "../../image/img_108.png";
 
 
 export default function Tickets(){
@@ -189,60 +191,78 @@ export default function Tickets(){
         document.body.classList.remove("no-scroll");
     };
     let onlyTest = 5
+    const [isBlockVisible, setBlockVisibility] = useState(true);
+
+    useEffect(() => {
+        let prevScrollPos = window.pageYOffset;
+
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const scrollingDown = prevScrollPos < currentScrollPos;
+
+            setBlockVisibility(!scrollingDown);
+            prevScrollPos = currentScrollPos;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
+        <>
         <header className={'header-profile'}>
             <div className={'container'}>
                 <div className={'content'}>
                     <div className={'logo-content'}>
                         <Link to="">
-                            <img className={'logo'} src={ticket}
-                                 alt="Logo"
-                                 onMouseOver={() => { /* Обработчик наведения на картинку */
-                                 }}
-                                 onClick={handleImageClick}/>
+                            <img className={'logo'} src={ticket} alt="Logo" onClick={handleImageClick}/>
                         </Link>
                         <Link to="">
-                            <img className={'logo-text'} src={tickettext}
-                                 alt="Logo"
-                                 onMouseOver={() => { /* Обработчик наведения на картинку */
-                                 }}
+                            <img className={'logo-text'} src={tickettext} alt="Logo" onClick={handleImageClick}/>
+                        </Link>
+                        <Link to="">
+                            <img className={'logo-text-mobile'} src={tickettextblue} alt="Logo"
                                  onClick={handleImageClick}/>
                         </Link>
-                        <div className={'header-burger'} onClick={toggleMenu}>
-                            <span className={'span-burger'}></span>
-                        </div>
                     </div>
                     <div className={'menu'}>
                         <div className={'menu-content-profile error-menu-profile'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
-                            <a className="smooth" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToPrizes(event)
-                            }}> Призы </a>
-                            {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
-                            {/*    closeMenu();*/}
-                            {/*    handleGoToWinners(event)*/}
-                            {/*}}>Победители</a>*/}
-                            <a className="smooth" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToFaq(event)
-                            }}> Вопрос-ответ </a>
-                            <a className="smooth backFaq" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToSupport(event)
-                            }}> Обратная связь </a>
-                            <SelectProfile/>
-                            <img className={'users-logo'} src={users}/>
-                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать
-                                билет</b> </a>
+                            <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
+                                <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
+                                <a className="smooth" href={'#'} onClick={(event) => {
+                                    handleGoToPrizes(event)
+                                }}> Призы </a>
+                                {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
+                                {/*    closeMenu();*/}
+                                {/*    handleGoToWinners(event)*/}
+                                {/*}}>Победители</a>*/}
+                                <a className="smooth" href={'#'} onClick={(event) => {
+                                    handleGoToFaq(event)
+                                }}> Вопрос-ответ </a>
+                                <a className="smooth" href={'#'} onClick={(event) => {
+                                    handleGoToSupport(event)
+                                }}> Обратная связь </a>
+
+                            </div>
+                            <div className={'random-block'}>
+                                <button id="profile-button"
+                                        className="button-animation">
+                                    Личный кабинет
+                                </button>
+                            </div>
+                            <img className={'users-logo top-side'} src={users}/>
                         </div>
                     </div>
                 </div>
             </div>
-            <main>
+        </header>
+            <main className={'main-tickets'}>
                 <div className={'main-tickets main-items-profile'} id={'main-profile'}>
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
+                        <img className={'tsxt-mobile'} src={ticketsmb}/>
                         <div className={'items-block-profile tickets-items-block'}>
                             <div className={'background-container'}></div>
                             <div className={'global-name'}>
@@ -590,7 +610,7 @@ export default function Tickets(){
             <PopupTicket5/>
             <PopupVideos/>
             <PopupEnd/>
-        </header>
+        </>
 
 
     );
