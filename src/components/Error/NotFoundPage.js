@@ -27,6 +27,11 @@ import PopupVideos from "../Winners-videos/PopupVideos";
 import ticket from "../../image/ticket.png";
 import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_107.png";
+import tickettextblue from "../../image/img_99.png";
+import ScrollPrizes from "../Scroll/ScrollPrizes";
+import ScrollFaq from "../Scroll/ScrollFaq";
+import ScrollSupport from "../Scroll/ScrollSupport";
+import PopupPasswordCopy from "../PopupReg/PopupPasswordCopy";
 
 export default function NotFoundPage(props){
     const currentDomain = window.location.origin;
@@ -123,77 +128,85 @@ export default function NotFoundPage(props){
             }, 0);
         }
     }, [activeSection]);
+    const [isBlockVisible, setBlockVisibility] = useState(true);
+
+    useEffect(() => {
+        let prevScrollPos = window.pageYOffset;
+
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const scrollingDown = prevScrollPos < currentScrollPos;
+
+            setBlockVisibility(!scrollingDown);
+            prevScrollPos = currentScrollPos;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
-        <header className={'header-error'}>
-            <div className={'container'}>
-                <div className={'content'}>
-                    <div className={'logo-content'}>
-                        <Link to="">
-                            <img className={'logo'} src={ticket}
-                                 alt="Logo"
-                                 onMouseOver={() => { /* Обработчик наведения на картинку */
-                                 }}
-                                 onClick={handleImageClick}/>
-                        </Link>
-                        <Link to="">
-                            <img className={'logo-text'} src={tickettext}
-                                 alt="Logo"
-                                 onMouseOver={() => { /* Обработчик наведения на картинку */
-                                 }}
-                                 onClick={handleImageClick}/>
-                        </Link>
-                        <div className={'header-burger'} onClick={toggleMenu}>
-                            <span className={'span-burger'}></span>
+        <>
+            <header className={'header'}>
+                <div className={'container'}>
+                    <div className={'content'}>
+                        <div className={'logo-content'}>
+                            <Link to="">
+                                <img className={'logo'} src={ticket} alt="Logo" onClick={handleImageClick}/>
+                            </Link>
+                            <Link to="">
+                                <img className={'logo-text'} src={tickettext} alt="Logo" onClick={handleImageClick}/>
+                            </Link>
+                            <Link to="">
+                                <img className={'logo-text-mobile'} src={tickettextblue} alt="Logo"
+                                     onClick={handleImageClick}/>
+                            </Link>
                         </div>
-                    </div>
-                    <div className={'logo-content'}>
-                        <div className={'header-burger'} onClick={toggleMenu}>
-                            <span className={'span-burger'}></span>
-                        </div>
-                    </div>
-                    <div className={'menu'}>
-                        <div className={'menu-content-profile error-menu-profile-test'}>
-                            <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
-                            <a className="smooth" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToPrizes(event)
-                            }}> Призы </a>
-                            {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
-                            {/*    closeMenu();*/}
-                            {/*    handleGoToWinners(event)*/}
-                            {/*}}>Победители</a>*/}
-                            <a className="smooth" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToFaq(event)
-                            }}> Вопрос-ответ </a>
-                            <a className="smooth backFaq" href={'#'} onClick={(event) => {
-                                closeMenu();
-                                handleGoToSupport(event)
-                            }}> Обратная связь </a>
-                            <div className={'random-block'}>
-                                {isAuthenticated ? (
-                                    <button id="profile-button" onClick={redirectToProfile}
-                                            className="button-animation">
-                                        Личный кабинет
-                                    </button>
-                                ) : (
-                                    <div className={'random-block-2'}>
-                                        <button id="registration-button" onClick={openPopup}
+                        <div className={'menu'}>
+                            <div className={'menu-content'}>
+                                <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
+                                    <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
+                                    <a className="smooth" href={'#'} onClick={(event) => {
+                                        handleGoToPrizes(event)
+                                    }}> Призы </a>
+                                    {/*<a className="smooth" href={'#'} onClick={(event) => {*/}
+                                    {/*    closeMenu();*/}
+                                    {/*    handleGoToWinners(event)*/}
+                                    {/*}}>Победители</a>*/}
+                                    <a className="smooth" href={'#'} onClick={(event) => {
+                                        handleGoToFaq(event)
+                                    }}> Вопрос-ответ </a>
+                                    <a className="smooth" href={'#'} onClick={(event) => {
+                                        handleGoToSupport(event)
+                                    }}> Обратная связь </a>
+                                </div>
+                                <div className={'random-block'}>
+                                    {isAuthenticated ? (
+                                        <button id="profile-button" onClick={redirectToProfile}
                                                 className="button-animation">
-                                            Вход / Регистрация
+                                            Личный кабинет
                                         </button>
-                                        {isPopupOpen && <Popup isOpen={isPopupOpen} closeModal={closePopup}/>}
-                                    </div>
-                                )}
+                                    ) : (
+                                        <div className={'random-block-2'}>
+                                            <button id="registration-button" onClick={openPopup}
+                                                    className="button-animation">
+                                                Вход / Регистрация
+                                            </button>
+                                            {isPopupOpen && <Popup isOpen={isPopupOpen} closeModal={closePopup}/>}
+                                        </div>
+                                    )}
+                                </div>
+                                <img className={'users-logo top-side'} src={users}/>
+                                {/*<a onClick={handleOnClick} className={'shadow-button-animation-text'}> <b>Принять участие в*/}
+                                {/*    акции</b> </a>*/}
                             </div>
-                            <img className={'users-logo'} src={users}/>
-                            <a onClick={openPopup} className={'shadow-button-animation-text'}> <b>Зарегистрировать
-                                билет</b> </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <main>
+            </header>
+            <main className={'main-error'}>
                 <div className={'main-error'} id={'main-error'}>
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt error'} src={tickets}/>
@@ -256,19 +269,18 @@ export default function NotFoundPage(props){
                         <div className={'footer-row-left'}>
                             <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
                                target="_blank" className={'footer-color-size left'}>Конфиденциальность</a>
-                        </div>
-
                     </div>
-                </div>
-                <PopupTicket1/>
-                <PopupTicket2/>
-                <PopupTicket3/>
-                <PopupTicket4/>
-                <PopupTicket5/>
-                <PopupVideos/>
-            </footer>
-        </header>
 
+                </div>
+            </div>
+            <PopupTicket1/>
+            <PopupTicket2/>
+            <PopupTicket3/>
+            <PopupTicket4/>
+            <PopupTicket5/>
+            <PopupVideos/>
+        </footer>
+        </>
 
     );
 }

@@ -10878,17 +10878,21 @@ iframe {
     margin: 3.4vw 0vw 0vw -15.1vw;
   }
   .header-error {
-    position: absolute;
-    top: 0;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0 0 0 0;
+    display: flex;
+    gap: 0;
+    height: 17.944vw;
+    justify-content: space-between;
     left: 0;
-    width: 100%;
-    height: 21vw;
+    opacity: 1;
+    position: fixed;
     right: 0;
-    z-index: 99;
-    box-sizing: border-box;
-    transition: background 0.3s;
-    background-color: #023d6c;
-    box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
+    top: 0;
+    transition: background-color .3s ease;
+    width: 100vw;
+    z-index: 1000;
   }
   .tsxt {
     display: none;
@@ -13498,21 +13502,25 @@ iframe {
     border-radius: 3vw;
   }
   .header-error {
-    position: absolute;
-    top: 0;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0 0 0 0;
+    display: flex;
+    gap: 0;
+    height: 17.944vw;
+    justify-content: space-between;
     left: 0;
-    width: 100%;
-    height: 22vw;
+    opacity: 1;
+    position: fixed;
     right: 0;
-    z-index: 99;
-    box-sizing: border-box;
-    transition: background 0.3s;
-    background-color: #023d6c;
-    box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
+    top: 0;
+    transition: background-color .3s ease;
+    width: 100vw;
+    z-index: 1000;
   }
   .main-error {
     margin-top: 21vw;
-    background-image: linear-gradient(#00622A, #009640, #03BE53);
+    background-image: linear-gradient(#6AAFF8, #6AAFF8, #6AAFF8);
     background-size: cover;
     width: 100%;
     height: 120.8vw;
@@ -15951,7 +15959,20 @@ iframe {
     margin-left: 0vw;
     margin-top: 2vw;
   }
+  .header-error .menu-content-profile {
+    display: flex;
+    gap: 6px;
+    margin-left: -21vw;
+    margin-right: 10px;
+    margin-top: 21vw;
+  }
 
+  .header-error .menu-content-profile a {
+    font-size: 3.889vw;
+    line-height: 5.094vw;
+    margin-left: 3.2vw;
+    padding: 0;
+  }
 
 
 }
