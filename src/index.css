@@ -2936,7 +2936,7 @@ header .menu-content-profile a:hover {
   border-radius: 0 0 1.46vw 1.46vw;
   background-color: #023d6c;
   z-index: 1;
-  box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+  box-shadow: 0vw 1vw 3.5vw 1.7vw rgba(197, 205, 228, 1);
 }
 .items-block-how::after {
   content: '';
@@ -13732,8 +13732,8 @@ iframe {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background-color: #00438280;
-    box-shadow: 0vw 1vw 3.5vw 1.7vw #3979dc;
+    /*background-color: #00438280;*/
+    box-shadow: 0vw 0vw 3.5vw 1.7vw rgba(197, 205, 228, 1);
     width: 89.33vw;
     height: auto;
     min-height: 89vw;
@@ -15660,6 +15660,7 @@ iframe {
   }
   .left-first-profile-p3-count.spin-p-test {
     font-family: 'Halvar Breit Bd', sans-serif;
+    text-transform: uppercase;
     width: 77.35vw;
     height: 1.90vw;
     position: absolute;
