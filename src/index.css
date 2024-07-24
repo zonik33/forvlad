@@ -15512,10 +15512,42 @@ iframe {
     margin-left: 2vw;
   }
   .Modal-add {
-    margin-top: 5vw;
+    overflow: hidden; /* Предотвращает появление полос прокрутки */
+    margin-top: 16vw;
     width: 80vw !important;
-    height: 100vw !important;
+    height: 169vw !important;
   }
+  #spin-popup {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4.23vw;
+    background-image: linear-gradient(#DA4DA3, #783185);
+    border: 0.15vw solid #FFFFFF80;
+    z-index: 6;
+    margin-left: 0vw;
+    margin-top: -23.65vw;
+    padding: 3.4vw 26.86vw;
+    color: #FFFFFF;
+    line-height: 6.07vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    font-size: 5.07vw;
+    text-transform: none;
+  }
+  .left-first-profile-p2-p2-p2.p-popup {
+    width: 70.73vw;
+    height: 5.32vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 3.464vw;
+    text-align: center;
+    line-height: 4.05vw;
+    margin-top: 19.8vw;
+    margin-left: -0.5vw;
+    color: #364059;
+  }
+
   .popup-spin.form-register {
     width: 70vw;
     margin-left: 2vw;
@@ -15544,17 +15576,17 @@ iframe {
     line-height: 5vw;
     color: #364059;
     font-weight: 400;
-    margin-left: -0.4vw;
-    margin-top: 94vw;
+    margin-left: 11.6vw;
+    margin-top: 108vw;
   }
   .left-first-profile-p3-count.spin-p {
     width: 37vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 3.464vw;
-    text-align: left;
+    text-align: center;
     line-height: 4.05vw;
     font-weight: 400;
-    margin-left: -0.4vw;
+    margin-left: 16.6vw;
     margin-top: -1.9vw;
     color: #364059;
   }
@@ -15589,21 +15621,21 @@ iframe {
   canvas#wheel-profile-popup {
     position: absolute;
     z-index: 5;
-    width: 74.722vw;
-    height: 74.722vw;
-    margin: -76vw 0vw 0vw -45.6vw;
+    width: 84.722vw;
+    height: 84.722vw;
+    margin: -131vw 0vw 0vw -42.6vw;
   }
   .users-logo-spin.spin-test-popup {
     position: absolute;
-    width: 51.1vw;
+    width: 58vw;
     height: auto;
-    margin: -63.7vw 0vw 0vw -33.8vw;
+    margin: -117vw 0vw 0vw -29.2vw;
   }
   .users-logo-spin.spin-test-animal {
     position: absolute;
     width: 6vw;
     height: auto;
-    margin: -90.2vw 0vw 0vw -19.5vw;
+    margin: -145.2vw 0vw 0vw -13.8vw;
     z-index: -1;
     opacity: 0;
     transition: transform 1s ease-out, width 1s ease-out;
@@ -15611,19 +15643,19 @@ iframe {
   }
   .users-logo-spin.spin-test-animal.animate {
     transform: translateY(0) scale(1);
-    width: 18.5vw;
+    width: 22.5vw;
   }
   .users-logo-spin.hand-right.animate {
     opacity: 1;
     transform: translateY(0) scale(1);
-    width: 7vw;
-    z-index: 5;
+    width: 8vw;
+    z-index: 7;
   }
   .users-logo-spin.hand-right {
     position: absolute;
     width: 4vw;
     height: auto;
-    margin: -66.7vw 0vw 0vw -5vw;
+    margin: -119.7vw 0vw 0vw 2vw;
     z-index: -1;
     opacity: 0;
     transition: transform 1s ease-out, width 1s ease-out;
@@ -15633,7 +15665,7 @@ iframe {
     position: absolute;
     width: 4vw;
     height: auto;
-    margin: -66.7vw 0vw 0vw -18vw;
+    margin: -119.7vw 0vw 0vw -12vw;
     z-index: -1;
     opacity: 0;
     transform: translateY(0px);
@@ -15645,8 +15677,8 @@ iframe {
   }
   .users-logo-spin.hand-left.animate {
     opacity: 1;
-    transform: translateY(0px);
-    width: 7vw;
+    transform: translateY(50px);
+    width: 8vw;
     animation: appearAndRotate 0.5s both ease-in-out;
     transform-origin: bottom center;
     z-index: 10;
@@ -15656,9 +15688,106 @@ iframe {
     width: 79vw;
   }
 
+  .left-second-profile.add-spin {
+    position: relative;
+    width: 73.8vw;
+    height: auto;
+    min-height: 16vw;
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    /* border: #FFFFFF4D solid 0.15vw; */
+    border-radius: 5.33vw;
+    z-index: 11;
+    background-size: cover;
+    margin-top: 7vw;
+    margin-bottom: 37vw;
+  }
+  @keyframes appearAndRotate-mobile {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+    50% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(0px) rotate(120deg); }
+  }
 
+  .users-logo-spin.hand-left.animate {
+    opacity: 1;
+    transform: translateY(0px); /* Изменение положения при появлении hand-left */
+    width: 8vw;
+    animation: appearAndRotate-mobile 0.5s both ease-in-out;
+    transform-origin: bottom center; /* Изменение точки вращения к левому нижнему углу руки */
+    z-index: 10; /* Это сохранит изображение "hand-left" над другими элементами */
+  }
+  @keyframes shake-mobile {
+    0% { transform: translateY(0px) rotate(120deg); }
+    25% { transform: translateY(5px) rotate(125deg); }
+    50% { transform: translateY(0px) rotate(115deg); }
+    75% { transform: translateY(8px) rotate(123deg); }
+    100% { transform: translateY(0px) rotate(120deg); }
 
-
+  }
+  .users-logo-spin.hand-left.animate.shake-animation {
+    transform: translateY(0px) rotate(120deg); /* Изменение положения при появлении hand-left */
+    animation: shake-mobile 1s 1s forwards; /* Анимация тряски с задержкой после появления */
+  }
+  #selectorspintestpopup {
+    color: #d52976;
+    position: absolute;
+    margin-top: -99.4vw;
+    margin-left: -29.1vw;
+    font-size: 9.878vw;
+    z-index: 6;
+  }
+  .wheel-center-container-popup {
+    position: absolute;
+    margin: -95.6vw 0vw 0vw 62.5vw;
+  }
+  #wheel-center-test-popup {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 1em;
+    background: #9665d7;
+    margin-top: 7.2vw;
+    margin-left: -25.3vw;
+    z-index: 104;
+  }
+  #wheel-center-2-test-popup {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 3em;
+    height: 3em;
+    border-radius: 1.5em;
+    background: #5e3692;
+    margin-top: 7.2vw;
+    margin-left: -25.3vw;
+    z-index: 103;
+  }
+  #wheel-center-3-test-popup {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 6em;
+    height: 6em;
+    border-radius: 3em;
+    background: #7a3bcb;
+    margin-top: 7.2vw;
+    margin-left: -25.3vw;
+    z-index: 102;
+  }
+  #wheel-center-4-test-popup {
+    /* cursor: pointer; */
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 8em;
+    height: 8em;
+    border-radius: 4em;
+    background: #4f2d7a;
+    margin-top: 7.2vw;
+    margin-left: -25.32vw;
+    z-index: 101;
+  }
 
 
 

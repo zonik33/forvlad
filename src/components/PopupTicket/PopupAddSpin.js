@@ -112,7 +112,7 @@ export default function PopupAddSpin(props) {
                         </p>
                         <span className="close close-for-popup-first" onClick={closeModal}>&times;</span>
                     </div>
-                    <div className={'left-second-profile'}>
+                    <div className={'left-second-profile add-spin'}>
                         <p className={'left-first-profile-p spin-p'}>Вы зарегистрировали
                             <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
                             <br></br>на сумму
