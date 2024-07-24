@@ -13774,7 +13774,7 @@ iframe {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
+    z-index: 9998 !important;
   }
   .main-input {
     margin: -2.63vw 0 1.46vw -1.9vw;
@@ -15618,7 +15618,6 @@ iframe {
   }
   .Modal-add {
     overflow: hidden; /* Предотвращает появление полос прокрутки */
-    margin-top: 16vw;
     width: 80vw !important;
     height: 169vw !important;
   }
