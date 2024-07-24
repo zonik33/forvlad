@@ -3559,6 +3559,7 @@ canvas#wheel-profile-popup {
 }
 
 .how-center-icon {
+  display: none;
   position: absolute;
   width: 32%;
   margin-left: 41.5vw;
@@ -9188,7 +9189,7 @@ iframe {
     margin-left: 8.3vw;
     width: 90vw;
     text-align: center;
-    height: 303vw;
+    height: 214vw;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -9320,7 +9321,7 @@ iframe {
     width: 91.47vw;
     height: 16.53vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin: 475vw 0 0 -0.35vw;
+    margin: 384vw 0 0 -0.35vw;
     font-size: 6.40vw;
     line-height: 8.53vw;
     text-align: left;
@@ -9467,7 +9468,7 @@ iframe {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 84.5vw 0 0 5vw;
+    margin: 2.5vw 0 0 5vw;
     z-index: 5;
     position: relative;
   }
@@ -15407,7 +15408,7 @@ iframe {
     width: 86.892vw;
     height: 75.699vw;
     padding: 5.757vw 2.489vw;
-    margin: 73vw 0vw 0vw 4vw;
+    margin: 72vw 0vw 0vw 4vw;
     border-radius: 4.2vw 4.2vw 4.2vw 4.2vw;
     background-color: #FFFFFF;
     opacity: 1;
