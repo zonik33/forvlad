@@ -61,8 +61,8 @@ export default function PopupTakeGifts ({number, text}) {
                 <div className="popup-take-gifts its-2" id={'popup-content'}>
                     <span className="close" onClick={closePopup2}>&times;</span>
                     <form action={''} id={'form-add-ticket2'} className={'form-register'}>
-                        <h1 className={'popup-h1'}>Поздравляем</h1>
-                        <label className={'bilet-ticket-2-p take-gifts'}>Вы выиграли промокод на получение
+                        <h1 className={'popup-h1 take-gifts'}>Поздравляем</h1>
+                        <label className={'bilet-ticket-2-p take-gifts'}>Вы выиграли промокод на <br></br> получение
                             билета:</label>
                         <label className={'bilet-ticket-2-p2 take-gifts'}
                                id={'ticket-for-number2'}>{number} 2323850925307322305</label>
