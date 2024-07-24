@@ -5324,9 +5324,9 @@ canvas#wheel-profile-popup {
   margin-top: 3vw;
 }
 .popup-banner .form-register {
-  width: 46vw;
-  margin-left: 5vw;
-  margin-top: 1vw;
+  width: 45vw;
+  margin-left: 0vw;
+  margin-top: 2vw;
 }
 .popup-winners-videos {
   background-color: #FFFFFF4D;
@@ -5345,11 +5345,12 @@ canvas#wheel-profile-popup {
   margin-top: 0vw;
 }
 .popup-banner {
-  background-color: #088740;
-  width: 48vw;
-  height: 16.98vw;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+  width: 34.6vw;
+  height: 23.99vw;
   padding: 0.6vw 0.94vw;
-  border-radius: 1vw;
+  border-radius: 1.27vw;
   margin-top: 0vw;
 }
 .banner-mc-p {
@@ -5436,7 +5437,35 @@ canvas#wheel-profile-popup {
   border: #FFFFFF4D 0vw solid;
   color: #5E6976;
 }
+.popup-banner .close {
+  position: absolute;
+  cursor: pointer;
+  margin: 0.6vw 0.35vw 0.35vw 30.38vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: initial;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0vw solid;
+  color: #5E6976;
+}
 .popup-take-gifts .close:hover {
+  position: absolute;
+  cursor: pointer;
+  margin: 0.6vw 0.35vw 0.35vw 30.38vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: initial;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0vw solid;
+  color: #bebec5;
+}
+.popup-banner .close:hover {
   position: absolute;
   cursor: pointer;
   margin: 0.6vw 0.35vw 0.35vw 30.38vw;
@@ -5541,6 +5570,18 @@ canvas#wheel-profile-popup {
   font-weight: 500;
   color: #364059;
 }
+.bilet-ticket-2-p2.take-banner {
+  margin-left: 1.5vw;
+  width: 26.35vw;
+  height: 1.90vw;
+  display: block;
+  text-align: center;
+  font-size: 1.17vw;
+  line-height: 1.61vw;
+  font-family: "Halvar Mittelschrift Rg", sans-serif;
+  font-weight: 400;
+  color: #364059;
+}
 .bilet-ticket-2-p.take-gifts {
   margin-left: 1.4vw;
   width: 20.35vw;
@@ -5551,6 +5592,33 @@ canvas#wheel-profile-popup {
   margin-top: 2vw;
   font-size: 1.32vw;
   line-height: 1.76vw;
+  font-family: "Halvar Mittelschrift Rg", sans-serif;
+  font-weight: 400;
+  color: #364059;
+}
+.bilet-ticket-2-p.take-banner {
+  margin-left: 4.4vw;
+  width: 20.35vw;
+  height: 1.90vw;
+  margin-bottom: 2vw;
+  display: block;
+  text-align: center;
+  margin-top: 1vw;
+  font-size: 1.42vw;
+  line-height: 2vw;
+  font-family: "Halvar Mittelschrift Rg", sans-serif;
+  font-weight: 400;
+  color: #364059;
+}
+.bilet-ticket-2-p4.take-banner {
+  margin-top: 3.5vw;
+  margin-left: 2.6vw;
+  width: 23.35vw;
+  height: 4.83vw;
+  display: block;
+  text-align: center;
+  font-size: 1.17vw;
+  line-height: 1.61vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
   color: #364059;
@@ -15420,10 +15488,38 @@ iframe {
     border: #FFFFFF4D 0vw solid;
     color: #5E6976;
   }
+  .popup-banner .close {
+    position: absolute;
+    cursor: pointer;
+    margin: 1.6vw 0.35vw 0.35vw 64.2vw;
+    width: 14vw;
+    height: 14vw;
+    font-size: 16.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 11vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
   .popup-take-gifts .close:hover {
     position: absolute;
     cursor: pointer;
     margin: 3.6vw 0.35vw 0.35vw 69.2vw;
+    width: 14vw;
+    height: 14vw;
+    font-size: 16.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 11vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .popup-banner .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: 1.6vw 0.35vw 0.35vw 64.2vw;
     width: 14vw;
     height: 14vw;
     font-size: 16.60vw;
@@ -15788,7 +15884,73 @@ iframe {
     margin-left: -25.32vw;
     z-index: 101;
   }
+  .bilet-ticket-2-p2.take-banner {
+    margin-left: -0.6vw;
+    width: 74.35vw !important;
+    height: 1.90vw;
+    margin-bottom: 3vw;
+    display: block;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 3.27vw;
+    line-height: 4.87vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .popup-banner {
+    background-color: #088740;
+    width: 78.76vw;
+    height: 75.54vw;
+    padding: 0.6vw 0.94vw;
+    border-radius: 5vw;
+    margin-top: 0vw;
+  }
+  .popup-h1.take-banner {
+    position: relative;
+    font-size: 5.87vw;
+    text-align: center;
+    line-height: 6.40vw;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-weight: 400;
+    margin-top: 11.1vw;
+    margin-left: -3vw;
+    color: #364059;
+    text-transform: uppercase;
+  }
 
+  .bilet-ticket-2-p.take-banner{
+    margin-left: 6.4vw;
+    width: 59.35vw;
+    height: 6.9vw;
+    margin-bottom: 5vw;
+    display: block;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 4.77vw;
+    line-height: 5.87vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .bilet-ticket-2-p4.take-banner {
+    margin-left: 9vw;
+    margin-top: 11.5vw;
+    width: 55.53vw;
+    height: 9.2vw;
+    display: block;
+    text-align: center;
+    font-size: 3.27vw;
+    line-height: 4.87vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .popup-banner .form-register {
+    width: 75vw;
+    margin-left: 0vw;
+    margin-top: 2vw;
+  }
 
 
 

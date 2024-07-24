@@ -184,13 +184,18 @@ export default function Tickets(){
     }
     const [isPopupOpen, setIsPopupOpen] = useState(null);
     function openPopup1() {
-        setIsPopupOpen(true);
+        if (onlyTest > 0) {
+            setIsPopupOpen(true); // Показывать попап, если onlyTest больше 0
+        } else {
+            document.getElementById("popup-banner").style.display = "block"; // Показывать другой попап
+            document.body.classList.add("no-scroll");
+        }
     }
     const closePopup = () => {
         setIsPopupOpen(false);
         document.body.classList.remove("no-scroll");
     };
-    let onlyTest = 5
+    let onlyTest = 0
     const [isBlockVisible, setBlockVisibility] = useState(true);
 
     useEffect(() => {

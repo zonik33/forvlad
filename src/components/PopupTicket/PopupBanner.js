@@ -34,10 +34,9 @@ export default function PopupBanner ({number}) {
 
 
     function closePopup2() {
-        document.getElementById("popup-ticket-2").style.display = "none";
+        document.getElementById("popup-banner").style.display = "none";
         localStorage.removeItem('number');
         document.body.classList.remove("no-scroll");
-        reloadPage1()
     }
 
 // Функция обновления страницы
@@ -78,35 +77,21 @@ export default function PopupBanner ({number}) {
         <div id="popup-banner" className="popup">
             <div className={'blur-filter for-mc'}>
                 <div className="popup-banner" id={'popup-content-banner'}>
-                    {/*<span className="close" onClick={closePopup2}>&times;</span>*/}
-                    <form action={'https://nloto-promo.ru/backend/api/ticket'}
-                          id={'popup-end'} className={'form-register banner-for-mc'}>
-                        <div className={'img-mc-block'}>
-                            {/*<img className={'img-mc'} src={bannerMC}/>*/}
-                        </div>
-                        <div className={'text-mc-center'}>
-                            {/*<a className={'banner-mc-p'}>Тираж Новогоднего «Мечталлиона» состоялся и мы спешим начислить выигрыши миллионам счастливчиков.</a>*/}
-                            {/*<a className={'banner-mc-p'}>Это может занять больше времени, чем обычно, но мы уверены, что под звон бокалов в кругу семьи и друзей ожидание пройдёт незаметно.</a>*/}
-                            <a className={'banner-mc-p marg-top'}>Регистрация билетов для участия в акции «Отмечайте на
-                                здоровье» начнётся 1.02.2024.
-                            </a>
-                            <a className={'banner-mc-p marg-top-top'}>Вас ждут ежедневные подарки и призы!</a>
+                    <span className="close" onClick={closePopup2}>&times;</span>
+                    <form action={'https://nlotoasd-promo.ru/backend/api/ticket'}
+                          id={'popup-end'} className={'form-register'}>
+                        <h1 className={'popup-h1 take-banner'}>Регистрация билета</h1>
+                        <label className={'bilet-ticket-2-p take-banner'}>У вас недостаточно билетов, <br></br> готовых для розыгрыша</label>
+                        <p className={'bilet-ticket-2-p2 take-banner'}>Хотите получить попытки и испытать удачу
+                            в<br></br> розыгрыше рулетки?
+                            Купите лотерейные билеты<br></br> на сумму от 300 рублей.</p>
+                        {/*<label className={'bilet-ticket-2-p3 take-gifts'}>не существует. </label>*/}
+                        <p className={'bilet-ticket-2-p4 take-banner'}> За каждые 300 рублей вы получите
+                            1 (одну) попытку</p>
+                        {/*<a className="button-animation-text-profile click-take-gifts"*/}
+                        {/*   href={'https://nloto.ru/'} target="_blank">*/}
+                        {/*    <b className={'gifts-b'}>Активировать промокод</b></a>*/}
 
-                        </div>
-
-                        <img className={'left-border'} src={leftBorder}/>
-                        <img className={'back-g'} src={backg}/>
-                        {/*<img className={'right-border'} src={rightBorder}/>*/}
-                        <img className={'banner-billets'} src={march8}/>
-                        <img className={'banner-billets-2'} src={feb23}/>
-                        {/*<img className={'under-text-mc'} src={underTextMC}/>*/}
-                        <img className={'snow1'} src={snow1}/>
-                        <img className={'snow2'} src={snow2}/>
-                        <img className={'snow3'} src={snow3}/>
-                        <img className={'snow4'} src={snow4}/>
-                        <img className={'snow5'} src={snow5}/>
-                        <img className={'snow6'} src={snow6}/>
-                        <img className={'snow7'} src={snow1}/>
                     </form>
                 </div>
             </div>
