@@ -1203,6 +1203,12 @@ header .menu-content-profile a:hover {
   line-height: 0.926vw;
   color: #42486C;
 }
+.footer-color-size.margin-left {
+  margin-left: -7.2vw;
+  font-size: 0.781vw;
+  line-height: 0.926vw;
+  color: #42486C;
+}
 .right-first-profile {
   width: 13.45vw;
   height: 5vw;
@@ -1559,6 +1565,9 @@ header .menu-content-profile a:hover {
 .how-full4444-img img:hover::after {
   opacity: 1;
 }
+.MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
 .for-test-img img {
   width: 86.1%;
   margin-left: -1vw;
@@ -1578,7 +1587,7 @@ header .menu-content-profile a:hover {
   margin-left: -10vw;
 }
 .for-test-img-test-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: 6.4vw;
@@ -1589,7 +1598,7 @@ header .menu-content-profile a:hover {
   margin-left: -8.4vw;
 }
 .for-test-img-test-mini2-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: 3.5vw;
@@ -1604,7 +1613,7 @@ header .menu-content-profile a:hover {
   margin-left: -6.8vw;
 }
 .for-test-img-second-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: 0.65vw;
@@ -1620,7 +1629,7 @@ header .menu-content-profile a:hover {
 
 }
 .for-test-img-third-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: -2vw;
@@ -1641,25 +1650,25 @@ header .menu-content-profile a:hover {
   margin-left: -0.7vw;
 }
 .for-test-img-4-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: 6.4vw;
 }
 .for-test-img-5-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: 3.5vw;
 }
 .for-test-img-6-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: 0.65vw;
 }
 .for-test-img-7-mini-prizes img {
-  border-radius: 2vw;
+  border-radius: 1.2vw;
   width: 77%;
   margin-top: 0.45vw;
   margin-left: -2vw;
@@ -1715,7 +1724,7 @@ header .menu-content-profile a:hover {
 }
 .jss5 {
   width: 7vw !important;
-  margin: -1.354vw 0px 1.302vw 0.052vw !important;
+  margin: -0.72vw 0vw 1.67vw -0.1vw !important;
   border-top: 1px solid black !important;
   background-color: black !important;
 }
@@ -1726,6 +1735,12 @@ header .menu-content-profile a:hover {
 }
 .MuiAccordion-root.Mui-expanded .MuiAccordionSummary-content {
   color: black !important;
+}
+.MuiAccordionSummary-content {
+  margin: -3px 0 !important;
+  display: flex;
+  flex-grow: 1;
+  transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .makeStyles-heading-3.Mui-expanded {
@@ -6956,7 +6971,7 @@ button:focus {
   padding: 0.2vw !important;
 }
 .MuiSvgIcon-root {
-  font-size: 2vw !important;
+  font-size: 1.5vw !important;
 }
 .MuiIconButton-root {
   color: black !important;
@@ -6973,6 +6988,7 @@ button:focus {
   width: 68.938vw;
 }
 .column-help {
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
   flex: 1 1;
   margin-top: -1vw;
   margin-left: 0vw;
@@ -7034,13 +7050,13 @@ button:focus {
   font-size: 1.042vw !important;
   font-family: Inter, sans-serif !important;
   font-weight: 400 !important;
-  line-height: 1.250vw !important;
+  line-height: 1.55vw !important;
   letter-spacing: 0.00938em;
   text-align: left !important;
 }
 .makeStyles-line-5 {
   width: 22% !important;
-  margin: -2.72vw 0vw 1.67vw -0.1vw !important;
+  margin: -0.72vw 0vw 1.67vw -0.1vw !important;
   border-top: 1px solid #364059 !important;
   background-color: #364059 !important;
 }
@@ -7061,7 +7077,7 @@ button:focus {
 }
 .heading-name {
   margin-left: 1vw;
-  margin-top: -3.5vw;
+  margin-top: -3.74vw;
   font-weight: 500;
   font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
   font-size: 1.25vw;

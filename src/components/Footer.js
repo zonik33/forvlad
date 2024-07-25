@@ -46,7 +46,7 @@ export default function Footer (props) {
                     </div>
                     <div className={'footer-row-left'}>
                         <a href={`${currentDomain}/1_1_Политика_в_отношении_обработки_ПДн_1.pdf`}
-                           target="_blank" className={'footer-color-size left'}>Конфиденциальность</a>
+                           target="_blank" className={'footer-color-size left margin-left'}>Конфиденциальность</a>
                     </div>
 
                 </div>
