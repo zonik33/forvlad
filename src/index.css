@@ -14862,7 +14862,7 @@ iframe {
     align-items: center;
     gap: 0px;
     border-radius: 0 0 5.556vw 5.556vw;
-    border-bottom: 1px solid #000;
+    border-bottom: none;
     position: fixed;
     margin-top: 3.8vw;
     margin-left: -6.9vw;
