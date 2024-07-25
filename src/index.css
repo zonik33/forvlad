@@ -3563,6 +3563,11 @@ canvas#wheel-profile-popup {
   margin-left: 37.8vw;
   margin-top: -0.5vw;
 }
+.column-help.third img {
+  width: 2.4%;
+  margin-left: -2.2vw;
+  margin-top: -0.3vw;
+}
 
 .back-g {
   position: absolute;
@@ -6998,11 +7003,11 @@ button:focus {
 }
 
 .column-help img {
-  position: absolute;
-  width: 2.55%;
   height: auto;
   margin-left: -2.2vw;
-  margin-top: -0.2vw;
+  margin-top: -0vw;
+  position: absolute;
+  width: 2.4%;
 }
 
 .MuiAccordionSummary-root .MuiAccordionSummary-expandIcon,
