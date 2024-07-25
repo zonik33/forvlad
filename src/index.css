@@ -773,7 +773,7 @@ header .menu-content-profile a:hover {
   margin-top: 0vw;
 }
 .secret-block {
-  margin-top: -1vw;
+  margin-top: -0.85vw;
 }
 .popup-take-gifts-bonus {
   background-color: #FFFFFF4D;
@@ -1530,7 +1530,7 @@ header .menu-content-profile a:hover {
   width: 101.5%;
   margin-left: -10vw;
   transition: transform 0.5s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* добавляем пассивное свечение */
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); !* добавляем пассивное свечение *!*/
   position: relative;
 }
 .how-full4-img img::after,
@@ -1871,15 +1871,15 @@ header .menu-content-profile a:hover {
   text-decoration: none;
   padding: 1vw 1.55vw;
   border-radius: 0.6763vw;
-  background-image: linear-gradient(#DA4DA3, #783185);
+  background-image: linear-gradient(#AF21C9, #AF21C9);
   margin-left: -10.3vw;
   margin-top: -2vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  border: 0.15vw solid #FFFFFF80;
+  /*border: 0.15vw solid #FFFFFF80;*/
   transition: background-image 0.3s ease;
 }
 .button-animation-text:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
+  background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   transition: background-image 0.8s ease-in-out;
 }
 .button-animation-text-profile {
@@ -3386,15 +3386,15 @@ canvas#wheel-profile-popup {
   border-radius: 0.71875vw;
   cursor: pointer;
   /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
-  border: 0.15vw solid #AF21C9CC;
+  border: 0.15vw solid #AF21C9;
   opacity: 1;
   transition:  background-image 0.2s ease-in-out;
 }
 .prizes-button-check:hover {
   color: #FFFFFF; /* Изменение цвета текста на белый */
-  background-image: linear-gradient(#AF21C9CC, #AF21C9CC); /* Изменение фона при наведении */
+  background-image: linear-gradient(#AF21C9, #AF21C9); /* Изменение фона при наведении */
   opacity: 1;
-  border:0.15vw solid #AF21C9CC;
+  border: 0.15vw solid #AF21C9;
   transition: background-image 0.2s ease-in-out;
 }
 .question-button-check:hover {
@@ -3559,7 +3559,6 @@ canvas#wheel-profile-popup {
 }
 
 .how-center-icon {
-  display: none;
   position: absolute;
   width: 32%;
   margin-left: 41.5vw;
@@ -6957,7 +6956,7 @@ button:focus {
   padding: 0.2vw !important;
 }
 .MuiSvgIcon-root {
-  font-size: 3rem !important;
+  font-size: 2vw !important;
 }
 .MuiIconButton-root {
   color: black !important;
@@ -6967,6 +6966,7 @@ button:focus {
   margin-top: 0vw !important;
 }
 .container-question-help {
+  margin-left: 1.5vw;
   position: relative;
   display: flex;
   z-index: 5;
@@ -6976,16 +6976,17 @@ button:focus {
   flex: 1 1;
   margin-top: -1vw;
   margin-left: 0vw;
-  text-align: center;
+  text-align: left;
   padding: 2vw 6vw 4vw 0vw;
 
 }
 
 .column-help img {
   position: absolute;
-  width: 2%;
+  width: 2.55%;
   height: auto;
-  margin-left: -1.6vw;
+  margin-left: -2.2vw;
+  margin-top: -0.2vw;
 }
 
 .MuiAccordionSummary-root .MuiAccordionSummary-expandIcon,
@@ -8248,7 +8249,7 @@ button:focus {
   height: 4.65vw;
   border-radius: 1.4vw;
   border: 0.055vw solid #FFFFFF4D;
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0 );
+  background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
   color: #FFFFFF;
   font-size: 1.32vw;
   line-height: 1.32vw;
@@ -8263,7 +8264,7 @@ button:focus {
   top: 68% !important;
 }
 #submit:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
 }
 #submit-code {
   display: none;
@@ -9265,7 +9266,7 @@ iframe {
   }
 
   .prizes-content-box2 {
-    margin-top: -100vw;
+    margin-top: -10vw;
     margin-left: -6.5vw;
     width: 91vw;
     height: 226vw;
@@ -9390,19 +9391,19 @@ iframe {
   }
   .users-logo-spin.spin-main {
     width: 73.5vw;
-    margin: -77.1vw 0vw 0vw -36.2vw;
+    margin: -14.1vw 0vw 0vw -36.2vw;
     z-index: 515;
   }
   .users-logo-spin {
     position: absolute;
     width: 84vw;
     height: auto;
-    margin: -82.2vw 0vw 0vw -41.45vw;
+    margin: -19.2vw 0vw 0vw -41.45vw;
   }
   #selectorspin {
     color: #d52976;
     position: absolute;
-    margin-top: -93.54vw;
+    margin-top: -30.54vw;
     margin-left: -2.4vw;
     font-size: 14.678vw;
     z-index: 516;
@@ -9468,8 +9469,8 @@ iframe {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 2.5vw 0 0 5vw;
-    z-index: 5;
+    margin: 105.5vw 0 0 5vw;
+    z-index: 8;
     position: relative;
   }
 
@@ -12806,7 +12807,7 @@ iframe {
     height: 17.60vw;
     border-radius: 4.27vw;
     border: 0.055vw solid #FFFFFF4D;
-    background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0);
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
     color: #FFFFFF;
     font-size: 4.80vw;
     line-height: 4.80vw;
@@ -12820,7 +12821,7 @@ iframe {
 
 
   #submit:hover {
-    background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+    background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   }
   .popup-p-under.for-mobile{
     margin-top: 7vw;
@@ -14992,7 +14993,7 @@ iframe {
   .question-block {
     position: relative;
     z-index: 5;
-    margin: 10.5vw 0vw 7.2vw -3.4vw;
+    margin: 105.5vw 0vw 7.2vw -3.4vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
@@ -15005,7 +15006,7 @@ iframe {
     letter-spacing: -0.04vw;
   }
   .MuiSvgIcon-root {
-    font-size: 1rem !important;
+    font-size: 5vw !important;
   }
   .heading-name {
     margin-left: 1vw;
@@ -15408,7 +15409,7 @@ iframe {
     width: 86.892vw;
     height: 75.699vw;
     padding: 5.757vw 2.489vw;
-    margin: 72vw 0vw 0vw 4vw;
+    margin: 84vw 0vw 0vw 4vw;
     border-radius: 4.2vw 4.2vw 4.2vw 4.2vw;
     background-color: #FFFFFF;
     opacity: 1;

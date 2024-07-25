@@ -449,7 +449,7 @@ export default function How (props) {
                                 становитесь участником розыгрышей ценных призов
                             </div>
                             <div className={'second-step'}>2.</div>
-                            <div className="text-block-2">Зарегистрируйте приобретенных лотерейные билеты на сайте
+                            <div className="text-block-2">Зарегистрируйте приобретенные лотерейные билеты на сайте
                                 промо-акции и испытайте удачу в рулетке с подарками в вашем личном кабинете
                             </div>
                             <div className={'third-step'}>3.</div>
