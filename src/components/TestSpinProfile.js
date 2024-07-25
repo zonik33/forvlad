@@ -366,8 +366,8 @@ class TestForSpin extends React.Component {
                     <span id="wheel-center-4-test"></span>
                 </div>
                 <img className={'users-logo-spin spin-test'} src={spin}/>
-                {/*<img className={'users-logo-spin spin-main-profile rotating-img'} id={'wheel-test-spin-1'} src={spinmain}*/}
-                {/*     alt="Rotating Image"/>*/}
+                <img className={'users-logo-spin spin-main-profile rotating-img'} id={'wheel-test-spin-1'} src={spinmain}
+                     alt="Rotating Image"/>
                 <canvas
                     id="wheel-profile"
                     width="500"

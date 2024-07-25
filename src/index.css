@@ -2572,9 +2572,9 @@ header .menu-content-profile a:hover {
   z-index: 515;
 }
 .users-logo-spin.spin-main-profile {
-  width: 22.2vw;
-  margin: 2.3vw 0vw 0vw 41.2vw;
-  z-index: 515;
+  width: 13.8vw;
+  margin: 3.4vw 0vw 0vw 3.9vw;
+  z-index: 6;
 }
 @keyframes rotateWithDelay {
   0% {
@@ -3081,7 +3081,7 @@ canvas#wheel-profile-popup {
   margin-top: -4.27vw;
   margin-left: -26.7vw;
   font-size: 3.378vw;
-  z-index: 6;
+  z-index: 7;
 }
 #wheel-center {
   cursor: pointer;
@@ -12056,10 +12056,10 @@ iframe {
   #selectorspintest {
     color: #d52976;
     position: absolute;
-    margin-top: -40.57vw;
-    margin-left: -2.7vw;
+    margin-top: -40.17vw;
+    margin-left: -3vw;
     font-size: 14.778vw;
-    z-index: 6;
+    z-index: 136;
   }
   .wheel-center-container-profile {
     position: absolute;
@@ -16006,6 +16006,15 @@ iframe {
     line-height: 5.094vw;
     margin-left: 3.2vw;
     padding: 0;
+  }
+  .users-logo-spin.spin-main-profile {
+    width: 74.8vw;
+    margin: -25vw 0vw 0vw 4.9vw;
+    z-index: 135;
+  }
+  .footer-color-size.margin-left {
+    margin-left: -1.15vw;
+    color: #42486C;
   }
 
 
