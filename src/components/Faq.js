@@ -200,7 +200,7 @@ export default function Faq() {
                     <br></br>
                     <a className={'question-color-second'}>Поддержка 24/7</a>
                 </div>
-                <div className="column-help">
+                <div className="column-help third">
                     <img src={write} alt="Image 3"/>
                     Написать на <a className={'question-color'}>support@nloto.ru</a>
                 </div>

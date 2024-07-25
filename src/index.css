@@ -8932,11 +8932,11 @@ iframe {
       text-decoration: none;
       padding: 3vw 19vw;
       border-radius: 3.6763vw;
-      background-image: linear-gradient(#DA4DA3, #783185);
+      background-image: linear-gradient(#AF21C9, #AF21C9);
       margin-left: -21.6vw;
       margin-top: 15.5vw;
       font-family: 'Halvar Mittelschrift Rg', sans-serif;
-      border: 0.15vw solid #FFFFFF80;
+      /*border: 0.15vw solid #FFFFFF80;*/
       transition: background-image 0.3s ease;
     }
   .button-animation-text b {
@@ -14924,7 +14924,7 @@ iframe {
     margin-bottom: 8vw;
   }
   .for-test-img-test-mini-prizes img {
-    border-radius: 5vw;
+    border-radius: 4vw;
     width: 123%;
     margin-top: -0.55vw;
     margin-left: -11.6vw;
@@ -14936,7 +14936,7 @@ iframe {
     margin-left: -1.5vw;
   }
   .for-test-img-second-mini-prizes img {
-    border-radius: 5vw;
+    border-radius: 4vw;
     width: 123%;
     margin-top: -0.55vw;
     margin-left: -11.6vw;
@@ -14949,7 +14949,7 @@ iframe {
   }
 
   .for-test-img-4-mini-prizes img {
-    border-radius: 5vw;
+    border-radius: 4vw;
     width: 123%;
     margin-top: -0.55vw;
     margin-left: -11.6vw;
@@ -14961,7 +14961,7 @@ iframe {
     margin-left: -1.5vw;
   }
   .for-test-img-6-mini-prizes img {
-    border-radius: 5vw;
+    border-radius: 4vw;
     width: 123%;
     margin-top: -0.55vw;
     margin-left: -11.6vw;
@@ -15022,17 +15022,28 @@ iframe {
     letter-spacing: -0.04vw;
   }
   .MuiSvgIcon-root {
+    margin-top: 1.5vw;
     font-size: 5vw !important;
   }
   .heading-name {
-    margin-left: 1vw;
-    margin-top: -6.5vw;
+    margin-left: 3vw;
+    margin-top: -3.5vw;
     font-weight: 500;
     font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
     font-size: 5.000vw;
     line-height: 6.550vw;
     color: #364059;
-    margin-bottom: 0vw;
+    margin-bottom: 2vw;
+  }
+  .makeStyles-line-5 {
+    width: 37% !important;
+    margin: -0.72vw 0vw 2.67vw 0.2vw !important;
+    border-top: 1px solid #364059 !important;
+    background-color: #364059 !important;
+  }
+  .MuiAccordionDetails-root {
+    display: flex;
+    padding: 2.04vw 2.94vw 3.17vw 4.17vw !important;
   }
   .MuiIconButton-edgeEnd {
     margin-right: 0.72vw !important;
@@ -15098,7 +15109,7 @@ iframe {
     width: 100vw;
     flex: 1 1;
     margin-top: -1vw;
-    margin-left: 12vw;
+    margin-left: 10vw;
     padding: 2vw 6vw 4vw 0vw;
     font-size: 4.444vw;
     line-height: 5.422vw;
@@ -15111,7 +15122,12 @@ iframe {
     width: 12%;
     height: auto;
     margin-left: -11.6vw;
-    margin-top: -1vw;
+    margin-top: -0.5vw;
+  }
+  .column-help.third img {
+    width: 12%;
+    margin-left: -11.6vw;
+    margin-top: -1.7vw;
   }
   .question-color-second {
     color: #5E6976;
