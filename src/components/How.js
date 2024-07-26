@@ -1,5 +1,5 @@
 import howLeftIcon from '../image/img_85.png'
-import howCenterIcon from '../image/img_86.png'
+import howCenterIcon from '../image/img_111.png'
 import howRightIcon from '../image/how-right-icon.png'
 import snakeHow from "../image/snake1.png";
 import howAppstore from "../image/how-appstore_.png";

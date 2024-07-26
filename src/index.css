@@ -54,6 +54,9 @@ body {
   margin-left: 9.75vw;
   overflow: hidden;
 }
+.how-tickets-img-tablet {
+  display: none;
+}
 
 
 
@@ -1557,7 +1560,7 @@ header .menu-content-profile a:hover {
 .how-full444-img img:hover,
 .how-full4444-img img:hover {
   transform: scale(1.05); /* увеличиваем масштаб при наведении */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* увеличиваем масштаб и изменяем свечение при наведении */
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); !* увеличиваем масштаб и изменяем свечение при наведении *!*/
 }
 .how-full4-img img:hover::after,
 .how-full44-img img:hover::after,
@@ -8595,14 +8598,22 @@ iframe {
     background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
     position: relative;
     border-radius: 0vw 0vw 1.46vw 1.46vw;
-    margin-top: 33vw;
+    margin-top: 189vw;
     margin-left: 2.1vw;
     width: 96vw;
     height: auto;
     z-index: 1;
     box-shadow: 0 0 0 0;
   }
+
   header .menu-content {
+    width: 81vw;
+    position: absolute;
+    row-gap: 5vw;
+    margin-top: 0.52vw;
+    margin-left: -19vw;
+  }
+  header .menu-content-profile {
     width: 81vw;
     position: absolute;
     row-gap: 5vw;
@@ -8653,6 +8664,21 @@ iframe {
   }
   header .menu-content a {
     /* text-transform: uppercase; */
+    text-decoration: none;
+    margin-right: 1.9vw;
+    margin-left: 0.72vw;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 1.953vw;
+    line-height: 2.192vw;
+    margin-top: -0.6vw;
+    transition: color 0.2s ease-in-out;
+    transform: translateZ(0);
+    color: #2F41B0;
+  }
+  header .menu-content-profile a {
+
     text-decoration: none;
     margin-right: 1.9vw;
     margin-left: 0.72vw;
@@ -8885,11 +8911,44 @@ iframe {
     margin-top: -11.5vw;
     margin-left: -7.7vw;
     width: 95.91vw;
-    height: 135vw;
+    height: 283vw;
     border-radius: 3.46vw;
     background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
     z-index: 5;
     /* box-shadow: 0 32px 80px 0 rgba(197, 205, 228, 1); */
+  }
+  .items-block-how::after {
+    content: '';
+    position: absolute;
+    bottom: 97%;
+    left: 0;
+    width: 100%;
+    height: 15vw;
+    background: linear-gradient(to bottom, #6AAFF8 10%, #edf0fa 100%);
+    z-index: -1;
+  }
+  .users-logo-spin.spin-main {
+    width: 31.6vw;
+    margin: 45.9vw 0vw 0vw -38.78vw;
+    z-index: 515;
+  }
+  .users-logo-spin {
+    position: absolute;
+    width: 36vw;
+    height: auto;
+    margin: 43.8vw 0vw 0vw -41.15vw;
+  }
+  .selectorspin-container {
+    position: absolute;
+    margin: 54.3vw 0vw 0vw 45vw;
+  }
+  #selectorspin {
+    color: #d52976;
+    position: absolute;
+    margin-top: -13.4vw;
+    margin-left: -31.1vw;
+    font-size: 6.678vw;
+    z-index: 516;
   }
   .how-tickes-img-p-right {
     position: absolute;
@@ -8904,7 +8963,482 @@ iframe {
     margin-bottom: 10vw;
     text-align: left;
   }
+  .prizes-content-box-title-bot2 {
+    position: relative;
+    width: 67.13vw;
+    height: 60.54vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin: -0.3vw 0 0 2vw;
+    font-size: 2.928vw;
+    font-weight: 400;
+    line-height: 3.514vw;
+    text-align: left;
+    color: #FFFFFF;
+    z-index: 5;
+  }
+  .how-center-p-text-stap2 {
+    font-family: 'Halvar Breit Bd', sans-serif;
+    width: 45.1vw;
+    font-weight: 700;
+    height: 6.81vw;
+    font-size: 2.8vw;
+    line-height: 3.54vw;
+    margin-left: -12vw;
+    margin-top: -4.6vw;
+    margin-bottom: 0vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+    text-transform: uppercase;
+  }
+  .how-center-p-text-stap2-second {
+    font-family: 'Halvar Breit Bd', sans-serif;
+    width: 43.1vw;
+    font-weight: 700;
+    height: 6.81vw;
+    font-size: 2.8vw;
+    line-height: 3.14vw;
+    margin-left: -12vw;
+    margin-top: -2.4vw;
+    margin-bottom: 0vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+    text-transform: uppercase;
+  }
+  .how-center-icon {
+    position: absolute;
+    width: 45%;
+    margin-left: 36.5vw;
+    margin-top: -4.35vw;
+  }
 
+  .how-center-p-text-first {
+    width: 45vw;
+    font-size: 2.0538vw;
+    font-weight: 400;
+    line-height: 2.546vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-top: 5.15vw;
+    margin-left: -12vw;
+    color: #364059;
+  }
+  .how-center-p-text {
+    width: 43vw;
+    font-size: 2.0538vw;
+    font-weight: 400;
+    line-height: 2.546vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-top: -0.85vw;
+    margin-left: -12vw;
+    color: #364059;
+  }
+  .prizes-items11 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 181vw 0 0 0;
+    z-index: 5;
+    position: relative;
+  }
+  .prizes-button-check {
+    position: absolute;
+    z-index: 6;
+    color: #EEF3EC;
+    font-weight: 700;
+    font-size: 1.04vw;
+    line-height: 1.15vw;
+    text-align: center;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    padding: 1.439583vw 10.43125vw;
+    margin-top: 25.95vw;
+    margin-left: -44.5vw;
+    border-radius: 1.71875vw;
+    cursor: pointer;
+    /* background-image: linear-gradient(#FFFFFF, #FFFFFF); */
+    border: 0.15vw solid #AF21C9;
+    opacity: 1;
+    transition: background-image 0.2s ease-in-out;
+  }
+  .prizes-button-check b {
+    color: #AF21C9;
+    line-height: 2.375vw;
+    margin-left: 0.05vw;
+    font-family: 'Halvar Mittelschrift', sans-serif;
+    font-weight: 500;
+    font-size: 1.833vw;
+   }
+
+
+  .prizes-content-box-title-bot3 {
+    position: absolute;
+    width: 30.13vw;
+    height: 10.54vw;
+    font-weight: 400;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin: 130.7vw 0 0 57.3vw;
+    font-size: 2.93vw;
+    line-height: 3.51vw;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  .how-center-p-text-stap2-second.bonus-how {
+    width: 33vw;
+    margin-top: 0.85vw;
+    margin-left: 0vw;
+  }
+  .how-center-p-text-first.bonus-style {
+    width: 43vw;
+    font-size: 2.0538vw;
+    font-weight: 400;
+    line-height: 2.646vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin-top: 9.35vw;
+    margin-left: -12vw;
+    color: #364059;
+  }
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    width: 84.892vw;
+    height: 24.699vw;
+    padding: 1.757vw 2.489vw;
+    margin: 97vw 0vw 0vw 3vw;
+    border-radius: 2.2vw 2.2vw 2.2vw 2.2vw;
+    background-color: #FFFFFF;
+    opacity: 1;
+  }
+  .text-block-1 {
+    color: #364059;
+    width: 22.816vw;
+    height: 7.028vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 2.038vw;
+    font-weight: 400;
+    line-height: 3.046vw;
+    margin: 1.8vw 0vw 0vw 3vw;
+    letter-spacing: -0.005vw;
+  }
+  .text-block-2 {
+    color: #364059;
+    width: 23.816vw;
+    height: 7.028vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 2.038vw;
+    font-weight: 400;
+    line-height: 3.046vw;
+    margin: 1.8vw 0vw 0vw 2vw;
+    letter-spacing: -0.005vw;
+  }
+
+  .text-block-3 {
+    color: #364059;
+    width: 23.816vw;
+    height: 7.028vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 2.038vw;
+    font-weight: 400;
+    line-height: 3.046vw;
+    letter-spacing: -0.005vw;
+    margin: 1.8vw -1vw 0vw 0vw;
+  }
+  .first-step {
+    color: #364059;
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 2.038vw;
+    font-weight: 400;
+    line-height: 6.146vw;
+    margin: 0.25vw 0vw 0vw 0.6vw;
+  }
+  .second-step {
+    color: #364059;
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 2.038vw;
+    font-weight: 400;
+    line-height: 1.146vw;
+    margin: 2.65vw 0vw 0vw 30.5vw;
+  }
+  .third-step {
+    color: #364059;
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 2.038vw;
+    font-weight: 400;
+    line-height: 1.146vw;
+    margin: 2.65vw 0vw 0vw 59.8vw;
+  }
+  .prizes-text11 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 6.2vw 0 3vw -21.15vw;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    color: #364059;
+    font-size: 4.05vw;
+    line-height: 3.833vw;
+    width: 55.75vw;
+    height: 8.05vw;
+    letter-spacing: -0.04vw;
+  }
+  .how-center-p-text.bonus-prizes {
+    width: 91vw;
+    margin-top: -3.5vw;
+    margin-left: -1.75vw;
+  }
+  .how-center-p-text-first.bonus-prizes {
+    width: 91vw;
+    margin-top: -0.5vw;
+    margin-left: -1.75vw;
+  }
+  .wrapper {
+    width: 95.8vw;
+    margin-left: 2.6vw;
+    overflow: hidden;
+  }
+.how-tickets-img-tablet {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2vw 0vw 0vw 0vw;
+}
+  .how-tickets-img {
+    display: none;
+  }
+  .prizes-content-box-title-bot2-prizes {
+    position: relative;
+    width: 73.13vw;
+    height: 126.54vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin: -2.48vw 0 0 4.6vw;
+    font-size: 2.928vw;
+    font-weight: 400;
+    line-height: 3.514vw;
+    text-align: left;
+    color: #FFFFFF;
+    z-index: 0;
+  }
+  .for-test-img-test-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 116%;
+    margin-top: 4.45vw;
+    margin-left: -2vw;
+  }
+  .for-test-img-test-mini2-prizes img {
+    border-radius: 1.2vw;
+    width: 116%;
+    margin-top: 4.45vw;
+    margin-left: 4.1vw;
+  }
+  .for-test-img-second-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 116%;
+    margin-top: 4.45vw;
+    margin-left: 10.35vw;
+  }
+  .for-test-img-third-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 116%;
+    margin-top: -0.85vw;
+    margin-left: -2vw;
+  }
+  .for-test-img-4-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 116%;
+    margin-top: -0.85vw;
+    margin-left: 4.3vw;
+  }
+  .for-test-img-5-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 116%;
+    margin-top: -0.95vw;
+    margin-left: 10.3vw;
+  }
+  .for-test-img-6-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 77.2%;
+    margin-top: -0.75vw;
+    margin-left: -1.85vw;
+  }
+  .for-test-img-7-mini-prizes img {
+    border-radius: 1.2vw;
+    width: 77.2%;
+    margin-top: -0.75vw;
+    margin-left: -8vw;
+  }
+  .question-block {
+    position: relative;
+    z-index: 5;
+    margin: 70vw 0vw 1.4vw -4.4vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    color: #364059;
+    font-size: 3.35vw;
+    line-height: 2.833vw;
+    width: 55.75vw;
+    height: 8.05vw;
+    letter-spacing: -0.04vw;
+  }
+  .MuiSvgIcon-root {
+    font-size: 3.5vw !important;
+  }
+  .heading-name {
+    margin-left: 1.5vw;
+    margin-top: -2vw;
+    font-weight: 500;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
+    font-size: 2.55vw;
+    line-height: 1.650vw;
+    color: #364059;
+  }
+  .makeStyles-line-5 {
+    width: 20% !important;
+    margin: -0.52vw 0vw 3.67vw 0.4vw !important;
+    border-top: 2px solid #364059 !important;
+    background-color: #364059 !important;
+  }
+  .MuiAccordionDetails-root {
+    display: flex;
+    padding: 1.04vw 2.94vw 2.17vw 2.17vw !important;
+  }
+  .MuiTypography-body1 {
+    font-size: 2.042vw !important;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 2.55vw !important;
+    letter-spacing: 0.00938em;
+    text-align: left !important;
+  }
+  .MuiAccordion-root:first-child {
+    z-index: 5;
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    transition: background-color 0.3s;
+    border-top-left-radius: 2.5vw !important;
+    border-top-right-radius: 2.5vw !important;
+    border-bottom-right-radius: 2.5vw !important;
+    border-bottom-left-radius: 2.5vw !important;
+  }
+  .MuiAccordion-rounded {
+    z-index: 5;
+    margin-bottom: 2vw;
+    color: white !important;
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    transition: background-color 0.3s !important;
+    border: 2px solid #364059 !important;
+    border-radius: 2.5vw !important;
+  }
+  .centered-container {
+    margin-left: 16vw;
+    z-index: 55555555555555555 !important;
+    width: 93.3% !important;
+  }
+  .question-block.faq-bonus1 {
+    margin: 8.4vw 0vw 1.2vw 13.6vw;
+    font-size: 3.35vw;
+    line-height: 3.833vw;
+    width: 63.75vw;
+    height: 8.05vw;
+  }
+  .question-block.faq-bonus2 {
+    margin: 4.4vw 0vw 0.2vw 16.6vw;
+    text-transform: none;
+    font-size: 2.45vw;
+    line-height: 2.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-weight: 500;
+  }
+  .container-question-help {
+    margin-left: 1.5vw;
+    position: relative;
+    display: flex;
+    z-index: 5;
+    width: 95.938vw;
+  }
+  .column-help {
+    font-size: 2vw;
+    line-height: 2.3vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    flex: 1 1;
+    margin-top: -1vw;
+    margin-left: 6vw;
+    text-align: left;
+    padding: 2vw 6vw 3vw 0vw;
+  }
+  .column-help img {
+    height: auto;
+    margin-left: -5.6vw;
+    margin-top: -0vw;
+    position: absolute;
+    width: 4.4%;
+  }
+  .question-color-second {
+    font-size: 1.4vw;
+    color: #5E6976;
+  }
+  .column-help.third img {
+    width: 4.4%;
+    margin-left: -5.2vw;
+    margin-top: 0vw;
+  }
+  .question-color {
+    color: #1F48D8;
+  }
+  .footer-logo {
+    width: 28.7%;
+    margin-top: -12.3vw;
+    margin-left: -0.1vw;
+    position: absolute;
+  }
+  .footer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+     justify-content: left;
+    align-items: center;
+    margin-top: 3.3vw;
+    padding-top: 8.46vw;
+    padding-bottom: 19.5vw;
+     /*background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);*/
+  }
+  .footer-left {
+    margin-left: 2.55vw;
+    margin-top: 1.1vw;
+    z-index: 5;
+  }
+  .footer-color-size {
+    width: 96vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 1.829vw;
+    font-weight: 400;
+    line-height: 2.226vw;
+    text-decoration: none;
+    color: #42486C99;
+  }
+  .footer-right {
+    width: 90.61vw;
+    height: 4.3vw;
+    margin-right: 10.5vw;
+    margin-top: 11.85vw;
+    z-index: 5;
+  }
+  .footer-color-size.left {
+    font-size: 2.081vw;
+    line-height: 1.926vw;
+    color: #42486C;
+  }
+  .container-footer-bottom {
+    display: flex;
+    padding-right: 9vw;
+  }
+  .footer-logo.right {
+    width: 5.4%;
+    margin-top: -11.5vw;
+    margin-left: 88.9vw;
+    position: absolute;
+  }
 
 
 
@@ -9620,7 +10154,7 @@ iframe {
     margin-top: -10vw;
     margin-left: -6.5vw;
     width: 91vw;
-    height: 226vw;
+    height: 165vw;
     text-align: center;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -9673,7 +10207,7 @@ iframe {
     width: 91.47vw;
     height: 16.53vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin: 384vw 0 0 -0.35vw;
+    margin: 470vw 0 0 -0.35vw;
     font-size: 6.40vw;
     line-height: 8.53vw;
     text-align: left;
@@ -9720,7 +10254,7 @@ iframe {
     text-decoration: none;
     /* text-transform: uppercase; */
     padding: 2.839583vw 19.83125vw;
-    margin-top: -112.05vw;
+    margin-top: -48.05vw;
     margin-left: -45.5vw;
     border-radius: 2.71875vw;
     cursor: pointer;
@@ -9754,8 +10288,8 @@ iframe {
   #selectorspin {
     color: #d52976;
     position: absolute;
-    margin-top: -30.54vw;
-    margin-left: -2.4vw;
+    margin-top: -79.54vw;
+    margin-left: -9.1vw;
     font-size: 14.678vw;
     z-index: 516;
   }
@@ -9794,7 +10328,7 @@ iframe {
   .prizes-text11 {
     text-transform: uppercase;
     text-align: center;
-    margin: 0vw 0vw 3vw -15vw;
+    margin: -2vw 0vw 3vw -23vw;
     font-weight: 700;
     font-family: 'Halvar Breit Bd', sans-serif;
     font-size: 7.222vw;
@@ -9820,7 +10354,7 @@ iframe {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 105.5vw 0 0 5vw;
+    margin: 86.5vw 0 0 5vw;
     z-index: 21;
     position: relative;
   }
@@ -11044,7 +11578,7 @@ iframe {
   .footer-logo {
     width: 41%;
     margin-top: 10.5vw;
-    margin-left: -53.2vw;
+    margin-left: -47.2vw;
     position: absolute;
   }
 
@@ -11122,6 +11656,7 @@ iframe {
   .how-center-p-text-stap2.bonus-steps12 {
     text-transform: uppercase;
     width: 38vw;
+    height: 13vw;
     font-size: 5.000vw;
     line-height: 8.111vw;
     font-weight: 700;
@@ -11134,6 +11669,7 @@ iframe {
   .how-center-p-text-stap2-second {
     text-transform: uppercase;
     width: 82vw;
+    height: 21vw;
     font-size: 5.000vw;
     font-weight: 700;
     line-height: 5.556vw;
@@ -12391,8 +12927,8 @@ iframe {
   #selectorspintest {
     color: #d52976;
     position: absolute;
-    margin-top: -40.17vw;
-    margin-left: -3vw;
+    margin-top: -89.67vw;
+    margin-left: -10vw;
     font-size: 14.778vw;
     z-index: 136;
   }
@@ -15235,7 +15771,7 @@ iframe {
     font-weight: 400;
     line-height: 5.833vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin-top: 2.15vw;
+    margin-top: 17.15vw;
     margin-left: 0.5vw;
     color: #364059;
   }
@@ -15347,7 +15883,7 @@ iframe {
   .question-block {
     position: relative;
     z-index: 5;
-    margin: 105.5vw 0vw 7.2vw -3.4vw;
+    margin: 85.5vw 0vw 7.2vw -3.4vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
@@ -15779,7 +16315,7 @@ iframe {
     width: 86.892vw;
     height: 75.699vw;
     padding: 5.757vw 2.489vw;
-    margin: 84vw 0vw 0vw 4vw;
+    margin: 131vw 0vw 0vw 4vw;
     border-radius: 4.2vw 4.2vw 4.2vw 4.2vw;
     background-color: #FFFFFF;
     opacity: 1;
@@ -16356,6 +16892,9 @@ iframe {
   .footer-color-size.margin-left {
     margin-left: -1.15vw;
     color: #42486C;
+  }
+  .how-tickets-img-tablet {
+    display: none;
   }
 
 
