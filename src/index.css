@@ -8670,7 +8670,7 @@ iframe {
     /* text-transform: uppercase; */
     border: none;
     background-color: transparent;
-    margin-top: 0vw;
+    margin-top: 0.23vw;
     font-weight: 400;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 1.953vw;
@@ -9807,7 +9807,7 @@ iframe {
     justify-content: flex-start;
     align-items: center;
     margin: 105.5vw 0 0 5vw;
-    z-index: 8;
+    z-index: 21;
     position: relative;
   }
 
@@ -15324,7 +15324,7 @@ iframe {
     margin-left: 0.5vw;
     width: 99.21vw;
     height: auto;
-    z-index: 6;
+    z-index: 20;
     box-shadow: 0 0 0 0;
   }
   .question-block {

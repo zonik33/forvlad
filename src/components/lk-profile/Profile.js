@@ -33,7 +33,7 @@ import TestForSpin from "../TestSpinProfile";
 import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 import Popup from "../PopupReg/Popup";
 import ticketTextRight from "../../image/img_100.png";
-import tickettextblue from "../../image/img_99.png";
+import tickettextblue from '../../image/img_109.png'
 
 
 

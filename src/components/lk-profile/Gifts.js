@@ -35,7 +35,7 @@ import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
 import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_106.png";
-import tickettextblue from "../../image/img_99.png";
+import tickettextblue from '../../image/img_109.png'
 import ticketsmb from "../../image/img_108.png";
 
 export default function Gifts() {
