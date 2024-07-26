@@ -51,6 +51,7 @@ import { CSSTransition } from 'react-transition-group';
 import Prizes from "./Prizes";
 import Questions from "./Questions";
 import Footer from "./Footer";
+import wavesblur from "../image/img_104.png";
 
 
 export default function How (props) {
@@ -158,6 +159,7 @@ export default function How (props) {
     };
         return (
             <div className={'how'} id={'how'}>
+                <img className={'man-tablet waves-blur'} src={wavesblur}/>
                 <div className={'wrapper-how'}>
                     <div className={'items-block-how'}>
                         <div className={'how-bottle-left'}>
@@ -411,7 +413,8 @@ export default function How (props) {
 
                                     <p className={'how-center-p-text'}> В Акции участвуют лотерейные билеты, купленные
                                         в отделении Почты России. <br></br>
-                                        Если при покупке Вы указали <b>номер мобильного телефона</b>, то регистрировать такой
+                                        Если при покупке Вы указали <b>номер мобильного телефона</b>, то регистрировать
+                                        такой
                                         лотерейный билет не нужно. После регистрации и/или авторизации на промо-сайте
                                         акции при совпадении номера мобильного телефона лотерейный билет автоматически
                                         зарегистрируется в акции и будет отображен в Вашем личном кабинете</p>

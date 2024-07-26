@@ -2,6 +2,7 @@ import wintohealth from '../image/wintohealth.png'
 import img55 from '../image/img_55.png'
 import man from '../image/img_56.png'
 import manisok from '../image/img_105.png'
+import manisokes from '../image/img_110.png'
 import waves from '../image/img_101.png'
 import wavesblur from '../image/img_104.png'
 import logopochta from '../image/img_57.png'
@@ -85,6 +86,7 @@ export default function Main (props) {
                     <div className={'myELementSecond'}>
                         <img className={'man'} src={man}/>
                         <img className={'man-mobile'} src={manisok}/>
+                        <img className={'man-tablet'} src={manisokes}/>
                         {/*<div className={'overlay'}></div>*/}
                         {/*<div className={'overlay-low'}></div>*/}
                     </div>
@@ -92,6 +94,8 @@ export default function Main (props) {
                         <img className={'man logo-pochta'} src={logopochta}/>
                         <img className={'man waves'} src={waves}/>
                         <img className={'man waves-blur'} src={wavesblur}/>
+                        <img className={'man-tablet logo-pochta'} src={logopochta}/>
+                        <img className={'man-tablet waves'} src={waves}/>
                         <div className={'main-text'}> Покупайте лотерейные билеты в отделениях «Почты России»*
                             и участвуйте в розыгрыше призов от Национальной Лотереи
                             <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,

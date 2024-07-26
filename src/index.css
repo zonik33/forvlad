@@ -2071,7 +2071,9 @@ header .menu-content-profile a:hover {
   100% { transform: rotate(0deg); }
 }
 
-
+.man-tablet {
+  display: none;
+}
 .man {
   position: absolute;
   flex: 1 1;
@@ -7053,7 +7055,7 @@ button:focus {
 }
 .MuiTypography-body1 {
   font-size: 1.042vw !important;
-  font-family: Inter, sans-serif !important;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
   font-weight: 400 !important;
   line-height: 1.55vw !important;
   letter-spacing: 0.00938em;
@@ -7084,7 +7086,7 @@ button:focus {
   margin-left: 1vw;
   margin-top: -3.74vw;
   font-weight: 500;
-  font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
   font-size: 1.25vw;
   line-height: 1.650vw;
   color: #364059;
@@ -8586,6 +8588,41 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  header .menu-content {
+    width: 81vw;
+    position: absolute;
+    row-gap: 5vw;
+    margin-top: 0.52vw;
+    margin-left: -19vw;
+  }
+  header .menu-content a {
+    font-size: 2vw;
+    padding: 0;
+  }
+  header .logo {
+    display: none;
+    position: absolute;
+    width: 10.2vw;
+    height: 4.25vw;
+    margin-left: 3vw;
+  }
+  header .logo-text {
+    display: none;
+    position: absolute;
+    width: 6.5vw;
+    height: auto;
+    margin-left: 5.1vw;
+    margin-top: 0.2vw;
+  }
+  header .logo-text-mobile {
+    display: block;
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    margin-left: -7.7vw;
+    margin-top: 2vw;
+    z-index: 51;
+  }
   header {
     position: absolute;
     top: 0;
@@ -8596,7 +8633,7 @@ iframe {
     z-index: 99;
     box-sizing: border-box;
     transition: background 0.3s;
-    border-radius: 0vw 0vw 1vw 1vw;
+    border-radius: 0vw 0vw 3vw 3vw;
     background-color: #FFFFFF;
     box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
   }
@@ -8615,13 +8652,17 @@ iframe {
     transform: translateZ(0);
     color: #2F41B0;
   }
-  header .menu-content {
+  .man-tablet {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3.665vw;
-    padding-left: 1.8vw;
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 83%;
+    margin-left: -98.2vw;
+    margin-top: -2vw;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
   }
   .button-animation {
     text-decoration: none;
@@ -8639,21 +8680,227 @@ iframe {
     transition: opacity 0.2s ease-in-out;
   }
   .secret-block {
-    margin-left: 3vw;
-    margin-top: -0.4vw;
+    margin-left: 6vw;
+    margin-top: 1vw;
   }
   .random-block {
-    margin-left: 8.5vw;
-    margin-top: -0.9vw;
+    position: absolute;
+    margin-left: 61.5vw;
+    margin-top: 0.55vw;
   }
   .users-logo {
     position: absolute;
     width: 3.46vw;
     height: auto;
-    margin-left: 56.8vw;
-    margin-top: -1.73vw;
+    margin-left: 57.8vw;
+    margin-top: 0.27vw;
   }
+  .man-tablet.logo-pochta {
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 13.8%;
+    margin-left: -21.2vw;
+    margin-top: 16.45vw;
+    z-index: 8;
+  }
+  .man-tablet.waves {
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 135.8%;
+    margin-left: -38.2vw;
+    margin-top: 8.45vw;
+    z-index: 2;
+  }
+  .man-tablet.waves-blur {
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 100vw;
+    margin-left: 0vw;
+    margin-top: -16.55vw;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .prizes-text {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 3.4vw 0 3vw -5.35vw;
+    font-weight: 700;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    color: #364059;
+    font-size: 3.35vw;
+    line-height: 3.833vw;
+    width: 55.75vw;
+    height: 8.05vw;
+    letter-spacing: -0.04vw;
+  }
+  .how-tickes-img-p {
+    font-family: 'Halvar Breit Bd', sans-serif;
+    width: 45.1vw;
+    font-weight: 700;
+    height: 6.81vw;
+    font-size: 2.8vw;
+    line-height: 3.54vw;
+    margin-left: 4vw;
+    margin-top: 6.4vw;
+    margin-bottom: 6vw;
+    letter-spacing: -0.02vw;
+    color: #364059;
+    text-transform: uppercase;
+  }
+  .how-tickes-img-p-right-how {
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    width: 42.1vw;
+    font-weight: 400;
+    height: 6.81vw;
+    font-size: 2.138vw;
+    line-height: 2.444vw;
+    margin-left: 4.1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 10vw;
+    color: #364059;
+    text-align: left;
+  }
+  .prizes-content-box2 {
+    margin-top: 39vw;
+    width: auto;
+    height: 16vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .how-left-icon {
+    width: 43.5%;
+    margin-left: 2.5vw;
+    margin-top: -0.7vw;
+  }
+  .main-text {
+    position: relative;
+    text-align: left;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-weight: 500;
+    color: #EEF3EC;
+    font-size: 2.45vw;
+    line-height: 3vw;
+    margin-left: -21.3vw;
+    margin-top: 28vw;
+    word-wrap: normal;
+    margin-bottom: 3.26vw;
+    z-index: 5;
+    width: 35vw;
+    height: 6.81vw;
+  }
+  .man {
+    display: none;
+  }
+  .man-tablet {
+    display: flex;
+    position: absolute;
+    flex: 1 1;
+    height: auto;
+    width: 53%;
+    margin-left: -62.2vw;
+    margin-top: 48vw;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .man-mobile {
+    display: none;
+  }
+  .main {
+    padding: 5.5vw 0;
+    background: linear-gradient(to right, #6AAFF8 100%, #3C84E1 100%);
+    background-size: cover;
+    width: 100%;
+    height: 49.725vw;
+    font-family: 'Circe', sans-serif;
+    font-weight: 700;
+    scroll-behavior: smooth;
+    font-size: 0.83vw;
+    line-height: 1.5;
+    margin-bottom: 10vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .button-animation-text {
+    position: absolute;
+    z-index: 6;
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    padding: 1.9vw 3.1vw;
+    border-radius: 1.363vw;
+    background-image: linear-gradient(#AF21C9, #AF21C9);
+    margin-left: -21.3vw;
+    margin-top: 7.5vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    /* border: 0.15vw solid #FFFFFF80; */
+    transition: background-image 0.3s ease;
+  }
+  .button-animation-text b {
+    color: #FFFFFF;
+    line-height: 2.375vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-weight: 500;
+    font-size: 2.242vw;
+  }
+  .how {
+    width: 73.21vw;
+    height: auto;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    min-width: initial;
+    scroll-behavior: smooth;
+    font-size: 0.83vw;
+    line-height: 1.5;
+    margin-top: 0vw;
+    padding-top: 1.46vw;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  }
+  .items-block-how {
+    overflow: hidden;
+    position: absolute;
+    margin-top: -11.5vw;
+    margin-left: -7.7vw;
+    width: 95.91vw;
+    height: 135vw;
+    border-radius: 3.46vw;
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    z-index: 5;
+    /* box-shadow: 0 32px 80px 0 rgba(197, 205, 228, 1); */
+  }
+  .how-tickes-img-p-right {
+    position: absolute;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    width: 37.1vw;
+    font-weight: 400;
+    height: 6.81vw;
+    font-size: 1.833vw;
+    line-height: 2.1vw;
+    margin-left: 0vw;
+    margin-top: 12.3vw;
+    margin-bottom: 10vw;
+    text-align: left;
+  }
+
+
+
+
+
+
+
+
+
 }
+
 @media screen and (max-width: 767px) {
   iframe {
     margin-top: 25vw;
@@ -8750,10 +8997,10 @@ iframe {
   header .logo-text-mobile {
     display: block;
     position: absolute;
-    width: 32.3vw;
+    width: 36.3vw;
     height: auto;
     margin-left: -6.7vw;
-    margin-top: 2vw;
+    margin-top: 5vw;
     z-index: 51;
   }
 
@@ -15103,7 +15350,7 @@ iframe {
     margin-left: 3vw;
     margin-top: -3.5vw;
     font-weight: 500;
-    font-family: 'Halvar Mittelschrift Rg', Arial, sans-serif;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
     font-size: 5.000vw;
     line-height: 6.550vw;
     color: #364059;
@@ -16013,6 +16260,9 @@ iframe {
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
     color: #364059;
+  }
+  .man-tablet {
+    display: none;
   }
   .popup-banner {
     background-color: #088740;
