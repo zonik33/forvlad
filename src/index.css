@@ -3952,6 +3952,9 @@ canvas#wheel-profile-popup {
 
 
 }
+.items-block-how.qouest::after {
+  display: none;
+}
 .gifts-prizes-data {
   width: 11vw;
   text-align: left;
@@ -8588,6 +8591,17 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .items-block-how.qouest {
+    background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
+    position: relative;
+    border-radius: 0vw 0vw 1.46vw 1.46vw;
+    margin-top: 33vw;
+    margin-left: 2.1vw;
+    width: 96vw;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 0 0 0;
+  }
   header .menu-content {
     width: 81vw;
     position: absolute;
@@ -15326,6 +15340,9 @@ iframe {
     height: auto;
     z-index: 20;
     box-shadow: 0 0 0 0;
+  }
+  .items-block-how.qouest::after {
+    display: none;
   }
   .question-block {
     position: relative;
