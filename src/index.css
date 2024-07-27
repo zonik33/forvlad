@@ -8604,6 +8604,16 @@ iframe {
     border-radius: 1.27vw;
     margin-top: 0vw;
   }
+  .centered-container.jss2 {
+    width: 94% !important;
+    z-index: 15 !important;
+  }
+  .jss5 {
+    background-color: #000 !important;
+    border-top: 1px solid #000 !important;
+    margin: -0.72vw 0 1.67vw -0.1vw !important;
+    width: 21vw !important;
+  }
   .popup-take-gifts {
     background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
