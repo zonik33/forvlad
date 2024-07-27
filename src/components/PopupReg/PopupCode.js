@@ -229,12 +229,12 @@
                                     )}
                                     <span id="nameError" className="error"></span>
                                 </div>
-                                <label className={"right-label-popupCode"}>
-                                    <a onClick={openPopup} className={'text-nloto'}>Сменить номер</a>
-                                    {isPopupOpen && (
-                                        <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
-                                    )}
-                                </label>
+                                {/*<label className={"right-label-popupCode"}>*/}
+                                {/*    <a onClick={openPopup} className={'text-nloto'}>Сменить номер</a>*/}
+                                {/*    {isPopupOpen && (*/}
+                                {/*        <Popup isOpen={isPopupOpen} closeModal={closePopup}/>*/}
+                                {/*    )}*/}
+                                {/*</label>*/}
                                 <span
                                     id="countdown"
                                     onClick={handleTimerClick}

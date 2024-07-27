@@ -200,7 +200,7 @@ function Popup(props) {
                         onSubmit={postRegister}
                         ref={popupRef}
                         onMouseDown={handleMouseDown}
-                        action={'https://nloto-promoвфывфы.ru/backend/api/login'}
+                        action={'https://nloto-promo.ru/backend/api/login'}
                         method={'POST'}
                         id={'form-register'}
                         className={'form-register'}
