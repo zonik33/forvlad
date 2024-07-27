@@ -8595,6 +8595,217 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .popup-banner {
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+    width: 44.6vw;
+    height: 31.99vw;
+    padding: 0.6vw 0.94vw;
+    border-radius: 1.27vw;
+    margin-top: 0vw;
+  }
+  .popup-take-gifts {
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+    width: 45.6vw;
+    height: 23.99vw;
+    padding: 0.6vw 0.94vw;
+    border-radius: 1.27vw;
+    margin-top: 0vw;
+  }
+  .its-2 {
+    height: 34.99vw;
+  }
+  .popup-take-gifts .form-register {
+    width: 45vw;
+    margin-left: 2.6vw;
+  }
+  .bilet-ticket-2-p.take-gifts {
+    margin-left: 1.4vw;
+    width: 31.35vw;
+    height: 2.90vw;
+    margin-bottom: 3vw;
+    display: block;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .popup-h1.take-gifts {
+    margin-left: 6.5vw;
+  }
+  .bilet-ticket-2-p2.take-gifts {
+    margin-left: 1.5vw;
+    width: 31.35vw;
+    height: 2.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 500;
+    color: #364059;
+  }
+  .bilet-ticket-2-p4 {
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;
+    width: 31.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .button-animation-text-profile.click-take-gifts {
+    margin-left: 5.75vw;
+    margin-top: 25.8vw;
+    padding: 1.5vw 2.35vw;
+    background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+    border: 0vw solid #AF21C9CC;
+    color: #EEF3EC;
+    transition: color 0.3s, background-image 0.3s;
+    border-radius: 1.3vw;
+  }
+  .popup-take-gifts .close {
+    position: absolute;
+    cursor: pointer;
+    margin: 0.6vw 0.35vw 0.35vw 41.38vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-take-gifts .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: 0.6vw 0.35vw 0.35vw 41.38vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .bilet-ticket-2-p.take-banner {
+    margin-left: 3.2vw;
+    width: 32.35vw;
+    height: 1.90vw;
+    margin-bottom: 2vw;
+    display: block;
+    text-align: center;
+    margin-top: 1vw;
+    font-size: 1.72vw;
+    line-height: 2vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .popup-h1.take-banner {
+    margin-left: 4vw;
+    margin-bottom: 2vw;
+  }
+  .bilet-ticket-2-p2.take-banner {
+    margin-left: 2vw;
+    width: 35.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.57vw;
+    line-height: 1.91vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .bilet-ticket-2-p4.take-banner {
+    margin-top: 4.1vw;
+    margin-left: 6.5vw;
+    width: 26.35vw;
+    height: 4.83vw;
+    display: block;
+    text-align: center;
+    font-size: 1.57vw;
+    line-height: 1.91vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .popup-banner .close {
+    position: absolute;
+    cursor: pointer;
+    margin: 1.2vw 0.35vw 0.35vw 39.78vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-banner .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: 1.2vw 0.35vw 0.35vw 39.78vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .users-logo-spin.hand-left.animateback {
+    opacity: 1;
+    transform: translateY(20px); /* Изменение положения при появлении hand-left */
+    width: 5vw;
+    animation: appearAndRotateBack 0.5s both ease-in-out;
+    transform-origin: bottom center; /* Изменение точки вращения к левому нижнему углу руки */
+    z-index: 10; /* Это сохранит изображение "hand-left" над другими элементами */
+  }
+  .users-logo-spin.hand-left.animate.shake-animation {
+    transform: translateY(-30px) rotate(120deg);
+    animation: shake 1s 1s forwards;
+  }
+
+  @keyframes appearAndRotate {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+    50% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-30px) rotate(120deg); }
+  }
+  @keyframes appearAndRotateBack {
+    0% { transform: translateY(0px) rotate(120deg); opacity: 0; }
+    50% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+  *:focus {
+    outline: none;
+  }
+
+  @keyframes shake {
+    0% { transform: translateY(-30px) rotate(120deg); }
+    25% { transform: translateY(-25px) rotate(125deg); }
+    50% { transform: translateY(-35px) rotate(115deg); }
+    75% { transform: translateY(-28px) rotate(123deg); }
+    100% { transform: translateY(-30px) rotate(120deg); }
+
+  }
   .items-block-how.qouest {
     background: linear-gradient(to right, #edf0fa 50%, #edf0fa 20%);
     position: relative;
@@ -8605,6 +8816,158 @@ iframe {
     height: auto;
     z-index: 1;
     box-shadow: 0 0 0 0;
+  }
+  #spin-popup {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 1.23vw;
+    background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
+
+    border: 0vw solid #FFFFFF80;
+    z-index: 6;
+    margin-left: 0vw;
+    margin-top: -17.65vw;
+    padding: 1.8vw 2.86vw;
+    color: #FFFFFF;
+    line-height: 1.47vw;
+    font-family: 'Acrom Medium', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.47vw;
+  }
+  .left-first-profile-p3-count.spin-p-test {
+    text-transform: uppercase;
+    width: 22vw;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-size: 1.911vw;
+    text-align: left;
+    line-height: 3.050vw;
+    color: #364059;
+    font-weight: 700;
+    margin-left: -0.4vw;
+    margin-top: 3.1vw;
+  }
+  .popup-spin .close {
+    position: absolute;
+    cursor: pointer;
+    margin: -8.4vw 0.35vw 0.35vw 51.78vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-spin .close:hover {
+    margin: -8.4vw 0.35vw 0.35vw 51.78vw;
+    color: #bebec5;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+  }
+  .users-logo-spin.spin-test-animal.animate {
+    transform: translateY(0) scale(1);
+    width: 11.5vw;
+  }
+  .users-logo-spin.spin-test-animal {
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    margin: -47.2vw 0vw 0vw 16.5vw;
+    z-index: -1;
+    opacity: 0;
+    transition: transform 1s ease-out, width 1s ease-out;
+    transform: translateY(200px) scale(0.2);
+  }
+  canvas#wheel-profile-popup {
+    position: relative;
+    z-index: 5;
+    width: 35.722vw;
+    height: 35.722vw;
+    margin: -34vw 0vw 0vw 19vw;
+  }
+  .users-logo-spin.spin-test-popup {
+    position: absolute;
+    width: 24.5vw;
+    height: auto;
+    margin: -28.3vw 0vw 0vw 24.6vw;
+  }
+  .users-logo-spin.hand-right {
+    position: absolute;
+    width: 4vw;
+    height: auto;
+    margin: -31.7vw 0vw 0vw 25vw;
+    z-index: -1;
+    opacity: 0;
+    transition: transform 1s ease-out, width 1s ease-out;
+    transform: translateY(0px) scale(1);
+  }
+  .users-logo-spin.left-right {
+    position: absolute;
+    width: 4vw;
+    height: auto;
+    margin: -35.7vw 0vw 0vw 25vw;
+    z-index: -1;
+    opacity: 0;
+    transition: transform 1s ease-out, width 1s ease-out;
+    transform: translateY(0px) scale(1);
+  }
+  #selectorspintestpopup {
+    color: #d52976;
+    position: absolute;
+    margin-top: -8.8vw;
+    margin-left: -26.64vw;
+    font-size: 4.878vw;
+    z-index: 6;
+  }
+  .wheel-center-container-popup {
+    position: absolute;
+    margin: -23.5vw 0vw 0vw 62.2vw;
+  }
+
+  .left-first-profile-p.spin-p {
+    width: 21vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 1.95vw;
+    text-align: left;
+    line-height: 2vw;
+    color: #364059;
+    font-weight: 400;
+    margin-left: -0.4vw;
+    margin-top: -0.5vw;
+  }
+  .left-first-profile-p3-count.spin-p {
+    width: 19vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 1.764vw;
+    text-align: left;
+    line-height: 2.050vw;
+    font-weight: 400;
+    margin-left: -0.4vw;
+    margin-top: -1.9vw;
+    color: #364059;
+  }
+  .left-first-profile-p2-p2-p2.p-popup {
+    width: 21.73vw;
+    height: 7.32vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-size: 1.764vw;
+    font-weight: 400;
+    margin-top: 6.8vw;
+    margin-left: -0.5vw;
+    text-align: left;
+    color: #364059;
+    line-height: 7.050vw;
+  }
+  .Modal-add {
+    overflow: visible;
+    width: 60vw !important;
+    height: 40vw !important;
   }
   .close-for-popup-first:hover {
     position: absolute;
@@ -8819,18 +9182,18 @@ iframe {
     outline: none;
   }
   #submit {
-    width: 18.78vw;
+    width: 20.78vw;
     height: 5.65vw;
     border-radius: 1.4vw;
     border: 0.055vw solid #FFFFFF4D;
     background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
     color: #FFFFFF;
-    font-size: 1.62vw;
-    line-height: 1.62vw;
+    font-size: 1.82vw;
+    line-height: 1.82vw;
     font-weight: 400;
     font-family: 'Acrom Medium', Arial, sans-serif;
     text-transform: uppercase;
-    margin-left: 7.5vw;
+    margin-left: 6.5vw;
     margin-top: 1vw;
     z-index: 999999999999999;
   }
@@ -14478,8 +14841,10 @@ iframe {
     margin-top: -3vw;
   }
   .form-group-password {
-    width: 36.6vw;
-    height: 6vw;
+    width: 34.6vw;
+    height: 19vw;
+    margin-left: 0vw;
+    margin-right: -0.5vw;
   }
   .popupCode-form-label {
     display: inline-block;
@@ -15847,7 +16212,7 @@ iframe {
 
   .popup-ticket1 .left-label {
     width: 76.53vw;
-    margin-top: 1.8vw;
+    margin-top: 6.8vw;
     margin-left: -0.8vw;
     float: left;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
@@ -15885,8 +16250,8 @@ iframe {
     font-size: 4.27vw;
     line-height: 5.87vw;
     width: 33.53vw;
-    margin-top: 18.5vw;
-    margin-left: 17vw;
+    margin-top: 14.5vw;
+    margin-left: 6vw;
     color: #364059;
   }
   .how-tickets-img-1 {
@@ -15937,7 +16302,7 @@ iframe {
     border: 0.14vw;
     width: 70vw;
     outline: none;
-    margin: 0.8vw 0 0 -1vw;
+    margin: -2vw 0 0 -1vw;
     font-size: 4.27vw;
     color: #2A60AA;
     border-radius: 2vw;
@@ -15952,7 +16317,7 @@ iframe {
     font-size: 4.27vw;
     line-height: 4.27vw;
     font-weight: 400;
-    margin-top: 32vw;
+    margin-top: 27vw;
     margin-left: 1.8vw;
     font-family: 'Acrom Medium', Arial, sans-serif;
     text-transform: uppercase;
@@ -17195,6 +17560,7 @@ iframe {
     color: #364059;
   }
   .bilet-ticket-2-p4.take-gifts {
+    margin-left: -0vw;
     margin-top: 0.5vw;
     width: 76.53vw;
     height: 9.2vw;
