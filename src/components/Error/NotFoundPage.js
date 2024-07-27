@@ -27,7 +27,7 @@ import PopupVideos from "../Winners-videos/PopupVideos";
 import ticket from "../../image/ticket.png";
 import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_107.png";
-import tickettextblue from "../../image/img_99.png";
+import tickettextblue from '../../image/img_109.png'
 import ScrollPrizes from "../Scroll/ScrollPrizes";
 import ScrollFaq from "../Scroll/ScrollFaq";
 import ScrollSupport from "../Scroll/ScrollSupport";
