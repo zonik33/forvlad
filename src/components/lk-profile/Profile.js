@@ -73,11 +73,17 @@ export default function Profile(props){
     useEffect(() => {
         const storedProfile = JSON.parse(localStorage.getItem('profile'));
         setProfile(storedProfile);
-
+        console.log(storedProfile); // Добавьте эту строку для отладки
     }, []);
     const currentDomain = window.location.origin;
     const location = useLocation();
+    const selectChoose = (text) => {
+        // Удалить токен из localStorage
+        localStorage.removeItem('auth_key');
 
+        // Перенаправить на главную страницу
+        window.location.href = '/';
+    };
 
     const handleImageClick = () => {
         window.location.href = '/'
@@ -273,7 +279,7 @@ export default function Profile(props){
                             </div>
                             <div className={'random-block'}>
                                 <button id="profile-button"
-                                        className="button-animation">
+                                        className="button-animation" onClick={selectChoose}>
                                     Личный кабинет
                                 </button>
                             </div>
@@ -444,10 +450,12 @@ export default function Profile(props){
                                         <div className={'content-from-left'}>
                                             {/*<p className={'right-second-profile-p'}>Данные профиля</p>*/}
                                             <p className={'right-second-profile-p2'}>Номер телефона</p>
-                                            <input className={'popupCode-input-profile'} type="tel"
-                                                   defaultValue={'+7 977 302 84 57'} value={profile && profile.login}
-                                                   readOnly
-                                                   style={{backgroundColor: '#edf0fa'}}
+                                            <input
+                                                className={'popupCode-input-profile'}
+                                                type="tel"
+                                                value={profile && profile.login}
+                                                readOnly
+                                                style={{backgroundColor: '#edf0fa'}}
                                             />
                                             {/*<p className={'right-second-profile-p3'}><a>Изменить пароль</a></p>*/}
                                         </div>

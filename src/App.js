@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {BrowserRouter, Routes, Route, Navigate, Outlet} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate, Outlet, useNavigate} from 'react-router-dom';
 import Profile from "./components/lk-profile/Profile";
 import Nav from "./Nav/Nav";
 import Gifts from "./components/lk-profile/Gifts";
@@ -87,16 +87,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Nav />} />
             <Route
-                path="/profile/*" element={<Profile />}
-                // element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
+                path="/profile/*"
+                element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
             />
             <Route
-                path="/gifts/*" element={<Gifts />}
-                // element={isAuthenticated ? <Gifts /> : <Navigate to="/" />}
+                path="/gifts/*"
+                element={isAuthenticated ? <Gifts /> : <Navigate to="/" />}
             />
             <Route
-                path="/tickets/*" element={<Tickets/>}
-                // element={isAuthenticated ? <Tickets/> : <Navigate to="/" />}
+                path="/tickets/*"
+                element={isAuthenticated ? <Tickets/> : <Navigate to="/" />}
             />
             {/*<Route path="/videos/*" element={isAuthenticated ? <Videos/> : <Navigate to="/" />}*/}
             />

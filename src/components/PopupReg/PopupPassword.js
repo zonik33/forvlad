@@ -78,6 +78,9 @@ export default function PopupPassword (props) {
     };
     async function postRegisterPassword(event) {
         const form = document.getElementById('form-register-password');
+        setTimeout(() => {
+            window.location.href = '/profile';
+        }, 1000);
         event.preventDefault();
         const hash = localStorage.getItem('hash');
         // const password = document.getElementById('password');
@@ -193,7 +196,8 @@ export default function PopupPassword (props) {
                         {/*<h1 className={'popup-h1'}>Регистрация</h1>*/}
                         <span id="phoneError" className="error"></span>
                         <br/>
-                        <a className={'a-last-first'}>Для завершения регистрации необходимо дать согласия:</a>
+                        <a className={'a-last-first main-test-text-last'}>Завершение регистрации</a>
+                        <a className={'a-last-first'}>Необходимо дать согласие:</a>
                         <div className={'form-group-fisrt-one'}>
                             <label className={'popup-p-center'}>
                                 <input
@@ -203,7 +207,8 @@ export default function PopupPassword (props) {
                                     onChange={handleAgree1Change}
                                 />
                                 <span className={`custom-checkbox ${!agree1Checked ? 'error' : ''}`}></span>
-                                <p>Мне есть 18 лет. Я согласен на обработку персональных данных ООО "Спортивные лотереи" и
+                                <p>Мне есть 18 лет. Я согласен на обработку персональных данных ООО "Спортивные лотереи"
+                                    и
                                     ООО НКО "Мобильная карта" и с договорами-офертой ООО "Спортивные лотереи" и ООО НКО
                                     "Мобильная карта"
                                 </p>
@@ -229,7 +234,8 @@ export default function PopupPassword (props) {
                                     onChange={handleAgree3Change}
                                 />
                                 <span className={`custom-checkbox ${!agree3Checked ? 'error' : ''}`}></span>
-                                <p>Я согласен с обработкой ООО «Спортивные Лотереи» моих персональных данных , собранных в
+                                <p>Я согласен с обработкой ООО «Спортивные Лотереи» моих персональных данных , собранных
+                                    в
                                     рамках договора-оферты ООО «Спортивные Лотереи», в целях направления мне рекламы по
                                     сетям электросвязи.
                                 </p>
@@ -260,8 +266,10 @@ export default function PopupPassword (props) {
                                     onChange={handleAgree5Change}
                                 />
                                 <span className={`custom-checkbox ${!agree5Checked ? 'error' : ''}`}></span>
-                                <p> Я согласен c поручением ООО «Спортивные Лотереи» обработки моих персональных данных ООО
-                                    «Бэйкер промоушен» в целях его сбора и передачи лицам, которым я даю согласия и/или с
+                                <p> Я согласен c поручением ООО «Спортивные Лотереи» обработки моих персональных данных
+                                    ООО
+                                    «Бэйкер промоушен» в целях его сбора и передачи лицам, которым я даю согласия и/или
+                                    с
                                     которыми я вступаю в договорные отношения, в рамках оферт на сайте nloto.ru.
                                 </p>
                                 <span id="phoneError" className="error"></span>

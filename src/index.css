@@ -5138,7 +5138,7 @@ canvas#wheel-profile-popup {
   height: 3.22vw;
   margin-top: 2vw;
   font-family: 'Acrom Medium', Arial, sans-serif;
-  color: white;
+  color: #364059;
   text-align: center;
   cursor: pointer;
 }
@@ -5574,7 +5574,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-2-p2 {
   width: 26.35vw;
@@ -5585,7 +5585,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-2-p2.take-gifts {
   margin-left: -1.5vw;
@@ -5661,7 +5661,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-2-p4 {
   margin-top: 1.5vw;
@@ -5685,7 +5685,7 @@ canvas#wheel-profile-popup {
   line-height: 1.61vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-5-p {
   width: 26.35vw;
@@ -5851,15 +5851,20 @@ canvas#wheel-profile-popup {
   border: #FFFFFF4D 0vw solid;
   color: #bebec5;
 }
+.popup-h1.popup-first-some-fisrst {
+  text-transform: uppercase;
+  margin: -1vw 0vw 0vw 4.5vw;
+}
 .popup-ticket1 .popup-h1 {
-  width: 21.35vw;
+  text-transform: uppercase;
+  width: 28.35vw;
   position: relative;
   font-size: 1.61vw;
   line-height: 1.77vw;
   font-family: 'Halvar Breit Bd', sans-serif;
   font-weight: 400;
   margin-top: 1.1vw;
-  margin-left: 2.7vw;
+  margin-left: 0.7vw;
   color: #364059;
 }
 .popup-winners-videos .popup-h1 {
@@ -6903,7 +6908,9 @@ button:focus {
   width: 0.5vw; /* Ширина скроллбара */
 }
 .Modal .popup-h1 {
-  margin-left: 2vw;
+  margin-top: 3vw;
+  text-transform: uppercase;
+  margin-left:0.8vw;
 }
 .Modal::-webkit-scrollbar-thumb {
   background-color: transparent; /* Цвет ползунка скроллбара */
@@ -7886,11 +7893,12 @@ button:focus {
   scrollbar-color: gray lightgray;
 }
 .popup-content-code {
-  background-color: #FFFFFF4D;
+  background-image: linear-gradient(#e1e5f2, #e1e5f2, #e1e5f2);
+  border-radius: 1.37vw;
+  box-shadow: 0 1vw 3.5vw 1.7vw #c5cde4;
   width: 22.8vw;
   height: 18.4vw;
   padding: 2.6vw 6.94vw;
-  border-radius: 1.83vw;
   margin-top: 0vw;
   scrollbar-width: thin;
   scrollbar-color: gray lightgray;
@@ -7906,7 +7914,8 @@ button:focus {
   scrollbar-color: gray lightgray;
 }
 .popup-content-password {
-  background-color: #FFFFFF4D;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 0vw 4.5vw 1.7vw rgba(197, 205, 228, 1);
   width: 22.8vw;
   height: 38.6vw;
   padding: 2.6vw 6.94vw;
@@ -7916,9 +7925,10 @@ button:focus {
   scrollbar-color: gray lightgray;
 }
 .popup-content-password-copy {
-  background-color: #ffffff4d;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 0vw 4.5vw 1.7vw rgba(197, 205, 228, 1);
   border-radius: 1.83vw;
-  height: 20.6vw;
+  height: 23.6vw;
   margin-top: 0;
   padding: 2.6vw 6.94vw;
   scrollbar-color: gray #d3d3d3;
@@ -8015,7 +8025,7 @@ button:focus {
   line-height: 1.3vw;
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .popup-p-center{
   font-size: 1.67vw;
@@ -8075,7 +8085,7 @@ button:focus {
 }
 .text-nloto {
   text-decoration: underline;
-  color: #FFFFFF !important;
+  color: #364059 !important;
 }
 .text-nloto-blue {
   /*text-decoration: underline;*/
@@ -8132,16 +8142,32 @@ button:focus {
   height: 6.29vw;
 }
 .a-last-first {
-  margin-top: -3vw;
+  color: #364059;
+  margin-top: -2vw;
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
   font-size: 1.32vw;
   line-height: 1.76vw;
   width: 26vw;
-  margin-bottom: 3vw;
-  margin-left: -1.8vw;
+  margin-bottom: 1.4vw;
+  margin-left: 4vw;
+}
+
+.a-last-first.main-test-text-last {
+  text-align: left;
+  text-transform: uppercase;
+  color: #364059;
+  margin-top: -4vw;
+  font-size: 1.61vw;
+  line-height: 1.77vw;
+  font-family: 'Halvar Breit Bd', sans-serif;
+  font-weight: 700;
+  width: 26vw;
+  margin-bottom: 2vw;
+  margin-left: 5.2vw;
 }
 .a-last-first-copy {
+  color: #364059;
   font-family: Halvar Mittelschrift Rg,Arial,sans-serif;
   font-size: 1.32vw;
   font-weight: 400;
@@ -8231,11 +8257,15 @@ button:focus {
   display: inline-block;
   width: 2.20vw;
   height: 2.20vw;
-  background-color: #FFFFFF;
+  background-color: #364059;
   border-radius: 0.44vw;
   margin-left: -5vw;
   margin-top: -1.35vw;
   margin-bottom: 1.3vw;
+}
+input[type="checkbox"]:not(:checked) + .custom-checkbox {
+  background-color: #6b748f;
+  /* Добавьте другие свойства CSS, если необходимо */
 }
 .custom-checkbox.error {
   border: 0.07vw solid red;
@@ -8274,20 +8304,23 @@ button:focus {
   text-decoration: none;
   color: #FFFFFF;
 }
-#submit {
-  width: 15.78vw;
-  height: 4.65vw;
-  border-radius: 1.4vw;
-  border: 0.055vw solid #FFFFFF4D;
-  background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
-  color: #FFFFFF;
-  font-size: 1.32vw;
-  line-height: 1.32vw;
-  font-weight: 400;
-  font-family: 'Acrom Medium',  Arial, sans-serif;
-  text-transform: uppercase;
-  margin-left: 3.5vw;
-  z-index: 999999999999999;
+
+  #submit {
+    width: 15.78vw;
+    height: 4.65vw;
+    border-radius: 1.4vw;
+    border: 0.055vw solid #FFFFFF4D;
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
+    color: #FFFFFF;
+    font-size: 1.32vw;
+    line-height: 1.32vw;
+    font-weight: 400;
+    margin-top: 2.5vw;
+    font-family: 'Acrom Medium', Arial, sans-serif;
+    text-transform: uppercase;
+    margin-left: 3.5vw;
+    z-index: 999999999999999;
+
 }
 
 .sumbit-button-submit {
@@ -8324,7 +8357,7 @@ button:focus {
   height: 4.85vw;
   border-radius: 1.4vw;
   border: 0.055vw solid #FFFFFF4D;
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0 );
+  background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
   color: #FFFFFF;
   font-size: 1.32vw;
   line-height: 1.32vw;
@@ -8334,15 +8367,17 @@ button:focus {
   bottom: 50%;
   font-family: 'Acrom Medium', Arial, sans-serif;
   text-transform: uppercase;
+  cursor: pointer;
 }
 #submit-password:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
 }
 #submit-password:disabled {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#665a68, #816c85, #58485a);
+  cursor: auto;
 }
 #submit-password-copy {
-  background-image: linear-gradient(#da4da3,#8b3a99,#2f46b0);
+  background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
   border: 0.055vw solid #ffffff4d;
   border-radius: 1.4vw;
   bottom: 50%;
@@ -8360,10 +8395,10 @@ button:focus {
   cursor: pointer;
 }
 #submit-password-copy:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
 }
 #submit-password-copy:disabled {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#665a68, #816c85, #58485a);
   cursor: auto;
 }
 #submit-auth{
@@ -8520,7 +8555,7 @@ button:focus {
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
   line-height: 1.63vw;
-  color: #FFFFFF;
+  color: #364059;
   margin-left: -1.8vw;
 }
 .popupPassword-form-label {
@@ -8528,7 +8563,7 @@ button:focus {
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-weight: 400;
   line-height: 1.63vw;
-  color: #FFFFFF;
+  color: #364059;
   margin-left: -1.8vw;
 }
 .popupPassword-input {
@@ -8595,6 +8630,288 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .popup-content-password-copy {
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 0vw 4.5vw 1.7vw rgba(197, 205, 228, 1);
+    border-radius: 1.83vw;
+    margin-top: 0;
+    padding: 2.6vw 6.94vw;
+    scrollbar-color: gray #d3d3d3;
+    scrollbar-width: thin;
+    width: 37.8vw;
+    height: 37.6vw;
+  }
+  .popup-content-password-copy .form-register {
+    width: 50vw;
+    margin-left: -2vw;
+    margin-top: 5vw;
+  }
+  .popup-content-password .close {
+    position: absolute;
+    cursor: pointer;
+    margin: -5.4vw 0.35vw 0.35vw 39.38vw;
+    width: 4vw;
+    height: 4vw;
+    font-size: 4.6vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-content-password-copy .close {
+    position: absolute;
+    cursor: pointer;
+    margin: -5.4vw 0.35vw 0.35vw 39.38vw;
+    width: 4vw;
+    height: 4vw;
+    font-size: 4.6vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-content-password-copy .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: -5.4vw 0.35vw 0.35vw 39.38vw;
+    width: 4vw;
+    height: 4vw;
+    font-size: 4.6vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .popup-content-password .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: -5.4vw 0.35vw 0.35vw 39.38vw;
+    width: 4vw;
+    height: 4vw;
+    font-size: 4.6vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .a-last-first.main-test-text-last {
+    text-align: left;
+    text-transform: uppercase;
+    color: #364059;
+    margin-top: -1vw;
+    font-size: 2.31vw;
+    line-height: 2.47vw;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-weight: 700;
+    width: 26vw;
+    margin-bottom: 2vw;
+    margin-left: 7.2vw;
+  }
+
+  .popup-content-code .close {
+    position: absolute;
+    cursor: pointer;
+    margin: -4.4vw 0.35vw 0.35vw 35.38vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.6vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-content-code .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: -4.4vw 0.35vw 0.35vw 35.38vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.6vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .popupCode-input {
+    margin: 0.6vw 1vw 1.46vw 0.2vw;
+    padding: 2vw 3vw 2vw 4vw;
+    border-radius: 0.9vw;
+    border: 0.14vw;
+    width: 1.3vw;
+    height: 0.7vw;
+    font-size: 1.82vw;
+    line-height: 1.86vw;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-weight: 400;
+    color: #2A60AA;
+    outline: none;
+  }
+  .popup-content-code .form-register {
+    width: 50vw;
+    margin-left: 1vw;
+    margin-top: 6vw;
+  }
+  .code-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25.15vw;
+    margin: 1vw 0 0 -4.8vw;
+  }
+  .popupCode-form-label {
+    font-size: 1.82vw;
+    line-height: 1.86vw;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-weight: 400;
+    color: #364059;
+    margin-left: -4.8vw;
+  }
+  #countdown {
+    margin-left: -1.3vw;
+    font-size: 1.82vw;
+    line-height: 1.86vw;
+    width: 30.35vw;
+    height: 3.22vw;
+    margin-top: 6vw;
+    font-family: 'Acrom Medium', Arial, sans-serif;
+    color: #364059;
+    text-align: center;
+    cursor: pointer;
+  }
+  .popup-content-code {
+    background-image: linear-gradient(#e1e5f2, #e1e5f2, #e1e5f2);
+    border-radius: 1.37vw;
+    box-shadow: 0 1vw 3.5vw 1.7vw #c5cde4;
+    width: 35.28vw;
+    height: 30.49vw;
+    padding: 2.6vw 6.94vw;
+    margin-top: 0vw;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray;
+  }
+  .popup-content-password .form-register {
+    width: 43vw;
+    margin-left: -2vw;
+    margin-top: 3vw;
+  }
+  .form-group-fisrt-one {
+    position: relative;
+    width: 26.35vw;
+    height: 8.29vw;
+  }
+  .form-group-letter {
+    position: relative;
+    width: 26.35vw;
+    height: 5.9vw;
+  }
+  .form-group-2 {
+    position: relative;
+    width: 26.35vw;
+    height: 3.59vw;
+    margin-top: 1.1vw;
+  }
+  .input-checkbox:checked + .custom-checkbox:before {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  .form-group {
+    position: relative;
+    width: 26.35vw;
+    height: 7vw;
+  }
+  .a-last-first {
+    color: #364059;
+    margin-top: -1vw;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.82vw;
+    line-height: 1.86vw;
+    width: 37vw;
+    margin-bottom: 2vw;
+    margin-left: 6.2vw;
+  }
+  .popup-p-center p {
+    width: 37.65vw;
+    height: 5.27vw;
+    margin: -4.7vw 0 0 1.3vw;
+    font-size: 1.45vw;
+    line-height: 1.8vw;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 3.2vw;
+    height: 3.2vw;
+    background-color: #364059;
+    border-radius: 0.64vw;
+    margin-left: -6.5vw;
+    margin-top: -1.35vw;
+    margin-bottom: 1.3vw;
+  }
+  .popup-content-password {
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    width: 37.8vw;
+    height: 54.6vw;
+    padding: 2.6vw 6.94vw;
+    border-radius: 1.83vw;
+    margin-top: 0vw;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray;
+  }
+  #submit-password {
+    position: absolute;
+    width: 32.8vw;
+    height: 5.85vw;
+    border-radius: 1.4vw;
+    border: 0.055vw solid #FFFFFF4D;
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
+    color: #FFFFFF;
+    font-size: 1.82vw;
+    line-height: 1.82vw;
+    font-weight: 400;
+    left: 19.5%;
+    top: 85.85%;
+    bottom: 50%;
+    font-family: 'Acrom Medium', Arial, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  #submit-password-copy {
+    position: absolute;
+    width: 32.8vw;
+    height: 5.85vw;
+    border-radius: 1.4vw;
+    border: 0.055vw solid #FFFFFF4D;
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
+    color: #FFFFFF;
+    font-size: 1.82vw;
+    line-height: 1.82vw;
+    font-weight: 400;
+    left: 19.5%;
+    top: 78.85%;
+    bottom: 50%;
+    font-family: 'Acrom Medium', Arial, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .popup-h1.popup-first-some-fisrst {
+    text-transform: uppercase;
+    margin: -1vw 0vw 3vw 3.5vw;
+  }
   .popup-banner {
     background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
@@ -8989,7 +9306,7 @@ iframe {
     border-radius: 50%;
     background-color: initial;
     border: #FFFFFF4D 0vw solid;
-    color: #5E6976;
+    color: #bebec5;
     text-align: center;
     line-height: 3.3vw;
     z-index: 100;
@@ -9203,9 +9520,9 @@ iframe {
     font-weight: 400;
     font-family: 'Acrom Medium', Arial, sans-serif;
     text-transform: uppercase;
-    margin-left: 6.5vw;
-    margin-top: 1vw;
-    z-index: 999999999999999;
+    margin-left: 6.3vw;
+    margin-top: 3.5vw;
+
   }
 
   header .menu-content {
@@ -14323,12 +14640,13 @@ iframe {
     scrollbar-color: gray lightgray;
   }
   .a-last-first {
+    color: #364059;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
     font-size: 4.32vw;
     line-height: 4.76vw;
     width: 60vw;
-    margin-bottom: 0vw;
+    margin-bottom: -3vw;
     margin-left: -1.8vw;
     margin-top: 4vw;
   }
@@ -14752,7 +15070,7 @@ iframe {
     display: inline-block;
     width: 8vw;
     height: 8vw;
-    background-color: #FFFFFF;
+    background-color: #364059;
     border-radius: 1.60vw;
     margin-top: 5vw;
   }
@@ -14769,14 +15087,14 @@ iframe {
   }
 
   .popup-p-center p {
-    width: 69.33vw;
+    width: 71.33vw;
     height: 24vw;
     margin: -10vw 0 0 9.3vw;
     font-size: 2.7vw;
     line-height: 3.8vw;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
   }
 
   #submit {
@@ -14843,9 +15161,9 @@ iframe {
 
 
   .popup-content-code {
-    background-color: #FFFFFF4D;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     width: 75.33vw;
-    height: 75.33vw;
+    height: 92.33vw;
     padding: 0.6vw 6.94vw;
     border-radius: 5.27vw;
     margin-top: -3vw;
@@ -14857,16 +15175,17 @@ iframe {
     margin-right: -0.5vw;
   }
   .popupCode-form-label {
+    text-align: center;
     display: inline-block;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
     line-height: 5.83vw;
-    color: #FFFFFF;
-    margin-left: -1.8vw;
+    color: #364059;
+    margin-left: 3.2vw;
     margin-top: 4vw;
     width: 68.53vw;
     height: 11.73vw;
-    font-size: 4.27vw;
+    font-size: 4.57vw;
   }
   .popupCode-input {
     margin: 9.6vw 3vw 7.46vw 0.2vw;
@@ -14934,10 +15253,10 @@ iframe {
   .popup-content-code .close {
     position: absolute;
     cursor: pointer;
-    margin: 3.6vw 0.35vw 0.35vw 63.38vw;
+    margin: 3.6vw 0.35vw 0.35vw 66.38vw;
     width: 14.93vw;
     height: 14.93vw;
-    font-size: 22vw;
+    font-size: 15vw;
     border-radius: 50%;
     background-color: initial;
     text-align: center;
@@ -14945,15 +15264,30 @@ iframe {
     border: #FFFFFF4D 0vw solid;
     color: #5E6976;
   }
+  .popup-content-code .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: 3.6vw 0.35vw 0.35vw 66.38vw;
+    width: 14.93vw;
+    height: 14.93vw;
+    font-size: 15vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
   .popup-content-code .popup-h1 {
+    width: 49vw;
     position: relative;
     font-size: 5.87vw;
     line-height: 6.40vw;
     font-family: 'Halvar Breit Bd', sans-serif;
     font-weight: 400;
-    margin-top: -6.9vw;
+    margin-top: 18.1vw;
     margin-left: -1vw;
-    color: #FFFFFF;
+    color: #364059;
   }
   .popup-content-code .popup-p-under {
     width: 76.27vw;
@@ -14971,8 +15305,9 @@ iframe {
 
   .popup-content-password {
     background-color: #FFFFFF4D;
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
     width: 77.27vw;
-    height: 122.73vw;
+    height: 125.73vw;
     padding: 2.6vw 6.94vw;
     border-radius: 5.27vw;
     margin-top: 3vw;
@@ -15029,22 +15364,22 @@ iframe {
     height: 17.6vw;
     border-radius: 4.27vw;
     border: 0.055vw solid #FFFFFF4D;
-    background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0 );
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
     color: #FFFFFF;
     font-size: 4.80vw;
     line-height: 4.80vw;
     font-weight: 400;
-    left: 7.5%;
+    left: 8.5%;
     top: 79.5%;
     bottom: 50%;
     font-family: 'Acrom Medium', Arial, sans-serif;
     text-transform: uppercase;
   }
   #submit-password:hover {
-    background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+    background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   }
   #submit-password-copy {
-    background-image: linear-gradient(#da4da3,#8b3a99,#2f46b0);
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
     border: 0.055vw solid #ffffff4d;
     border-radius: 4.27vw;
     bottom: 50%;
@@ -15061,7 +15396,7 @@ iframe {
     width: 75.93vw;
   }
   #submit-password-copy:hover {
-    background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+    background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   }
   .popup-content-password .popup-p-under {
     width: 76.27vw;
@@ -15078,10 +15413,10 @@ iframe {
   .popup-content-password .close {
     position: absolute;
     cursor: pointer;
-    margin: 3.6vw 0.35vw 0.35vw 63.38vw;
+    margin: -1.4vw 0.35vw 0.35vw 66.38vw;
     width: 14.93vw;
     height: 14.93vw;
-    font-size: 22vw;
+    font-size: 15vw;
     border-radius: 50%;
     background-color: initial;
     text-align: center;
@@ -15089,19 +15424,47 @@ iframe {
     border: #FFFFFF4D 0vw solid;
     color: #5E6976;
   }
+  .popup-content-password .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: -1.4vw 0.35vw 0.35vw 66.38vw;
+    width: 14.93vw;
+    height: 14.93vw;
+    font-size: 15vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
   .popup-content-password-copy .close {
     position: absolute;
     cursor: pointer;
-    margin: 3.6vw 0.35vw 0.35vw 63.38vw;
+    margin: -1.4vw 0.35vw 0.35vw 68.38vw;
     width: 14.93vw;
     height: 14.93vw;
-    font-size: 22vw;
+    font-size: 15vw;
     border-radius: 50%;
     background-color: initial;
     text-align: center;
     line-height: 12vw;
     border: #FFFFFF4D 0vw solid;
     color: #5E6976;
+  }
+  .popup-content-password-copy .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: -1.4vw 0.35vw 0.35vw 68.38vw;
+    width: 14.93vw;
+    height: 14.93vw;
+    font-size: 15vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 12vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
   }
   .profile-right-float-img {
     display: none;
@@ -15298,7 +15661,7 @@ iframe {
     font-weight: 400;
     margin-left: -0.35vw;
     margin-top: -3.55vw;
-    color: #FFFFFF;
+    color: #364059;
     margin-bottom: 1.8vw;
   }
   .qr-code-number-block {
@@ -15306,15 +15669,16 @@ iframe {
   }
   #popup-recovery .popupCode-form-label {
     display: inline-block;
+    text-align: center;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
     line-height: 5.83vw;
-    color: #FFFFFF;
+    color: #364059;
     margin-left: -0.8vw;
-    margin-top: 10vw;
+    margin-top: 13vw;
     width: 76.53vw;
     height: 11.73vw;
-    font-size: 4.27vw;
+    font-size: 4.57vw;
   }
 
   #popup-recovery .popup-p-under {
@@ -15324,7 +15688,7 @@ iframe {
     line-height: 5.87vw;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
     margin-top: 50.42vw;
     margin-left: -0.45vw;
     text-align: center;
@@ -15713,12 +16077,12 @@ iframe {
     transform: translate(-50%, -50%);
     z-index: 9999;
     /*background-color: #00438280;*/
-    box-shadow: 0vw 0vw 3.5vw 1.7vw rgba(197, 205, 228, 1);
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
     width: 89.33vw;
     height: auto;
     min-height: 89vw;
     padding: 1.46vw;
-    border-radius: 0.37vw;
+    border-radius: 7.37vw;
   }
   .content-container-modal {
     margin-left: 5vw;
@@ -15994,7 +16358,8 @@ iframe {
 
 
   .popup-ticket1 {
-    background-color: #FFFFFF4D;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
     width: 87vw;
     height: auto;
     min-height: 104vw;
@@ -16003,7 +16368,8 @@ iframe {
     margin-top: -3vw;
   }
   .popup-ticket2 {
-    background-color: #FFFFFF4D;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
     width: 87vw;
     height: auto;
     min-height: 104vw;
@@ -16012,7 +16378,8 @@ iframe {
     margin-top: -3vw;
   }
   .popup-ticket3 {
-    background-color: #FFFFFF4D;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
     width: 87vw;
     height: auto;
     min-height: 104vw;
@@ -16368,7 +16735,7 @@ iframe {
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
     white-space: nowrap;
   }
   .bilet-ticket-2-p2 {
@@ -16380,7 +16747,7 @@ iframe {
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 500;
-    color: #FFFFFF;
+    color: #364059;
     white-space: nowrap;
 
   }
@@ -16393,7 +16760,7 @@ iframe {
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
     white-space: nowrap;
   }
   .bilet-ticket-2-p4 {
@@ -16406,7 +16773,7 @@ iframe {
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
 
   }
   .bilet-ticket-2-p4 label {
@@ -16435,7 +16802,7 @@ iframe {
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
   }
   .how-full1-img,
   .how-full2-img,
@@ -16762,9 +17129,10 @@ iframe {
     line-height: 5.83vw;
     width: 76.53vw;
     height: 11.73vw;
-    margin-top: 1vw;
+    margin-top: 30vw;
+    margin-left: -1vw;
     font-family: 'Acrom Medium', Arial, sans-serif;
-    color: white;
+    color: #364059;
     text-align: center;
     cursor: pointer;
   }
@@ -17989,7 +18357,26 @@ iframe {
   .how-tickets-img-tablet {
     display: none;
   }
-
+  .popup-h1.popup-first-some-fisrst {
+    text-transform: uppercase;
+    margin: 14vw 0vw 0vw 12.5vw;
+  }
+  .a-last-first.main-test-text-last {
+    text-align: left;
+    text-transform: uppercase;
+    color: #364059;
+    margin-top: 2vw;
+    font-size: 5.87vw;
+    line-height: 6.40vw;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-weight: 700;
+    width: 26vw;
+    margin-bottom: -3vw;
+    margin-left: 9.2vw;
+  }
+  .a-last-first.bonus-need-conf {
+    margin-bottom: -8vw;
+  }
 
 }
 

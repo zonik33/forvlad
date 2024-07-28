@@ -157,7 +157,7 @@
                         if (auth_key) {
                             localStorage.setItem('auth_key', auth_key);
                             handleSuccess()
-                            openPopupEnd()
+                            handleClickTest()
                         }else {
                             console.log(response.data.result);
                             const hash = response.data.data.hash;
@@ -187,6 +187,15 @@
                 let rutarget = window._rutarget || [];
                 rutarget.push({'event': 'thankYou', 'conv_id': 'registration'});
             }
+            function handleClickTest () {
+                // const auth_key = "T56UtCwneBsxhPqLcjgeJvx-udu0YDaO";
+                // const login = "+7 (927) 360-80-66"
+                // if (auth_key) {
+                //     localStorage.setItem('auth_key', auth_key);
+                //     localStorage.setItem('login', login);
+                // }
+                window.location.href = '/profile'
+            }
 
             return (
                 <div id="popup-complete" className="popup">
@@ -205,10 +214,11 @@
                                 id={"form-register-code"}
                                 className={"form-register form-special"}
                             >
-                                {/*<h1 className={"popup-h1"}>Регистрация</h1>*/}
+                                <h1 className={'popup-h1 popup-first-some-fisrst'}>Введите код</h1>
                                 <span id="phoneError" className="error"></span>
-                                <br />
+                                <br/>
                                 <div className={"form-group-password"}>
+
                                     <label className={"popupCode-form-label"}>
                                         Введите код, отправленный на ваш номер
                                     </label>
@@ -222,7 +232,7 @@
                                     {registrationError && (
                                         <div
                                             className={"error-block-phone bonus-error-block-popup"}
-                                            style={{ color: "#FFFFFF" }}
+                                            style={{color: "#FFFFFF"}}
                                         >
                                             {registrationError}
                                         </div>

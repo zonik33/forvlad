@@ -75,6 +75,8 @@ function Popup(props) {
     }
 
     const postRegister = async (event) => {
+        debugger;
+        openPopup2()
 
         const form = document.getElementById('form-register');
         event.preventDefault();
@@ -200,7 +202,7 @@ function Popup(props) {
                         onSubmit={postRegister}
                         ref={popupRef}
                         onMouseDown={handleMouseDown}
-                        action={'https://nloto-promo.ru/backend/api/login'}
+                        action={''}
                         method={'POST'}
                         id={'form-register'}
                         className={'form-register'}

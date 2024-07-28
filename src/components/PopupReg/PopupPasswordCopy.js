@@ -162,9 +162,10 @@ export default function PopupPasswordCopy (props) {
                         {/*<h1 className={'popup-h1'}>Регистрация</h1>*/}
                         <span id="phoneError" className="error"></span>
                         <br/>
-                        <a className={'a-last-first-copy'}>Для завершения регистрации необходимо дать согласия:</a>
+                        <a className={'a-last-first main-test-text-last'}>Завершение регистрации</a>
+                        <a className={'a-last-first bonus-need-conf'}>Необходимо дать согласие:</a>
                         <div className={'form-group-2'}>
-                            <label className={'popup-p-center'}>
+                        <label className={'popup-p-center'}>
                                 <input
                                     type="checkbox"
                                     id="agree_6"
