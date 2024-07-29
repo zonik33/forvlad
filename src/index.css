@@ -8260,9 +8260,11 @@ button:focus {
   color: #cb2828 !important;
 }
 .only-for-phone {
+  color: #cb2828 !important;
+  height: 0;
+  margin-top: 0vw;
   width: 28vw;
-  height: 0vw;
-  margin-top: -0.04vw;
+  position: absolute;
 }
 
 .input-checkbox {
@@ -8650,6 +8652,19 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .only-for-phone {
+    color: #cb2828 !important;
+    height: 0;
+    margin-top: -1vw;
+    width: 28vw;
+    font-size: 1.07vw;
+    position: absolute;
+  }
+  .error-block-for-ticket {
+    color: #cb2828 !important;
+    font-size: 1.07vw;
+    margin-left: -.86vw;
+  }
   .bilet-ticket-5-p {
     width: 26.35vw;
     height: 1.9vw;

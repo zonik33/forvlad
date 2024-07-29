@@ -98,7 +98,7 @@ function Popup(props) {
 
 
         try {
-            const response = await axios.post('https://nloto.tw0.ru/api/login', formData);
+            const response = await axios.post('https://nloto-promo.ru/backend/api/login', formData);
                         if (response.data.result === false) {
                             console.log(response.data.result);
                             if (response.data.error.login) {
