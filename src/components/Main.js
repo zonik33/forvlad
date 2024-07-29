@@ -19,6 +19,7 @@ import Popup from "./PopupReg/Popup";
 import React, {useEffect, useRef, useState} from "react";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
 import {useLocation} from "react-router-dom";
+import PopupTicket6 from "./PopupTicket/PopupTickets6";
 
 
 function openPopup2() {
@@ -153,6 +154,7 @@ export default function Main (props) {
                 <PopupTicket3/>
                 <PopupTicket4/>
                 <PopupTicket5/>
+            <PopupTicket6/>
         </main>
 
 

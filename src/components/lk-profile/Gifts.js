@@ -37,6 +37,7 @@ import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_106.png";
 import tickettextblue from '../../image/img_109.png'
 import ticketsmb from "../../image/img_108.png";
+import PopupTicket6 from "../PopupTicket/PopupTickets6";
 
 export default function Gifts() {
 
@@ -627,6 +628,7 @@ export default function Gifts() {
                 <PopupTicket3/>
                 <PopupTicket4/>
                 <PopupTicket5/>
+                <PopupTicket6/>
                 <PopupVideos/>
                 <PopupEnd/>
                 <PopupTakeGifts/>

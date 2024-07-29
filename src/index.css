@@ -5497,6 +5497,9 @@ canvas#wheel-profile-popup {
   border: #FFFFFF4D 0vw solid;
   color: #5E6976;
 }
+.its-6 {
+  height: 27.99vw;
+}
 .popup-take-gifts .close:hover {
   position: absolute;
   cursor: pointer;

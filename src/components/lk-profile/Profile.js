@@ -35,6 +35,7 @@ import Popup from "../PopupReg/Popup";
 import ticketTextRight from "../../image/img_100.png";
 import tickettextblue from '../../image/img_109.png'
 import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
+import PopupTicket6 from "../PopupTicket/PopupTickets6";
 
 
 
@@ -523,6 +524,7 @@ export default function Profile(props){
                 <PopupTicket3/>
                 <PopupTicket4/>
                 <PopupTicket5/>
+        <PopupTicket6/>
                 <PopupVideos/>
                 <PopupEnd/>
                 <PopupAddSpin/>
