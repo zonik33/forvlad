@@ -321,10 +321,9 @@ export default function Tickets(){
                                             <TestForSpin/>
                                         </div>
                                         <p className={'left-first-profile-p'}>Вы зарегистрировали
-                                            <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                                            <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
                                             <br></br>на сумму
                                             {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
-
                                         </p>
 
                                         <div className="white-line"></div>
@@ -450,189 +449,90 @@ export default function Tickets(){
                                                                 </div>
                                                             </div>
                                                             <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
+                                                                {profile && Array.isArray(profile.tickets) && profile.tickets.length > 0 ? (
+                                                                    profile.tickets.map((ticket, index) => (
+                                                                        <div className={'table-body-winners-ticket'}
+                                                                             key={index}>
+                                                                            <div className={'centered-ticket-wrapper'}>
+                                                                                <div className={'centered-ticket'}>
+                                                                                    <div
+                                                                                        className={'head-colm-prize1-ticket'}>
+                                                                                        <div
+                                                                                            className={'colm-ticket-none'}> Билет:
+                                                                                        </div>
+                                                                                        <div
+                                                                                            className={'colm-text1-ticket'}> {ticket.number} </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        className={'head-colm-phone1-ticket'}>
+                                                                                        <div
+                                                                                            className={'colm-data-ticket-none'}> Дата:
+                                                                                        </div>
+                                                                                        <div
+                                                                                            className={'colm-text1-data-ticket'}> {ticket.date} </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div className={'head-colm-date1-ticket'}>
+                                                                                <div
+                                                                                    className={'colm-status-ticket-none'}> Статус:
+                                                                                </div>
+                                                                                {ticket.status.id === 0 && (
+                                                                                    <div
+                                                                                        className={'centered-ticket-wrapper'}>
+                                                                                        <div
+                                                                                            className={'centered-ticket'}>
+                                                                                            <div
+                                                                                                className={'custom-status-pending'}></div>
+                                                                                            <div
+                                                                                                className={'colm-text1-status-ticket1-check'}>
+                                                                                                <div
+                                                                                                    dangerouslySetInnerHTML={{__html: ticket.status.name}}></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                                {ticket.status.id === 1 && (
+                                                                                    <div
+                                                                                        className={'centered-ticket-wrapper'}>
+                                                                                        <div
+                                                                                            className={'centered-ticket'}>
+                                                                                            <div
+                                                                                                className={'custom-status-ok'}></div>
+                                                                                            <div
+                                                                                                className={'colm-text1-status-ticket1-complete'}>
+                                                                                                <div
+                                                                                                    className={'massive-text-agree'}
+                                                                                                    dangerouslySetInnerHTML={{__html: ticket.status.text}}></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                                {ticket.status.id === 2 && (
+                                                                                    <div
+                                                                                        className={'centered-ticket-wrapper'}>
+                                                                                        <div
+                                                                                            className={'centered-ticket'}>
+                                                                                            <div
+                                                                                                className={'custom-status-neok'}></div>
+                                                                                            <div
+                                                                                                className={'colm-text1-status-ticket1-fail'}>
+                                                                                                <div
+                                                                                                    className={'massive-text-not-agree'}
+                                                                                                    dangerouslySetInnerHTML={{__html: ticket.status.text}}></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                            </div>
                                                                         </div>
-                                                                        <div className="table-cell number">221234567890
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">10.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 1.06.2024
-                                                                        </div>
+                                                                    ))
+                                                                ) : (
+                                                                    <div className="no-tickets-message">
+                                                                        <p>Список билетов пуст</p>
                                                                     </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
+                                                                )}
                                                             </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
-                                                                        </div>
-                                                                        <div className="table-cell number">221235567120
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">1.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 25.06.2024
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
-                                                            </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
-                                                                        </div>
-                                                                        <div className="table-cell number">221234567890
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">10.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 1.06.2024
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
-                                                            </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
-                                                                        </div>
-                                                                        <div className="table-cell number">221234567890
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">10.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 1.06.2024
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
-                                                            </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
-                                                                        </div>
-                                                                        <div className="table-cell number">221234567890
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">10.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 1.06.2024
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
-                                                            </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
-                                                                        </div>
-                                                                        <div className="table-cell number">221234567890
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">10.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 1.06.2024
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
-                                                            </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                <div className={'centered-ticket-wrapper'}>
-                                                                    <div className="table-row">
-                                                                        <div className="colm-data-ticket-none">Номер
-                                                                            лотерейного
-                                                                            билета
-                                                                        </div>
-                                                                        <div className="table-cell number">221234567890
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Дата
-                                                                            регистрации в акции
-                                                                        </div>
-                                                                        <div className="table-cell data">10.06.2024
-                                                                        </div>
-                                                                        <div className="colm-data-ticket-none">Статус
-                                                                            участия в рулетке
-                                                                        </div>
-                                                                        <div className="table-cell status">Принял
-                                                                            участие в
-                                                                            розыгрыше
-                                                                            <br></br> Дата розыграша: 1.06.2024
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={'line-true-tickets'}></div>
-                                                                </div>
-                                                            </div>
-
-
                                                         </div>
                                                     </div>
                                                 </div>

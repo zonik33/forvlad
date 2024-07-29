@@ -368,10 +368,9 @@ export default function Gifts() {
                                             <TestForSpin/>
                                         </div>
                                         <p className={'left-first-profile-p'}>Вы зарегистрировали
-                                            <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                                            <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
                                             <br></br>на сумму
                                             {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
-
                                         </p>
 
                                         <div className="white-line"></div>

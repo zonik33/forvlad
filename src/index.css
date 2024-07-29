@@ -221,6 +221,16 @@ header .menu-content-profile a {
   transition: transform 0.2s ease-in-out;
   transform-origin: left;
 }
+.no-tickets-message {
+  text-align: left;
+  width: 11vw;
+  /* text-transform: uppercase; */
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.250vw;
+  color: #364059;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+}
 
 
 .menu-content a:hover::after {
@@ -8209,6 +8219,9 @@ button:focus {
   height: 2.59vw;
   margin-top: 1.1vw;
 }
+.no-tickets-message {
+  display: none;
+}
 .form-group-code {
   width: 36.60vw;
   height: 6vw;
@@ -8652,6 +8665,9 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .no-tickets-message {
+    display: none;
+  }
   .only-for-phone {
     color: #cb2828 !important;
     height: 0;
@@ -14210,7 +14226,7 @@ iframe {
     position: relative;
     width: 88.8vw;
     height: auto;
-    min-height: 67.7vw;
+    min-height: 7.7vw;
     text-align: center;
     /* background-color: rgba(255, 255, 255, 0.15); */
     /* border: #FFFFFF4D solid 0.15vw; */
@@ -18547,6 +18563,17 @@ iframe {
   .popup-ticket1 .popup-h1.for-its-5 {
     margin-top: -11vw;
     margin-left: 9.4vw;
+  }
+  .no-tickets-message {
+    display: block;
+    width: 84vw;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-size: 6.667vw;
+    line-height: 7.778vw;
+    color: #364059;
+    font-weight: 400;
+    margin-left: -22.5vw;
+    margin-top: -5.2vw;
   }
 
 }
