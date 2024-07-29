@@ -75,13 +75,9 @@ function Popup(props) {
     }
 
     const postRegister = async (event) => {
-        debugger;
-        openPopup2()
-
         const form = document.getElementById('form-register');
         event.preventDefault();
         const token = await recaptchaRef.current.executeAsync();
-        debugger;
         // Отправка формы на сервер с токеном reCAPTCHA
 
         const login = document.getElementById('login');
