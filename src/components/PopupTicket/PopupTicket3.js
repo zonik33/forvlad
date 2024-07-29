@@ -64,8 +64,8 @@ export default function PopupTicket3 ({number, text}) {
                 <div className="popup-ticket1 its-3" id={'popup-content'}>
                     <span className="close" onClick={closePopup2}>&times;</span>
                     <form action={''}  id={'form-add-ticket3'} className={'form-register'} >
-                        <h1 className={'popup-h1'}>Регистрация билета</h1>
-                        <label className={'bilet-ticket-2-p'}>Регистрация билета</label>
+                        <h1 className={'popup-h1 for-its-3'}>Регистрация билета</h1>
+                        <label className={'bilet-ticket-2-p '}>Регистрация билета</label>
                         <label className={'bilet-ticket-2-p2'} id='ticket-for-number3'>{number}</label>
                         <label className={'bilet-ticket-2-p3'}>невозможна.</label>
                         <p className={'bilet-ticket-2-p4'} id='ticket-for-number33'>{text}</p>

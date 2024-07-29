@@ -12,7 +12,13 @@ export default function PopupAddSpin(props) {
     const [registrationError, setRegistrationError] = useState('');
     const [registrationErrorEm, setRegistrationErrorEm] = useState('');
     const popupRef = useRef(null);
-
+    function openPopup3() {
+        closeModal();
+        document.getElementById("popup-take-gifts").style.display = "block";
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+        document.body.classList.add("no-scroll");
+    }
     let onlyTest = 5
 
     function openPopup2() {
@@ -153,7 +159,7 @@ export default function PopupAddSpin(props) {
                         </p>
                         }
                         <div className="spin-block">
-                            <SpinForPopup/>
+                            <SpinForPopup onSpinComplete={openPopup3} />
                         </div>
                         {/*<a*/}
                         {/*    className={'button-animation-text-profile click-spin'}>*/}

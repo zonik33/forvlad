@@ -119,8 +119,9 @@ export default function PopupTicket1 (props) {
         let _rutarget = window._rutarget || [];
         _rutarget.push({'event': 'thankYou', 'conv_id': 'register_tickets'});
         const form = document.getElementById('form-add-ticket1');
+
         event.preventDefault();
-        debugger;
+
         const number = document.getElementById('number-add-ticket');
         if (isRequestPending) {
             return;
@@ -205,7 +206,7 @@ export default function PopupTicket1 (props) {
                     {/*</form>*/}
 
 
-                    <form action={'https://nloto-proasdasmo.ru/backend/api/ticket'}
+                    <form action={'https://nloto-promo.ru/backend/api/ticket'}
                           id={'form-add-ticket1'} className={'form-register'}
                         onSubmit={addTicket}>
                         <h1 className={'popup-h1'}>Регистрация билета</h1>

@@ -34,6 +34,7 @@ import PopupAddSpin from "../PopupTicket/PopupAddSpin";
 import Popup from "../PopupReg/Popup";
 import ticketTextRight from "../../image/img_100.png";
 import tickettextblue from '../../image/img_109.png'
+import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
 
 
 
@@ -279,7 +280,7 @@ export default function Profile(props){
                             </div>
                             <div className={'random-block'}>
                                 <button id="profile-button"
-                                        className="button-animation" onClick={selectChoose}>
+                                        className="button-animation">
                                     Личный кабинет
                                 </button>
                             </div>
@@ -525,6 +526,7 @@ export default function Profile(props){
                 <PopupVideos/>
                 <PopupEnd/>
                 <PopupAddSpin/>
+        <PopupTakeGifts/>
             </footer>
         </>
 

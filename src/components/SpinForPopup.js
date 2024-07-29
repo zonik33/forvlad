@@ -384,6 +384,9 @@ class SpinForPopup extends React.Component {
         this.setState({
             net: netRotation,
             result: result
+        }, () => {
+            // Вызываем функцию, переданную через пропсы, после обновления состояния
+            this.props.onSpinComplete();
         });
     };
 

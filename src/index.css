@@ -1900,6 +1900,22 @@ header .menu-content-profile a:hover {
   background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   transition: background-image 0.8s ease-in-out;
 }
+.popup-ticket1 .popup-h1.for-its-2 {
+  margin-top: 4vw;
+  margin-left: 1.4vw;
+}
+.popup-ticket1 .popup-h1.for-its-3 {
+  margin-top: 4vw;
+  margin-left: 1.4vw;
+}
+.popup-ticket1 .popup-h1.for-its-4 {
+  margin-top: 4vw;
+  margin-left: 1.4vw;
+}
+.popup-ticket1 .popup-h1.for-its-5 {
+  margin-top: 4vw;
+  margin-left: 1.4vw;
+}
 .button-animation-text-profile {
   position: absolute;
   z-index: 6;
@@ -5293,7 +5309,8 @@ canvas#wheel-profile-popup {
   min-height: 20vw;
 }
 .popup-ticket1 {
-  background-color: #FFFFFF4D;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
   width: 34.6vw;
   height: 37.99vw;
   padding: 0.6vw 0.94vw;
@@ -5692,14 +5709,14 @@ canvas#wheel-profile-popup {
   height: 1.9vw;
   display: block;
   text-align: center;
-  margin-top: -0vw;
-  margin-left: -1.1vw;
-  margin-bottom: 0.1vw;
+  margin-top: 3vw;
+  margin-left: 0vw;
+  margin-bottom: 2.1vw;
   font-size: 1.76vw;
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-5-p.try-fix {
   width: 22.35vw;
@@ -5738,7 +5755,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 .bilet-ticket-5-p3 {
   width: 26.35vw;
@@ -5749,7 +5766,7 @@ canvas#wheel-profile-popup {
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #364059;
 }
 #container {
   position: fixed;
@@ -8630,6 +8647,95 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .bilet-ticket-5-p {
+    width: 26.35vw;
+    height: 1.9vw;
+    display: block;
+    text-align: center;
+    margin-top: 6vw;
+    margin-left: 5.45vw;
+    margin-bottom: 2.1vw;
+    font-size: 2.26vw;
+    line-height: 1.76vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .bilet-ticket-5-p2 {
+    width: 30.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    margin-bottom: 1vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+    margin-left: 3.7vw;
+  }
+  .bilet-ticket-5-p3 {
+    width: 33.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+    margin-left: 1.75vw;
+  }
+  .bilet-ticket-2-p2 {
+    width: 26.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 500;
+    color: #364059;
+    margin-left: 4.45vw;
+  }
+  .bilet-ticket-2-p5 {
+    margin-top: 4.5vw;
+    margin-left: 5vw;
+    width: 26.35vw;
+    height: 4.83vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
+  .popup-ticket1 .popup-h1.for-its-2 {
+    margin-top: 4vw;
+    margin-left: 3vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-3 {
+    margin-top: 4vw;
+    margin-left: 3vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-4 {
+    margin-top: 4vw;
+    margin-left: 3vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-5 {
+    margin-top: 4vw;
+    margin-left: 3vw;
+  }
+  .popup-ticket1 {
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+    width: 46.6vw;
+    height: 37.99vw;
+    padding: 0.6vw 0.94vw;
+    border-radius: 1.27vw;
+    margin-top: 0vw;
+  }
   .popup-content-password-copy {
     background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     box-shadow: 0vw 0vw 4.5vw 1.7vw rgba(197, 205, 228, 1);
@@ -8976,8 +9082,33 @@ iframe {
     font-weight: 500;
     color: #364059;
   }
+  .bilet-ticket-2-p {
+    width: 26.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+    margin-left: 5vw;
+  }
+  .bilet-ticket-2-p3 {
+    margin-left: 5vw;
+    width: 26.35vw;
+    height: 1.90vw;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+  }
   .bilet-ticket-2-p4 {
-    margin-left: 1.5vw;
+    margin-left: 3vw;
     margin-top: 1.5vw;
     width: 31.35vw;
     height: 1.90vw;
@@ -16739,6 +16870,7 @@ iframe {
     white-space: nowrap;
   }
   .bilet-ticket-2-p2 {
+    margin-left: 0vw;
     width: 76.53vw;
     height: 7.2vw;
     display: block;
@@ -16752,6 +16884,7 @@ iframe {
 
   }
   .bilet-ticket-2-p3 {
+    margin-left: 0vw;
     width: 76.53vw;
     height: 9.2vw;
     display: block;
@@ -16764,6 +16897,7 @@ iframe {
     white-space: nowrap;
   }
   .bilet-ticket-2-p4 {
+    margin-left: 0vw;
     margin-top: 0.5vw;
     width: 76.53vw;
     height: 9.2vw;
@@ -16793,6 +16927,7 @@ iframe {
     margin-left: 2vw;
   }
   .bilet-ticket-2-p5 {
+    margin-left: 0vw;
     margin-top: 0.5vw;
     width: 76.53vw;
     height: 9.2vw;
@@ -16876,14 +17011,14 @@ iframe {
     height: 9.8vw;
     display: block;
     /* text-align: left; */
-    margin-top: -4.1vw;
+    margin-top: 7.9vw;
     margin-left: 3.9vw;
     margin-bottom: 1.1vw;
-    font-size: 5.4vw;
-    line-height: 5.4vw;
+    font-size: 6vw;
+    line-height: 6vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
   }
   .bilet-ticket-5-p.try-fix {
     width: 67.53vw;
@@ -16903,23 +17038,25 @@ iframe {
     width: 76.53vw;
     height: 6.2vw;
     display: block;
-    text-align: left;
+    text-align: center;
     font-size: 4.80vw;
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
+    margin-left: 0vw;
   }
   .bilet-ticket-5-p3 {
     width: 76.53vw;
     height: 9.2vw;
     display: block;
-    text-align: left;
+    text-align: center;
     font-size: 4.80vw;
+    margin-left: 0vw;
     line-height: 6.40vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #364059;
   }
   .barcode-block {
     display: flex;
@@ -18376,6 +18513,22 @@ iframe {
   }
   .a-last-first.bonus-need-conf {
     margin-bottom: -8vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-2 {
+    margin-top: -11vw;
+    margin-left: 9.4vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-3 {
+    margin-top: -11vw;
+    margin-left: 9.4vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-4 {
+    margin-top: -11vw;
+    margin-left: 9.4vw;
+  }
+  .popup-ticket1 .popup-h1.for-its-5 {
+    margin-top: -11vw;
+    margin-left: 9.4vw;
   }
 
 }

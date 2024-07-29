@@ -21,7 +21,7 @@ export default function PopupTakeGifts ({number, text}) {
         document.getElementById("popup-take-gifts").style.display = "none";
         localStorage.removeItem('number');
         document.body.classList.remove("no-scroll");
-        // reloadPage1()
+        reloadPage1()
     }
 
 // Функция обновления страницы

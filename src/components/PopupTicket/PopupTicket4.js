@@ -63,9 +63,9 @@ export default function PopupTicket4 ({number,text}) {
                 <div className="popup-ticket1 its-4" id={'popup-content'}>
                     <span className="close" onClick={closePopup2}>&times;</span>
                     <form action={''}  id={'form-add-ticket4'} className={'form-register'} >
-                        <h1 className={'popup-h1'}>Регистрация билета</h1>
+                        <h1 className={'popup-h1 for-its-4'}>Регистрация билета</h1>
                         <label className={'bilet-ticket-2-p'}>Билет</label>
-                        <label className={'bilet-ticket-2-p2'} id='ticket-for-number4'>{number}</label>
+                        <label className={'bilet-ticket-2-p2'} id='ticket-for-number4'></label>
                         <label className={'bilet-ticket-2-p3'}>не продан: регистрация невозможна </label>
                         <p className={'bilet-ticket-2-p5'}>Проверьте корректность ввода номера лотерейного билета или обратитесь в точку продаж</p>
                     </form>

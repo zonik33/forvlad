@@ -29,6 +29,7 @@ import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_106.png";
 import tickettextblue from '../../image/img_109.png'
 import ticketsmb from "../../image/img_108.png";
+import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
 
 
 export default function Tickets(){
@@ -700,6 +701,7 @@ export default function Tickets(){
             <PopupTicket4/>
             <PopupTicket5/>
             <PopupVideos/>
+            <PopupTakeGifts/>
             <PopupEnd/>
         </>
 
