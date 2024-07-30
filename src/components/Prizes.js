@@ -18,18 +18,18 @@ import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
 import {CSSTransition} from "react-transition-group";
-import mini1 from "../image/img_89.png";
+import mini1 from "../image/img_113.png";
 import mini2 from "../image/img_64.png";
 import mini3 from "../image/img_65.png";
 import mini4 from "../image/img_66.png";
 import mini5 from "../image/img_87.png";
 import mini6 from "../image/img_88.png";
 import mini7 from "../image/img_89.png";
-import howFull1 from "../image/img_90.png";
+import howFull1 from "../image/img_112.png";
 import howFull2 from "../image/img_91.png";
 import howFull3 from "../image/img_94.png";
 import howFull5 from "../image/img_93.png";
-import howFull6 from "../image/img_92.png";
+import howFull6 from "../image/img_114.png";
 
 export default function Prizes (props) {
 
