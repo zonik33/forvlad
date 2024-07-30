@@ -1,6 +1,6 @@
 import lcexit from "../../image/img_30.png";
 import Modal from "react-modal";
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import howCenterIcon from "../../image/img_58.png";
 import TestForSpin from "../TestSpinProfile";
@@ -71,6 +71,13 @@ export default function PopupAddSpin(props) {
             isRequestPending = false;
         }
     }
+    const [profile, setProfile] = useState(null);
+
+    useEffect(() => {
+        const storedProfile = JSON.parse(localStorage.getItem('profile'));
+        setProfile(storedProfile);
+        console.log(storedProfile); // Добавьте эту строку для отладки
+    }, []);
     return (
         <Modal closeTimeoutMS={300}
                ref={popupRef}
@@ -120,7 +127,7 @@ export default function PopupAddSpin(props) {
                     </div>
                     <div className={'left-second-profile add-spin'}>
                         <p className={'left-first-profile-p spin-p'}>Вы зарегистрировали
-                            <br></br>{/*{profile && profile.countTicketsTotal}*/} 6 лотерейных билетов
+                            <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
                             <br></br>на сумму
                             {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
 
