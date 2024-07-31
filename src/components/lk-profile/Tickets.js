@@ -128,6 +128,13 @@ export default function Tickets(){
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    function profileExit () {
+        // Удалить токен из localStorage
+        localStorage.removeItem('auth_key');
+
+        // Перенаправить на главную страницу
+        window.location.href = '/';
+    };
     const navigate = useNavigate();
 
     const handleGoToPrizes = (event) => {
@@ -186,7 +193,7 @@ export default function Tickets(){
     }
     const [isPopupOpen, setIsPopupOpen] = useState(null);
     function openPopup1() {
-        if (onlyTest > 0) {
+        if (profile && profile.countRoulette > 0) {
             setIsPopupOpen(true); // Показывать попап, если onlyTest больше 0
         } else {
             document.getElementById("popup-banner").style.display = "block"; // Показывать другой попап
@@ -197,7 +204,6 @@ export default function Tickets(){
         setIsPopupOpen(false);
         document.body.classList.remove("no-scroll");
     };
-    let onlyTest = 0
     const [isBlockVisible, setBlockVisibility] = useState(true);
 
     useEffect(() => {
@@ -270,10 +276,17 @@ export default function Tickets(){
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
                         <img className={'tsxt-mobile'} src={ticketsmb}/>
+                        <p className={'global-name-move-mobile shadow-exit'}><a className={'exit-pro'}
+                                                                                onClick={profileExit}>Выйти
+                            из профиля
+                        </a></p>
                         <div className={'items-block-profile tickets-items-block'}>
                             <div className={'background-container'}></div>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
+                                <p className={'global-name-move shadow-exit'}><a className={'exit-pro'}
+                                                                                 onClick={profileExit}>Выйти из профиля
+                                </a></p>
                             </div>
                             <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
@@ -322,29 +335,10 @@ export default function Tickets(){
                                         </div>
                                         <p className={'left-first-profile-p'}>Вы зарегистрировали
                                             <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
-                                            <br></br>на сумму
-                                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+                                            <br></br>на сумму {profile?.sumTickets ?? 0} рублей.
                                         </p>
 
                                         <div className="white-line"></div>
-                                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                                        {/*    За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.*/}
-                                        {/*</p>*/}
-                                        {/*{profile && profile.countReferrals > 0 ? (*/}
-
-                                        {/*<p className={'left-first-profile-p3'}>*/}
-
-                                        {/*    приняли участие <br></br>в*/}
-                                        {/*    розыгрыше*/}
-                                        {/*</p>*/}
-                                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                                        {/*    {profile && profile.countTicketsRejected}*/}
-                                        {/*    3*/}
-                                        {/*</p>*/}
-                                        {/*<p className={'left-first-profile-p3'}>*/}
-                                        {/*    могут принять <br></br>участие в*/}
-                                        {/*    розыгрыше*/}
-                                        {/*</p>*/}
                                         <a
                                             onClick={openPopup1}
                                             className={'button-animation-text-profile click-spin'}>
@@ -352,10 +346,10 @@ export default function Tickets(){
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
-                                        {onlyTest > 6 ? (
+                                        {profile && profile.countRoulette > 0 ? (
                                             <>
                                                 <p className={'left-first-profile-p2-p2-p2'}>
-                                                    Осталось прокрутить {onlyTest} раз
+                                                    Осталось прокрутить {profile && profile.countRoulette} раз
                                                 </p>
 
                                             </>
@@ -448,91 +442,96 @@ export default function Tickets(){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className={'table-body-ticket'}>
-                                                                {profile && Array.isArray(profile.tickets) && profile.tickets.length > 0 ? (
-                                                                    profile.tickets.map((ticket, index) => (
-                                                                        <div className={'table-body-winners-ticket'}
+                                                            {profile && profile.tickets && Array.isArray(profile.tickets) ? (
+                                                                <div className={'table-body-ticket'}>
+                                                                    {profile.tickets.map((ticket, index) => (
+                                                                        <div className={'centered-ticket-wrapper'}
                                                                              key={index}>
-                                                                            <div className={'centered-ticket-wrapper'}>
-                                                                                <div className={'centered-ticket'}>
-                                                                                    <div
-                                                                                        className={'head-colm-prize1-ticket'}>
-                                                                                        <div
-                                                                                            className={'colm-ticket-none'}> Билет:
-                                                                                        </div>
-                                                                                        <div
-                                                                                            className={'colm-text1-ticket'}> {ticket.number} </div>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        className={'head-colm-phone1-ticket'}>
-                                                                                        <div
-                                                                                            className={'colm-data-ticket-none'}> Дата:
-                                                                                        </div>
-                                                                                        <div
-                                                                                            className={'colm-text1-data-ticket'}> {ticket.date} </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div className={'head-colm-date1-ticket'}>
+                                                                            <div className="table-row">
                                                                                 <div
-                                                                                    className={'colm-status-ticket-none'}> Статус:
+                                                                                    className="colm-data-ticket-none">Номер
+                                                                                    лотерейного билета
                                                                                 </div>
-                                                                                {ticket.status.id === 0 && (
-                                                                                    <div
-                                                                                        className={'centered-ticket-wrapper'}>
+                                                                                <div
+                                                                                    className="table-cell number">{ticket.number}</div>
+                                                                                <div
+                                                                                    className="colm-data-ticket-none">Дата
+                                                                                    регистрации в акции
+                                                                                </div>
+                                                                                <div
+                                                                                    className="table-cell data">{ticket.date}</div>
+                                                                                <div
+                                                                                    className="colm-data-ticket-none">Статус
+                                                                                    участия в рулетке
+                                                                                </div>
+                                                                                <div className="table-cell status">
+                                                                                    {ticket.status.id === 0 &&
                                                                                         <div
-                                                                                            className={'centered-ticket'}>
+                                                                                            className={'centered-ticket-wrapper'}>
                                                                                             <div
-                                                                                                className={'custom-status-pending'}></div>
-                                                                                            <div
-                                                                                                className={'colm-text1-status-ticket1-check'}>
+                                                                                                className={'centered-ticket'}>
                                                                                                 <div
-                                                                                                    dangerouslySetInnerHTML={{__html: ticket.status.name}}></div>
+                                                                                                    className={'custom-status-pending'}>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    className={'colm-text1-status-ticket1-check'}>
+                                                                                                    <div
+                                                                                                        dangerouslySetInnerHTML=
+                                                                                                            {{__html: ticket.status.name}}>
+
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                )}
-                                                                                {ticket.status.id === 1 && (
-                                                                                    <div
-                                                                                        className={'centered-ticket-wrapper'}>
+
+                                                                                        </div>}
+                                                                                    {ticket.status.id === 1 &&
                                                                                         <div
-                                                                                            className={'centered-ticket'}>
+                                                                                            className={'centered-ticket-wrapper'}>
                                                                                             <div
-                                                                                                className={'custom-status-ok'}></div>
-                                                                                            <div
-                                                                                                className={'colm-text1-status-ticket1-complete'}>
+                                                                                                className={'centered-ticket'}>
+                                                                                                {/*<div className={'custom-status-ok'}>*/}
+                                                                                                {/*</div>*/}
                                                                                                 <div
-                                                                                                    className={'massive-text-agree'}
-                                                                                                    dangerouslySetInnerHTML={{__html: ticket.status.text}}></div>
+                                                                                                    className={'colm-text1-status-ticket1-complete'}>
+                                                                                                    <div
+                                                                                                        className={'massive-text-agree'}
+                                                                                                        dangerouslySetInnerHTML=
+                                                                                                            {{__html: ticket.status.text}}>
+
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                )}
-                                                                                {ticket.status.id === 2 && (
-                                                                                    <div
-                                                                                        className={'centered-ticket-wrapper'}>
+                                                                                        </div>}
+                                                                                    {ticket.status.id === 2 &&
                                                                                         <div
-                                                                                            className={'centered-ticket'}>
+                                                                                            className={'centered-ticket-wrapper'}>
                                                                                             <div
-                                                                                                className={'custom-status-neok'}></div>
-                                                                                            <div
-                                                                                                className={'colm-text1-status-ticket1-fail'}>
+                                                                                                className={'centered-ticket'}>
+                                                                                                {/*<div*/}
+                                                                                                {/*    className={'custom-status-neok'}>*/}
+                                                                                                {/*</div>*/}
                                                                                                 <div
-                                                                                                    className={'massive-text-not-agree'}
-                                                                                                    dangerouslySetInnerHTML={{__html: ticket.status.text}}></div>
+                                                                                                    className={'colm-text1-status-ticket1-fail'}>
+                                                                                                    <div
+                                                                                                        className={'massive-text-not-agree'}
+                                                                                                        dangerouslySetInnerHTML=
+                                                                                                            {{__html: ticket.status.text}}>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
+
                                                                                         </div>
-                                                                                    </div>
-                                                                                )}
+                                                                                    }
+                                                                                    <div
+                                                                                        className={'line-true-tickets'}></div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    ))
-                                                                ) : (
-                                                                    <div className="no-tickets-message">
-                                                                        <p>Список билетов пуст</p>
-                                                                    </div>
-                                                                )}
-                                                            </div>
+                                                                    ))}
+                                                                </div>
+                                                            ) : (
+                                                                <></>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>

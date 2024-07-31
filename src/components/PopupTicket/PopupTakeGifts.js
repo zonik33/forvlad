@@ -1,8 +1,8 @@
 import CodeInput from "../CodeInput";
 import PhoneInput from "../PhoneInput";
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
-export default function PopupTakeGifts ({number, text}) {
+export default function PopupTakeGifts ({name, image}) {
     function openPopupTicket2() {
         closePopup2()
         document.getElementById("popup-ticket-2").style.display = "block";
@@ -18,8 +18,13 @@ export default function PopupTakeGifts ({number, text}) {
 
 
     function closePopup2() {
-        document.getElementById("popup-take-gifts").style.display = "none";
         localStorage.removeItem('number');
+        localStorage.removeItem('name');
+        localStorage.removeItem('image');
+        localStorage.removeItem('prizeNumber'); // Очищаем номер приза
+        localStorage.removeItem('prizeName');   // Очищаем имя приза
+        localStorage.removeItem('prizeImage');   // Если есть изображение, очищаем его тоже
+        document.getElementById("popup-take-gifts").style.display = "none";
         document.body.classList.remove("no-scroll");
         reloadPage1()
     }
@@ -38,6 +43,9 @@ export default function PopupTakeGifts ({number, text}) {
     window.addEventListener('beforeunload', function(event) {
         // Удаляем элемент 'number' из localStorage перед обновлением страницы
         localStorage.removeItem('number');
+        localStorage.removeItem('name');
+        localStorage.removeItem('image');
+
     });
     const [showTooltip, setShowTooltip] = useState(false);
 
@@ -64,8 +72,12 @@ export default function PopupTakeGifts ({number, text}) {
                         <h1 className={'popup-h1 take-gifts'}>Поздравляем</h1>
                         <label className={'bilet-ticket-2-p take-gifts'}>Вы выиграли промокод на <br></br> получение
                             билета:</label>
-                        <label className={'bilet-ticket-2-p2 take-gifts'}
-                               id={'ticket-for-number2'}>{number} 2323850925307322305</label>
+                        <div className="ticket-container">
+                            <img src={image}
+                                 className="ticket-image" id={'ticket-for-number2254img'}/>
+                            <label className={'bilet-ticket-2-p2 take-gifts'}
+                                   id={'ticket-for-number2254'}>{name}</label>
+                        </div>
                         {/*<label className={'bilet-ticket-2-p3 take-gifts'}>не существует. </label>*/}
                         <p className={'bilet-ticket-2-p4 take-gifts'}>Для активации промокода перейдите на nloto.ru по
                             ссылке:</p>

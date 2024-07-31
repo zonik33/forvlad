@@ -2000,7 +2000,7 @@ header .menu-content-profile a:hover {
   line-height: 1.650vw;
 }
 .button-animation-text-profile.click-ticket-prizes {
-  margin-left: -7.4vw;
+  margin-left: -24.4vw;
   margin-top: 0.8vw;
   padding: 1.1vw 1.35vw;
   background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
@@ -2027,6 +2027,19 @@ header .menu-content-profile a:hover {
 
 .global-name-move {
   margin: 3.4vw 0vw 0vw -75.1vw;
+}
+.global-name-move.shadow-exit {
+  margin: 0vw 0vw 0vw -23.4vw;
+  position: absolute;
+  font-size: 1.067vw;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.423vw;
+  cursor: pointer;
+}
+.exit-pro {
+  color: #364059;
+  text-decoration: underline;
 }
 .button-animation-text-profile:hover {
   background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
@@ -2413,6 +2426,24 @@ header .menu-content-profile a:hover {
   width: 9.2%;
   height: auto;
 }
+/*.ticket-image {*/
+/*  width: 3vw;*/
+/*  margin: 10vw 0vw 0vw 4vw;*/
+/*  height: auto;*/
+/*  position: absolute;*/
+/*}*/
+.ticket-container {
+  display: flex;
+  align-items: center; /* Вертикальное выравнивание по центру */
+  justify-content: flex-start; /* Горизонтальное выравнивание слева */
+}
+
+.ticket-image {
+  height: auto;
+  margin-left: 25%;
+  margin-right: 1vw;
+  width: 3vw;
+}
 
 
 
@@ -2687,7 +2718,7 @@ header .menu-content-profile a:hover {
   height: auto;
   margin: -42.2vw 0vw 0vw 16.5vw;
   z-index: -1;
-  opacity: 0;
+  opacity: 1;
   transition: transform 1s ease-out, width 1s ease-out; /* Добавьте плавные переходы для изменения позиции и размера */
   transform: translateY(200px) scale(0.2); /* Начальное положение и размер */
 }
@@ -3014,6 +3045,7 @@ canvas#wheel {
   margin: -1vw 0vw 0vw 32vw;
 }
 canvas#wheel-profile {
+  pointer-events: none;
   position: relative;
   z-index: 5;
   width: 22.722vw;
@@ -3888,8 +3920,8 @@ canvas#wheel-profile-popup {
 .prizes-container {
   width: 53vw;
   display: flex;
+  margin-bottom: 11.7vw;
   margin-top: 5vw;
-  margin-bottom: 5.7vw;
 }
 .gifts-prizes-name-none {
   display: none;
@@ -3959,17 +3991,18 @@ canvas#wheel-profile-popup {
 
 .draw-date {
   color: #364059;
-  font-size: 1.250vw;
+  font-family: Halvar Mittelschrift Rg, sans-serif;
+  font-size: 1.25vw;
   font-weight: 400;
   line-height: 1.667vw;
-  margin-left: -3.15vw;
-  margin-top: 0.4vw;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin-left: 14.45vw;
+  margin-top: -5.6vw;
   text-align: left;
 
 }
 .draw-date.margin-new {
-  margin-left: -9.35vw;
+  margin-left: 26vw;
+  margin-top: -1.7vw;
 }
 .gifts-prizes-name {
   position: absolute;
@@ -5618,11 +5651,12 @@ canvas#wheel-profile-popup {
   color: #364059;
 }
 .bilet-ticket-2-p2.take-gifts {
-  margin-left: -1.5vw;
-  width: 26.35vw;
+  margin-left: 0.5vw;
+  width: 21.35vw;
   height: 1.90vw;
   display: block;
-  text-align: center;
+  margin-top: 0vw;
+  text-align: left;
   font-size: 1.32vw;
   line-height: 1.76vw;
   font-family: "Halvar Mittelschrift Rg", sans-serif;
@@ -6092,10 +6126,10 @@ canvas#wheel-profile-popup {
   margin-top: -0.7vw;
 }
 .head-colm-phone-ticket {
-  min-width: 1.614583vw;
+  margin-left: 1.1vw;
   margin-right: -2.3vw;
-  margin-top: -0.25vw;
-  margin-left: -2.9vw;
+  margin-top: -.25vw;
+  min-width: 1.614583vw;
 }
 .head-colm-phone {
   min-width: 16.614583vw;
@@ -6132,7 +6166,7 @@ canvas#wheel-profile-popup {
   opacity: 50%;
 }
 .line-true-tickets {
-  margin: 5vw 0vw 0vw -10vw;
+  margin: 0vw 0 0 -20.6vw;
   position: absolute;
   width: 40.318vw;
   height: 0.146vw;
@@ -6146,7 +6180,7 @@ canvas#wheel-profile-popup {
   font-weight: 400;
   line-height: 1.667vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  margin-left: 2.7vw;
+  margin-left: 3.7vw;
   margin-right: 0.6vw;
   color: #364059;
 
@@ -6154,8 +6188,8 @@ canvas#wheel-profile-popup {
 .table-cell.data {
   display: block;
   text-align: left;
-  margin-left: -2vw;
-  margin-right: -3vw;
+  margin-left: 0vw;
+  margin-right: -5vw;
   font-size: 1.250vw;
   font-weight: 400;
   line-height: 1.667vw;
@@ -6164,16 +6198,13 @@ canvas#wheel-profile-popup {
 
 }
 .table-cell.status {
-  margin-left: 0.75vw;
-  width: 33vw;
+  color: #364059;
   display: block;
-  text-align: left;
-  font-size: 1.250vw;
-  font-weight: 400;
+  font-size: 1.25vw;
   line-height: 1.667vw;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
-  color: #364059
-
+  margin-left: -2.25vw;
+  text-align: left;
+  width: 33vw;
 }
 .table-cell {
   display: inline-block;
@@ -6195,7 +6226,7 @@ canvas#wheel-profile-popup {
   margin-left: -8vw;
 }
 .line-true.gifts {
-  margin: 10.5vw 0vw 0vw 0.3vw;
+  margin: 9.5vw 0vw 0vw 0.3vw;
   position: absolute;
   width: 40.318vw;
   height: 0.146vw;
@@ -6408,12 +6439,10 @@ canvas#wheel-profile-popup {
 }
 .massive-text-agree {
   display: inline-block;
-  width: 19.59vw;
   height: auto;
-  margin-left: -1.2vw;
-  /*margin-top: -0.5vw;*/
-  /*margin-bottom: 1.4vw;*/
+  margin-left: -0.8vw;
   text-align: left;
+  width: 19.59vw;
 }
 .table-body-winners {
   display: flex;
@@ -8659,12 +8688,32 @@ input::placeholder {
 
 
 
-
+.global-name-move-mobile {
+  display: none;
+}
 
 iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .global-name-move-mobile {
+    display: none;
+  }
+  .global-name-move.shadow-exit {
+    margin: 1vw 0vw 0vw -12vw !important;
+    position: absolute;
+    font-size: 1.867vw;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.423vw;
+    cursor: pointer;
+  }
+  .ticket-image {
+    margin-right: auto; /* Отталкивает текст вправо */
+    margin-left: 25%; /* Сдвигаем фотографию чуть левее */
+    width: 4vw; /* Задайте максимальную ширину, если нужно */
+    height: auto; /* Сохраняет пропорции изображения */
+  }
   .no-tickets-message {
     display: none;
   }
@@ -9105,11 +9154,12 @@ iframe {
     margin-left: 6.5vw;
   }
   .bilet-ticket-2-p2.take-gifts {
-    margin-left: 1.5vw;
+    margin-left: 2.2vw;
+    margin-top: 0.7vw;
     width: 31.35vw;
     height: 2.90vw;
     display: block;
-    text-align: center;
+    text-align: left;
     font-size: 1.72vw;
     line-height: 2.1vw;
     font-family: "Halvar Mittelschrift Rg", sans-serif;
@@ -9372,7 +9422,7 @@ iframe {
     height: auto;
     margin: -47.2vw 0vw 0vw 16.5vw;
     z-index: -1;
-    opacity: 0;
+    opacity: 1;
     transition: transform 1s ease-out, width 1s ease-out;
     transform: translateY(200px) scale(0.2);
   }
@@ -9735,32 +9785,50 @@ iframe {
   .table-cell.number {
     display: block;
     text-align: left;
-    font-size: 2.35vw;
+    font-size: 2.05vw;
     font-weight: 400;
     line-height: 2.667vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin-left: 15vw;
+    margin-left: 20vw;
     margin-right: 0.9vw;
     color: #364059;
+  }
+  .massive-text-agree {
+    display: inline-block;
+    height: auto;
+    margin-left: -4.1vw;
+    text-align: left;
+    width: 18.59vw;
+  }
+  .head-colm-phone-ticket {
+    margin-left: 8.1vw;
+    margin-right: -2.3vw;
+    margin-top: -.25vw;
+    min-width: 1.614583vw;
+  }
+  .head-colm-date-ticket {
+    margin-left: 5vw;
+    margin-top: -.3vw;
+    min-width: 5.364583vw;
   }
   .table-cell.data {
     display: block;
     text-align: left;
-    margin-left: -2vw;
-    margin-right: -3vw;
-    font-size: 2.35vw;
+    margin-left: 0vw;
+    margin-right: -4vw;
+    font-size: 2.05vw;
     font-weight: 400;
     line-height: 2.667vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     color: #364059;
   }
   .line-true-tickets {
-    margin: 19vw 0vw 0vw 1vw;
-    position: absolute;
-    width: 50.318vw;
-    height: 0.246vw;
-    background-color: #93CFFC;
+    background-color: #93cffc;
+    height: .246vw;
+    margin: 0px 0 0 -39.4vw;
     opacity: 50%;
+    position: absolute;
+    width: 55.318vw;
   }
   .gifts-prizes-name {
     position: absolute;
@@ -9796,7 +9864,7 @@ iframe {
     width: 53vw;
     display: flex;
     margin-top: 13vw;
-    margin-bottom: 5.7vw;
+    margin-bottom: 20.7vw;
   }
   .prize-name {
     color: #364059;
@@ -9804,7 +9872,7 @@ iframe {
     text-align: left;
     margin-left: 0.34vw;
     margin-top: -1.96vw;
-    font-size: 2.5vw;
+    font-size: 2.05vw;
     font-weight: 400;
     line-height: 5.667vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
@@ -9816,8 +9884,8 @@ iframe {
     font-size: 1.671vw !important;
   }
   .button-animation-text-profile.click-ticket-prizes {
-    margin-left: -7.9vw;
-    margin-top: 1.3vw;
+    margin-left: -24.9vw;
+    margin-top: 2.3vw;
     padding: 2.1vw 1.55vw;
     background-image: linear-gradient(#AF21C9CC, #AF21C9CC);
     border: 0.15vw solid #AF21C9CC;
@@ -9825,12 +9893,12 @@ iframe {
     transition: color 0.3s, background-image 0.3s;
   }
   .line-true.gifts {
-    margin: 17.5vw 0vw 0vw 0.3vw;
+    background-color: #93cffc;
+    height: .246vw;
+    margin: 16.5vw 0 0 .3vw;
+    opacity: 50%;
     position: absolute;
     width: 54.318vw;
-    height: 0.246vw;
-    background-color: #93CFFC;
-    opacity: 50%;
   }
   .tsxt.error {
     margin: 4.6vw 0vw 0vw 0vw;
@@ -9880,23 +9948,24 @@ iframe {
      text-align: left;
      margin-left: 0.34vw;
      margin-top: 0.34vw;
-       font-size: 2.5vw;
+       font-size: 2.05vw;
        font-weight: 400;
        line-height: 2.667vw;
      font-family: 'Halvar Mittelschrift Rg', sans-serif;
    }
   .draw-date {
     color: #364059;
-    font-size: 2.5vw;
+    font-size: 2.05vw;
     font-weight: 400;
     line-height: 2.667vw;
-    margin-left: -0.15vw;
-    margin-top: -0.6vw;
+    margin-left: 18.85vw;
+    margin-top: -8.6vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     text-align: left;
   }
   .draw-date.margin-new {
-    margin-left: 0.65vw;
+    margin-left: 36.85vw;
+    margin-top: -2.75vw;
   }
   .table-cell.status {
     margin-top: -0.55vw;
@@ -9904,9 +9973,9 @@ iframe {
     width: 33vw;
     display: block;
     text-align: left;
-    font-size: 2.35vw;
+    font-size: 2.05vw;
     font-weight: 400;
-    line-height: 3.667vw;
+    line-height: 2.867vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     color: #364059;
   }
@@ -13856,7 +13925,7 @@ iframe {
     margin: 13vw 0vw 0vw -10vw;
     width: 88.8vw;
     height: auto;
-    min-height: 51vw;
+    min-height: 12vw;
     text-align: center;
     /*background-color: rgba(255, 255, 255, 0.15);*/
     /*border: #FFFFFF4D solid 0.15vw;*/
@@ -14148,19 +14217,19 @@ iframe {
     color: #FFFFFF;
   }
   .centered-ticket-wrapper {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     height: auto;
-    min-height: 80vw;
+    justify-content: center;
+    min-height: 16vw;
   }
   .line-true-tickets {
-    margin: 71vw 0vw 0vw -11vw;
+    background-color: #93cffc;
+    height: .5646vw;
+    margin: 3vw 0 0 2vw;
+    opacity: 50%;
     position: absolute;
     width: 89.318vw;
-    height: 0.5646vw;
-    background-color: #93CFFC;
-    opacity: 50%;
   }
 
   .centered-ticket {
@@ -14627,11 +14696,11 @@ iframe {
   }
 
   .colm-text1-status-ticket1-complete {
-    width: 39.2vw;
     height: auto;
+    line-height: 4.8vw;
     margin-left: 8vw;
-    margin-top: 0.5vw;
-    line-height: 4.80vw;
+    margin-top: .5vw;
+    width: 79.2vw;
   }
   .how-tickets-img-second {
     display: flex;
@@ -15400,12 +15469,13 @@ iframe {
     background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
   }
   .massive-text-agree {
-    width: 37.59vw;
+    line-height: 1.1;
     height: 5.64vw;
-    margin-left: 0.25vw;
-    margin-top: -6.5vw;
     margin-bottom: 1.4vw;
+    margin-left: -8.75vw;
+    margin-top: -1.5vw;
     text-align: left;
+    width: 89.59vw;
   }
   .form-under-button-code {
     position: relative;
@@ -17774,6 +17844,19 @@ iframe {
     margin-top: 2vw;
     margin-bottom: 2vw;
   }
+  .global-name-move-mobile {
+    margin: -12vw 0vw 0vw 64vw;
+    display: flex;
+    position: absolute;
+    font-size: 5vw;
+    width: 27vw;
+    line-height: 6vw;
+  }
+  .exit-pro {
+    color: #FFFFFF;
+    text-decoration: underline;
+
+  }
   .table-cell.data {
     display: block;
     text-align: left;
@@ -17788,20 +17871,21 @@ iframe {
     margin-bottom: 2vw;
   }
   .table-cell.status {
-    width: 95vw;
-    margin-left: 2vw;
+    color: #364059;
     display: block;
-    text-align: left;
+    font-family: Halvar Mittelschrift Rg, sans-serif;
     font-size: 6.667vw;
     font-weight: 400;
     line-height: 8.889vw;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    color: #364059;
-    margin-top: 2vw;
     margin-bottom: 2vw;
+    margin-left: 0vw;
+    margin-top: 2vw;
+    text-align: left;
+    width: 95vw;
   }
   .table-row {
-    margin-top: -9vw;
+    margin-bottom: 5vw;
+    margin-top: 0vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17886,7 +17970,7 @@ iframe {
     margin-bottom: 1.34vw;
   }
   .line-true.gifts {
-    margin: 95.5vw 0vw 0vw 1vw;
+    margin: 2.5vw 0vw 0vw 1vw;
     position: absolute;
     width: 91.318vw;
     height: 0.56vw;
@@ -18140,16 +18224,16 @@ iframe {
     line-height: 4.27vw !important;
   }
   .bilet-ticket-2-p2.take-gifts {
-    margin: 7vw 0vw 8vw -3vw;
-    width: 77.35vw;
-    height: 1.90vw;
-    display: block;
-    text-align: center;
-    font-size: 4.27vw;
-    line-height: 6.40vw;
-    font-family: "Halvar Mittelschrift Rg", sans-serif;
-    font-weight: 500;
     color: #364059;
+    display: block;
+    font-family: Halvar Mittelschrift Rg, sans-serif;
+    font-size: 4.27vw;
+    font-weight: 500;
+    height: 1.9vw;
+    line-height: 2.4vw;
+    margin: 7vw 0 8vw 5vw;
+    text-align: left;
+    width: 57.35vw;
   }
   .popup-take-gifts .form-register {
     width: 88vw;
@@ -18281,7 +18365,7 @@ iframe {
     height: auto;
     margin: -145.2vw 0vw 0vw -13.8vw;
     z-index: -1;
-    opacity: 0;
+    opacity: 1;
     transition: transform 1s ease-out, width 1s ease-out;
     transform: translateY(200px) scale(0.2);
   }
@@ -18574,6 +18658,12 @@ iframe {
     font-weight: 400;
     margin-left: -22.5vw;
     margin-top: -5.2vw;
+  }
+  .ticket-image {
+    margin-right: auto; /* Отталкивает текст вправо */
+    margin-left: 25%; /* Сдвигаем фотографию чуть левее */
+    width: 8vw; /* Задайте максимальную ширину, если нужно */
+    height: auto; /* Сохраняет пропорции изображения */
   }
 
 }

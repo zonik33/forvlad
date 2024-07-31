@@ -50,6 +50,9 @@ export default function Gifts() {
         document.getElementById("popup-take-gifts").style.display = "block";
         document.body.classList.add("no-scroll");
     }
+    function openPopupTest() {
+        window.open('https://nloto.ru', '_blank');
+    }
 
     function toggleMenu() {
         const navLists = document.querySelector('.header-burger');
@@ -232,7 +235,7 @@ export default function Gifts() {
     }, [activeSection]);
     const [isPopupOpen, setIsPopupOpen] = useState(null);
     function openPopup1() {
-        if (onlyTest > 0) {
+        if (profile && profile.countRoulette > 0) {
             setIsPopupOpen(true); // Показывать попап, если onlyTest больше 0
         } else {
             document.getElementById("popup-banner").style.display = "block"; // Показывать другой попап
@@ -243,7 +246,6 @@ export default function Gifts() {
         setIsPopupOpen(false);
         document.body.classList.remove("no-scroll");
     };
-    let onlyTest = 5
 
     const [isBlockVisible, setBlockVisibility] = useState(true);
 
@@ -264,6 +266,13 @@ export default function Gifts() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    function profileExit () {
+        // Удалить токен из localStorage
+        localStorage.removeItem('auth_key');
+
+        // Перенаправить на главную страницу
+        window.location.href = '/';
+    };
     return (
         <>
             <header className={'header-profile'}>
@@ -317,11 +326,19 @@ export default function Gifts() {
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
                         <img className={'tsxt-mobile'} src={ticketsmb}/>
+                        <p className={'global-name-move-mobile shadow-exit'}><a className={'exit-pro'}
+                                                                                onClick={profileExit}>Выйти
+                            из профиля
+                        </a></p>
                         <div className={'items-block-profile gifts-items-block'}>
                             <div className={'background-container'}></div>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
+                                <p className={'global-name-move shadow-exit'}><a className={'exit-pro'}
+                                                                                 onClick={profileExit}>Выйти из профиля
+                                </a></p>
                             </div>
+
                             <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
                             <div className="container-profile">
@@ -369,29 +386,10 @@ export default function Gifts() {
                                         </div>
                                         <p className={'left-first-profile-p'}>Вы зарегистрировали
                                             <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
-                                            <br></br>на сумму
-                                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+                                            <br></br>на сумму {profile?.sumTickets ?? 0} рублей.
                                         </p>
 
                                         <div className="white-line"></div>
-                                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                                        {/*    За каждые 300 рублей вы можете 1 (один) раз <br></br> прокрутить колесо.*/}
-                                        {/*</p>*/}
-                                        {/*{profile && profile.countReferrals > 0 ? (*/}
-
-                                        {/*<p className={'left-first-profile-p3'}>*/}
-
-                                        {/*    приняли участие <br></br>в*/}
-                                        {/*    розыгрыше*/}
-                                        {/*</p>*/}
-                                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                                        {/*    {profile && profile.countTicketsRejected}*/}
-                                        {/*    3*/}
-                                        {/*</p>*/}
-                                        {/*<p className={'left-first-profile-p3'}>*/}
-                                        {/*    могут принять <br></br>участие в*/}
-                                        {/*    розыгрыше*/}
-                                        {/*</p>*/}
                                         <a
                                             onClick={openPopup1}
                                             className={'button-animation-text-profile click-spin'}>
@@ -399,10 +397,10 @@ export default function Gifts() {
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
-                                        {onlyTest > 0 ? (
+                                        {profile && profile.countRoulette > 0 ? (
                                             <>
                                                 <p className={'left-first-profile-p2-p2-p2'}>
-                                                    Осталось прокрутить {onlyTest} раз
+                                                    Осталось прокрутить {profile && profile.countRoulette} раз
                                                 </p>
 
                                             </>
@@ -472,100 +470,220 @@ export default function Gifts() {
                                         <span className={'gifts-prizes-name'}>Приз</span>
                                         <span className={'gifts-prizes-data'}>Итоги розыгрыша рулетки</span>
                                         <span className={'gifts-prizes-data-add'}>Срок <br></br>действия до</span>
-                                        <div className="prizes-container">
-                                            <div className="prize-column">
-                                                <div className="prize-item">
-                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
-                                                    <span className="prize-name">Мечталион</span>
-                                                    <span className="prize-code">221234567890</span>
-                                                    <a className="button-animation-text-profile click-ticket-prizes"
-                                                       onClick={openPopupTakeGifts}>
-                                                        <b className={'gifts-b'}>Получить билет</b></a>
+                                        {profile && profile.prizes ? profile.prizes.map((prize, index) => (
+                                            <div className="prizes-container" key={index}>
+                                                <div className="prize-column">
+                                                    {prize.type === 1 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 2 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 3 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 4 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 5 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 6 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 7 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
+                                                    {prize.type === 8 && (
+                                                        <>
+                                                            <div className="prize-item">
+                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                                <span className="prize-name">{prize.name}</span>
+                                                                {/*<span className="prize-code">221234567890</span>*/}
+                                                                <a
+                                                                    className="button-animation-text-profile click-ticket-prizes"
+                                                                    href={prize.link} // Используйте prize.link здесь
+                                                                    target="_blank" // Открыть в новой вкладке
+                                                                >
+                                                                    <b className={'gifts-b'}>Получить билет</b>
+                                                                </a>
+                                                            </div>
+                                                            <div className="draw-date-column">
+                                                                <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
+                                                                <div className="draw-date">10.06.2024</div>
+                                                            </div>
+                                                            <div className="draw-date-prizes-column">
+                                                                <span
+                                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
+                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                            </div>
+                                                            <div className={'line-true gifts'}></div>
+                                                        </>
+                                                    )}
                                                 </div>
                                             </div>
-                                            <div className="draw-date-column">
-                                                <span
-                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                <div className="draw-date">10.06.2024</div>
-                                            </div>
-                                            <div className="draw-date-prizes-column">
-                                                <span
-                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                <div className="draw-date margin-new">10.08.2024</div>
-                                            </div>
-                                            <div className={'line-true gifts'}></div>
-                                        </div>
-
-                                        <div className="prizes-container">
-                                            <div className="prize-column">
-                                                <div className="prize-item">
-                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
-                                                    <span className="prize-name">Мечталион</span>
-                                                    <span className="prize-code">221234567890</span>
-                                                    <a className="button-animation-text-profile click-ticket-prizes"
-                                                       onClick={openPopupTakeGifts}>
-                                                        <b className={'gifts-b'}>Получить билет</b></a>
-                                                </div>
-                                            </div>
-                                            <div className="draw-date-column">
-                                                <span
-                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                <div className="draw-date">10.06.2024</div>
-                                            </div>
-                                            <div className="draw-date-prizes-column">
-                                                <span
-                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                <div className="draw-date margin-new">10.08.2024</div>
-                                            </div>
-                                            <div className={'line-true gifts'}></div>
-                                        </div>
-
-                                        <div className="prizes-container">
-                                            <div className="prize-column">
-                                                <div className="prize-item">
-                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
-                                                    <span className="prize-name">Мечталион</span>
-                                                    <span className="prize-code">221234567890</span>
-                                                    <a className="button-animation-text-profile click-ticket-prizes"
-                                                       onClick={openPopupTakeGifts}>
-                                                        <b className={'gifts-b'}>Получить билет</b></a>
-                                                </div>
-                                            </div>
-                                            <div className="draw-date-column">
-                                                <span
-                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                <div className="draw-date">10.06.2024</div>
-                                            </div>
-                                            <div className="draw-date-prizes-column">
-                                                <span
-                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                <div className="draw-date margin-new">10.08.2024</div>
-                                            </div>
-                                            <div className={'line-true gifts'}></div>
-                                        </div>
-                                        <div className="prizes-container">
-                                            <div className="prize-column">
-                                                <div className="prize-item">
-                                                    <span className={'gifts-prizes-name-none'}>Приз</span>
-                                                    <span className="prize-name">Мечталион</span>
-                                                    <span className="prize-code">221234567890</span>
-                                                    <a className="button-animation-text-profile click-ticket-prizes"
-                                                       onClick={openPopupTakeGifts}>
-                                                        <b className={'gifts-b'}>Получить билет</b></a>
-                                                </div>
-                                            </div>
-                                            <div className="draw-date-column">
-                                                <span
-                                                    className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                <div className="draw-date">10.06.2024</div>
-                                            </div>
-                                            <div className="draw-date-prizes-column">
-                                                <span
-                                                    className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                <div className="draw-date margin-new">10.08.2024</div>
-                                            </div>
-                                            <div className={'line-true gifts'}></div>
-                                        </div>
+                                        )) : null}
                                     </div>
                                 </div>
                             </div>

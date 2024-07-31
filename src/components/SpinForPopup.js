@@ -13,7 +13,36 @@ import animal from '../image/img_80.png'
 import lefthand from '../image/img_81.png'
 import righthand from '../image/img_82.png'
 import spinmain from "../image/spin-main.png";
+import axios from "axios";
+import e1 from '../image/img_122.png'
+import e8 from '../image/img_115.png'
+import e7 from '../image/img_116.png'
+import e6 from '../image/img_120.png'
+import e5 from '../image/img_119.png'
+import e4 from '../image/img_118.png'
+import e3 from '../image/img_117.png'
+import e2 from '../image/img_121.png'
 
+const prizes = {
+    1: { name: "4*4", image: e1 },
+    2: { name: "5 из 37", image: e2 },
+    3: { name: "Большая 8", image: e3 },
+    4: { name: "Великолепная 8", image: e4 },
+    5: { name: "Мечталлион", image: e5 },
+    6: { name: "Форсаж 75", image: e6 },
+    7: { name: "Премьер", image: e7 },
+    8: { name: "Топ-12", image: e8 },
+};
+const indexToPrizeMap = {
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
+    7: 1,
+    8: 1
+};
 
 class SpinForPopup extends React.Component {
     state = {
@@ -28,8 +57,8 @@ class SpinForPopup extends React.Component {
             fors,
             vel8,
         ],
-        // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
-        // list: ["$100","$500","$9,999","$1","$60"],
+
+
         radius: 75, // PIXELS
         rotate: 0, // DEGREES
         easeOut: 0, // SECONDS
@@ -41,6 +70,8 @@ class SpinForPopup extends React.Component {
         spinning: false,
         buttonDisabled: false, // Начальное состояние кнопки
     };
+
+
 
     componentDidMount() {
         // generate canvas wheel on load
@@ -300,68 +331,127 @@ class SpinForPopup extends React.Component {
         }
     }
 
-    spin = () => {
+    handleAnimation = () => {
+        const imageElement = document.getElementById('yourImageId');
+        setTimeout(() => {
+            imageElement.classList.add('animate');
+        }, 100);
+
+        const imageElements = document.getElementById('yourImageId2');
+        setTimeout(() => {
+            imageElements.classList.add('animate');
+        }, 1500);
+
+        const imageElements2 = document.getElementById('yourImageId3');
+        setTimeout(() => {
+            imageElements2.classList.add('animate');
+        }, 1500);
+
+        setTimeout(() => {
+            imageElements.classList.add('shake-animation');
+            imageElements2.classList.add('shake-animation');
+        }, 2800);
+    };
+
+
+
+    spin = async () => {
+        debugger;
         if (!this.state.spinning && this.state.availableTickets >= 3) {
-            let randomSpin = Math.floor(Math.random() * 900) + 500;
+            const baseRotation = 360; // базовое вращение
+            const additionalRotation = 180; // дополнительное вращение перед остановкой
+            const sectors = 8; // количество секторов
+            // let randomSpin = Math.floor(Math.random() * 900) + 500; // Объявление переменной randomSpin
             this.setState({
                 buttonDisabled: true,
                 rotating: true,
                 showFullSizeImage: true
             });
+            debugger
 
-            // Выбранная часть: Добавляем showPhoto и showImage
-            this.setState({
-                showPhoto: true,
-                showNewPhoto: true,
-                showNewPhotoRight: true
-            }, () => {
-                const imageElement = document.getElementById('yourImageId');
-                setTimeout(() => {
-                    document.getElementById('yourImageId').classList.add('animate');
-                }, 100); // Delay in milliseconds
-                // Замените 'yourImageId' на реальный идентификатор вашего изображения
-                imageElement.classList.add('show-image');
-                const imageElements = document.getElementById('yourImageId2');
-                setTimeout(() => {
-                    document.getElementById('yourImageId2').classList.add('animate');
-                }, 1500); // Delay in milliseconds
-                // Замените 'yourImageId' на реальный идентификатор вашего изображения
-                imageElements.classList.add('show-image');
-                const imageElements2 = document.getElementById('yourImageId3');
-                setTimeout(() => {
-                    document.getElementById('yourImageId3').classList.add('animate');
-                }, 1500); // Delay in milliseconds
-                imageElements2.classList.add('show-image');
-                const imageElements22 = document.getElementById('yourImageId3');
-                setTimeout(() => {
-                    document.getElementById('yourImageId2').classList.add('shake-animation');
-                }, 2800); // Delay in milliseconds
-                imageElements22.classList.add('shake-animation');
-            });
-
-
-
-            setTimeout(() => {
-                this.setState({
-                    rotate: randomSpin,
-                    easeOut: 2,
+            try {
+                const response = await axios.post('https://nloto-promo.ru/backend/api/roulette', {}, {
+                    headers: {
+                        'X-Auth-Token': localStorage.getItem('auth_key'),
+                        'Content-Type': 'application/json'
+                    }
                 });
-                setTimeout(() => {
-                    this.getResult(randomSpin);
+
+                if (response.data.result === true) {
+                    const prizeNumber = response.data.data.prize;
+                    const selectedPrize = prizes[prizeNumber];
+                    const totalRotation = this.calculateRotation(prizeNumber); // вычисляем вращение
+                    // console.log("Базовое вращение: 360°");
+                    // console.log("Дополнительное вращение: 180°");
+                    // console.log("Угол остановки:", (prizeNumber - 1) * (360 / 8), "°");
+                    // console.log("Итоговое вращение:", totalRotation, "°");
+
+
+
+
+                    // console.log("Полученный приз:", selectedPrize);
+                    localStorage.setItem('prizeLink', selectedPrize.link);
+                    localStorage.setItem('prizeName', selectedPrize.name);
+                    localStorage.setItem('prizeImage', selectedPrize.image); // Здесь selectedPrize.image уже строка
+                    localStorage.setItem('prizeNumber', prizeNumber);
                     this.setState({
-                        buttonDisabled: false,
+                        showPhoto: true,
+                        showNewPhoto: true,
+                        showNewPhotoRight: true,
+                        prizeName: selectedPrize.name,
+                        prizeImage: selectedPrize.image,
+                        prizeLink: selectedPrize.link,
+
+                    }, () => {
+                        this.handleAnimation();
+
                     });
-                }, 3000);
-            }, 4000);
-            setTimeout(() => {
+
+                    setTimeout(() => {
+                        this.setState({ rotate: totalRotation, easeOut: 3 });
+
+                        setTimeout(() => {
+                            this.getResult(totalRotation, selectedPrize.name, selectedPrize.image, selectedPrize.link);
+                            this.setState({
+                                buttonDisabled: false,
+                            });
+                        }, 3000);
+                    }, 4000);
+                } else {
+                    throw new Error("Ошибка: результат запроса неуспешен");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                // Handle error state, e.g., enable button and stop spinning animation
                 this.setState({
-                    showNewPhoto: false,
+                    buttonDisabled: false,
+                    spinning: false
                 });
-            }, 6500); // Delay after the spin animation is completed
+            }
         }
     };
 
-    getResult = spin => {
+    calculateRotation(prizeNumber) {
+        const angles = [235, 190, 350, 100, 20, 170, 280, 50]; // Углы остановки для призов 1-8
+        const baseRotation = 360; // базовое вращение
+        const additionalRotation = 180; // дополнительное вращение перед остановкой
+// console.log('Правильно: 5, 7, 4, 8, 2, 6, 1')
+        // Получаем угол остановки для указанного номера приза
+        const stopAt = angles[prizeNumber - 1] || 0; // Если номер приза вне диапазона, используем 0
+
+        // Корректируем угол остановки, чтобы он не стал отрицательным
+        const correctedStopAt = (stopAt + 360) % 360;
+
+        const totalRotation = baseRotation + additionalRotation + correctedStopAt; // вычисляем общее вращение
+
+        // console.log("Результат calculateRotation для приза", prizeNumber, ":", totalRotation);
+
+        return totalRotation; // возвращаем итоговое вращение
+    }
+
+
+
+    getResult = (spin, prizeName, prizeImage, prizeLink)=> {
         const { angle, top, offset, list } = this.state;
         let netRotation = ((spin % 360) * Math.PI) / 180; // RADIANS
         let travel = netRotation + offset;
@@ -379,14 +469,19 @@ class SpinForPopup extends React.Component {
         } else {
             result = list.length + count;
         }
+        const prizeNumber = indexToPrizeMap[result + 1]; // +1 чтобы учесть индекс, начинающийся с 1
+        const selectedPrize = prizes[prizeNumber]; // Получаем массив с информацией о призе
 
         // set state variable to display result
         this.setState({
             net: netRotation,
-            result: result
+            result: result,
+            prizeName: selectedPrize.name,
+            prizeImage: selectedPrize.image,
+
         }, () => {
             // Вызываем функцию, переданную через пропсы, после обновления состояния
-            this.props.onSpinComplete();
+            this.props.onSpinComplete(prizeName, prizeImage, prizeLink);
         });
     };
 

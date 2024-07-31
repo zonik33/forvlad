@@ -8,11 +8,20 @@ import SpinForPopup from "../SpinForPopup";
 
 export default function PopupAddSpin(props) {
     const { isOpen, closeModal } = props;
+    const [prizeDetails, setPrizeDetails] = useState({ name: "", image: "" });
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [registrationError, setRegistrationError] = useState('');
     const [registrationErrorEm, setRegistrationErrorEm] = useState('');
+
     const popupRef = useRef(null);
     function openPopup3() {
+        const name = localStorage.getItem('prizeName');
+        const image = localStorage.getItem('prizeImage');
+        const welcomeMessage = document.getElementById('ticket-for-number2254');
+        const welcomeMessage2 = document.getElementById('ticket-for-number2254img');
+        // const welcomeMessage2 = document.getElementById('ticket-for-number22');
+        welcomeMessage.textContent = name;
+        welcomeMessage2.src = image;
         closeModal();
         document.getElementById("popup-take-gifts").style.display = "block";
         document.body.style.overflow = "hidden";
@@ -112,7 +121,7 @@ export default function PopupAddSpin(props) {
                }}
                contentLabel="Оставить заявку"
         >
-            <form action={'https://promoasd.lasdaimasdesh.ch/backend/api/registerCode'}
+            <form action={'https://nloto-promo.ru/backend/api/roulette'}
                   ref={popupRef}
                   method={'POST'} onSubmit={postAddSpin}
                   id={'form-add-spin'}
@@ -127,9 +136,8 @@ export default function PopupAddSpin(props) {
                     </div>
                     <div className={'left-second-profile add-spin'}>
                         <p className={'left-first-profile-p spin-p'}>Вы зарегистрировали
-                            <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
-                            <br></br>на сумму
-                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+                            <br></br>{profile && profile.countTicketsTotal}  лотерейных билетов
+                            <br></br>на сумму {profile && profile.sumTickets} рублей.
 
                         </p>
 
@@ -137,25 +145,11 @@ export default function PopupAddSpin(props) {
                         <p className={'left-first-profile-p3-count spin-p'}>
                             За каждые 300 рублей вы можете 1 (один) раз прокрутить колесо.
                         </p>
-                        {/*{profile && profile.countReferrals > 0 ? (*/}
 
-                        {/*<p className={'left-first-profile-p3'}>*/}
-
-                        {/*    приняли участие <br></br>в*/}
-                        {/*    розыгрыше*/}
-                        {/*</p>*/}
-                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                        {/*    {profile && profile.countTicketsRejected}*/}
-                        {/*    3*/}
-                        {/*</p>*/}
-                        {/*<p className={'left-first-profile-p3'}>*/}
-                        {/*    могут принять <br></br>участие в*/}
-                        {/*    розыгрыше*/}
-                        {/*</p>*/}
-                        {onlyTest > 0 ? (
+                        {profile && profile.countRoulette > 0 ? (
                             <>
                                 <p className={'left-first-profile-p2-p2-p2 p-popup'}>
-                                    Осталось прокрутить {onlyTest} раз
+                                    Осталось прокрутить {profile && profile.countRoulette} раз
                                 </p>
 
                             </>
@@ -168,26 +162,10 @@ export default function PopupAddSpin(props) {
                         <div className="spin-block">
                             <SpinForPopup onSpinComplete={openPopup3} />
                         </div>
-                        {/*<a*/}
-                        {/*    className={'button-animation-text-profile click-spin'}>*/}
-                        {/*    <b>Крутануть</b> </a>*/}
                     </div>
-                    {/*<p className={'register-inputs-text code-left'}>:</p>*/}
-                    {/*<input type="text" id={'addCode'}*/}
-                    {/*       required*/}
-                    {/*       className={`register-inputs code-bottom ${registrationErrorEm ? 'error' : ''}`}*/}
-                    {/*       maxLength={11}*/}
-                    {/*       placeholder="Ваш код"/>*/}
-                    {/*{registrationErrorEm && <div className={'error-block-phone test-code-add'}*/}
-                    {/*                             style={{color: '#FFFFFF'}}>{registrationErrorEm}</div>}*/}
-                    {/*<span id="phoneError" className="error"></span>*/}
-                    {/*<div className="register-button-container">*/}
-                        {/*<button type={'submit'} id={'submit-add'} className={'register-button code-down'}>Отправить*/}
-                        {/*</button>*/}
-                    {/*</div>*/}
+
                 </div>
             </form>
-            {/*<button onClick={togglePopup}>Закрыть</button>*/}
         </Modal>
     )
 }

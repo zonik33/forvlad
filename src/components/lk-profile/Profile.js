@@ -212,7 +212,7 @@ export default function Profile(props){
         document.body.classList.add("no-scroll");
     }
     function openPopup1() {
-        if (onlyTest > 0) {
+        if (profile && profile.countRoulette > 0) {
             setIsPopupOpen(true); // Показывать попап, если onlyTest больше 0
         } else {
             document.getElementById("popup-banner").style.display = "block"; // Показывать другой попап
@@ -223,7 +223,7 @@ export default function Profile(props){
         setIsPopupOpen(false);
         document.body.classList.remove("no-scroll");
     };
-    let onlyTest = 5
+
     const [isBlockVisible, setBlockVisibility] = useState(true);
 
     useEffect(() => {
@@ -243,6 +243,13 @@ export default function Profile(props){
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    function profileExit () {
+        // Удалить токен из localStorage
+        localStorage.removeItem('auth_key');
+
+        // Перенаправить на главную страницу
+        window.location.href = '/';
+    };
     return (
         <>
         <header className={'header-profile'}>
@@ -296,10 +303,16 @@ export default function Profile(props){
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
                         <img className={'tsxt-mobile'} src={ticketsmb}/>
+                        <p className={'global-name-move-mobile shadow-exit'}><a className={'exit-pro'} onClick={profileExit}>Выйти
+                            из профиля
+                        </a></p>
                         <div className={'items-block-profile'}>
                             <div className={'background-container'}></div>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
+                                <p className={'global-name-move shadow-exit'}><a className={'exit-pro'}
+                                                                                 onClick={profileExit}>Выйти из профиля
+                                </a></p>
                             </div>
                             <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
@@ -347,30 +360,11 @@ export default function Profile(props){
                                             <TestForSpin/>
                                         </div>
                                         <p className={'left-first-profile-p'}>Вы зарегистрировали
-                                            <br></br>{profile && profile.countTicketsTotal}  лотерейных билетов
-                                            <br></br>на сумму
-                                            {/*{profile && profile.countTicketsTotal}*/} 2300 рублей.
+                                            <br></br>{profile && profile.countTicketsTotal} лотерейных билетов
+                                            <br></br>на сумму {profile?.sumTickets ?? 0} рублей.
                                         </p>
 
                                         <div className="white-line"></div>
-                                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                                        {/*    За каждые 300 рублей вы можете 1 (один) раз <br></br>прокрутить колесо.*/}
-                                        {/*</p>*/}
-                                        {/*{profile && profile.countReferrals > 0 ? (*/}
-
-                                        {/*<p className={'left-first-profile-p3'}>*/}
-
-                                        {/*    приняли участие <br></br>в*/}
-                                        {/*    розыгрыше*/}
-                                        {/*</p>*/}
-                                        {/*<p className={'left-first-profile-p3-count'}>*/}
-                                        {/*    {profile && profile.countTicketsRejected}*/}
-                                        {/*    3*/}
-                                        {/*</p>*/}
-                                        {/*<p className={'left-first-profile-p3'}>*/}
-                                        {/*    могут принять <br></br>участие в*/}
-                                        {/*    розыгрыше*/}
-                                        {/*</p>*/}
                                         <a
                                             onClick={openPopup1}
                                             className={'button-animation-text-profile click-spin'}>
@@ -378,10 +372,10 @@ export default function Profile(props){
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
-                                        {onlyTest > 0 ? (
+                                        {profile && profile.countRoulette > 0 ? (
                                             <>
                                                 <p className={'left-first-profile-p2-p2-p2'}>
-                                                    Осталось прокрутить {onlyTest} раз
+                                                    Осталось прокрутить {profile && profile.countRoulette} раз
                                                 </p>
 
                                             </>
@@ -469,10 +463,10 @@ export default function Profile(props){
                     </div>
                 </div>
             </main>
-    <footer className={'footer'}>
-        <div className="footer-left">
+            <footer className={'footer'}>
+                <div className="footer-left">
 
-            <div className={'footer-row'}>
+                    <div className={'footer-row'}>
                 <div className={'footer-colm'}>
                     <img className={'footer-logo'} src={ticketText}/>
                     <img className={'footer-logo right'} src={ticketTextRight}/>
