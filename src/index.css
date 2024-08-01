@@ -3718,6 +3718,12 @@ canvas#wheel-profile-popup {
   letter-spacing: -0.02vw;
   color: #364059;
 }
+.left-stap {
+  margin-left: -0.6vw;
+}
+.left-stap-2 {
+  margin-left: -1vw;
+}
 .how-center-p-text-stap2-second.bonus-how {
   width: 30vw;
   margin-top: 0.35vw;
@@ -8696,6 +8702,12 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .left-stap-2 {
+    margin-left: -2.2vw;
+  }
+  .left-stap {
+    margin-left: -1.5vw;
+  }
   .global-name-move-mobile {
     display: none;
   }
@@ -18665,7 +18677,12 @@ iframe {
     width: 8vw; /* Задайте максимальную ширину, если нужно */
     height: auto; /* Сохраняет пропорции изображения */
   }
-
+  .left-stap-2 {
+    margin-left: -5vw;
+  }
+  .left-stap {
+    margin-left: -3.3vw;
+  }
 }
 
 

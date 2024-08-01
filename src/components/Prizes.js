@@ -14,7 +14,7 @@ import prizesRightHalfRing from '../image/img_7.png'
 import prizesLeftHearth from '../image/img_8.png'
 import prizesLeftFullHearth from '../image/img_9.png'
 import prizesSnakeInBlock from '../image/img_1.png'
-import {useEffect, useLayoutEffect, useRef, useState} from "react";
+import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
 import {CSSTransition} from "react-transition-group";
@@ -106,7 +106,8 @@ export default function Prizes (props) {
                                 Лотерея».
                             </p>
                             <p className={'how-center-p-text-first bonus-prizes'}>
-                                Для применения промокода перейдите на сайт nloto.ru из вашего личного кабинета
+                                <label className={'left-stap-2'}>**</label> Для применения промокода перейдите на сайт
+                                nloto.ru из вашего личного кабинета
                                 на сайте акции.
                                 Пройдите авторизацию и/или регистрацию. При необходимости подтвердите e-mail
                                 и в разделе «Мои билеты» вы увидите лотерейный билет, зарегистрированный на тираж.
@@ -125,33 +126,33 @@ export default function Prizes (props) {
                                         src={mini5}/></a>
                                 </div>
                                 <div className="how-full4-img for-test-img-test-mini2-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
                                         src={mini6}/></a>
                                 </div>
                                 <div className="how-full444-img for-test-img-second-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-12x24" target="_blank"><img
                                         src={mini1}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-third-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-4x20-premier" target="_blank"><img
                                         src={howFull1}/></a>
                                 </div>
                             </div>
                             <div className={'how-tickets-img'}>
                                 <div className="how-full4444-img for-test-img-4-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-8x20" target="_blank"><img
                                         src={howFull2}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-5-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-8x20-big8" target="_blank"><img
                                         src={howFull6}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-6-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/bingo-3x3" target="_blank"><img
                                         src={howFull5}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/bingo-75" target="_blank"><img
                                         src={howFull3}/></a>
                                 </div>
                             </div>
@@ -164,37 +165,37 @@ export default function Prizes (props) {
                                         src={mini5}/></a>
                                 </div>
                                 <div className="how-full4-img for-test-img-test-mini2-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
                                         src={mini6}/></a>
                                 </div>
                             </div>
                             <div className={'how-tickets-img-mobile'}>
                                 <div className="how-full444-img for-test-img-second-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-12x24" target="_blank"><img
                                         src={mini1}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-third-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-4x20-premier" target="_blank"><img
                                         src={howFull1}/></a>
                                 </div>
                             </div>
                             <div className={'how-tickets-img-mobile'}>
                                 <div className="how-full4444-img for-test-img-4-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-8x20" target="_blank"><img
                                         src={howFull2}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-5-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-8x20-big8" target="_blank"><img
                                         src={howFull6}/></a>
                                 </div>
                             </div>
                             <div className={'how-tickets-img-mobile'}>
                                 <div className="how-full4444-img for-test-img-6-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/bingo-3x3" target="_blank"><img
                                         src={howFull5}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/bingo-75" target="_blank"><img
                                         src={howFull3}/></a>
                                 </div>
                             </div>
@@ -206,35 +207,35 @@ export default function Prizes (props) {
                                         src={mini5}/></a>
                                 </div>
                                 <div className="how-full4-img for-test-img-test-mini2-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-12x24-2" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
                                         src={mini6}/></a>
                                 </div>
                                 <div className="how-full444-img for-test-img-second-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-5x50-f2" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-12x24" target="_blank"><img
                                         src={mini1}/></a>
                                 </div>
                             </div>
                             <div className={'how-tickets-img-tablet'}>
                                 <div className="how-full4444-img for-test-img-third-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/digital-4x20-premier" target="_blank"><img
                                         src={howFull1}/></a>
                                 </div>
                                     <div className="how-full4444-img for-test-img-4-mini-prizes">
-                                        <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                        <a href="https://nloto.ru/lottery/digital-8x20" target="_blank"><img
                                             src={howFull2}/></a>
                                     </div>
                                         <div className="how-full4444-img for-test-img-5-mini-prizes">
-                                            <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                            <a href="https://nloto.ru/lottery/digital-8x20-big8" target="_blank"><img
                                                 src={howFull6}/></a>
                                         </div>
                             </div>
                             <div className={'how-tickets-img-tablet'}>
                                 <div className="how-full4444-img for-test-img-6-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/bingo-3x3" target="_blank"><img
                                         src={howFull5}/></a>
                                 </div>
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
-                                    <a href="https://nloto.ru/lottery/digital-4x20" target="_blank"><img
+                                    <a href="https://nloto.ru/lottery/bingo-75" target="_blank"><img
                                         src={howFull3}/></a>
                                 </div>
                             </div>
