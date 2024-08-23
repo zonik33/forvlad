@@ -2,7 +2,7 @@ import CodeInput from "../CodeInput";
 import PhoneInput from "../PhoneInput";
 import React, {useEffect, useState} from 'react';
 
-export default function PopupTakeGifts ({name, image}) {
+export default function PopupTakeGifts ({name, image, link}) {
     function openPopupTicket2() {
         closePopup2()
         document.getElementById("popup-ticket-2").style.display = "block";
@@ -19,6 +19,7 @@ export default function PopupTakeGifts ({name, image}) {
 
     function closePopup2() {
         localStorage.removeItem('number');
+        localStorage.removeItem('link');
         localStorage.removeItem('name');
         localStorage.removeItem('image');
         localStorage.removeItem('prizeNumber'); // Очищаем номер приза
@@ -26,7 +27,8 @@ export default function PopupTakeGifts ({name, image}) {
         localStorage.removeItem('prizeImage');   // Если есть изображение, очищаем его тоже
         document.getElementById("popup-take-gifts").style.display = "none";
         document.body.classList.remove("no-scroll");
-        reloadPage1()
+        window.location.reload();
+        window.location.href = window.location.href;
     }
 
 // Функция обновления страницы
@@ -45,6 +47,7 @@ export default function PopupTakeGifts ({name, image}) {
         localStorage.removeItem('number');
         localStorage.removeItem('name');
         localStorage.removeItem('image');
+        localStorage.removeItem('link');
 
     });
     const [showTooltip, setShowTooltip] = useState(false);
@@ -81,8 +84,8 @@ export default function PopupTakeGifts ({name, image}) {
                         {/*<label className={'bilet-ticket-2-p3 take-gifts'}>не существует. </label>*/}
                         <p className={'bilet-ticket-2-p4 take-gifts'}>Для активации промокода перейдите на nloto.ru по
                             ссылке:</p>
-                        <a className="button-animation-text-profile click-take-gifts"
-                           href={'https://nloto.ru/'} target="_blank">
+                        <a className="button-animation-text-profile click-take-gifts" id={'ticket-for-number2254link'}
+                           href={link} target="_blank">
                             <b className={'gifts-b'}>Активировать промокод</b></a>
                     </form>
 

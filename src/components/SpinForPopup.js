@@ -14,17 +14,17 @@ import lefthand from '../image/img_81.png'
 import righthand from '../image/img_82.png'
 import spinmain from "../image/spin-main.png";
 import axios from "axios";
-import e1 from '../image/img_122.png'
+import e1 from '../image/img_125.png'
 import e8 from '../image/img_115.png'
 import e7 from '../image/img_116.png'
 import e6 from '../image/img_120.png'
 import e5 from '../image/img_119.png'
 import e4 from '../image/img_118.png'
 import e3 from '../image/img_117.png'
-import e2 from '../image/img_121.png'
+import e2 from '../image/img_126.png'
 
 const prizes = {
-    1: { name: "4*4", image: e1 },
+    1: { name: "4*4", image: e1, },
     2: { name: "5 из 37", image: e2 },
     3: { name: "Большая 8", image: e3 },
     4: { name: "Великолепная 8", image: e4 },
@@ -69,6 +69,7 @@ class SpinForPopup extends React.Component {
         result: null, // INDEX
         spinning: false,
         buttonDisabled: false, // Начальное состояние кнопки
+        errorMessage: '', // Новое состояние для хранения сообщения об ошибке
     };
 
 
@@ -365,7 +366,8 @@ class SpinForPopup extends React.Component {
             this.setState({
                 buttonDisabled: true,
                 rotating: true,
-                showFullSizeImage: true
+                showFullSizeImage: true,
+                errorMessage: '', // Сбрасываем сообщение об ошибке
             });
             debugger
 
@@ -378,7 +380,10 @@ class SpinForPopup extends React.Component {
                 });
 
                 if (response.data.result === true) {
+                    this.updateProfileData(response.data.data.profile);
+
                     const prizeNumber = response.data.data.prize;
+                    const prizeLink = response.data.data.link; // Ссылка на приз
                     const selectedPrize = prizes[prizeNumber];
                     const totalRotation = this.calculateRotation(prizeNumber); // вычисляем вращение
                     // console.log("Базовое вращение: 360°");
@@ -390,7 +395,7 @@ class SpinForPopup extends React.Component {
 
 
                     // console.log("Полученный приз:", selectedPrize);
-                    localStorage.setItem('prizeLink', selectedPrize.link);
+                    localStorage.setItem('prizeLink', prizeLink);
                     localStorage.setItem('prizeName', selectedPrize.name);
                     localStorage.setItem('prizeImage', selectedPrize.image); // Здесь selectedPrize.image уже строка
                     localStorage.setItem('prizeNumber', prizeNumber);
@@ -400,7 +405,7 @@ class SpinForPopup extends React.Component {
                         showNewPhotoRight: true,
                         prizeName: selectedPrize.name,
                         prizeImage: selectedPrize.image,
-                        prizeLink: selectedPrize.link,
+                        prizeLink: prizeLink,
 
                     }, () => {
                         this.handleAnimation();
@@ -418,17 +423,31 @@ class SpinForPopup extends React.Component {
                         }, 3000);
                     }, 4000);
                 } else {
-                    throw new Error("Ошибка: результат запроса неуспешен");
+                    this.setState({
+                        errorMessage: response.data.error || 'Неизвестная ошибка. Попробуйте позже.',
+                        buttonDisabled: false,
+                        spinning: false
+                    });
                 }
             } catch (error) {
                 console.error("Error:", error);
-                // Handle error state, e.g., enable button and stop spinning animation
                 this.setState({
+                    errorMessage: 'Ошибка при соединении с сервером. Попробуйте снова.',
                     buttonDisabled: false,
                     spinning: false
                 });
             }
         }
+    };
+    updateProfileData = (profileData) => {
+        // Здесь обновляем состояние компонента с новыми данными профиля
+        this.setState({
+            availableTickets: profileData.countTicketsTotal,
+            prizes: profileData.prizes || [], // Обновляем список призов
+            tickets: profileData.tickets || [], // Обновляем список билетов
+            countTicketsApproved: profileData.countTicketsApproved,
+            countTicketsRejected: profileData.countTicketsRejected,
+        });
     };
 
     calculateRotation(prizeNumber) {
@@ -477,6 +496,7 @@ class SpinForPopup extends React.Component {
             net: netRotation,
             result: result,
             prizeName: selectedPrize.name,
+            prizeLink: prizeLink,
             prizeImage: selectedPrize.image,
 
         }, () => {
@@ -551,6 +571,11 @@ class SpinForPopup extends React.Component {
               <span id="result">{this.state.list[this.state.result]}</span>
           </span>
                 </div>
+                {this.state.errorMessage && (
+                    <div className="error-message">
+                        {this.state.errorMessage}
+                    </div>
+                )}
             </div>
         );
     }

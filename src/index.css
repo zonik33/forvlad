@@ -8,9 +8,14 @@
   src: url('fonts/halvar/HalvarMittel-Rg.ttf');
 }
 @font-face {
+  font-family: 'Halvar Mittelschrift Md';
+  src: url('fonts/halvar/HalvarMittel-Md.ttf');
+}
+@font-face {
   font-family: 'Halvar Breit Bd';
   src: url('fonts/halvar/HalvarBreit-Bd.ttf');
 }
+
 
 body {
   font-family: 'Acrom Medium', Arial, sans-serif;
@@ -167,7 +172,7 @@ header .menu-content a {
   margin-left: 0.72vw;
   text-align: center;
   font-weight: 400;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
   font-size: 0.833vw;
   line-height: 1.092vw;
   margin-top: -0.6vw;
@@ -182,7 +187,7 @@ header .menu-content-profile a {
   margin-left: 0.72vw;
   text-align: center;
   font-weight: 400;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
   font-size: 0.833vw;
   line-height: 1.092vw;
   margin-top: -0.6vw;
@@ -254,7 +259,7 @@ header .menu-content-profile a {
   background-color: transparent;
   margin-top: -1.2vw;
   font-weight: 400;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
   font-size: 0.833vw;
   line-height: 1.092vw;
   color: #2F41B0;
@@ -496,6 +501,23 @@ header .menu-content-profile a:hover {
   line-height: 1.5;
 
 }
+.main-text-act {
+  text-transform: uppercase;
+  position: relative;
+  text-align: left;
+  font-family: 'Halvar Breit Bd', sans-serif;
+  font-weight: 500;
+  color: #EEF3EC;
+  font-size: 1.250vw;
+  line-height: 1.650vw;
+  margin-left: -10.3vw;
+  margin-top: 20.85vw;
+  word-wrap: normal;
+  margin-bottom: -21.34vw;
+  z-index: 5;
+  width: 28.8vw;
+  height: 2.81vw;
+}
 .main-text {
   position: relative;
   text-align: left;
@@ -505,9 +527,9 @@ header .menu-content-profile a:hover {
   font-size: 1.250vw;
   line-height: 1.650vw;
   margin-left: -10.3vw;
-  margin-top: 20.85vw;
+  margin-top: 21.85vw;
   word-wrap: normal;
-  margin-bottom: 3.26vw;
+  margin-bottom: 2.56vw;
   z-index: 5;
   width: 28.8vw;
   height: 6.81vw;
@@ -822,6 +844,9 @@ header .menu-content-profile a:hover {
   text-align: left;
   color: #364059;
   line-height: 2.050vw;
+}
+.left-first-profile-p2-p2-p2.new {
+  margin-top: -6vw;
 }
 .left-first-profile-p2 {
   width: 19vw;
@@ -1797,7 +1822,7 @@ header .menu-content-profile a:hover {
   text-transform: none;
   font-size: 1.250vw;
   line-height: 1.667vw;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
   font-weight: 500;
 }
 
@@ -1966,7 +1991,7 @@ header .menu-content-profile a:hover {
 }
 .button-animation-text-profile.first-one:hover {
   background-image: linear-gradient(#AF21C9CC, #AF21C9CC, #AF21C9CC);
-  border: 0.15vw solid #AF21C9CC;
+  border: 0.15vw solid #c153c1;
   color: white;
   transition: color 0.3s, background-image 0.3s; /* Плавные переходы для цвета и фона */
 }
@@ -2040,6 +2065,13 @@ header .menu-content-profile a:hover {
 .exit-pro {
   color: #364059;
   text-decoration: underline;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.exit-pro:hover {
+  color: #2F41B0B2;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
 }
 .button-animation-text-profile:hover {
   background-image: linear-gradient(#814791, #8B3A99, #8B3A99);
@@ -2158,10 +2190,22 @@ header .menu-content-profile a:hover {
   margin-top: 35vw;
   z-index: 3;
 }
+.copied-notification {
+  color: #5E6976;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 1.00vw;
+  position: absolute;
+  margin: -0vw 0vw 0vw 0vw;
+  animation: fade-in-out 1.5s ease-out;
+}
 .question-color {
   color: #1F48D8;
+  cursor: pointer;
 }
 .question-color-second {
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
   color: #5E6976;
 }
 .rings {
@@ -3376,7 +3420,7 @@ canvas#wheel-profile-popup {
   font-size: 0.833vw;
   line-height: 1.100vw;
   margin-left: 0vw;
-  margin-top: 8.3vw;
+  margin-top: 7.3vw;
   margin-bottom: 10vw;
   text-align: left;
 }
@@ -3473,7 +3517,7 @@ canvas#wheel-profile-popup {
   color: #FFFFFF; /* Изменение цвета текста на белый */
   background-image: linear-gradient(#AF21C9, #AF21C9); /* Изменение фона при наведении */
   opacity: 1;
-  border: 0.15vw solid #AF21C9;
+  border: 0.15vw solid #c153c1;
   transition: background-image 0.2s ease-in-out;
 }
 .question-button-check:hover {
@@ -4002,7 +4046,7 @@ canvas#wheel-profile-popup {
   font-weight: 400;
   line-height: 1.667vw;
   margin-left: 14.45vw;
-  margin-top: -5.6vw;
+  margin-top: -3.35vw;
   text-align: left;
 
 }
@@ -5432,9 +5476,10 @@ canvas#wheel-profile-popup {
   margin-top: 0vw;
 }
 .popup-end {
-  background-color: #FFFFFF4D;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
   width: 34.6vw;
-  height: 43vw;
+  height: 24vw;
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
@@ -5986,9 +6031,10 @@ canvas#wheel-profile-popup {
   line-height: 1.77vw;
   font-family: 'Acrom Medium', sans-serif;
   font-weight: 400;
-  margin-top: 1.2vw;
-  margin-left: 2vw;
+  margin-top: 2.2vw;
+  margin-left: 6vw;
   color: #364059;
+
 }
 .win4healht {
   margin-bottom: 7vw;
@@ -6077,7 +6123,7 @@ canvas#wheel-profile-popup {
   height: 4.85vw;
   border-radius: 1.4vw;
   border: 0.055vw solid #FFFFFF4D;
-  background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0 );
+  background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
   color: #FFFFFF;
   font-size: 1.3vw;
   line-height: 1.46vw;
@@ -6088,7 +6134,7 @@ canvas#wheel-profile-popup {
   cursor: pointer;
 }
 #submit-4life:hover {
-  background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+  background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
 }
 
 
@@ -6232,7 +6278,7 @@ canvas#wheel-profile-popup {
   margin-left: -8vw;
 }
 .line-true.gifts {
-  margin: 9.5vw 0vw 0vw 0.3vw;
+  margin: 7.5vw 0vw 0vw 0.3vw;
   position: absolute;
   width: 40.318vw;
   height: 0.146vw;
@@ -6306,7 +6352,7 @@ canvas#wheel-profile-popup {
 .decl-bonus-text {
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   width: 42.35vw;
-  margin-top: -1.5vw;
+  margin-top: 1.5vw;
   font-size: 1.32vw;
   line-height: 1.76vw;
   margin-bottom: 3.5vw;
@@ -6356,12 +6402,12 @@ canvas#wheel-profile-popup {
   text-align: left;
 }
 .colm-text1-status-ticket1-check {
-  width: 19.59vw;
   height: 2.64vw;
-  margin-left: -2.15vw;
-  margin-top: -0.4vw;
   margin-bottom: 1.4vw;
+  margin-left: 0.65vw;
+  margin-top: -0.1vw;
   text-align: left;
+  width: 19.59vw;
 }
 .colm-text1-status-ticket3 {
   margin-left: -11.2vw;
@@ -6446,9 +6492,10 @@ canvas#wheel-profile-popup {
 .massive-text-agree {
   display: inline-block;
   height: auto;
-  margin-left: -0.8vw;
+  margin-left: -1.2vw;
+  margin-top: -0.1vw;
   text-align: left;
-  width: 19.59vw;
+  width: 16.59vw;
 }
 .table-body-winners {
   display: flex;
@@ -7074,7 +7121,7 @@ button:focus {
   width: 68.938vw;
 }
 .column-help {
-  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
   flex: 1 1;
   margin-top: -1vw;
   margin-left: 0vw;
@@ -7165,7 +7212,7 @@ button:focus {
   margin-left: 1vw;
   margin-top: -3.74vw;
   font-weight: 500;
-  font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
+  font-family: 'Halvar Mittelschrift Md', sans-serif !important;
   font-size: 1.25vw;
   line-height: 1.650vw;
   color: #364059;
@@ -8298,6 +8345,7 @@ button:focus {
   margin-bottom: 1vw;
 }
 .error-block-phone {
+  color: #cb2828 !important;
   margin-left: -0.86vw;
   margin-top: -1.04vw;
   font-size: 0.97vw;
@@ -8702,6 +8750,38 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .copied-notification {
+    color: #5E6976;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
+    font-weight: 400;
+    font-size: 1.33vw;
+    line-height: 1.60vw;
+    position: absolute;
+    margin: -0vw 0vw 0vw 0vw;
+    animation: fade-in-out 1.5s ease-out;
+  }
+
+  .colm-text1-status-ticket1-check {
+    display: inline-block;
+    height: auto;
+    margin-bottom: 1.4vw;
+    margin-left: -10.1vw;
+    margin-top: 0.45vw;
+    text-align: left;
+    width: 15.59vw;
+  }
+  .left-first-profile-p2-p2-p2.new {
+    margin-top: -2vw;
+  }
+  .error-block-phone {
+
+    color: #cb2828 !important;
+    margin-left: -3.86vw;
+    font-size: 1.37vw;
+    margin-top: -1.04vw;
+
+  }
+
   .left-stap-2 {
     margin-left: -2.2vw;
   }
@@ -8730,6 +8810,7 @@ iframe {
     display: none;
   }
   .only-for-phone {
+    margin-left: -1vw;
     color: #cb2828 !important;
     height: 0;
     margin-top: -1vw;
@@ -9807,8 +9888,9 @@ iframe {
   }
   .massive-text-agree {
     display: inline-block;
+    margin-top: 0.3vw;
     height: auto;
-    margin-left: -4.1vw;
+    margin-left: -4.7vw;
     text-align: left;
     width: 18.59vw;
   }
@@ -9971,7 +10053,7 @@ iframe {
     font-weight: 400;
     line-height: 2.667vw;
     margin-left: 18.85vw;
-    margin-top: -8.6vw;
+    margin-top: -5.8vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     text-align: left;
   }
@@ -10020,7 +10102,7 @@ iframe {
     margin-left: 0.72vw;
     text-align: center;
     font-weight: 400;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-size: 1.953vw;
     line-height: 2.192vw;
     margin-top: -0.6vw;
@@ -10035,7 +10117,7 @@ iframe {
     margin-left: 0.72vw;
     text-align: center;
     font-weight: 400;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-size: 1.953vw;
     line-height: 2.192vw;
     margin-top: -0.6vw;
@@ -10063,7 +10145,7 @@ iframe {
     background-color: transparent;
     margin-top: 0.23vw;
     font-weight: 400;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-size: 1.953vw;
     line-height: 2.192vw;
     color: #2F41B0;
@@ -10180,11 +10262,29 @@ iframe {
     margin-left: -21.3vw;
     margin-top: 28vw;
     word-wrap: normal;
-    margin-bottom: 3.26vw;
+    margin-bottom: 1.26vw;
+    z-index: 5;
+    width: 39vw;
+    height: 6.81vw;
+  }
+  .main-text-act {
+    text-transform: uppercase;
+    position: relative;
+    text-align: left;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-weight: 500;
+    color: #EEF3EC;
+    font-size: 2.344vw;
+    line-height: 3vw;
+    margin-left: -21.3vw;
+    margin-top: 28vw;
+    word-wrap: normal;
+    margin-bottom: -27.74vw;
     z-index: 5;
     width: 35vw;
     height: 6.81vw;
   }
+
   .man {
     display: none;
   }
@@ -10236,7 +10336,7 @@ iframe {
   .button-animation-text b {
     color: #FFFFFF;
     line-height: 2.375vw;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-weight: 500;
     font-size: 2.242vw;
   }
@@ -10461,7 +10561,7 @@ iframe {
   }
   .text-block-1 {
     color: #364059;
-    width: 22.816vw;
+    width: 24.816vw;
     height: 7.028vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 2.038vw;
@@ -10509,7 +10609,7 @@ iframe {
     font-size: 2.038vw;
     font-weight: 400;
     line-height: 1.146vw;
-    margin: 2.65vw 0vw 0vw 30.5vw;
+    margin: 2.75vw 0vw 0vw 31.5vw;
   }
   .third-step {
     color: #364059;
@@ -10518,7 +10618,7 @@ iframe {
     font-size: 2.038vw;
     font-weight: 400;
     line-height: 1.146vw;
-    margin: 2.65vw 0vw 0vw 59.8vw;
+    margin: 2.75vw 0vw 0vw 59.8vw;
   }
   .prizes-text11 {
     text-transform: uppercase;
@@ -10640,9 +10740,9 @@ iframe {
     margin-left: 1.5vw;
     margin-top: -2vw;
     font-weight: 500;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
+    font-family: 'Halvar Mittelschrift Md', sans-serif !important;
     font-size: 2.55vw;
-    line-height: 1.650vw;
+    line-height: 3.65vw;
     color: #364059;
   }
   .makeStyles-line-5 {
@@ -10698,7 +10798,7 @@ iframe {
     text-transform: none;
     font-size: 2.45vw;
     line-height: 2.667vw;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-weight: 500;
   }
   .container-question-help {
@@ -10711,7 +10811,7 @@ iframe {
   .column-help {
     font-size: 2vw;
     line-height: 2.3vw;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     flex: 1 1;
     margin-top: -1vw;
     margin-left: 6vw;
@@ -10726,6 +10826,7 @@ iframe {
     width: 4.4%;
   }
   .question-color-second {
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 1.4vw;
     color: #5E6976;
   }
@@ -11285,10 +11386,11 @@ iframe {
   }
 
   header .menu-content a {
-    font-size: 3.889vw;
+    font-size: 3.389vw;
     line-height: 5.094vw;
     padding: 0;
-    margin-left: 3.2vw; /* Добавляем отступ между ссылками */
+    margin-left: 4vw;
+    margin-right: 3vw;
   }
 
   header .menu-content.backFaq a {
@@ -11306,8 +11408,7 @@ iframe {
     background-color: transparent;
     margin-top: -1.2vw;
     font-size: 3.389vw;
-    height: 1.1vw;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-weight: 400;
     color: #2F41B0;
     margin-left: 4.5vw;
@@ -11423,7 +11524,7 @@ iframe {
     height: auto;
     width: 26.8%;
     margin-left: -18.6vw;
-    margin-top: 1.75vw;
+    margin-top: -3.25vw;
     z-index: 8;
   }
 
@@ -11440,6 +11541,22 @@ iframe {
     margin-top: 22.85vw;
     word-wrap: normal;
     margin-bottom: 3.26vw;
+    z-index: 5;
+    width: 70vw;
+    height: 48.81vw;
+  }
+  .main-text-act {
+    position: relative;
+    text-align: left;
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-weight: 500;
+    color: #EEF3EC;
+    font-size: 4.444vw;
+    line-height: 5.867vw;
+    margin-left: -19.3vw;
+    margin-top: 16.85vw;
+    word-wrap: normal;
+    margin-bottom: -63.74vw;
     z-index: 5;
     width: 65vw;
     height: 48.81vw;
@@ -11471,11 +11588,11 @@ iframe {
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     width: 88.1vw;
     font-weight: 400;
-    height: 6.81vw;
+    height: 13.81vw;
     font-size: 3.889vw;
     line-height: 5.133vw;
     margin-left: -0.5vw;
-    margin-top: 56.3vw;
+    margin-top: 62.3vw;
     margin-bottom: 10vw;
     text-align: center;
   }
@@ -14659,7 +14776,7 @@ iframe {
     position: absolute;
   }
   .left-first-profile-p2-p2-p2 {
-    width: 68vw;
+    width: 70vw;
     height: 32vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 5.556vw;
@@ -15994,10 +16111,11 @@ iframe {
     margin-top: -25vw;
   }
   .header-profile .menu-content-profile a {
-    font-size: 3.889vw;
+    font-size: 3.389vw;
     line-height: 5.094vw;
-    margin-left: 3.2vw;
     padding: 0;
+    margin-left: 4vw;
+    margin-right: 3vw;
   }
   .button-animation-text-profile.first-one {
     position: absolute;
@@ -16081,6 +16199,7 @@ iframe {
     font-weight: 400;
   }
   .error-block-phone {
+    color: #cb2828 !important;
     width: 500vw;
     height: 5vw;
     margin-left: -0.86vw;
@@ -16088,6 +16207,7 @@ iframe {
     font-size: 5.97vw;
     line-height: 8vw;
     margin-bottom: 1vw;
+
   }
   .main-input.error {
     border: 1px solid red;
@@ -16300,7 +16420,7 @@ iframe {
     margin-left: -2vw;
     margin-top: -1.75vw;
     position: absolute;
-    width: 40vw;
+    width: 41.7vw;
   }
   .random-b {
     line-height: 4.53vw;
@@ -16430,6 +16550,7 @@ iframe {
     width: 84vw;
   }
   .bonus-error-block-popup {
+    color: #cb2828 !important;
     width: 95vw;
     height: 5vw;
     margin-left: -0.86vw;
@@ -16595,7 +16716,7 @@ iframe {
   .custom-status-pending {
   }
   .colm-text1-status-ticket1-check {
-    width: 40.59vw;
+    width: 98.59vw;
     height: 5.64vw;
     margin-left: 9.15vw;
     margin-top: 0.12vw;
@@ -16802,7 +16923,8 @@ iframe {
     font-weight: 400;
     margin-top: -16.9vw;
     margin-left: -0.3vw;
-    color: #FFFFFF;
+    color: #364059;
+
   }
   .how-full1-img {
     display: flex;
@@ -16955,12 +17077,12 @@ iframe {
     height: 17.85vw;
     border-radius: 4.4vw;
     border: 0.055vw solid #FFFFFF4D;
-    background-image: linear-gradient(#DA4DA3, #8B3A99, #2F46B0 );
+    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
     color: #FFFFFF;
     font-size: 4.27vw;
     line-height: 4.27vw;
     font-weight: 400;
-    margin-top: 48vw;
+    margin-top:39vw;
     margin-bottom: 5vw;
     margin-left: 1.8vw;
     font-family: 'Acrom Medium', Arial, sans-serif;
@@ -16968,7 +17090,7 @@ iframe {
   }
 
   #submit-4life:hover {
-    background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
+    background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   }
 
   .bilet-ticket-2-p {
@@ -17293,7 +17415,7 @@ iframe {
     font-size: 4.11vw;
     line-height: 5vw;
     margin-bottom: 2.5vw;
-    color: white;
+    color: #364059;
   }
   .decl-pluse {
     margin-top: 15.5vw;
@@ -17616,7 +17738,7 @@ iframe {
     margin-left: 3vw;
     margin-top: -3.5vw;
     font-weight: 500;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif !important;
+    font-family: 'Halvar Mittelschrift Md', sans-serif !important;
     font-size: 5.000vw;
     line-height: 6.550vw;
     color: #364059;
@@ -17681,7 +17803,7 @@ iframe {
     text-transform: none;
     font-size: 5vw;
     line-height: 6.550vw;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     font-weight: 500;
   }
   .container-question-help {
@@ -17701,7 +17823,7 @@ iframe {
     font-size: 4.444vw;
     line-height: 5.422vw;
     font-weight: 500;
-    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
     text-align: left;
   }
   .column-help img {
@@ -17929,6 +18051,7 @@ iframe {
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
   }
   .prize-name {
+    width: 70vw;
     color: #364059;
     display: block;
     text-align: left;
@@ -18063,7 +18186,7 @@ iframe {
     font-size: 4.444vw;
     font-weight: 400;
     line-height: 5.833vw;
-    margin: 28vw 0vw 0vw 0.6vw;
+    margin: 31.2vw 0vw 0vw 0.6vw;
   }
   .third-step {
     color: #364059;
@@ -18072,7 +18195,7 @@ iframe {
     font-size: 4.444vw;
     font-weight: 400;
     line-height: 5.833vw;
-    margin: 55.94vw 0vw 0vw 0.6vw;
+    margin: 57.23vw 0vw 0vw 0.6vw;
   }
 
   .text-block-1 {
@@ -18094,7 +18217,7 @@ iframe {
     font-size: 4.444vw;
     font-weight: 400;
     line-height: 5.833vw;
-    margin: 0vw 0vw 0vw 6vw;
+    margin: 2vw 0vw 0vw 6vw;
     letter-spacing: -0.005vw;
   }
   .text-block-3 {
@@ -18682,6 +18805,19 @@ iframe {
   }
   .left-stap {
     margin-left: -3.3vw;
+  }
+  .left-first-profile-p2-p2-p2.new {
+    margin-top: -25vw;
+  }
+  .copied-notification {
+    color: #5E6976;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
+    font-weight: 400;
+    font-size: 3.33vw;
+    line-height: 4.40vw;
+    position: absolute;
+    margin: -0vw 0vw 0vw 0vw;
+    animation: fade-in-out 1.5s ease-out;
   }
 }
 

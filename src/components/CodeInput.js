@@ -1,69 +1,63 @@
-import React, { useState, useEffect, useRef } from 'react';
+import {useRef} from "react";
 
-const CodeInput = ({ onSubmit }) => {
-    const [codeValues, setCodeValues] = useState(['', '', '', '']);
+const CodeInput = ({ onSubmit, value = ['', '', '', ''], onChange }) => {
     const inputRefs = useRef([]);
-    const [isCodeComplete, setIsCodeComplete] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    useEffect(() => {
-        if (isCodeComplete && !isSubmitted) {
-            onSubmit(codeValues.join(''));
-            setIsSubmitted(true);
-        }
-    }, [isCodeComplete, codeValues, onSubmit, isSubmitted]);
-
-    useEffect(() => {
-        setIsSubmitted(false);
-    }, [codeValues]);
 
     const handleChange = (index, e) => {
-        const { value } = e.target;
-        setCodeValues((prevValues) => {
-            const newValues = [...prevValues];
-            newValues[index] = value;
+        const newValue = e.target.value;
 
-            if (value.length === 1 && index < 3) {
+        // Убедитесь, что пользователь вводит только цифры
+        if (newValue.match(/^[0-9]$/) || newValue === '') {
+            // Обновляем массив значений кода
+            const newCodeValues = [...value];
+            newCodeValues[index] = newValue;
+
+            // Перейти к следующему полю, если текущее заполнено
+            if (newValue && index < 3) {
                 inputRefs.current[index + 1].focus();
             }
 
-            const isComplete = newValues.every((val) => val !== '');
-
-            if (isComplete) {
-                setIsCodeComplete(true);
-            } else if (isCodeComplete) {
-                setIsCodeComplete(false);
+            // Проверьте, заполнены ли все поля
+            if (newCodeValues.every((val) => val !== '')) {
+                onSubmit(newCodeValues.join(''));
             }
 
-            return newValues;
-        });
+            // Вызываем onChange из пропсов
+            onChange(newCodeValues);
+
+            return;
+        }
     };
 
-    const handleKeyPress = (index, e) => {
-        if (e.key === 'Backspace' && index > 0 && codeValues[index] === '') {
-            inputRefs.current[index - 1].focus();
+    const handleKeyDown = (index, e) => {
+        if (e.key === 'Backspace') {
+            const newCodeValues = [...value];
+
+            if (newCodeValues[index]) {
+                // Если текущее поле не пустое, очищаем его
+                newCodeValues[index] = '';
+                onChange(newCodeValues);
+            } else if (index > 0) {
+                // Перейти на предыдущее поле, если текущее пустое
+                inputRefs.current[index - 1].focus();
+            }
         }
     };
 
     const renderInputs = () => {
-        const inputs = [];
-        for (let i = 0; i < 4; i++) {
-            const isLastInput = i === 3;
-            inputs.push(
-                <input
-                    key={i}
-                    type="text"
-                    maxLength="1"
-                    placeholder={'_'}
-                    value={codeValues[i]}
-                    className={`popupCode-input ${isLastInput ? 'last' : ''}`}
-                    onChange={(e) => handleChange(i, e)}
-                    onKeyPress={(e) => handleKeyPress(i, e)}
-                    ref={(ref) => (inputRefs.current[i] = ref)}
-                />
-            );
-        }
-        return inputs;
+        return value.map((codeValue, index) => (
+            <input
+                key={index}
+                type="text"
+                maxLength="1"
+                placeholder={'_'}
+                value={codeValue}
+                className={`popupCode-input`}
+                onChange={(e) => handleChange(index, e)}
+                onKeyDown={(e) => handleKeyDown(index, e)}
+                ref={(ref) => (inputRefs.current[index] = ref)}
+            />
+        ));
     };
 
     return <div className="code-input-container">{renderInputs()}</div>;

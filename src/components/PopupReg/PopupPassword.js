@@ -118,7 +118,7 @@ export default function PopupPassword (props) {
         try {
             const response = await Api.post('https://nloto-promo.ru/backend/api/signup', formData);
             if (response.data.result === false) {
-                console.log(response.data.result);
+                // console.log(response.data.result);
                 if (response.data.error.login) {
                     setRegistrationError(response.data.error.login[0]);
                 } else {
@@ -148,7 +148,7 @@ export default function PopupPassword (props) {
 
             } else {
                 handleSuccess1();
-                console.log(response.data.result)
+                // console.log(response.data.result)
                 const login = response.data.data.login;
                 localStorage.setItem('login', login);
                 const countTicketsTotal = response.data.data.countTicketsTotal;
@@ -158,11 +158,10 @@ export default function PopupPassword (props) {
                 const countTicketsRejected = response.data.data.countTicketsRejected;
                 localStorage.setItem('countTicketsRejected', countTicketsRejected);
                 const auth_key = response.data.data.auth_key;
-                localStorage.setItem('auth_key', auth_key);
-                setAuthToken(auth_key);
-                setTimeout(() => {
-                    window.location.href = '/profile';
-                }, 1000);
+                if (auth_key) {
+                    localStorage.setItem('auth_key', auth_key);
+                    window.location.href = '/profile'
+                }
             }
 
 
@@ -251,8 +250,8 @@ export default function PopupPassword (props) {
                                     onChange={handleAgree4Change}
                                 />
                                 <span className={`custom-checkbox ${!agree4Checked ? 'error' : ''}`}></span>
-                                <p> Я согласен с <a href={'https://nloto-promo.ru/rules.pdf'} className={"text-nloto"}>Правилами
-                                    Акции "Отмечайте на здоровье"</a>
+                                <p> Я согласен с <a href={'https://nloto-promo.ru/rules.pdf'} target="_blank" className={"text-nloto"}>Правилами
+                                    Акции "Ваш билетик"</a>
                                 </p>
                                 <span id="phoneError" className="error"></span>
                             </label>

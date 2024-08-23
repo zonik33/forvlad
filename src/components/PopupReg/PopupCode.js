@@ -1,7 +1,8 @@
         import CodeInput from "../CodeInput";
         import axios from "axios";
-        import React, { useEffect, useState } from "react";
+        import React, {useEffect, useRef, useState} from "react";
         import Popup from "./Popup";
+        import ReCAPTCHA from "react-google-recaptcha";
 
         export default function PopupCode(props) {
             const { postRegister } = props;
@@ -11,7 +12,7 @@
             let [intervalId, setIntervalId] = useState(null);
             const [isRequestPending, setIsRequestPending] = useState(false); // New state
 
-            const timerDuration = 90;
+            const timerDuration = 120;
             let timer = timerDuration;
 
             const startTimer = () => {
@@ -45,13 +46,20 @@
                 };
             }, []);
 
-            const handleTimerClick = () => {
+            const handleTimerClick = async () => {
                 if (isTimerClickable) {
-                    startTimer();
                     setIsTimerClickable(false);
-                    postRegisterCode(codeInputValue); // Вызываем функцию только при клике на таймер
+                    startTimer(); // Перезапускаем таймер
+                    try {
+                        await handleResendCode(); // Вызов функции отправки кода
+                    } catch (error) {
+                        console.error('Ошибка при повторной отправке кода:', error);
+                        // Вы можете также установить состояние для отображения ошибки пользователю
+                        setRegistrationError('Не удалось отправить код. Попробуйте еще раз.');
+                    }
                 }
             };
+
 
             const openPopup = () => {
                 closePopup2();
@@ -87,29 +95,23 @@
                 document.body.style.overflow = "hidden"; // Заблокируйте прокрутку страницы
                 document.documentElement.style.overflow = "hidden"; // Заблокируйте прокрутку страницы
             }
-
+            const handleRecaptchaChange = () => {
+                // Ничего не делаем здесь, токен будет получен в handleSubmit
+            };
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                // Ваш код обработки отправки формы, включая recaptchaToken
+            };
             function closePopup2() {
                 document.getElementById("popup-complete").style.display = "none";
                 document.body.classList.remove("no-scroll");
+                setCodeInputValue(['', '', '', '']); // Сброс значений ввода кода
+                setRegistrationError(""); // Сброс ошибки при закрытии попапа
             }
             function reloadPage1() {
                 window.location.href = window.location.href;
             }
 
-            React.useEffect(() => {
-                function handleOutsideClick(event) {
-                    const popupContent = document.getElementById("popup-content");
-                    if (event.target !== popupContent && !popupContent.contains(event.target)) {
-                        closePopup2();
-                    }
-                }
-
-                document.addEventListener("click", handleOutsideClick);
-
-                return () => {
-                    document.removeEventListener("click", handleOutsideClick);
-                };
-            }, []);
 
             // Функция обновления страницы
             function reloadPage() {
@@ -118,11 +120,11 @@
 
 
             const [registrationError, setRegistrationError] = useState("");
-            const [codeInputValue, setCodeInputValue] = useState("");
+            const [codeInputValue, setCodeInputValue] = useState(['', '', '', '']);
 
 
-            const handleCodeInputChange = (event) => {
-                setCodeInputValue(event.target.value);
+            const handleCodeInputChange = (newCodeValues) => {
+                setCodeInputValue(newCodeValues); // Update based on child component's input
                 setRegistrationError("");
             };
 
@@ -146,7 +148,7 @@
                         formData
                     );
                     if (response.data.result === false) {
-                        console.log(response.data.result);
+                        // console.log(response.data.result);
                         if (response.data.error.code) {
                             setRegistrationError(response.data.error.code[0]);
                         } else {
@@ -157,9 +159,10 @@
                         if (auth_key) {
                             localStorage.setItem('auth_key', auth_key);
                             handleSuccess()
-                            handleClickTest()
+                            // handleClickTest()
+                            openPopupEnd()
                         }else {
-                            console.log(response.data.result);
+                            // console.log(response.data.result);
                             const hash = response.data.data.hash;
                             localStorage.setItem("hash", hash);
                             const isNew = response.data.data.isNew;
@@ -183,6 +186,43 @@
                     setIsRequestPending(false);
                 }
             };
+            const handleResendCode = async () => {
+                // console.log("handleResendCode вызван");
+                try {
+                    const token = await recaptchaRef.current.executeAsync();
+                    const login = document.getElementById('login');
+                    const domain = window.location.hostname;
+                    const formData = new FormData();
+                    const loginValue = localStorage.getItem('login');
+                    // Проверяем, что логин существует
+                    if (!loginValue) {
+                        console.error('Логин не найден в localStorage');
+                        return;
+                    }
+                    formData.append('login', loginValue); // Используем правильно значение логина
+                    formData.append('domain', domain);
+                    formData.append('g-recaptcha-response', token);
+
+                    // Здесь добавьте ваш код для отправки запроса на сервер
+                    const response = await axios.post('https://nloto-promo.ru/backend/api/login', formData);
+                    // console.log("Ответ от сервера:", response.data);
+                    if (response.data.result === false) {
+                        // console.log(response.data.result);
+                        if (response.data.error.login) {
+                            setRegistrationError(response.data.error.login[0]);
+                        } else {
+                            setRegistrationError('');
+                        }
+                    } else {
+                        // console.log("Успех:", response.data.result);
+                        // console.log(response.data.result);
+                        const hash = response.data.data.hash;
+                        localStorage.setItem('hash', hash);
+                    }
+                } catch (error) {
+                    console.error('Ошибка при повторной отправке кода:', error);
+                }
+            };
             function handleSuccess() {
                 let rutarget = window._rutarget || [];
                 rutarget.push({'event': 'thankYou', 'conv_id': 'registration'});
@@ -196,8 +236,10 @@
                 // }
                 window.location.href = '/profile'
             }
+            const recaptchaRef = useRef(null);
 
             return (
+                <>
                 <div id="popup-complete" className="popup">
                     <div className={"blur-filter"}>
                         <div className="popup-content-code" id={"popup-content"}>
@@ -223,11 +265,10 @@
                                         Введите код, отправленный на ваш номер
                                     </label>
                                     <CodeInput
-                                        id="code"
                                         registrationError={registrationError}
-                                        value={codeInputValue}
-                                        onChange={handleCodeInputChange}
-                                        onSubmit={postRegisterCode} // change handleCodeInputSubmit to postRegisterCode
+                                        value={codeInputValue} // Pass the array directly
+                                        onChange={handleCodeInputChange} // Pass the handler to update the state
+                                        onSubmit={postRegisterCode}
                                     />
                                     {registrationError && (
                                         <div
@@ -248,7 +289,7 @@
                                 <span
                                     id="countdown"
                                     onClick={handleTimerClick}
-                                    postRegister={postRegister}
+                                    // postRegister={postRegister}
                                     style={{
                                         textDecoration: isTimerClickable ? "underline" : "none",
                                         cursor: isTimerClickable ? "pointer" : "default"
@@ -256,9 +297,18 @@
                                 >
       {timerDisplay}
     </span>
+                                <div id="recaptcha-container">
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        sitekey="6LdO5cUeAAAAAAd39wBOubSL9TP3cOzT-lJ2ua1k"
+                                        onChange={handleRecaptchaChange}
+                                        size="invisible"
+                                    />
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
+                </>
             );
         }

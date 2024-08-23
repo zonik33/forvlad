@@ -214,8 +214,7 @@ export default function How (props) {
                                 <div className={'prizes-content-box-title-bot1'}>
                                     <p className={'how-tickes-img-p'}> Шаг 1. <br></br> Купите лотерейный билет </p>
                                     <p className={'how-tickes-img-p-right-how'}>
-                                        Покупайте лотерейные билеты на сумму от 300 ₽ в отделениях «Почты
-                                        России».
+                                        Покупайте тиражные лотерейные билеты и купоны на сумму от 300 ₽ в отделениях «Почты России»
                                     </p>
                                     {/*<div className={'how-tickets-img'}>*/}
                                     {/*    <div className="how-full44-img">*/}
@@ -407,8 +406,7 @@ export default function How (props) {
                                         на
                                         сайте nloto-promo.ru</p>
                                     <p className={'how-center-p-text-first'}>
-                                        Добавьте* номер приобретенного лотерейного билета с 01.08.2024 начала
-                                        и до 30.09.25, используя кнопку "Зарегистрировать билет"
+                                        Добавьте* номер приобретённого лотерейного билета с 01.09.2024 до 31.10.2024г., используя кнопку «Зарегистрировать билет»
                                     </p>
 
                                     <p className={'how-center-p-text'}> <label className={'left-stap'}>*</label> В Акции участвуют лотерейные билеты, купленные
@@ -428,7 +426,7 @@ export default function How (props) {
                                         получайте призы</p>
                                 </p>
                                 <p className={'how-center-p-text-first bonus-style'}>
-                                    Нажмите кнопку «Крутить» и получите промокод
+                                    В личном кабинете нажмите кнопку «Крутить» и получите промокод
                                     на лотерейный билет от «Национальная Лотерея».
                                 </p>
                             </div>
@@ -446,8 +444,7 @@ export default function How (props) {
                         </div>
                         <div className={'steps-container'}>
                             <div className={'first-step'}>1.</div>
-                            <div className="text-block-1">Покупайте лотерейные билеты на сумму не менее 300 рублей и
-                                становитесь участником розыгрышей ценных призов
+                            <div className="text-block-1">Покупайте тиражные лотерейные билеты и купоны на сумму от 300 ₽ в отделениях «Почты России» и участвуйте в розыгрыше гарантированных призов
                             </div>
                             <div className={'second-step'}>2.</div>
                             <div className="text-block-2">Зарегистрируйте приобретенные лотерейные билеты на сайте

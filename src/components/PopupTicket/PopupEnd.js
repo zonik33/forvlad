@@ -113,14 +113,13 @@ export default function PopupEnd ({number}) {
                     <span className="close" onClick={closePopup2}>&times;</span>
                     <form action={'https://nloto-promo.ru/backend/api/ticket'}
                           id={'popup-end'} className={'form-register'}>
-                        <h1 className={'popup-h1 win4healht'}>Отмечайте на здоровье</h1>
+                        <h1 className={'popup-h1 win4healht'}>Ваш билетик</h1>
                         <a className={'decl-text decl-bonus-text'}> Если при покупке лотерейного билета Вы <br></br>указали
                             свой номер
                             мобильного телефона,
-                            <br></br>то такой билет участвует в акции <br></br>«Отмечайте на здоровье»
+                            <br></br>то такой билет участвует в акции <br></br>«Ваш билетик»
                             <br></br>автоматически и уже отображается
-                            <br></br>в личном кабинете. <br></br>Проверьте личный кабинет - если билет не найден,
-                            зарегистрируйте его.
+                            <br></br>в личном кабинете.
                         </a>
                         <button
                             type={'button'}
@@ -130,13 +129,13 @@ export default function PopupEnd ({number}) {
                         >
                             ПЕРЕЙТИ В ЛИЧНЫЙ КАБИНЕТ
                         </button>
-                        <div>
-                            <img className={'for-he4lth'} src={prizesCenterCard}/>
-                        </div>
-                        <img className={'for-he4lth-bg'} src={bgImagese}/>
-                        <p className={'p-bonus-profile-for-he4lth'}>Отправляйте ссылку друзьям и выигрывайте специальный приз от Мвидео в дополнительных розыгрышах!</p>
-                        <a className={'a-bonus-profile copy-link-second copy-link-for-he4lth'}>Скопировать ссылку</a>
-                        <div className="notification-second">Ссылка скопирована!</div>
+                        {/*<div>*/}
+                        {/*    <img className={'for-he4lth'} src={prizesCenterCard}/>*/}
+                        {/*</div>*/}
+                        {/*<img className={'for-he4lth-bg'} src={bgImagese}/>*/}
+                        {/*<p className={'p-bonus-profile-for-he4lth'}>Отправляйте ссылку друзьям и выигрывайте специальный приз от Мвидео в дополнительных розыгрышах!</p>*/}
+                        {/*<a className={'a-bonus-profile copy-link-second copy-link-for-he4lth'}>Скопировать ссылку</a>*/}
+                        {/*<div className="notification-second">Ссылка скопирована!</div>*/}
 
 
                     </form>

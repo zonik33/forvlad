@@ -49,13 +49,25 @@ export default function Tickets(){
     }
 
     const [profile, setProfile] = useState(null);
-
-    useEffect(() => {
-        const storedProfile = JSON.parse(localStorage.getItem('profile'));
-        setProfile(storedProfile);
-    }, []);
+    const [loading, setLoading] = useState(true); // Loading state
     const currentDomain = window.location.origin;
     const location = useLocation();
+
+
+const test= 2
+
+    useEffect(() => {
+        const fetchUpdatedProfileData = () => {
+            const storedProfile = JSON.parse(localStorage.getItem('profile'));
+            if (storedProfile) {
+                setProfile(storedProfile);
+            }
+            setLoading(false);
+        };
+
+        fetchUpdatedProfileData();
+    }, [profile]); // Это сработает при изменении profile
+
 
 
     useEffect(() => {
@@ -223,6 +235,9 @@ export default function Tickets(){
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    // if (loading) {
+    //     return <div>Loading...</div>; // You can replace this with a spinner or loading skeleton
+    // }
     return (
         <>
         <header className={'header-profile'}>
@@ -346,20 +361,22 @@ export default function Tickets(){
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
-                                        {profile && profile.countRoulette > 0 ? (
-                                            <>
-                                                <p className={'left-first-profile-p2-p2-p2'}>
-                                                    Осталось прокрутить {profile && profile.countRoulette} раз
-                                                </p>
-
-                                            </>
-                                        ) : <p className={'left-first-profile-p2-p2-p2'}>
-                                            Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму
-                                            от 300 рублей.
-                                            <br></br>
-                                            <br></br>
-                                            За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                        <p className={'left-first-profile-p2-p2-p2'}>
+                                            Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
+                                        {profile && profile.countRoulette > 0 ? (
+                                                <>
+
+                                                </>
+                                            ) :
+                                            <p className={'left-first-profile-p2-p2-p2 new'}>
+                                                Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на
+                                                сумму
+                                                от 300 рублей.
+                                                <br></br>
+                                                <br></br>
+                                                За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                            </p>
                                         }
                                     </div>
                                 </div>

@@ -80,10 +80,18 @@ export default function Gifts() {
 
 
     const [profile, setProfile] = useState(null);
+    const [loading, setLoading] = useState(true); // Loading state
     useEffect(() => {
-        const storedProfile = JSON.parse(localStorage.getItem('profile'));
-        setProfile(storedProfile);
-    }, []);
+        const fetchUpdatedProfileData = () => {
+            const storedProfile = JSON.parse(localStorage.getItem('profile'));
+            if (storedProfile) {
+                setProfile(storedProfile);
+            }
+            setLoading(false);
+        };
+
+        fetchUpdatedProfileData();
+    }, [profile]); // Это сработает при изменении profile
     const currentDomain = window.location.origin;
     const location = useLocation();
 
@@ -273,6 +281,9 @@ export default function Gifts() {
         // Перенаправить на главную страницу
         window.location.href = '/';
     };
+    // if (loading) {
+    //     return <div>Loading...</div>; // You can replace this with a spinner or loading skeleton
+    // }
     return (
         <>
             <header className={'header-profile'}>
@@ -397,20 +408,22 @@ export default function Gifts() {
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
-                                        {profile && profile.countRoulette > 0 ? (
-                                            <>
-                                                <p className={'left-first-profile-p2-p2-p2'}>
-                                                    Осталось прокрутить {profile && profile.countRoulette} раз
-                                                </p>
-
-                                            </>
-                                        ) : <p className={'left-first-profile-p2-p2-p2'}>
-                                            Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму
-                                            от 300 рублей.
-                                            <br></br>
-                                            <br></br>
-                                            За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                        <p className={'left-first-profile-p2-p2-p2'}>
+                                            Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
+                                        {profile && profile.countRoulette > 0 ? (
+                                                <>
+
+                                                </>
+                                            ) :
+                                            <p className={'left-first-profile-p2-p2-p2 new'}>
+                                                Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на
+                                                сумму
+                                                от 300 рублей.
+                                                <br></br>
+                                                <br></br>
+                                                За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                            </p>
                                         }
                                     </div>
                                 </div>
@@ -489,12 +502,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -515,12 +529,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -528,7 +543,7 @@ export default function Gifts() {
                                                     {prize.type === 3 && (
                                                         <>
                                                             <div className="prize-item">
-                                                                <span className={'gifts-prizes-name-none'}>Приз</span>
+                                                            <span className={'gifts-prizes-name-none'}>Приз</span>
                                                                 <span className="prize-name">{prize.name}</span>
                                                                 {/*<span className="prize-code">221234567890</span>*/}
                                                                 <a
@@ -541,12 +556,12 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -567,12 +582,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -593,12 +609,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -619,12 +636,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -645,12 +663,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>
@@ -671,12 +690,13 @@ export default function Gifts() {
                                                             </div>
                                                             <div className="draw-date-column">
                                                                 <span className={'gifts-prizes-data-none'}>Итоги розыгрыша рулетки</span>
-                                                                <div className="draw-date">10.06.2024</div>
+                                                                <div className="draw-date">{prize.date_roulette}</div>
                                                             </div>
                                                             <div className="draw-date-prizes-column">
                                                                 <span
                                                                     className={'gifts-prizes-data-add-none'}>Срок <br></br>действия до</span>
-                                                                <div className="draw-date margin-new">10.08.2024</div>
+                                                                <div
+                                                                    className="draw-date margin-new">{prize.date_prize}</div>
                                                             </div>
                                                             <div className={'line-true gifts'}></div>
                                                         </>

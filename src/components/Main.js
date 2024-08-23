@@ -97,6 +97,8 @@ export default function Main (props) {
                         <img className={'man waves-blur'} src={wavesblur}/>
                         <img className={'man-tablet logo-pochta'} src={logopochta}/>
                         <img className={'man-tablet waves'} src={waves}/>
+                        <div className={'main-text-act'}> Акция «ваш билетик»
+                        </div>
                         <div className={'main-text'}> Покупайте лотерейные билеты в отделениях «Почты России»*
                             и участвуйте в розыгрыше призов от Национальной Лотереи
                             <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,

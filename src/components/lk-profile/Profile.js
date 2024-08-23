@@ -58,6 +58,7 @@ export default function Profile(props){
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+
     function openPopupTicket2() {
         document.getElementById("popup-end").style.display = "block";
         document.body.classList.add("no-scroll");
@@ -71,12 +72,19 @@ export default function Profile(props){
         document.body.classList.toggle('menu-open');
     }
     const [profile, setProfile] = useState(null);
+    const [loading, setLoading] = useState(true); // Loading state
 
     useEffect(() => {
-        const storedProfile = JSON.parse(localStorage.getItem('profile'));
-        setProfile(storedProfile);
-        console.log(storedProfile); // Добавьте эту строку для отладки
-    }, []);
+        const fetchUpdatedProfileData = () => {
+            const storedProfile = JSON.parse(localStorage.getItem('profile'));
+            if (storedProfile) {
+                setProfile(storedProfile);
+            }
+            setLoading(false);
+        };
+
+        fetchUpdatedProfileData();
+    }, [profile]); // Это сработает при изменении profile
     const currentDomain = window.location.origin;
     const location = useLocation();
     const selectChoose = (text) => {
@@ -250,6 +258,9 @@ export default function Profile(props){
         // Перенаправить на главную страницу
         window.location.href = '/';
     };
+    // if (loading) {
+    //     return <div>Loading...</div>; // You can replace this with a spinner or loading skeleton
+    // }
     return (
         <>
         <header className={'header-profile'}>
@@ -371,27 +382,28 @@ export default function Profile(props){
                                             <b>Крутить</b> </a>
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
-
-                                        {profile && profile.countRoulette > 0 ? (
-                                            <>
-                                                <p className={'left-first-profile-p2-p2-p2'}>
-                                                    Осталось прокрутить {profile && profile.countRoulette} раз
-                                                </p>
-
-                                            </>
-                                        ) : <p className={'left-first-profile-p2-p2-p2'}>
-                                            Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на сумму
-                                            от 300 рублей.
-                                            <br></br>
-                                            <br></br>
-                                            За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                        <p className={'left-first-profile-p2-p2-p2'}>
+                                            Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
+                                        {profile && profile.countRoulette > 0 ? (
+                                                <>
+
+                                                </>
+                                            ) :
+                                            <p className={'left-first-profile-p2-p2-p2 new'}>
+                                                Хотите крутануть колесо? <br></br>Купите лотерейные билеты <br></br>на
+                                                сумму
+                                                от 300 рублей.
+                                                <br></br>
+                                                <br></br>
+                                                За каждые 300 рублей вы <br></br>получите 1 (одну) попытку.
+                                            </p>
                                         }
                                     </div>
                                 </div>
                                 <div className="right-column-profile profile">
                                     <div className={'right-first-profile'}>
-                                        <div className={'right-first-profile'}>
+                                    <div className={'right-first-profile'}>
                                             <NavLink
                                                 to="/profile"
                                                 activeclassname="active-subsection"

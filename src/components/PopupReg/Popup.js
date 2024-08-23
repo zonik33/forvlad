@@ -3,13 +3,16 @@ import Modal from 'react-modal';
 import PhoneInput from "../PhoneInput";
 import axios from "axios";
 import ReCAPTCHA from 'react-google-recaptcha';
+import PopupCode from "./PopupCode";
 
 
 function Popup(props) {
     const { isOpen, closeModal } = props;
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const popupRef = useRef(null);
+    const [isPopupCodeOpen, setIsPopupCodeOpen] = useState(false);
     const [recaptchaToken, setRecaptchaToken] = useState('');
+
 
 
     const handleRecaptchaChange = () => {
@@ -50,11 +53,13 @@ function Popup(props) {
 
 
     function openPopup2() {
-        closeModal()
+        closeModal();
         document.getElementById("popup-complete").style.display = "block";
         const hash = localStorage.getItem('hash');
         const referralCode = localStorage.getItem('referralCode');
         document.body.classList.add("no-scroll");
+        // Передаем сигнал открывать PopupCode
+        setIsPopupCodeOpen(true); // Предположим, что у вас уже есть состояние для управления видимостью PopupCode
     }
     function openPopup3() {
         closeModal()
@@ -96,23 +101,24 @@ function Popup(props) {
         formData.append('g-recaptcha-response', token);
 
 
-
         try {
             const response = await axios.post('https://nloto-promo.ru/backend/api/login', formData);
-                        if (response.data.result === false) {
-                            console.log(response.data.result);
-                            if (response.data.error.login) {
-                                setRegistrationError(response.data.error.login[0]);
-                            } else {
-                                setRegistrationError('');
-                            }
-                        } else {
-                            handleSuccess()
-                            console.log(response.data.result);
-                            const hash = response.data.data.hash;
-                            localStorage.setItem('hash', hash);
-                            openPopup2();
-                        }
+            if (response.data.result === false) {
+                // console.log(response.data.result);
+                if (response.data.error.login) {
+                    setRegistrationError(response.data.error.login[0]);
+                } else {
+                    setRegistrationError('');
+                }
+            } else {
+                handleSuccess()
+                // console.log(response.data.result);
+                const hash = response.data.data.hash;
+                const loginValue = login.value; // Сохраняем значение логина
+                localStorage.setItem('login', loginValue); // Сохраняем логин в localStorage
+                localStorage.setItem('hash', hash);
+                openPopup2();
+            }
         } catch (error) {
 
             if (axios.isCancel(error)) {
@@ -122,7 +128,6 @@ function Popup(props) {
         } finally {
             isRequestPending = false;
         }
-
     }
     function handleSuccess() {
         let rutarget = window._rutarget || [];
@@ -162,7 +167,7 @@ function Popup(props) {
     useEffect(() => {
         const handleHashChange = () => {
             if (window.location.hash === '#registration') {
-                console.log('123') // Здесь вызывайте функцию, которая открывает всплывающее окно
+                // console.log('123') // Здесь вызывайте функцию, которая открывает всплывающее окно
             }
         };
 

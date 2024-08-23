@@ -17,11 +17,14 @@ export default function PopupAddSpin(props) {
     function openPopup3() {
         const name = localStorage.getItem('prizeName');
         const image = localStorage.getItem('prizeImage');
+        const link = localStorage.getItem('prizeLink');
         const welcomeMessage = document.getElementById('ticket-for-number2254');
         const welcomeMessage2 = document.getElementById('ticket-for-number2254img');
+        const welcomeMessage3 = document.getElementById('ticket-for-number2254link');
         // const welcomeMessage2 = document.getElementById('ticket-for-number22');
         welcomeMessage.textContent = name;
         welcomeMessage2.src = image;
+        welcomeMessage3.href = link;
         closeModal();
         document.getElementById("popup-take-gifts").style.display = "block";
         document.body.style.overflow = "hidden";
@@ -36,6 +39,10 @@ export default function PopupAddSpin(props) {
         document.body.classList.add("no-scroll");
         // Добавить следующую строку для удаления фокуса с любого активного элемента при открытии
         document.activeElement.blur();
+    }
+    function closeModalAndRefresh() {
+        closeModal();  // вызов оригинальной функции закрытия
+        window.location.reload();  // перезагрузка страницы
     }
     let isRequestPending = false;
 
@@ -85,7 +92,7 @@ export default function PopupAddSpin(props) {
     useEffect(() => {
         const storedProfile = JSON.parse(localStorage.getItem('profile'));
         setProfile(storedProfile);
-        console.log(storedProfile); // Добавьте эту строку для отладки
+        // console.log(storedProfile); // Добавьте эту строку для отладки
     }, []);
     return (
         <Modal closeTimeoutMS={300}
@@ -132,7 +139,7 @@ export default function PopupAddSpin(props) {
                         <p className={'left-first-profile-p3-count spin-p-test'}>
                             Розыгрыш приза
                         </p>
-                        <span className="close close-for-popup-first" onClick={closeModal}>&times;</span>
+                        <span className="close close-for-popup-first" onClick={closeModalAndRefresh}>&times;</span>
                     </div>
                     <div className={'left-second-profile add-spin'}>
                         <p className={'left-first-profile-p spin-p'}>Вы зарегистрировали

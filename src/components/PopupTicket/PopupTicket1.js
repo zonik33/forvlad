@@ -27,7 +27,6 @@ export default function PopupTicket1 (props) {
         welcomeMessage.textContent = number;
         welcomeMessage2.textContent = text;
         document.body.classList.add("no-scroll");
-
     }
     function openPopupImpossible() {
         closePopup2()
@@ -39,7 +38,6 @@ export default function PopupTicket1 (props) {
         welcomeMessage.textContent = number;
         welcomeMessage2.textContent = text;
         document.body.classList.add("no-scroll");
-
 
     }
     function openPopupNotSold() {
@@ -65,14 +63,22 @@ export default function PopupTicket1 (props) {
         welcomeMessage2.textContent = text;
         document.body.classList.add("no-scroll");
 
+
     }
 
 
     function closePopup2() {
         document.getElementById("popup-ticket1").style.display = "none";
         document.body.classList.remove("no-scroll");
-        document.body.style.overflow = ""; // Разблокируйте прокрутку страницы
-        document.documentElement.style.overflow = ""; // Разблокируйте прокрутку страницы
+        document.body.style.overflow = ""; // Unblock page scrolling
+        document.documentElement.style.overflow = ""; // Unblock page scrolling
+
+
+        setValue(''); // Clear the ticket number value
+        setRegistrationError(''); // Clear registration error messages
+
+        // Reset tooltip visibility
+        setShowTooltip(false);
     }
 
 // Функция обновления страницы
@@ -218,7 +224,11 @@ export default function PopupTicket1 (props) {
                                 </label>
 
                             </div>
-                            <TicketInput registrationError={registrationError}/>
+
+                            <TicketInput   registrationError={registrationError}
+                                           value={value}
+                                           handleInputChange={handleInputChange}
+                                           />
                             {registrationError &&  <div className={'error-block-for-ticket'} style={{color: '#FFFFFF'}}>{registrationError}</div>}
                             <span id="nameError" className="error"></span>
                         </div>
