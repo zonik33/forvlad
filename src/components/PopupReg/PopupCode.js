@@ -11,6 +11,7 @@
             const [isTimerClickable, setIsTimerClickable] = useState(true);
             let [intervalId, setIntervalId] = useState(null);
             const [isRequestPending, setIsRequestPending] = useState(false); // New state
+            const [attemptsLeft, setAttemptsLeft] = useState(5); // Maximum attempts
 
             const timerDuration = 120;
             let timer = timerDuration;
@@ -48,6 +49,7 @@
 
             const handleTimerClick = async () => {
                 if (isTimerClickable) {
+                    setAttemptsLeft(5);
                     setIsTimerClickable(false);
                     startTimer(); // Перезапускаем таймер
                     try {
@@ -60,16 +62,6 @@
                 }
             };
 
-
-            const openPopup = () => {
-                closePopup2();
-                setIsPopupOpen(true);
-            };
-
-            const closePopup = () => {
-                setIsPopupOpen(false);
-
-            };
 
             function openPopupPassword() {
                 closePopup2();
@@ -107,6 +99,7 @@
                 document.body.classList.remove("no-scroll");
                 setCodeInputValue(['', '', '', '']); // Сброс значений ввода кода
                 setRegistrationError(""); // Сброс ошибки при закрытии попапа
+                setAttemptsLeft(5); // Reset attempts when closing popup
             }
             function reloadPage1() {
                 window.location.href = window.location.href;
@@ -149,6 +142,7 @@
                     );
                     if (response.data.result === false) {
                         // console.log(response.data.result);
+                        setAttemptsLeft(prev => Math.max(prev - 1, 0)); // Ensure it doesn't go below 0
                         if (response.data.error.code) {
                             setRegistrationError(response.data.error.code[0]);
                         } else {
@@ -286,6 +280,9 @@
                                 {/*        <Popup isOpen={isPopupOpen} closeModal={closePopup}/>*/}
                                 {/*    )}*/}
                                 {/*</label>*/}
+                                <div className="attempts-left">
+                                    Осталось попыток: {attemptsLeft}
+                                </div>
                                 <span
                                     id="countdown"
                                     onClick={handleTimerClick}

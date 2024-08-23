@@ -58,8 +58,6 @@ function Popup(props) {
         const hash = localStorage.getItem('hash');
         const referralCode = localStorage.getItem('referralCode');
         document.body.classList.add("no-scroll");
-        // Передаем сигнал открывать PopupCode
-        setIsPopupCodeOpen(true); // Предположим, что у вас уже есть состояние для управления видимостью PopupCode
     }
     function openPopup3() {
         closeModal()
@@ -114,6 +112,7 @@ function Popup(props) {
                 handleSuccess()
                 // console.log(response.data.result);
                 const hash = response.data.data.hash;
+
                 const loginValue = login.value; // Сохраняем значение логина
                 localStorage.setItem('login', loginValue); // Сохраняем логин в localStorage
                 localStorage.setItem('hash', hash);
