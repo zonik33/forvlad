@@ -20,6 +20,7 @@
                 if (intervalId) {
                     clearInterval(intervalId);
                 }
+                timer = timerDuration; // Reset timer variable
                 const newIntervalId = setInterval(() => {
                     let minutes = parseInt(timer / 60, 10);
                     let seconds = parseInt(timer % 60, 10);
@@ -99,7 +100,14 @@
                 document.body.classList.remove("no-scroll");
                 setCodeInputValue(['', '', '', '']); // Сброс значений ввода кода
                 setRegistrationError(""); // Сброс ошибки при закрытии попапа
-                setAttemptsLeft(5); // Reset attempts when closing popup
+                setAttemptsLeft(5); // Сброс попыток при закрытии попапа
+                setTimerDisplay(""); // Очистка дисплея таймера
+                clearInterval(intervalId); // Очищаем таймер
+                setIntervalId(null); // Сбрасываем идентификатор интервала
+                setIsTimerClickable(false);
+
+                // Перезапуск таймера на 120 секунд
+                startTimer();
             }
             function reloadPage1() {
                 window.location.href = window.location.href;

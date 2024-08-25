@@ -6109,19 +6109,21 @@ canvas#wheel-profile-popup {
   margin-right: -0.5vw;
 }
 #submit-add-ticket {
-  width: 26.3vw;
-  height: 4.85vw;
+  background-image: linear-gradient(#af21c9, #af21c9);
+  border: 0 solid #ffffff4d;
   border-radius: 1.4vw;
-  border: 0vw solid #FFFFFF4D;
-  background-image: linear-gradient(#AF21C9, #AF21C9);
-  color: #FFFFFF;
-  font-size: 1.46vw;
-  line-height: 1.46vw;
-  font-weight: 400;
-  margin-top: -3vw;
-  font-family: 'Acrom Medium', Arial, sans-serif;
-  text-transform: uppercase;
+  color: #fff;
   cursor: pointer;
+  font-family: Acrom Medium, Arial, sans-serif;
+  font-size: 1.46vw;
+  font-weight: 400;
+  height: 4.85vw;
+  line-height: 1.46vw;
+  margin-bottom: 2vw;
+  margin-left: -1.75vw;
+  margin-top: 1.5vw;
+  text-transform: uppercase;
+  width: 26.3vw;
 }
 #submit-add-ticket:hover {
   background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
@@ -8359,9 +8361,11 @@ button:focus {
   font-size: 0.97vw;
 }
 .error-block-for-ticket {
-  margin-left: -0.86vw;
-  font-size: 0.97vw;
   color: #cb2828 !important;
+  font-size: .97vw;
+  height: auto;
+  margin-bottom: -1vw;
+  margin-left: -.86vw;
 }
 .only-for-phone {
   color: #cb2828 !important;
@@ -8836,7 +8840,8 @@ iframe {
   }
   .error-block-for-ticket {
     color: #cb2828 !important;
-    font-size: 1.07vw;
+    font-size: 1.27vw;
+    margin-bottom: -1.4vw;
     margin-left: -.86vw;
   }
   .bilet-ticket-5-p {
@@ -9734,20 +9739,20 @@ iframe {
     margin-right: -0.5vw;
   }
   #submit-add-ticket {
-    width: 31.3vw;
-    height: 5.85vw;
+    background-image: linear-gradient(#af21c9, #af21c9);
+    border: 0 solid #ffffff4d;
     border-radius: 1.4vw;
-    border: 0vw solid #FFFFFF4D;
-    background-image: linear-gradient(#AF21C9, #AF21C9);
-    color: #FFFFFF;
-    font-size: 1.76vw;
-    line-height: 1.76vw;
-    font-weight: 400;
-    margin-top: -3vw;
-    font-family: 'Acrom Medium', Arial, sans-serif;
-    text-transform: uppercase;
+    color: #fff;
     cursor: pointer;
-    margin-left: 2.2vw;
+    font-family: Acrom Medium, Arial, sans-serif;
+    font-size: 1.76vw;
+    font-weight: 400;
+    height: 5.85vw;
+    line-height: 1.76vw;
+    margin-left: 1.5vw;
+    margin-top: 2vw;
+    text-transform: uppercase;
+    width: 31.3vw;
   }
   #container {
     position: fixed;
@@ -16577,13 +16582,14 @@ iframe {
   }
 
   .error-block-for-ticket {
-    width: 95vw;
-    height: 5vw;
-    margin-left: -0.86vw;
-    margin-top: -1.44vw;
     font-size: 2.97vw;
-    line-height: 8vw;
-    margin-bottom: 2vw;
+    /* line-height: 18vw; */
+    height: auto;
+    line-height: 4vw;
+    margin-bottom: -15vw;
+    margin-left: 1.14vw;
+    margin-top: 9.56vw;
+    width: 78vw;
   }
   .popup-content-auth .form-group-password {
     width: 75.6vw;
@@ -17070,19 +17076,19 @@ iframe {
     border-radius: 2vw;
   }
   #submit-add-ticket {
-    width: 73.3vw;
-    height: 17.85vw;
+    background-image: linear-gradient(#af21c9, #af21c9);
+    border: 0 solid #ffffff4d;
     border-radius: 4.4vw;
-    border: 0vw solid #FFFFFF4D;
-    background-image: linear-gradient(#AF21C9, #AF21C9);
-    color: #FFFFFF;
+    color: #fff;
+    font-family: Acrom Medium, Arial, sans-serif;
     font-size: 4.27vw;
-    line-height: 4.27vw;
     font-weight: 400;
-    margin-top: 27vw;
-    margin-left: 1.8vw;
-    font-family: 'Acrom Medium', Arial, sans-serif;
+    height: 17.85vw;
+    line-height: 4.27vw;
+    margin-left: 0.8vw;
+    margin-top: 17vw;
     text-transform: uppercase;
+    width: 73.3vw;
   }
 
   #submit-add-ticket:hover {
@@ -17537,7 +17543,7 @@ iframe {
     background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
     width: 84.6vw;
-    height: 95.99vw;
+    height: 100vw;
     padding: 0.6vw 0.94vw;
     border-radius: 1.27vw;
     margin-top: 0vw;

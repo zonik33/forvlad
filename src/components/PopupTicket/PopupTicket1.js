@@ -225,21 +225,17 @@ export default function PopupTicket1 (props) {
 
                             </div>
 
-                            <TicketInput   registrationError={registrationError}
-                                           value={value}
-                                           handleInputChange={handleInputChange}
-                                           />
-                            {registrationError &&  <div className={'error-block-for-ticket'} style={{color: '#FFFFFF'}}>{registrationError}</div>}
+                            <TicketInput registrationError={registrationError}
+                                         value={value}
+                                         handleInputChange={handleInputChange}
+                            />
+                            {registrationError && <div className={'error-block-for-ticket'}
+                                                       style={{color: '#FFFFFF'}}>{registrationError}</div>}
                             <span id="nameError" className="error"></span>
+                            <button type={'submit'} id={'submit-add-ticket'}
+                                    className={'button-animation-code'}>ЗАРЕГИСТРИРОВАТЬ БИЛЕТ
+                            </button>
                         </div>
-                        {/*<a className={'decl-text decl-pluse'}> Если при покупке лотерейного билета вы <br></br>указали свой номер*/}
-                        {/*    мобильного телефона,*/}
-                        {/*    <br></br>то такой билет участвует в акции <br></br>«Отмечайте на здоровье»*/}
-                        {/*    <br></br>автоматически и уже отображается*/}
-                        {/*    <br></br>в <a href={'https://nloto-promo.ru/profile'} className={'text-nloto'}>личном кабинете</a>.*/}
-                        {/*</a>*/}
-                        <button type={'submit'} id={'submit-add-ticket'}
-                                className={'button-animation-code'}>ЗАРЕГИСТРИРОВАТЬ БИЛЕТ</button>
 
                     </form>
 
