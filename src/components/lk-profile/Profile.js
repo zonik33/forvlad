@@ -387,7 +387,7 @@ export default function Profile(props){
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
                                         <p className={'left-first-profile-p2-p2-p2'}>
-                                            Вы прокрутили {profile && profile.countRoulette} раз
+                                            Вы прокрутили {profile && profile.countRouletteUsed} раз
                                             <br></br>
                                             Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>

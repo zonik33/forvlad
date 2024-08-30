@@ -6249,6 +6249,17 @@ canvas#wheel-profile-popup {
   color: #364059;
 
 }
+.table-cell.price {
+  position: absolute;
+  display: block;
+  text-align: left;
+  font-size: 1.250vw;
+  font-weight: 400;
+  line-height: 1.667vw;
+  font-family: 'Halvar Mittelschrift Rg', sans-serif;
+  margin: 2.5vw -1vw 0vw 8.3vw;
+  color: #364059;
+}
 .table-cell.data {
   display: block;
   text-align: left;
@@ -9908,6 +9919,17 @@ iframe {
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     margin-left: 20vw;
     margin-right: 0.9vw;
+    color: #364059;
+  }
+  .table-cell.price {
+    position: absolute;
+    display: block;
+    text-align: left;
+    font-size: 2.05vw;
+    font-weight: 400;
+    line-height: 2.667vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    margin: 3.5vw -1vw 0 26.6vw;
     color: #364059;
   }
   .massive-text-agree {
@@ -17998,11 +18020,20 @@ iframe {
     font-weight: 400;
     line-height: 8.889vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
-    margin-left: 1.7vw;
-    margin-right: 0.6vw;
     color: #364059;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin: 2vw .6vw 9vw 1.7vw;
+  }
+  .table-cell.price {
+    position: absolute;
+    display: block;
+    text-align: left;
+    font-size: 6.667vw;
+    font-weight: 400;
+    line-height: 8.889vw;
+    font-family: 'Halvar Mittelschrift Rg', sans-serif;
+    width: 90vw;
+    margin: 16.5vw -1vw 0 2.9vw;
+    color: #364059;
   }
   .global-name-move-mobile {
     margin: -12vw 0vw 0vw 64vw;

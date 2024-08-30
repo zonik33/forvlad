@@ -365,7 +365,7 @@ const test= 2
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
                                         <p className={'left-first-profile-p2-p2-p2'}>
-                                            Вы прокрутили {profile && profile.countRoulette} раз
+                                            Вы прокрутили {profile && profile.countRouletteUsed} раз
                                             <br></br>
                                             Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
@@ -476,6 +476,9 @@ const test= 2
                                                                                 </div>
                                                                                 <div
                                                                                     className="table-cell number">{ticket.number}</div>
+                                                                                <div
+                                                                                    className="table-cell price">{ticket.amount} рублей
+                                                                                </div>
                                                                                 <div
                                                                                     className="colm-data-ticket-none">Дата
                                                                                     регистрации в акции
