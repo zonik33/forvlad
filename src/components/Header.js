@@ -1,4 +1,5 @@
 import users from '../image/img_98.png'
+import exitlogo from '../image/img_129.png'
 import ticket from '../image/ticket.png'
 import tickettext from '../image/tickettext.png'
 import tickettextblue from '../image/img_109.png'
@@ -138,6 +139,17 @@ export default function Header (props){
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    function toggleDropdown() {
+        const dropdown = document.querySelector('.dropdown-menu');
+        dropdown.classList.toggle('show');
+    }
+    function profileExit () {
+        // Удалить токен из localStorage
+        localStorage.removeItem('auth_key');
+
+        // Перенаправить на главную страницу
+        window.location.href = '/';
+    };
     return(
 
         <header className={'header'}>
@@ -157,7 +169,8 @@ export default function Header (props){
                     <div className={'menu'}>
                         <div className={'menu-content'}>
                             <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
-                                <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
+                                {/*<a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>*/}
+                                <a href={'#'}> Правила </a>
                                 <a className="smooth" href={'#prizes'} onClick={(event) => {
                                     ScrollPrizes(event);
                                 }}>
@@ -174,10 +187,21 @@ export default function Header (props){
                             </div>
                             <div className={'random-block'}>
                                 {isAuthenticated ? (
-                                    <button id="profile-button" onClick={redirectToProfile}
-                                            className="button-animation">
-                                        Личный кабинет
-                                    </button>
+                                    <>
+                                        <img className={'exit-logo'} src={exitlogo} onClick={toggleDropdown}
+                                             alt="Логотип"/>
+                                        <button id="profile-button" onClick={redirectToProfile}
+                                                className="button-animation">
+                                            Личный кабинет
+                                        </button>
+                                        <div className="dropdown-menu">
+                                            <div className="triangle">
+                                            </div>
+
+                                            <p onClick={profileExit} className={'exit-pro'}>Выход</p>
+                                        </div>
+                                    </>
+
                                 ) : (
                                     <div className={'random-block-2'}>
                                         <button id="registration-button" onClick={openPopup}

@@ -271,6 +271,8 @@ header .menu-content-profile a {
   display: none;
 }
 .random-block {
+  position: relative;
+  display: inline-block;
   margin-left: 15.5vw;
   margin-top: -0.9vw;
 }
@@ -278,6 +280,45 @@ header .menu-content-profile a {
   margin-left: 3.5vw;
   margin-top: -0.55vw;
 }
+.dropdown-menu {
+  width: 3.8vw;
+  height: 1vw;
+  margin-top: 1.4vw;
+  margin-left: 6vw;
+  visibility: hidden; /* Скрыть меню по умолчанию */
+  opacity: 0; /* Полная прозрачность по умолчанию */
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1vw;
+  padding: 10px; /* Уменьшите Padding для более аккуратного вида */
+  z-index: 1;
+  transform: translateY(-30px); /* Измените на -10px для воодушевляющего эффекта */
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease; /* Задержка для visibility */
+}
+.triangle {
+  position: absolute;
+  top: -10px; /* Положение треугольника над блоком */
+  left: 35px; /* Положение по горизонтали */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Левый бок треугольника */
+  border-right: 10px solid transparent; /* Правый бок треугольника */
+  border-bottom: 10px solid #fff; /* Низ треугольника */
+  margin: 0 auto; /* Центрирование, если понадобится */
+}
+
+.dropdown-menu.show .triangle {
+  border-bottom-color: #fff; /* Измените цвет при показе меню, если нужно */
+}
+
+.dropdown-menu.show {
+  visibility: visible; /* Показывать меню при добавлении класса show */
+  opacity: 1; /* Ставить полную видимость */
+  transform: translateY(0); /* Возвращать к начальной позиции */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Убрать задержку для visibility */
+}
+
 .for-error-random-block {
   margin-left: 15.5vw;
   margin-top: -0.9vw;
@@ -817,6 +858,18 @@ header .menu-content-profile a:hover {
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
+}
+.exit-logo {
+  position: absolute;
+  margin: -0.1vw 0vw 0vw 7.5vw;
+  width: 2vw;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Добавлено для плавности */
+}
+
+.exit-logo:hover {
+  opacity: 0.5;
 }
 .popup-take-gifts .form-register {
   width: 25vw;
@@ -2072,10 +2125,16 @@ header .menu-content-profile a:hover {
   cursor: pointer;
 }
 .exit-pro {
-  color: #364059;
-  text-decoration: underline;
+  margin: 0vw 0vw 0vw 0.7vw;
+  cursor: pointer;
+  color:  #2F41B0;
+  text-decoration: none !important;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
+  font-weight: 400;
+  font-family: 'Halvar Mittelschrift Md', sans-serif;
+  font-size: 0.833vw;
+  line-height: 1.092vw;
 }
 .exit-pro:hover {
   color: #2F41B0B2;
@@ -8775,6 +8834,53 @@ iframe {
   float: left;
 }
 @media screen and (max-width: 992px) {
+  .exit-logo {
+    position: absolute;
+    margin: -0.7vw 0vw 0vw 15.5vw;
+    width: 4vw;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .exit-pro {
+    margin: 0vw 0vw 0vw 0.7vw;
+    cursor: pointer;
+    color: #2F41B0;
+    text-decoration: none !important;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    font-weight: 400;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
+    font-size: 1.953vw;
+    line-height: 2.192vw;
+  }
+  .dropdown-menu {
+    width: 6.8vw;
+    height: 2.3vw;
+    margin-top: 4.4vw;
+    margin-left: 5vw;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1vw;
+    padding: 10px;
+    z-index: 1;
+    transform: translateY(-30px);
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
+  }
+  .triangle {
+    position: absolute;
+    top: -10px;
+    left: 34px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    margin: 0 auto;
+  }
   .attempts-left {
     display: none;
     color: #364059;
@@ -16456,7 +16562,7 @@ iframe {
   }
   .random-block {
     width: 34vw;
-    margin-left: 53.5vw;
+    margin-left: 51.5vw;
     margin-top: -23.9vw;
     position: absolute;
   }
@@ -18044,8 +18150,8 @@ iframe {
     line-height: 6vw;
   }
   .exit-pro {
-    color: #FFFFFF;
-    text-decoration: underline;
+    color: #364059;
+    /*text-decoration: underline;*/
 
   }
   .table-cell.data {
@@ -18884,6 +18990,61 @@ iframe {
     font-weight: 400;
     line-height: 4.63vw;
     margin: 0.9vw 0vw 28vw 43vw;
+  }
+  .dropdown-menu.show {
+    z-index: 1001;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .exit-logo {
+    margin: -3vw 0vw 0vw 31vw;
+    position: absolute;
+    width: 8.6vw;
+    height: auto;
+  }
+  .exit-pro {
+    margin: 0vw 0vw 0vw 0.7vw;
+    cursor: pointer;
+    color: #2F41B0;
+    text-decoration: none !important;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    font-weight: 400;
+    font-family: 'Halvar Mittelschrift Md', sans-serif;
+    font-size: 3.389vw;
+    line-height: 5.094vw;
+  }
+  .dropdown-menu {
+    width: 10.8vw;
+    height: 5.3vw;
+    margin-top: 7.4vw;
+    margin-left: 23vw;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3vw;
+    padding: 10px;
+    z-index: 1;
+    transform: translateY(-30px);
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
+  }
+  .triangle {
+    position: absolute;
+    top: -10px;
+    left: 37px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    margin: 0 auto;
+  }
+  .dropdown-menu.show .triangle {
+    border-bottom-color: #fff;
   }
 }
 

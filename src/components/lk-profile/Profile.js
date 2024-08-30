@@ -36,6 +36,7 @@ import ticketTextRight from "../../image/img_100.png";
 import tickettextblue from '../../image/img_109.png'
 import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
 import PopupTicket6 from "../PopupTicket/PopupTickets6";
+import exitlogo from "../../image/img_129.png";
 
 
 
@@ -265,6 +266,10 @@ export default function Profile(props){
     // if (loading) {
     //     return <div>Loading...</div>; // You can replace this with a spinner or loading skeleton
     // }
+    function toggleDropdown() {
+        const dropdown = document.querySelector('.dropdown-menu');
+        dropdown.classList.toggle('show');
+    }
     return (
         <>
         <header className={'header-profile'}>
@@ -285,7 +290,8 @@ export default function Profile(props){
                     <div className={'menu'}>
                         <div className={'menu-content-profile error-menu-profile'}>
                             <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
-                                <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
+                                {/*<a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>*/}
+                                <a href={'#'}> Правила </a>
                                 <a className="smooth" href={'#'} onClick={(event) => {
                                     handleGoToPrizes(event)
                                 }}> Призы </a>
@@ -301,11 +307,17 @@ export default function Profile(props){
                                 }}> Обратная связь </a>
 
                             </div>
-                            <div className={'random-block'}>
-                                <button id="profile-button"
-                                        className="button-animation">
+                            <div className="random-block">
+                                <img className={'exit-logo'} src={exitlogo} onClick={toggleDropdown} alt="Логотип"/>
+                                <button id="profile-button" className="button-animation">
                                     Личный кабинет
                                 </button>
+
+                                <div className="dropdown-menu">
+                                    <div className="triangle"></div>
+
+                                    <p onClick={profileExit} className={'exit-pro'}>Выход</p>
+                                </div>
                             </div>
                             <img className={'users-logo top-side'} src={users}/>
                         </div>
@@ -318,16 +330,17 @@ export default function Profile(props){
                     <div className={'main-items main-items-profile'}>
                         <img className={'tsxt'} src={tickets}/>
                         <img className={'tsxt-mobile'} src={ticketsmb}/>
-                        <p className={'global-name-move-mobile shadow-exit'}><a className={'exit-pro'} onClick={profileExit}>Выйти
-                            из профиля
-                        </a></p>
+                        {/*<p className={'global-name-move-mobile shadow-exit'}><a className={'exit-pro'} onClick={profileExit}>Выйти*/}
+                        {/*    из профиля*/}
+                        {/*</a></p>*/}
                         <div className={'items-block-profile'}>
                             <div className={'background-container'}></div>
                             <div className={'global-name'}>
                                 <p className={'global-name-move'}>Личный кабинет</p>
-                                <p className={'global-name-move shadow-exit'}><a className={'exit-pro'}
-                                                                                 onClick={profileExit}>Выйти из профиля
-                                </a></p>
+
+                                {/*<p className={'global-name-move shadow-exit'}><a className={'exit-pro'}*/}
+                                {/*                                                 onClick={profileExit}>Выйти из профиля*/}
+                                {/*</a></p>*/}
                             </div>
                             <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>

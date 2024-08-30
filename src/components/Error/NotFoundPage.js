@@ -170,7 +170,8 @@ export default function NotFoundPage(props){
                         <div className={'menu'}>
                             <div className={'menu-content'}>
                                 <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
-                                    <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
+                                    {/*<a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>*/}
+                                    <a href={'#'}> Правила </a>
                                     <a className="smooth" href={'#'} onClick={(event) => {
                                         handleGoToPrizes(event)
                                     }}> Призы </a>
