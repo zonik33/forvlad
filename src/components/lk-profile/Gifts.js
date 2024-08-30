@@ -169,6 +169,9 @@ export default function Gifts() {
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const handleImageClickTest = () => {
+        window.open('https://nloto.ru/', '_blank');
+    };
     const navigate = useNavigate();
 
     const handleGoToPrizes = (event) => {
@@ -409,6 +412,8 @@ export default function Gifts() {
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
                                         <p className={'left-first-profile-p2-p2-p2'}>
+                                            Вы прокрутили {profile && profile.countRoulette} раз
+                                            <br></br>
                                             Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
                                         {profile && profile.countRoulette > 0 ? (
@@ -716,7 +721,9 @@ export default function Gifts() {
 
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
-                            <img className={'footer-logo'} src={ticketText}/>
+                            <Link to="">
+                                <img className={'footer-logo'} src={ticketText} onClick={handleImageClickTest}/>
+                            </Link>
                             <img className={'footer-logo right'} src={ticketTextRight}/>
                         </div>
                     </div>

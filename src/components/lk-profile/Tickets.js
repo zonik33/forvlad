@@ -140,6 +140,9 @@ const test= 2
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const handleImageClickTest = () => {
+        window.open('https://nloto.ru/', '_blank');
+    };
     function profileExit () {
         // Удалить токен из localStorage
         localStorage.removeItem('auth_key');
@@ -362,6 +365,8 @@ const test= 2
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
 
                                         <p className={'left-first-profile-p2-p2-p2'}>
+                                            Вы прокрутили {profile && profile.countRoulette} раз
+                                            <br></br>
                                             Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
                                         {profile && profile.countRoulette > 0 ? (
@@ -567,7 +572,9 @@ const test= 2
 
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
-                            <img className={'footer-logo'} src={ticketText}/>
+                            <Link to="">
+                                <img className={'footer-logo'} src={ticketText} onClick={handleImageClickTest}/>
+                            </Link>
                             <img className={'footer-logo right'} src={ticketTextRight}/>
                         </div>
                     </div>

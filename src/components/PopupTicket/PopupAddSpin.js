@@ -156,6 +156,8 @@ export default function PopupAddSpin(props) {
                         {profile && profile.countRoulette > 0 ? (
                             <>
                                 <p className={'left-first-profile-p2-p2-p2 p-popup'}>
+                                    Вы прокрутили {profile && profile.countRoulette} раз
+                                    <br></br>
                                     Осталось прокрутить {profile && profile.countRoulette} раз
                                 </p>
 

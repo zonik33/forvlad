@@ -98,6 +98,9 @@ export default function Profile(props){
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const handleImageClickTest = () => {
+        window.open('https://nloto.ru/', '_blank');
+    };
     useEffect(() => {
         const copyLinkButton = document.querySelector('.copy-link');
         const notification = document.querySelector('.notification');
@@ -225,6 +228,7 @@ export default function Profile(props){
         } else {
             document.getElementById("popup-banner").style.display = "block"; // Показывать другой попап
             document.body.classList.add("no-scroll");
+
         }
     }
     const closePopup = () => {
@@ -383,6 +387,8 @@ export default function Profile(props){
                                         {isPopupOpen &&
                                             <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
                                         <p className={'left-first-profile-p2-p2-p2'}>
+                                            Вы прокрутили {profile && profile.countRoulette} раз
+                                            <br></br>
                                             Осталось прокрутить {profile && profile.countRoulette} раз
                                         </p>
                                         {profile && profile.countRoulette > 0 ? (
@@ -480,7 +486,9 @@ export default function Profile(props){
 
                     <div className={'footer-row'}>
                 <div className={'footer-colm'}>
-                    <img className={'footer-logo'} src={ticketText}/>
+                    <Link to="">
+                        <img className={'footer-logo'} src={ticketText} onClick={handleImageClickTest}/>
+                    </Link>
                     <img className={'footer-logo right'} src={ticketTextRight}/>
                 </div>
             </div>

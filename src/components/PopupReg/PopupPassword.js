@@ -206,9 +206,9 @@ export default function PopupPassword (props) {
                                     onChange={handleAgree1Change}
                                 />
                                 <span className={`custom-checkbox ${!agree1Checked ? 'error' : ''}`}></span>
-                                <p>Мне есть 18 лет. Я согласен на обработку персональных данных ООО "Спортивные лотереи"
+                                <p>Мне есть 18 лет. Я согласен на обработку персональных данных ООО "Спортивные Лотереи"
                                     и
-                                    ООО НКО "Мобильная карта" и с договорами-офертой ООО "Спортивные лотереи" и ООО НКО
+                                    ООО НКО "Мобильная карта" и с договорами-офертой ООО "Спортивные Лотереи" и ООО НКО
                                     "Мобильная карта"
                                 </p>
                                 <span id="phoneError" className="error"></span>
@@ -218,7 +218,7 @@ export default function PopupPassword (props) {
                             <label className={'popup-p-center'}>
                                 <input type={'checkbox'} id={'agree_2'} className={'input-checkbox'} name={'rules1'}/>
                                 <span className={`custom-checkbox`}></span>
-                                <p>Я соглашаюсь на получение сообщений или рекламы от ООО "Спортивные лотереи" в формате
+                                <p>Я соглашаюсь на получение сообщений или рекламы от ООО "Спортивные Лотереи" в формате
                                     СМС, push-уведомлений, e-mail рассылок (писем).
                                 </p>
                                 <span id="phoneError" className="error"></span>

@@ -3,9 +3,14 @@ import ticketTextRight from '../image/img_100.png'
 import React from "react";
 import img55 from "../image/img_55.png";
 import man from "../image/img_56.png";
+import ticket from "../image/ticket.png";
+import {Link} from "react-router-dom";
 
 
 export default function Footer (props) {
+    const handleImageClick = () => {
+        window.open('https://nloto.ru/', '_blank');
+    };
     const currentDomain = window.location.origin;
     return (
         <footer className={'footer'}>
@@ -13,7 +18,9 @@ export default function Footer (props) {
 
                 <div className={'footer-row'}>
                     <div className={'footer-colm'}>
-                        <img className={'footer-logo'} src={ticketText}/>
+                        <Link to="">
+                        <img className={'footer-logo'} src={ticketText} onClick={handleImageClick}/>
+                        </Link>
                         <img className={'footer-logo right'} src={ticketTextRight}/>
                     </div>
                 </div>

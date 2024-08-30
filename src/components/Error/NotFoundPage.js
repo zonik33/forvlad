@@ -49,6 +49,9 @@ export default function NotFoundPage(props){
     const handleImageClick = () => {
         window.location.href = '/'
     };
+    const handleImageClickTest = () => {
+        window.open('https://nloto.ru/', '_blank');
+    };
     function openPopup2() {
         document.getElementById("popup-ticket1").style.display = "block";
         document.body.classList.add("no-scroll");
@@ -231,7 +234,9 @@ export default function NotFoundPage(props){
 
                     <div className={'footer-row'}>
                         <div className={'footer-colm'}>
-                            <img className={'footer-logo'} src={ticketText}/>
+                            <Link to="">
+                                <img className={'footer-logo'} src={ticketText} onClick={handleImageClickTest}/>
+                            </Link>
                             <img className={'footer-logo right'} src={ticketTextRight}/>
                         </div>
                     </div>

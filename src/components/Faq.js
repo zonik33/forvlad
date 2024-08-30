@@ -196,7 +196,8 @@ export default function Faq() {
                     <Typography>
                         {expanded === 'panel3' && <div className={classes.line}></div>}
 
-                        Лотерейные билеты «Мечталлион», «Лавина призов», «12 Добрых дел», «Великолепная 8», «Пятая скорость», «Трижды три», «Форсаж-75»
+                        Лотерейные билеты «Мечталлион», «4х4», «Топ-12», «Премьер»,
+                        «Великолепная 8», «Большая 8», «5 из 37», «Форсаж 75»
 
 
                     </Typography>
@@ -267,7 +268,7 @@ export default function Faq() {
                 <AccordionDetails style={{color: expanded === 'panel6' ? '#5E6976' : '#5E6976'}}>
                     <Typography>
                         {expanded === 'panel6' && <div className={classes.line}></div>}
-                        Общий срок проведения акции «Ваш билетик» с «1» сентября 2024г. по «30» ноября 2024г. Период покупки лотерейных билетов для участия в акции происходит с «1» сентября 2024г. по «31» октября  2024г.
+                        Общий срок проведения акции «Ваш билетик» с «1» сентября 2024г. по «30» ноября 2024г. Период покупки лотерейных билетов для участия в акции происходит с «1» сентября 2024г. по «30» октября 2024г.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -290,13 +291,13 @@ export default function Faq() {
                 <AccordionDetails style={{color: expanded === 'panel4' ? '#5E6976' : '#5E6976'}}>
                     <Typography>
                         {expanded === 'panel7' && <div className={classes.line}></div>}
-                        Для участия в акции Вам необходимо в период с «1» сентября 2024г. по «31» ноября 2024г.
-                        приобрести лотерейные билеты «Мечталлион», «4*4», «Топ-12», «Премьер»,
+                        Для участия в акции Вам необходимо в период с «1» сентября 2024г. по «30» октября 2024г.
+                        приобрести лотерейные билеты «Мечталлион», «4х4», «Топ-12», «Премьер»,
                         «Великолепная 8», «Большая 8», «5 из 37», «Форсаж 75» на сумму не менее 300 рублей в отделениях Почты
                         России из следующих городов-участников: Москва, Санкт-Петербург Краснодар, Екатеринбург. Далее
                         зарегистрировать приобретенные билеты в акции «Ваш билетик». Для этого необходимо:
-                        <br></br>- перейти на промо-сайте акции https://nloto-promo.ru/;
-                        <br></br>- пройти регистрацию, то есть создать Личный кабинет на промо-сайте
+                        <br></br>- перейти на промо-сайт акции https://nloto-promo.ru/;
+                        <br></br>- пройти регистрацию, то есть создать Личный кабинет на промо-сайт
                         https://nloto-promo.ru/, указав номер мобильного телефона и приняв согласие на обработку
                         персональных данных, установленных настоящими Правилами;
                         <br></br>- зарегистрировать приобретенные билеты на главной странице промо-акции и/или в
@@ -404,7 +405,7 @@ export default function Faq() {
                 <AccordionDetails style={{color: expanded === 'panel4' ? '#5E6976' : '#5E6976'}}>
                     <Typography>
                         {expanded === 'panel11' && <div className={classes.line}></div>}
-                        Активировать промокод возможно  с «1» сентября 2024г. по «30» ноября 2024г.
+                        Активировать промокод возможно  с «1» сентября 2024г. по «30» октября 2024г.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -452,7 +453,7 @@ export default function Faq() {
                         {expanded === 'panel13' && <div className={classes.line}></div>}
                         Лотерейный билет не может быть зарегистрирован в акции, если
                         <br></br>
-                        - покупка билета произведена не в период действия акции с «1» сентября 2024г. по «31» октября
+                        - покупка билета произведена не в период действия акции с «1» сентября 2024г. по «30» октября
                         2024г.;
                         <br></br>
                         - покупка билета произведена не в отделениях Почты России следующих городов-участников: Москва,
@@ -464,11 +465,11 @@ export default function Faq() {
                         покупке;
                         <br></br>
                         - при покупке лотерейного билета была допущена ошибка в номере мобильного телефона. Для решения
-                        обратитесь в поддержку support@nloto.ru или позвоните по телефону 8-800-333-73-33;
+                        обратитесь в поддержку support@nloto.ru или позвоните по телефону 8 800 333-7-333;
                         <br></br>
                         - продажа билета не состоялась. Тут необходимо проверить корректность ввода номера лотерейного
                         билета. Если он корректный, но ошибка при регистрации в акции повторилась, то для решения
-                        обратитесь в поддержку support@nloto.ru или позвоните по телефону 8-800-333-73-33.
+                        обратитесь в поддержку support@nloto.ru или позвоните по телефону 8 800 333-7-333.
 
                     </Typography>
                 </AccordionDetails>
@@ -532,7 +533,7 @@ export default function Faq() {
                     id="panel2-header"
                 >
                     <Typography className={classes.heading}>
-                        <b className={'heading-id'}></b> <p className={'heading-name'}>Что делать, если не найдет ответ на вопрос? </p>
+                        <b className={'heading-id'}></b> <p className={'heading-name'}>Что делать, если не найден ответ на вопрос? </p>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{color: expanded === 'panel4' ? '#5E6976' : '#5E6976'}}>
@@ -556,7 +557,7 @@ export default function Faq() {
             <div className="container-question-help">
                 <div className="column-help">
                     <img src={phone} alt="Image 1"/>
-                    Позвонить по номеру <a  ref={phoneRef} className={'question-color'}>8 800 333-7-333</a>
+                    Позвонить по номеру <a className={'question-color'} href="tel:88003337333" target="_blank">8 800 333-7-333</a>
                     <br></br>
                     <a className={'question-color-second'}>24/7 Звонок по России бесплатный</a>
                     {copiedPhone && <div className="copied-notification">Телефон скопирован!</div>}
@@ -570,7 +571,7 @@ export default function Faq() {
                 </div>
                 <div className="column-help third">
                     <img src={write} alt="Image 3"/>
-                    Написать на <a  ref={emailRef} className={'question-color'}>support@nloto.ru</a>
+                    Написать на <a className={'question-color'} href={'mailto:support@nloto.ru'} target="_blank">support@nloto.ru</a>
                     {copiedEmail && <div className="copied-notification">Почта скопирована!</div>}
                 </div>
             </div>

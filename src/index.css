@@ -870,7 +870,7 @@ header .menu-content-profile a:hover {
 }
 .left-first-profile-p2-p2-p2 {
   width: 19.73vw;
-  height: 7.32vw;
+  height: 9.32vw;
   font-family: 'Halvar Mittelschrift Rg', sans-serif;
   font-size: 1.042vw;
   text-align: left;
@@ -1646,6 +1646,7 @@ header .menu-content-profile a:hover {
   margin-left: -7.1vw;
 }
 .attempts-left {
+  display: none;
   color: #364059;
   font-family: Halvar Mittelschrift Rg, Arial, sans-serif;
   font-size: 0.97vw;
@@ -5248,7 +5249,7 @@ canvas#wheel-profile-popup {
   z-index: 10;
 }
 #countdown {
-
+ margin-left: 1vw;
   font-size: 1.17vw;
   line-height: 1.61vw;
   width: 21.35vw;
@@ -6037,10 +6038,11 @@ canvas#wheel-profile-popup {
   position: relative;
   font-size: 1.61vw;
   line-height: 1.77vw;
-  font-family: 'Acrom Medium', sans-serif;
+  font-family: 'Halvar Breit Bd', sans-serif;
+  text-transform: uppercase;
   font-weight: 400;
   margin-top: 2.2vw;
-  margin-left: 6vw;
+  margin-left: 5vw;
   color: #364059;
 
 }
@@ -8763,6 +8765,7 @@ iframe {
 }
 @media screen and (max-width: 992px) {
   .attempts-left {
+    display: none;
     color: #364059;
     font-family: Halvar Mittelschrift Rg, Arial, sans-serif;
     font-size: 1.37vw;
@@ -9614,11 +9617,11 @@ iframe {
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 1.764vw;
     font-weight: 400;
-    margin-top: 6.8vw;
+    margin-top: 7.8vw;
     margin-left: -0.5vw;
     text-align: left;
     color: #364059;
-    line-height: 7.050vw;
+    line-height: 3.05vw;
   }
   .Modal-add {
     overflow: visible;
@@ -11151,7 +11154,7 @@ iframe {
     margin-top: 12.8vw;
     margin-left: 1.5vw;
     color: #364059;
-    margin-bottom: 5vw;
+    margin-bottom: 4vw;
   }
   .tsxt {
     margin: 6vw 0vw 0vw 0vw;
@@ -13365,6 +13368,7 @@ iframe {
   }
 
   .footer-logo {
+    z-index: 5;
     width: 41%;
     margin-top: 10.5vw;
     margin-left: -47.2vw;
@@ -13389,6 +13393,7 @@ iframe {
 
   .footer-row1 {
     width: 89.33vw;
+    pointer-events: none; /* Игнорирует клики */
     height: 40.8vw;
     display: flex;
     flex-flow: row nowrap;
@@ -14798,7 +14803,7 @@ iframe {
   }
   .left-first-profile-p2-p2-p2 {
     width: 70vw;
-    height: 32vw;
+    height: 42vw;
     font-family: 'Halvar Mittelschrift Rg', sans-serif;
     font-size: 5.556vw;
     text-align: left;
@@ -16937,16 +16942,15 @@ iframe {
     color: #FFFFFF;
   }
   .popup-end .popup-h1 {
-    width: 56.27vw;
-    position: relative;
-    font-size: 5.87vw;
-    line-height: 6.40vw;
-    font-family: 'Halvar Breit Bd', sans-serif;
-    font-weight: 400;
-    margin-top: -16.9vw;
-    margin-left: -0.3vw;
     color: #364059;
-
+    font-family: 'Halvar Breit Bd', sans-serif;
+    font-size: 5.87vw;
+    font-weight: 400;
+    line-height: 6.4vw;
+    margin-left: 12.7vw;
+    margin-top: -6.9vw;
+    position: relative;
+    width: 56.27vw;
   }
   .how-full1-img {
     display: flex;
@@ -17095,20 +17099,20 @@ iframe {
     background-image: linear-gradient(#8E12A5, #8E12A5, #8E12A5);
   }
   #submit-4life {
-    width: 73.3vw;
-    height: 17.85vw;
+    background-image: linear-gradient(#af21c9, #af21c9, #af21c9);
+    border: .055vw solid #ffffff4d;
     border-radius: 4.4vw;
-    border: 0.055vw solid #FFFFFF4D;
-    background-image: linear-gradient(#AF21C9, #AF21C9, #AF21C9);
-    color: #FFFFFF;
+    color: #fff;
+    font-family: 'Acrom Medium', Arial, sans-serif;
     font-size: 4.27vw;
-    line-height: 4.27vw;
     font-weight: 400;
-    margin-top:39vw;
+    height: 17.85vw;
+    line-height: 4.27vw;
     margin-bottom: 5vw;
     margin-left: 1.8vw;
-    font-family: 'Acrom Medium', Arial, sans-serif;
+    margin-top: 46vw;
     text-transform: uppercase;
+    width: 73.3vw;
   }
 
   #submit-4life:hover {
@@ -17433,7 +17437,7 @@ iframe {
     display: flex !important;
     position: absolute;
     width: 80vw;
-    margin-top: -0.5vw;
+    margin-top: 5.5vw;
     font-size: 4.11vw;
     line-height: 5vw;
     margin-bottom: 2.5vw;
@@ -17526,8 +17530,8 @@ iframe {
     line-height: 5.83vw;
     width: 76.53vw;
     height: 11.73vw;
-    margin-top: 0vw;
-    margin-left: -1vw;
+    margin-top: 31vw;
+    margin-left: 0vw;
     font-family: 'Acrom Medium', Arial, sans-serif;
     color: #364059;
     text-align: center;
@@ -18842,6 +18846,7 @@ iframe {
     animation: fade-in-out 1.5s ease-out;
   }
   .attempts-left {
+    display: none;
     color: #364059;
     font-family: Halvar Mittelschrift Rg, Arial, sans-serif;
     font-size: 3.37vw;
