@@ -1556,6 +1556,15 @@ header .menu-content-profile a:hover {
 .win-block-a-1 {
   display: none;
 }
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
 .win-block-p-1 {
   display: none;
 }
@@ -2629,6 +2638,9 @@ header .menu-content-profile a:hover {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .prizes-content-box2 {
   margin-top: 13vw;
@@ -2638,6 +2650,9 @@ header .menu-content-profile a:hover {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .prizes-content-box3 {
   margin-top: 13vw;
@@ -2648,6 +2663,15 @@ header .menu-content-profile a:hover {
   /*flex-flow: row nowrap;*/
   /*justify-content: flex-start;*/
   /*align-items: flex-start;*/
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.prizes-content-box1.fade-in,
+.prizes-content-box2.fade-in,
+.prizes-content-box-title-bot3.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
