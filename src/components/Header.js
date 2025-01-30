@@ -150,6 +150,7 @@ export default function Header (props){
         // Перенаправить на главную страницу
         window.location.href = '/';
     };
+
     return(
 
         <header className={'header'}>
@@ -169,8 +170,7 @@ export default function Header (props){
                     <div className={'menu'}>
                         <div className={'menu-content'}>
                             <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
-                                {/*<a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>*/}
-                                <a href={'#'}> Правила </a>
+                                <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                                 <a className="smooth" href={'#prizes'} onClick={(event) => {
                                     ScrollPrizes(event);
                                 }}>

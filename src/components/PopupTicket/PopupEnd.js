@@ -104,7 +104,7 @@ export default function PopupEnd ({number}) {
         // if (auth_key){
         //     localStorage.setItem('auth_key', auth_key);
         //     localStorage.setItem('login', login);
-            window.location.href = window.location.href;
+        window.location.href = '/profile';
         }
     return (
         <div id="popup-end" className="popup">

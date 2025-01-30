@@ -24,7 +24,7 @@ import e3 from '../image/img_117.png'
 import e2 from '../image/img_126.png'
 
 const prizes = {
-    1: { name: "4*4", image: e1, },
+    1: { name: "4x4", image: e1, },
     2: { name: "5 из 37", image: e2 },
     3: { name: "Большая 8", image: e3 },
     4: { name: "Великолепная 8", image: e4 },
@@ -357,7 +357,7 @@ class SpinForPopup extends React.Component {
 
 
     spin = async () => {
-        debugger;
+        // debugger;
         if (!this.state.spinning && this.state.availableTickets >= 3) {
             const baseRotation = 360; // базовое вращение
             const additionalRotation = 180; // дополнительное вращение перед остановкой
@@ -369,7 +369,7 @@ class SpinForPopup extends React.Component {
                 showFullSizeImage: true,
                 errorMessage: '', // Сбрасываем сообщение об ошибке
             });
-            debugger
+            // debugger;
 
             try {
                 const response = await axios.post('https://nloto-promo.ru/backend/api/roulette', {}, {
@@ -423,22 +423,25 @@ class SpinForPopup extends React.Component {
                         }, 3000);
                     }, 4000);
                 } else {
-                    this.setState({
-                        errorMessage: response.data.error || 'Неизвестная ошибка. Попробуйте позже.',
-                        buttonDisabled: false,
-                        spinning: false
-                    });
+                    const errorMsg = response.data.error || 'Неизвестная ошибка. Попробуйте позже.';
+                    this.setState({ errorMessage: errorMsg, buttonDisabled: false, spinning: false });
+                    localStorage.setItem('spinErrorMessage', errorMsg); // Сохраняем ошибку
+                    this.props.onError(errorMsg); // Handle error message
+                    // console.log("Ошибка 1:", errorMsg); // Логируем ошибку в консоль
                 }
             } catch (error) {
-                console.error("Error:", error);
-                this.setState({
-                    errorMessage: 'Ошибка при соединении с сервером. Попробуйте снова.',
-                    buttonDisabled: false,
-                    spinning: false
-                });
+                const errorMsg = error.response ? error.response.data.error : 'Ошибка соединения с сервером. Пожалуйста, попробуйте еще раз.';
+                this.setState({ errorMessage: errorMsg, buttonDisabled: false, spinning: false });
+                localStorage.setItem('spinErrorMessage', errorMsg); // Сохраняем ошибку
+                this.props.onError(errorMsg); // Передаем ошибку дальше
+                // console.log("Ошибка 2:", errorMsg);
             }
         }
     };
+    handleSpinError = (errorMessage) => {
+        this.props.onError(errorMessage);
+    };
+
     updateProfileData = (profileData) => {
         // Здесь обновляем состояние компонента с новыми данными профиля
         this.setState({
@@ -471,6 +474,7 @@ class SpinForPopup extends React.Component {
 
 
     getResult = (spin, prizeName, prizeImage, prizeLink)=> {
+        console.log("Переданная ошибка 11111:", prizeName);
         const { angle, top, offset, list } = this.state;
         let netRotation = ((spin % 360) * Math.PI) / 180; // RADIANS
         let travel = netRotation + offset;
@@ -490,6 +494,7 @@ class SpinForPopup extends React.Component {
         }
         const prizeNumber = indexToPrizeMap[result + 1]; // +1 чтобы учесть индекс, начинающийся с 1
         const selectedPrize = prizes[prizeNumber]; // Получаем массив с информацией о призе
+        const prizeError = localStorage.getItem('spinErrorMessage') || null;
 
         // set state variable to display result
         this.setState({
@@ -498,10 +503,17 @@ class SpinForPopup extends React.Component {
             prizeName: selectedPrize.name,
             prizeLink: prizeLink,
             prizeImage: selectedPrize.image,
-
         }, () => {
-            // Вызываем функцию, переданную через пропсы, после обновления состояния
+            // Call the parent's spin complete function
             this.props.onSpinComplete(prizeName, prizeImage, prizeLink);
+
+            // Pass the error if it exists
+            if (prizeError) {
+                console.log("Переданная ошибка:", prizeError);
+                this.props.onError(prizeName, prizeImage, prizeLink, prizeError);
+                // Optionally remove the error message from localStorage after using it
+                localStorage.removeItem('spinErrorMessage');
+            }
         });
     };
 
@@ -514,6 +526,7 @@ class SpinForPopup extends React.Component {
             spinning: false
         });
     };
+
 
     render() {
         return (

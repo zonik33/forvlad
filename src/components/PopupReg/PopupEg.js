@@ -6,7 +6,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import PopupCode from "./PopupCode";
 
 
-function Popup(props) {
+function PopupEg(props) {
     const { isOpen, closeModal } = props;
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const popupRef = useRef(null);
@@ -187,7 +187,7 @@ function Popup(props) {
         <div id="popup" className='popup'>
             <div className={'blur-filter'}>
                 <Modal
-                    className={`Modal`}
+                    className={`Modal-end-eg`}
                     contentLabel="Модальное окно"
                     overlayClassName="Overlay"
                     isOpen={isOpen}
@@ -214,25 +214,8 @@ function Popup(props) {
 
                         <div className="content-container-modal">
                             <span className="close close-for-popup-first" onClick={closeModal}>&times;</span>
-                            <h1 className={'popup-h1 popup-first-some'}>Вход / Регистрация</h1>
-                            <p className={'popup-p-next'}>На ваш номер будет отправлен СМС-код</p>
-                            <p className={'popup-p'}>Телефон</p>
-                            <PhoneInput id='login' name='login' className={'main-input'} registrationError={registrationError}  />
-                            {registrationError &&  <div className={'error-block-phone only-for-phone'} style={{color: '#FFFFFF'}}>{registrationError}</div>}
-                            <span id="phoneError" className="error"></span>
-                            <br/>
-
-                            <button type={'submit'} id={'submit'}
-                                    className={'button-animation  sumbit-button-submit'}>Получить код</button>
-                            <div id="recaptcha-container">
-                                <ReCAPTCHA
-                                    ref={recaptchaRef}
-                                    sitekey="6LdO5cUeAAAAAAd39wBOubSL9TP3cOzT-lJ2ua1k"
-                                    onChange={handleRecaptchaChange}
-                                    size="invisible"
-                                />
-                            </div>
-
+                            <h1 className={'popup-h1 popup-first-some-end'}>Акция «ваш билетик»</h1>
+                            <p className={'popup-p-next-end new'}>Акция завершена.</p>
                         </div>
                     </form>
                 </Modal>
@@ -242,4 +225,4 @@ function Popup(props) {
     );
 };
 
-export default Popup;
+export default PopupEg;

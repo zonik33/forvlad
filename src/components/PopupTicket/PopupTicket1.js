@@ -50,7 +50,6 @@ export default function PopupTicket1 (props) {
         welcomeMessage.textContent = number;
         welcomeMessage2.textContent = text;
         document.body.classList.add("no-scroll");
-
     }
     function openPopupSuccess() {
         closePopup2();
@@ -176,12 +175,13 @@ export default function PopupTicket1 (props) {
                         openPopupNotSold()
                     }
                 }
-                debugger;
             } else {
                 if (response.data.error.number) {
-                    setRegistrationError(response.data.error.number[0]);
+                    setRegistrationError(response.data.error.number[0]); // Set the first error message
+                } else if (response.data.error) {
+                    setRegistrationError(response.data.error); // Set general error message
                 } else {
-                    setRegistrationError('');
+                    setRegistrationError(''); // Clear the error if no error messages are present
                 }
 
             }
@@ -216,26 +216,26 @@ export default function PopupTicket1 (props) {
                           id={'form-add-ticket1'} className={'form-register'}
                         onSubmit={addTicket}>
                         <h1 className={'popup-h1'}>Регистрация билета</h1>
-                        <div className={'form-group-password'}>
-                            <div>
-                                <label className={'left-label'}>Введите номер билета</label>
-                                <label className={'right-label'}>
-                                    <a onClick={toggleTooltip}> Где найти номер?</a>
-                                </label>
+                        {/*<div className={'form-group-password'}>*/}
+                        {/*    <div>*/}
+                                <label className={'left-label'}>Акция завершена!</label>
+                        {/*        <label className={'right-label'}>*/}
+                        {/*            <a onClick={toggleTooltip}> Где найти номер?</a>*/}
+                        {/*        </label>*/}
 
-                            </div>
+                        {/*    </div>*/}
 
-                            <TicketInput registrationError={registrationError}
-                                         value={value}
-                                         handleInputChange={handleInputChange}
-                            />
-                            {registrationError && <div className={'error-block-for-ticket'}
-                                                       style={{color: '#FFFFFF'}}>{registrationError}</div>}
-                            <span id="nameError" className="error"></span>
-                            <button type={'submit'} id={'submit-add-ticket'}
-                                    className={'button-animation-code'}>ЗАРЕГИСТРИРОВАТЬ БИЛЕТ
-                            </button>
-                        </div>
+                        {/*    <TicketInput registrationError={registrationError}*/}
+                        {/*                 value={value}*/}
+                        {/*                 handleInputChange={handleInputChange}*/}
+                        {/*    />*/}
+                        {/*    {registrationError && <div className={'error-block-for-ticket'}*/}
+                        {/*                               style={{color: '#FFFFFF'}}>{registrationError}</div>}*/}
+                        {/*    <span id="nameError" className="error"></span>*/}
+                        {/*    <button type={'submit'} id={'submit-add-ticket'}*/}
+                        {/*            className={'button-animation-code'}>ЗАРЕГИСТРИРОВАТЬ БИЛЕТ*/}
+                        {/*    </button>*/}
+                        {/*</div>*/}
 
                     </form>
 

@@ -52,6 +52,7 @@ import Prizes from "./Prizes";
 import Questions from "./Questions";
 import Footer from "./Footer";
 import wavesblur from "../image/img_104.png";
+import PopupE from "./PopupReg/PopupE";
 
 
 export default function How (props) {
@@ -87,13 +88,18 @@ export default function How (props) {
     const isAuthenticated = !!auth_key;
     const handleOnClick = () => {
         if (isAuthenticated) {
-            openPopup2(); // Открываем попап для зарегистрированного пользователя
+            openPopupTestSecond(); // Открываем попап для зарегистрированного пользователя
         } else {
             openPopup();
         }
     };
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [isPopupOpen5, setIsPopupOpen5] = useState(false);
+    const [showPopupE2, setShowPopupE2] = useState(false);
+
+    const openPopupTestSecond = () => {
+        setShowPopupE2(true);
+    };
 
 
     const openPopup = () => {
@@ -434,6 +440,7 @@ export default function How (props) {
                         <div className={'prizes-button'}>
                             <a onClick={handleOnClick} className={'prizes-button-check'}>
                                 <b>Зарегистрировать билет</b></a>
+                            {showPopupE2 && <PopupE isOpen={showPopupE2} closeModal={() => setShowPopupE2(false)} />}
                             {isPopupOpen && (
                                 <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
                             )}

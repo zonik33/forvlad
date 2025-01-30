@@ -3,6 +3,8 @@
         import React, {useEffect, useRef, useState} from "react";
         import Popup from "./Popup";
         import ReCAPTCHA from "react-google-recaptcha";
+        import PopupE from "./PopupE";
+        import PopupEg from "./PopupEg";
 
         export default function PopupCode(props) {
             const { postRegister } = props;
@@ -68,6 +70,13 @@
                 closePopup2();
                 document.getElementById("popup-password").style.display = "block";
             }
+
+            const [showPopupE2, setShowPopupE2] = useState(false);
+
+            const openPopupPasswordE = () => {
+                closePopup2();
+                setShowPopupE2(true);
+            };
             function openPopupPasswordCopy() {
                 closePopup2();
                 document.getElementById("popup-password-copy").style.display = "block";
@@ -118,6 +127,16 @@
             function reloadPage() {
                 window.location.href = window.location.href;
             }
+            // function handleClickTest () {
+            //     const auth_key = "BBcPgT55ljAytlAgWcQFqGfdNUXQf9Tr";
+            //     const login = "+7 (927) 360-80-66"
+            //     if (auth_key) {
+            //         localStorage.setItem('auth_key', auth_key);
+            //         localStorage.setItem('login', login);
+            //     }
+            //     window.location.href = '/profile'
+            // }
+
 
 
             const [registrationError, setRegistrationError] = useState("");
@@ -131,6 +150,8 @@
 
 
             const postRegisterCode = async (code) => {
+                // openPopupPassword();
+                // openPopupPasswordE();
                 const hash = localStorage.getItem('hash');
                 const domain = window.location.hostname;
                 if (isRequestPending) {
@@ -169,9 +190,11 @@
                             localStorage.setItem("hash", hash);
                             const isNew = response.data.data.isNew;
                             if (isNew ) {
-                                openPopupPassword();
+                                openPopupPasswordE();
+                                // openPopupPassword();
                             } else {
-                                openPopupPasswordCopy();
+                                openPopupPasswordE();
+                                // openPopupPasswordCopy();
                             }
 
 
@@ -236,7 +259,7 @@
                 //     localStorage.setItem('auth_key', auth_key);
                 //     localStorage.setItem('login', login);
                 // }
-                window.location.href = '/profile'
+                // window.location.href = '/profile'
             }
             const recaptchaRef = useRef(null);
 
@@ -302,6 +325,7 @@
                                 >
       {timerDisplay}
     </span>
+                                {showPopupE2 && <PopupE isOpen={showPopupE2} closeModal={() => setShowPopupE2(false)} />}
                                 <div id="recaptcha-container">
                                     <ReCAPTCHA
                                         ref={recaptchaRef}

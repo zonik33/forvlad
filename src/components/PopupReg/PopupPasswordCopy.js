@@ -125,7 +125,7 @@ export default function PopupPasswordCopy (props) {
                 const auth_key = response.data.data.auth_key;
                 if (auth_key) {
                     localStorage.setItem('auth_key', auth_key);
-                    window.location.href = '/profile'
+                    window.location.href = window.location.href;
                 }
             }
 

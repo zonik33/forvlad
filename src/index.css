@@ -67,19 +67,20 @@ body {
 
 /* HEADER ---------------------------------------------------------------*/
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3.26vw;
-  right: 0;
-  z-index: 99;
+  background-color: #fff;
+  border-radius: 0 0 1vw 1vw;
+  box-shadow: 0 12px 20px 0 #7cc6fc33;
   box-sizing: border-box;
-  transition: background 0.3s;
-  border-radius: 0vw 0vw 1vw 1vw;
-  background-color: #FFFFFF;
-  box-shadow: 0 12px 20px 0 rgba(124, 198, 252, 0.2);
+  height: 3.26vw;
+  left: 0;
+  position: fixed; /* Изменено с absolute на fixed */
+  right: 0;
+  top: 0; /* Будет оставаться в верхней части окна */
+  transition: background .3s;
+  width: 100%;
+  z-index: 99;
 }
+
 header .container {
   position: relative;
   margin-right: auto;
@@ -267,6 +268,7 @@ header .menu-content-profile a {
   transition: opacity 0.2s ease-in-out;
 
 }
+
 .shadow-button-animation-text {
   display: none;
 }
@@ -299,7 +301,7 @@ header .menu-content-profile a {
 .triangle {
   position: absolute;
   top: -10px; /* Положение треугольника над блоком */
-  left: 35px; /* Положение по горизонтали */
+  left: 1.9vw;
   width: 0;
   height: 0;
   border-left: 10px solid transparent; /* Левый бок треугольника */
@@ -848,6 +850,15 @@ header .menu-content-profile a:hover {
   border-radius: 1.27vw;
   margin-top: 0vw;
 }
+.popup-take-gifts-error {
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+  width: 34.6vw;
+  height: auto !important;
+  padding: 0.6vw 0.94vw;
+  border-radius: 1.27vw;
+  margin-top: 0vw;
+}
 .secret-block {
   margin-top: -0.85vw;
 }
@@ -874,6 +885,11 @@ header .menu-content-profile a:hover {
 .popup-take-gifts .form-register {
   width: 25vw;
   margin-left: 2vw;
+}
+.popup-take-gifts-error .form-register {
+  width: 25vw;
+  margin-left: 1vw;
+  margin-top: 2vw;
 }
 .left-first-profile-p3-count.spin-p-test {
   width: 16vw;
@@ -1751,15 +1767,15 @@ header .menu-content-profile a:hover {
 }
 .for-test-img-4-mini-prizes img {
   border-radius: 1.2vw;
-  width: 77%;
+  width: 58%;
   margin-top: 0.45vw;
   margin-left: 6.4vw;
 }
 .for-test-img-5-mini-prizes img {
   border-radius: 1.2vw;
-  width: 77%;
+  width: 58%;
   margin-top: 0.45vw;
-  margin-left: 3.5vw;
+  margin-left: -2.5vw;
 }
 .for-test-img-6-mini-prizes img {
   border-radius: 1.2vw;
@@ -1769,9 +1785,9 @@ header .menu-content-profile a:hover {
 }
 .for-test-img-7-mini-prizes img {
   border-radius: 1.2vw;
-  width: 77%;
+  width: 58%;
   margin-top: 0.45vw;
-  margin-left: -2vw;
+  margin-left: -11.45vw;
 }
 
 .MuiAccordion-root:first-child {
@@ -5507,7 +5523,7 @@ canvas#wheel-profile-popup {
   background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
   box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
   width: 34.6vw;
-  height: 23.99vw;
+  height: 15.99vw;
   padding: 0.6vw 0.94vw;
   border-radius: 1.27vw;
   margin-top: 0vw;
@@ -5645,6 +5661,20 @@ canvas#wheel-profile-popup {
   border: #FFFFFF4D 0vw solid;
   color: #5E6976;
 }
+.popup-take-gifts-error .close {
+  position: absolute;
+  cursor: pointer;
+  margin: 0.6vw 0.35vw 0.35vw 30.38vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: initial;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0vw solid;
+  color: #5E6976;
+}
 .popup-banner .close {
   position: absolute;
   cursor: pointer;
@@ -5663,6 +5693,20 @@ canvas#wheel-profile-popup {
   height: 27.99vw;
 }
 .popup-take-gifts .close:hover {
+  position: absolute;
+  cursor: pointer;
+  margin: 0.6vw 0.35vw 0.35vw 30.38vw;
+  width: 3.99vw;
+  height: 4vw;
+  font-size: 4.60vw;
+  border-radius: 50%;
+  background-color: initial;
+  text-align: center;
+  line-height: 3.3vw;
+  border: #FFFFFF4D 0vw solid;
+  color: #bebec5;
+}
+.popup-take-gifts-error .close:hover {
   position: absolute;
   cursor: pointer;
   margin: 0.6vw 0.35vw 0.35vw 30.38vw;
@@ -5857,6 +5901,21 @@ canvas#wheel-profile-popup {
   font-family: "Halvar Mittelschrift Rg", sans-serif;
   font-weight: 400;
   color: #364059;
+}
+.bilet-ticket-2-p4.take-gifts-error-style {
+  margin-top: 1.5vw;
+  margin-left: 1.5vw;
+  width: 24.35vw;
+  height: auto;
+  display: block;
+  text-align: center;
+  font-size: 1.17vw;
+  line-height: 1.61vw;
+  font-family: "Halvar Mittelschrift Rg", sans-serif;
+  font-weight: 400;
+  color: #364059;
+  margin-bottom: 3vw;
+  min-height: 4vw;
 }
 .bilet-ticket-2-p5 {
   margin-top: 0.5vw;
@@ -6110,7 +6169,7 @@ canvas#wheel-profile-popup {
 }
 .popup-ticket1 .left-label {
   margin-top: 1.8vw;
-  margin-left: -1.8vw;
+  margin-left: 6.5vw;
   float: left;
   font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
   font-size: 1.17vw;
@@ -7113,6 +7172,72 @@ button:focus {
 .Modal::-webkit-scrollbar-track {
   background-color: transparent; /* Цвет трека скроллбара */
 }
+.Modal-end {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 33.28vw;
+  height: 15vw;
+  padding: 1.46vw;
+  border-radius: 1.37vw;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.Modal-end::-webkit-scrollbar {
+  width: 0.5vw; /* Ширина скроллбара */
+}
+.Modal-end .popup-h1 {
+  width: 24vw;
+  margin-top: 2vw;
+  text-transform: uppercase;
+  margin-left:0vw;
+}
+.Modal-end::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Цвет ползунка скроллбара */
+}
+
+.Modal-end::-webkit-scrollbar-track {
+  background-color: transparent; /* Цвет трека скроллбара */
+}
+.Modal-end-eg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 33.28vw;
+  height: 10vw;
+  padding: 1.46vw;
+  border-radius: 1.37vw;
+  background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+  box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.Modal-end-eg::-webkit-scrollbar {
+  width: 0.5vw; /* Ширина скроллбара */
+}
+.Modal-end-eg .popup-h1 {
+  width: 24vw;
+  margin-top: 2vw;
+  text-transform: uppercase;
+  margin-left:0vw;
+}
+.Modal-end-eg::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Цвет ползунка скроллбара */
+}
+
+.Modal-end-eg::-webkit-scrollbar-track {
+  background-color: transparent; /* Цвет трека скроллбара */
+}
 
 .content-container-modal {
   margin-left: 5vw;
@@ -7317,7 +7442,7 @@ button:focus {
   align-items: center;
   margin-top: 3.3vw;
   padding-top: 8.46vw;
-  padding-bottom: 12.5vw;
+  padding-bottom: 17.5vw;
   /*background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);*/
 }
 .footer-container {
@@ -8204,6 +8329,15 @@ button:focus {
   margin-top: -0.2vw;
   color: #364059;
 }
+.popup-p-next-end {
+  font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+  font-size: 1.32vw;
+  line-height: 1.76vw;
+  margin-left: -1vw;
+  text-align: center;
+  margin-top: 0.8vw;
+  color: #364059;
+}
 .main-input {
   width: 25.83vw;
   height: 1.13vw;
@@ -8280,6 +8414,10 @@ button:focus {
 .text-nloto {
   text-decoration: underline;
   color: #364059 !important;
+}
+.text-nloto-footer {
+  text-decoration: underline;
+  color: #42486C99;
 }
 .text-nloto-blue {
   /*text-decoration: underline;*/
@@ -8842,6 +8980,18 @@ iframe {
     cursor: pointer;
     transition: opacity 0.3s ease;
   }
+  .Modal-end .popup-h1 {
+    width: 40vw;
+    margin-top: 3vw;
+    text-transform: uppercase;
+    margin-left: -1vw;
+  }
+  .Modal-end-eg .popup-h1 {
+    width: 40vw;
+    margin-top: 3vw;
+    text-transform: uppercase;
+    margin-left: -1vw;
+  }
   .exit-pro {
     margin: 0vw 0vw 0vw 0.7vw;
     cursor: pointer;
@@ -8873,7 +9023,7 @@ iframe {
   .triangle {
     position: absolute;
     top: -10px;
-    left: 34px;
+    left: 3.5vw;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -9363,12 +9513,40 @@ iframe {
     border-radius: 1.27vw;
     margin-top: 0vw;
   }
+  .popup-take-gifts-error {
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+    width: 45.6vw;
+    height: auto !important;
+    padding: 0.6vw 0.94vw;
+    border-radius: 1.27vw;
+    margin-top: 0vw;
+  }
   .its-2 {
     height: 34.99vw;
   }
   .popup-take-gifts .form-register {
     width: 45vw;
     margin-left: 2.6vw;
+  }
+  .popup-take-gifts-error .form-register {
+    width: 45vw;
+    margin-left: 0.6vw;
+  }
+  .bilet-ticket-2-p4.take-gifts-error-style {
+    margin-top: 2.5vw;
+    margin-left: 2.2vw;
+    width: 35.35vw;
+    height: auto;
+    display: block;
+    text-align: center;
+    font-size: 1.72vw;
+    line-height: 2.1vw;
+    font-family: "Halvar Mittelschrift Rg", sans-serif;
+    font-weight: 400;
+    color: #364059;
+    margin-bottom: 3vw;
+    min-height: 4vw;
   }
   .bilet-ticket-2-p.take-gifts {
     margin-left: 1.4vw;
@@ -9463,6 +9641,34 @@ iframe {
     color: #5E6976;
   }
   .popup-take-gifts .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: 0.6vw 0.35vw 0.35vw 41.38vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .popup-take-gifts-error .close {
+    position: absolute;
+    cursor: pointer;
+    margin: 0.6vw 0.35vw 0.35vw 41.38vw;
+    width: 3.99vw;
+    height: 4vw;
+    font-size: 4.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 3.3vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-take-gifts-error .close:hover {
     position: absolute;
     cursor: pointer;
     margin: 0.6vw 0.35vw 0.35vw 41.38vw;
@@ -9777,11 +9983,45 @@ iframe {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
   }
+  .Modal-end {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 45.28vw;
+    height: 19.49vw;
+    padding: 1.46vw;
+    border-radius: 1.37vw;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  .Modal-end-eg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 45.28vw;
+    height: 13.49vw;
+    padding: 1.46vw;
+    border-radius: 1.37vw;
+    background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
+    box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
   .popup-start {
     background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
     width: 45.6vw;
-    height: 34.99vw;
+    height: 22.99vw;
     padding: 0.6vw 0.94vw;
     border-radius: 1.27vw;
     margin-top: 0vw;
@@ -9816,7 +10056,7 @@ iframe {
   }
   .popup-ticket1 .left-label {
     margin-top: 4.8vw;
-    margin-left: -1.8vw;
+    margin-left: 11vw;
     float: left;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-size: 1.62vw;
@@ -9933,6 +10173,28 @@ iframe {
     line-height: 1.86vw;
     margin-left: 0.6vw;
     margin-top: -0.2vw;
+    color: #364059;
+  }
+  .popup-p-next-end {
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-size: 1.82vw;
+    line-height: 2.06vw;
+    margin-left: 0.6vw;
+    padding-left: 0vw;
+    margin-right: 13vw;
+    text-align: center;
+    margin-top: 1.8vw;
+    color: #364059;
+  }
+  .popup-p-next-end.new {
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-size: 1.82vw;
+    line-height: 2.06vw;
+    margin-left: 5.6vw;
+    padding-left: 0vw;
+    margin-right: 13vw;
+    text-align: center;
+    margin-top: 1.8vw;
     color: #364059;
   }
   .popup-p {
@@ -10234,7 +10496,7 @@ iframe {
     margin-bottom: 5vw;
   }
   header {
-    position: absolute;
+    position: fixed; /* Изменено с absolute на fixed */
     top: 0;
     left: 0;
     width: 100%;
@@ -10866,9 +11128,9 @@ iframe {
   }
   .for-test-img-7-mini-prizes img {
     border-radius: 1.2vw;
-    width: 77.2%;
+    width: 39.2%;
     margin-top: -0.75vw;
-    margin-left: -8vw;
+    margin-left: -2vw;
   }
   .question-block {
     position: relative;
@@ -11004,7 +11266,7 @@ iframe {
     align-items: center;
     margin-top: 3.3vw;
     padding-top: 8.46vw;
-    padding-bottom: 19.5vw;
+    padding-bottom: 43.5vw;
      /*background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);*/
   }
   .footer-left {
@@ -11565,6 +11827,7 @@ iframe {
     color: #2F41B0;
     margin-left: 4.5vw;
   }
+
 
   .header-burger {
     display: flex;
@@ -13465,9 +13728,9 @@ iframe {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    height: 144vw;
+    height: 108vw;
     padding-top: 8.46vw;
-    padding-bottom: 7.5vw;
+    padding-bottom: 147.5vw;
     /*background-image: linear-gradient(#00622A, #009640, #03BE53);*/
     margin-top: -9.5vw;
     border-radius: 10.67vw 10.67vw 0 0;
@@ -13521,8 +13784,8 @@ iframe {
 
   .footer-row1 {
     width: 89.33vw;
-    pointer-events: none; /* Игнорирует клики */
-    height: 40.8vw;
+    pointer-events: none;
+    height: 57.8vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -13534,7 +13797,7 @@ iframe {
     font-weight: 400;
     color: #FFFFFF;
     margin-left: -13.1vw;
-    margin-top: 13.3vw;
+    margin-top: 10.3vw;
 
   }
 
@@ -14487,6 +14750,14 @@ iframe {
   .Modal .popup-h1 {
     margin-left: 8vw;
     margin-top: -8vw;
+  }
+  .Modal-end .popup-h1 {
+    margin-left: 8vw;
+    margin-top: -15vw;
+  }
+  .Modal-end-eg .popup-h1 {
+    margin-left: 8vw;
+    margin-top: -15vw;
   }
 
   .gifts-content-box-title-bot1111 {
@@ -16605,6 +16876,34 @@ iframe {
     padding: 1.46vw;
     border-radius: 7.37vw;
   }
+  .Modal-end {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /*background-color: #00438280;*/
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
+    width: 89.33vw;
+    height: auto;
+    min-height: 55vw;
+    padding: 1.46vw;
+    border-radius: 7.37vw;
+  }
+  .Modal-end-eg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /*background-color: #00438280;*/
+    box-shadow: 0vw 0vw 7.5vw 1.7vw rgba(197, 205, 228, 1);
+    width: 89.33vw;
+    height: auto;
+    min-height: 40vw;
+    padding: 1.46vw;
+    border-radius: 7.37vw;
+  }
   .content-container-modal {
     margin-left: 5vw;
 
@@ -17113,7 +17412,7 @@ iframe {
   .popup-ticket1 .left-label {
     width: 76.53vw;
     margin-top: 6.8vw;
-    margin-left: -0.8vw;
+    margin-left: 18.2vw;
     float: left;
     font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
     font-size: 4.27vw;
@@ -17300,7 +17599,20 @@ iframe {
     font-family: "Halvar Mittelschrift Rg", sans-serif;
     font-weight: 400;
     color: #364059;
-
+  }
+  .bilet-ticket-2-p4.take-gifts-error-style {
+    color: #364059;
+    display: block;
+    font-family: Halvar Mittelschrift Rg, sans-serif;
+    font-size: 4.27vw;
+    font-weight: 400;
+    height: auto;
+    line-height: 6.4vw;
+    margin-left: 11vw;
+    margin-top: -1.5vw;
+    margin-bottom: 14vw;
+    text-align: left;
+    width: 70.53vw;
   }
   .bilet-ticket-2-p4 label {
     width: 76.53vw;
@@ -17633,6 +17945,15 @@ iframe {
     margin-top: 10.8vw;
     color: #364059;
   }
+  .popup-p-next-end {
+    text-align: left;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-size: 4.32vw;
+    line-height: 5.76vw;
+    margin-left: 0.2vw;
+    margin-top: -0.2vw;
+    color: #364059;
+  }
   .a-bonus-profile-winners-videos:hover {
     background-image: linear-gradient(#814791, #8B3A99, #2F46B0);
     transition: background-image 0.8s ease-in-out;
@@ -17675,11 +17996,11 @@ iframe {
     background-image: linear-gradient(#E1E5F2, #E1E5F2, #E1E5F2);
     box-shadow: 0vw 1vw 3.5vw 1.7vw #C5CDE4;
     width: 84.6vw;
-    height: 100vw;
+    height: 54vw;
     padding: 0.6vw 0.94vw;
     border-radius: 1.27vw;
     margin-top: 0vw;
-    min-height: 90vw;
+    min-height: 54vw;
   }
   .popup-start .form-register {
     width: 73vw;
@@ -17828,9 +18149,9 @@ iframe {
   }
   .for-test-img-7-mini-prizes img {
     border-radius: 4vw;
-    width: 123%;
+    width: 62%;
     margin-top: -0.55vw;
-    margin-left: -1.5vw;
+    margin-left: -11.5vw;
   }
   .how-tickets-img-mobile {
     display: flex;
@@ -18062,7 +18383,7 @@ iframe {
     font-weight: 400;
     color: #FFFFFF;
     margin-bottom: -1vw;
-    margin-top: -19vw;
+    margin-top: -26vw;
     margin-left: -13vw;
   }
 .container-footer-bottom {
@@ -18403,7 +18724,31 @@ iframe {
     border-radius: 4.27vw;
     margin-top: 0vw;
   }
+  .popup-take-gifts-error {
+    background-image: linear-gradient(#e1e5f2, #e1e5f2, #e1e5f2);
+    border-radius: 4.27vw;
+    box-shadow: 0 1vw 3.5vw 1.7vw #c5cde4;
+    height: auto;
+    min-height: 69vw;
+    margin-top: 0;
+    padding: .6vw .94vw;
+    width: 84.6vw;
+  }
   .popup-take-gifts .close {
+    position: absolute;
+    cursor: pointer;
+    margin: 3.6vw 0.35vw 0.35vw 69.2vw;
+    width: 14vw;
+    height: 14vw;
+    font-size: 16.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 11vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #5E6976;
+  }
+  .popup-take-gifts-error .close {
     position: absolute;
     cursor: pointer;
     margin: 3.6vw 0.35vw 0.35vw 69.2vw;
@@ -18432,6 +18777,20 @@ iframe {
     color: #5E6976;
   }
   .popup-take-gifts .close:hover {
+    position: absolute;
+    cursor: pointer;
+    margin: 3.6vw 0.35vw 0.35vw 69.2vw;
+    width: 14vw;
+    height: 14vw;
+    font-size: 16.60vw;
+    border-radius: 50%;
+    background-color: initial;
+    text-align: center;
+    line-height: 11vw;
+    border: #FFFFFF4D 0vw solid;
+    color: #bebec5;
+  }
+  .popup-take-gifts-error .close:hover {
     position: absolute;
     cursor: pointer;
     margin: 3.6vw 0.35vw 0.35vw 69.2vw;
@@ -18536,6 +18895,11 @@ iframe {
   .popup-take-gifts .form-register {
     width: 88vw;
     margin-left: 2vw;
+  }
+  .popup-take-gifts-error .form-register {
+    width: 88vw;
+    margin-left: -5vw;
+    margin-top: 27vw;
   }
   .Modal-add {
     overflow: hidden; /* Предотвращает появление полос прокрутки */
@@ -18710,6 +19074,10 @@ iframe {
     z-index: 10;
   }
   .popup-h1.popup-first-some {
+    margin-left: 0vw;
+    width: 79vw;
+  }
+  .popup-h1.popup-first-some-end {
     margin-left: 0vw;
     width: 79vw;
   }
@@ -19035,7 +19403,7 @@ iframe {
   .triangle {
     position: absolute;
     top: -10px;
-    left: 37px;
+    left: 5.5vw;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -19045,6 +19413,15 @@ iframe {
   }
   .dropdown-menu.show .triangle {
     border-bottom-color: #fff;
+  }
+  .popup-p-next-end.new {
+    text-align: left;
+    font-family: "Halvar Mittelschrift Rg", Arial, sans-serif;
+    font-size: 4.32vw;
+    line-height: 5.76vw;
+    margin-left: 0.2vw;
+    margin-top: -0.2vw;
+    color: #364059;
   }
 }
 

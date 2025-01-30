@@ -20,6 +20,7 @@ import React, {useEffect, useRef, useState} from "react";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
 import {useLocation} from "react-router-dom";
 import PopupTicket6 from "./PopupTicket/PopupTickets6";
+import PopupE from "./PopupReg/PopupE";
 
 
 function openPopup2() {
@@ -30,22 +31,33 @@ function openPopup2() {
 export default function Main (props) {
     const auth_key = localStorage.getItem('auth_key');
     const isAuthenticated = !!auth_key;
+
+    const [showPopupE2, setShowPopupE2] = useState(false);
+
+    const openPopupTestSecond = () => {
+        setShowPopupE2(true);
+    };
     const handleOnClick = () => {
         if (isAuthenticated) {
-            openPopup2(); // Открываем попап для зарегистрированного пользователя
-            document.body.classList.add("no-scroll");
-            document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-            document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+            openPopupTestSecond(); // Открываем попап для зарегистрированного пользователя
+            // document.body.classList.add("no-scroll");
+            // document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+            // document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
         } else {
             openPopup();
 
         }
     };
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [showPopupE, setShowPopupE] = useState(false);
 
     const openPopup = () => {
         setIsPopupOpen(true);
     };
+    const openPopupTest = () => {
+        setShowPopupE(true);
+    };
+
 
     const closePopup = () => {
         setIsPopupOpen(false);
@@ -121,6 +133,7 @@ export default function Main (props) {
                         {/*</div>*/}
                         <a onClick={handleOnClick} className={'button-animation-text'}> <b>Участвовать в
                             акции</b> </a>
+                        {showPopupE2 && <PopupE isOpen={showPopupE2} closeModal={() => setShowPopupE2(false)} />}
                         {isPopupOpen && (
                             <Popup isOpen={isPopupOpen} closeModal={closePopup}/>
                         )}

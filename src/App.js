@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {BrowserRouter, Routes, Route, Navigate, Outlet, useNavigate} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Profile from "./components/lk-profile/Profile";
 import Nav from "./Nav/Nav";
 import Gifts from "./components/lk-profile/Gifts";
@@ -11,107 +11,79 @@ import Videos from "./components/lk-profile/Videos";
 import WinnersVideos from "./components/Winners-videos/WinnersVideos";
 import PopupStart from "./components/PopupReg/PopupStart";
 import PopupBanner from "./components/PopupTicket/PopupBanner";
+import PopupE from "./components/PopupReg/PopupE";
+
+
 const auth_key = localStorage.getItem('auth_key');
 const isAuthenticated = !!auth_key;
 
-
-async function fetchData() {
-  if (isAuthenticated) {
-    try {
-      const response = await axios.get('https://nloto-promo.ru/backend/api/profile', {
-        headers: {
-          'X-Auth-Token': auth_key
-        }
-      });
-
-      if (response.data.result) {
-        localStorage.setItem('profile', JSON.stringify(response.data.data));
-      }
-    } catch (error) {
-      // Handle error, if needed
-    }
-  }
-}
-fetchData();
-
-
 function App() {
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopupE, setShowPopupE] = useState(false);
   const [isContentLoaded, setIsContentLoaded] = useState(false);
+  function openPopup() {
+    document.getElementById("popup-ticket1").style.display = "block";
+    document.body.classList.add("no-scroll");
+  }
 
+  // Функция для получения данных профиля
+  async function fetchData() {
+    if (isAuthenticated) {
+      try {
+        const response = await axios.get('https://nloto-promo.ru/backend/api/profile', {
+          headers: {
+            'X-Auth-Token': auth_key
+          }
+        });
+
+        if (response.data.result) {
+          localStorage.setItem('profile', JSON.stringify(response.data.data));
+        }
+      } catch (error) {
+        if (error.response && error.response.status === 401) {
+          localStorage.removeItem('auth_key');
+          localStorage.removeItem('profile');
+          window.location.href = '/'; // Перенаправляем на главную
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    fetchData(); // Получение данных профиля
+  }, []);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const referralCode = urlParams.get('ref');
 
     if (referralCode) {
-      setShowPopup(true);
+      // setShowPopup(true);
     }
   }, []);
+
+  // Открытие попапа при монтировании компонента
   useEffect(() => {
-    // Обработчик события, вызываемый после загрузки всего контента
-    const handleContentLoaded = () => {
-      setIsContentLoaded(true);
-    };
-    document.addEventListener('DOMContentLoaded', handleContentLoaded);
-    // openPopup2()
-    // openPopup3()
-    return () => {
-      document.removeEventListener('DOMContentLoaded', handleContentLoaded);
-    };
+    setShowPopupE(true);
   }, []);
-
-  useEffect(() => {
-    if (isContentLoaded) {
-    }
-  }, [isContentLoaded]);
-  function openPopup2() {
-    document.getElementById("popup-start").style.display = "block";
-    document.body.classList.add("no-scroll");
-    document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-    document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-  }
-  function openPopup3() {
-    document.getElementById("popup-banner").style.display = "block";
-    document.getElementById("popup-banner").classList.add("popup-animation");
-    document.body.classList.add("no-scroll");
-    document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-    document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-  }
-
-
 
   return (
       <div className="App">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Nav />} />
-            <Route
-                path="/profile/*"
-                element={isAuthenticated ? <Profile /> : <Navigate to="/" />}
-            />
-            <Route
-                path="/gifts/*"
-                element={isAuthenticated ? <Gifts /> : <Navigate to="/" />}
-            />
-            <Route
-                path="/tickets/*"
-                element={isAuthenticated ? <Tickets/> : <Navigate to="/" />}
-            />
-            {/*<Route path="/videos/*" element={isAuthenticated ? <Videos/> : <Navigate to="/" />}*/}
-            />
-            <Route path="/winners-videos/*" element={<WinnersVideos />}
-            />
-
-            <Route path="*" element={<NotFoundPage/>} />
-
+            <Route path="/profile/*" element={isAuthenticated ? <Profile /> : <Navigate to="/" />} />
+            <Route path="/gifts/*" element={isAuthenticated ? <Gifts /> : <Navigate to="/" />} />
+            <Route path="/tickets/*" element={isAuthenticated ? <Tickets /> : <Navigate to="/" />} />
+            <Route path="/winners-videos/*" element={<WinnersVideos />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
-        <PopupStart/>
-        <PopupBanner/>
+        <PopupStart />
+        <PopupBanner />
         {showPopup && <Popup isOpen={showPopup} closeModal={() => setShowPopup(false)} />}
+        {showPopupE && <PopupE isOpen={showPopupE} closeModal={() => setShowPopupE(false)} />}
       </div>
-
   );
 }
 

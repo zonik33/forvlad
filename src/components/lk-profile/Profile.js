@@ -37,6 +37,8 @@ import tickettextblue from '../../image/img_109.png'
 import PopupTakeGifts from "../PopupTicket/PopupTakeGifts";
 import PopupTicket6 from "../PopupTicket/PopupTickets6";
 import exitlogo from "../../image/img_129.png";
+import PopupTakeGiftsError from "../PopupTicket/PopupTickets6";
+import PopupE from "../PopupReg/PopupE";
 
 
 
@@ -49,6 +51,7 @@ export default function Profile(props){
         document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
         document.body.classList.remove('menu-open');
     }
+    
 
 
     function closeMenu() {
@@ -227,6 +230,7 @@ export default function Profile(props){
         if (profile && profile.countRoulette > 0) {
             setIsPopupOpen(true); // Показывать попап, если onlyTest больше 0
         } else {
+            // setIsPopupOpen(true); // Показывать попап, если onlyTest больше 0
             document.getElementById("popup-banner").style.display = "block"; // Показывать другой попап
             document.body.classList.add("no-scroll");
 
@@ -270,6 +274,16 @@ export default function Profile(props){
         const dropdown = document.querySelector('.dropdown-menu');
         dropdown.classList.toggle('show');
     }
+
+    const [showPopupE, setShowPopupE] = useState(false);
+    const [showPopupE2, setShowPopupE2] = useState(false);
+
+    const openPopupTest = () => {
+        setShowPopupE(true);
+    };
+    const openPopupTestSecond = () => {
+        setShowPopupE2(true);
+    };
     return (
         <>
         <header className={'header-profile'}>
@@ -290,8 +304,7 @@ export default function Profile(props){
                     <div className={'menu'}>
                         <div className={'menu-content-profile error-menu-profile'}>
                             <div className={`secret-block ${isBlockVisible ? '' : 'hidden'}`}>
-                                {/*<a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>*/}
-                                <a href={'#'}> Правила </a>
+                                <a href={`${currentDomain}/rules.pdf`} target="_blank"> Правила </a>
                                 <a className="smooth" href={'#'} onClick={(event) => {
                                     handleGoToPrizes(event)
                                 }}> Призы </a>
@@ -309,7 +322,7 @@ export default function Profile(props){
                             </div>
                             <div className="random-block">
                                 <img className={'exit-logo'} src={exitlogo} onClick={toggleDropdown} alt="Логотип"/>
-                                <button id="profile-button" className="button-animation">
+                                <button id="profile-button" onClick={toggleDropdown} className="button-animation no-screen">
                                     Личный кабинет
                                 </button>
 
@@ -342,8 +355,9 @@ export default function Profile(props){
                                 {/*                                                 onClick={profileExit}>Выйти из профиля*/}
                                 {/*</a></p>*/}
                             </div>
-                            <a onClick={openPopup} className={'button-animation-text-profile first-one'}>
+                            <a onClick={openPopupTest} className={'button-animation-text-profile first-one'}>
                                 <b>Зарегистрировать билет</b> </a>
+                            {showPopupE && <PopupE isOpen={showPopupE} closeModal={() => setShowPopupE(false)} />}
                             <div className="container-profile">
                                 <div className="left-column-profile">
                                     {/*<div className={'left-first-profile'}>*/}
@@ -394,11 +408,12 @@ export default function Profile(props){
 
                                         <div className="white-line"></div>
                                         <a
-                                            onClick={openPopup1}
+                                            onClick={openPopupTestSecond}
                                             className={'button-animation-text-profile click-spin'}>
                                             <b>Крутить</b> </a>
-                                        {isPopupOpen &&
-                                            <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}
+                                        {showPopupE2 && <PopupE isOpen={showPopupE2} closeModal={() => setShowPopupE2(false)} />}
+                                        {/*{isPopupOpen &&*/}
+                                        {/*    <PopupAddSpin isOpen={isPopupOpen} closeModal={closePopup}/>}*/}
                                         <p className={'left-first-profile-p2-p2-p2'}>
                                             Вы прокрутили {profile && profile.countRouletteUsed} раз
                                             <br></br>
@@ -498,35 +513,54 @@ export default function Profile(props){
                 <div className="footer-left">
 
                     <div className={'footer-row'}>
-                <div className={'footer-colm'}>
-                    <Link to="">
-                        <img className={'footer-logo'} src={ticketText} onClick={handleImageClickTest}/>
-                    </Link>
-                    <img className={'footer-logo right'} src={ticketTextRight}/>
+                        <div className={'footer-colm'}>
+                            <Link to="">
+                                <img className={'footer-logo'} src={ticketText} onClick={handleImageClick}/>
+                            </Link>
+                            <img className={'footer-logo right'} src={ticketTextRight}/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div className="footer-right">
-            <div className={'footer-row1'}>
-                <a className={'footer-color-size'}>Лотерея «Мечталлион», ВГЛ-2Т Спорт Союз, алгоритм определения
-                    выигрышей № 4 («Мечталлион»),
-                    срок проведения лотереи – до 29.08.2034 г. Подробности на сайте www.nloto.ru и по
-                    телефону 8 800 333-7-333.
-                </a>
-            </div>
-            <div className={'footer-row2'}>
-                <a className={'footer-color-size'}>Специальные призы от Redmond разыгрываются только среди
-                            билетов, купленных в «Почте России». </a>
+                <div className="footer-right">
+                    <div className={'footer-row1'}>
+                        <a className={'footer-color-size'}>Акция «Ваш билетик».
+                            Общий срок проведения акции с «01» сентября 2024 года по «31» октября 2024. Подробную
+                            информацию об организаторе акции,
+                            о правилах ее проведения, количестве призов по результатам акции, сроках, месте и порядке их
+                            вручения, уточняйте на сайте <a className={"text-nloto-footer"}
+                                                            href={'https://nloto-promo.ru'}
+                                                            target="_blank">https://nloto-promo.ru</a> или по телефону
+                            горячей линии 8 (800) 333-7-33.
+                        </a>
+                    </div>
+                    <div className={'footer-row2'}>
+                        <a className={'footer-color-size'}>«ВГЛ-1Т Спорт Союз», алгоритм определения выигрышей № 5
+                            («Великолепная 8»),
+                            «ВГЛ-1Т Спорт Союз», алгоритм определения выигрышей № 2 («Лавина призов»), «ВГЛ-2Т Спорт
+                            Союз»,
+                            алгоритм определения выигрышей № 4 («Мечталлион»), «ВГЛ-1Т Спорт Союз», алгоритм определения
+                            выигрышей № 12 («12 добрых дел»),
+                            «ВГЛ-4Т Спорт Союз», алгоритм определения выигрышей № 4 («Топ 12»), «ВГЛ-4Т Спорт Союз»,
+                            алгоритм определения выигрышей № 13 («Премьер»),
+                            «ВГЛ-3Т Спорт Союз», алгоритм определения выигрышей № 15 («Большая 8»), «ВГЛ-2Т Спорт Союз»,
+                            алгоритм определения выигрышей № 5 («Форсаж 75»),
+                            «ВГЛ-4Т Спорт Союз», алгоритм определения выигрышей № 1 («5 из 37»), «ВГЛ-5Т Спорт Союз»
+                            алгоритм определения выигрышей № 10 («4х4),
+                            срок проведения лотереи – до 29.08.2034 г. <br></br><br></br>Информация об организаторе
+                            лотереи, правилах ее проведения, призовом фонде лотереи,
+                            количестве призов или выигрышей, сроках, месте и порядке их получения - на сайте <a
+                                className={"text-nloto-footer"} href={'https://nloto.ru/'}
+                                target="_blank">www.nloto.ru</a> и по телефону 8 800 333-7-333.
+                            Оператор лотерей ООО «Спортивные Лотереи». </a>
 
                     </div>
-                    <div className={'footer-row3'}>
-                        <a className={'footer-color-size'}>Рекламная акция «Мечталлион. С нами миллионы!», срок
-                            проведения с 03.10.2022 по 30.11.2022 г.,
-                            включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>
-                    </div>
+                    {/*<div className={'footer-row3'}>*/}
+                    {/*    <a className={'footer-color-size'}>Рекламная акция «Мечталлион. С нами миллионы!», срок проведения с 03.10.2022 по 30.11.2022 г.,*/}
+                    {/*        включая период вручения призов. Подробности на сайте www.promo-mechtalion.ru.</a>*/}
+                    {/*</div>*/}
                     <div className={'footer-row4'}>
-                        <a className={'footer-color-size'}>Реклама. Рекламодатель ООО «Спортивные Лотереи» (ОГРН:
-                            1195027010386, ИНН: 5003133760).</a>
+                        <a className={'footer-color-size'}>Реклама. Рекламодатель: ООО «Спортивные Лотереи», ОГРН
+                            1195027010386, ИНН 5003133760</a>
                     </div>
                     <div className={'footer-row-left'}>
                         {/*<a href={`${currentDomain}/rules.pdf`} target="_blank">Полные правила</a>*/}
@@ -550,11 +584,12 @@ export default function Profile(props){
                 <PopupTicket3/>
                 <PopupTicket4/>
                 <PopupTicket5/>
-        <PopupTicket6/>
+                <PopupTicket6/>
                 <PopupVideos/>
                 <PopupEnd/>
                 <PopupAddSpin/>
-        <PopupTakeGifts/>
+                <PopupTakeGifts/>
+                <PopupTakeGiftsError/>
             </footer>
         </>
 

@@ -12,6 +12,7 @@ export default function PopupAddSpin(props) {
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [registrationError, setRegistrationError] = useState('');
     const [registrationErrorEm, setRegistrationErrorEm] = useState('');
+    const [errorMsg, setErrorMsg] = useState(''); // New state for error message
 
     const popupRef = useRef(null);
     function openPopup3() {
@@ -40,6 +41,15 @@ export default function PopupAddSpin(props) {
         // Добавить следующую строку для удаления фокуса с любого активного элемента при открытии
         document.activeElement.blur();
     }
+    const showErrorPopup = () => {
+        // const storedErrorMsg = localStorage.getItem('spinErrorMessage');
+        const errorText = localStorage.getItem('spinErrorMessage'); // Извлечение сообщения об ошибке
+        const welcomeMessage2 = document.getElementById('ticket-for-number2254error');
+        welcomeMessage2.textContent = errorText;
+        // console.log("Полученное сообщение об ошибке:", storedErrorMsg);
+        closeModal();
+        document.getElementById("popup-take-gifts-error").style.display = "block";
+    };
     function closeModalAndRefresh() {
         closeModal();  // вызов оригинальной функции закрытия
         window.location.reload();  // перезагрузка страницы
@@ -169,7 +179,7 @@ export default function PopupAddSpin(props) {
                         </p>
                         }
                         <div className="spin-block">
-                            <SpinForPopup onSpinComplete={openPopup3} />
+                            <SpinForPopup onSpinComplete={openPopup3} onError={showErrorPopup} />
                         </div>
                     </div>
 

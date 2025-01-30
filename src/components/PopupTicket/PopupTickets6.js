@@ -1,14 +1,12 @@
 import CodeInput from "../CodeInput";
 import PhoneInput from "../PhoneInput";
-import React, { useState } from 'react';
-import PopupTicket2 from "./PopupTicket2";
-import PopupTicket1 from "./PopupTicket1";
+import React, {useEffect, useState} from 'react';
 
-export default function PopupTicket6 ({number,text}) {
+export default function PopupTakeGiftsError ({name, image, link, errorText}) {
 
-    function openPopupTicket6() {
+    function openPopupTicket2() {
         closePopup2()
-        document.getElementById("popup-ticket-6").style.display = "block";
+        document.getElementById("popup-ticket-2").style.display = "block";
     }
     function openPopupAuth() {
         closePopup2()
@@ -21,20 +19,21 @@ export default function PopupTicket6 ({number,text}) {
 
 
     function closePopup2() {
-        document.getElementById("popup-ticket-5").style.display = "none";
         localStorage.removeItem('number');
+        localStorage.removeItem('spinErrorMessage');
+        localStorage.removeItem('link');
+        localStorage.removeItem('name');
+        localStorage.removeItem('image');
+        localStorage.removeItem('prizeNumber');
+        localStorage.removeItem('prizeName');
+        localStorage.removeItem('prizeImage');
+        document.getElementById("popup-take-gifts-error").style.display = "none";
         document.body.classList.remove("no-scroll");
-        reloadPage1()
-    }
-    function reloadPage() {
         window.location.reload();
+        window.location.href = window.location.href;
     }
-    window.addEventListener('beforeunload', function(event) {
-        // Удаляем элемент 'number' из localStorage перед обновлением страницы
-        localStorage.removeItem('number');
-    });
-// Функция обновления страницы
 
+// Функция обновления страницы
     function reloadPage1() {
         window.location.href = window.location.href;
     }
@@ -45,37 +44,42 @@ export default function PopupTicket6 ({number,text}) {
         const sanitizedValue = inputValue.replace(/[^\d]/g, '');
         setValue(sanitizedValue);
     }
+    window.addEventListener('beforeunload', function(event) {
+        // Удаляем элемент 'number' из localStorage перед обновлением страницы
+        localStorage.removeItem('number');
+        localStorage.removeItem('name');
+        localStorage.removeItem('image');
+        localStorage.removeItem('link');
+        localStorage.removeItem('spinErrorMessage');
+
+    });
     const [showTooltip, setShowTooltip] = useState(false);
 
     const openTooltip = () => {
         setShowTooltip(true);
     };
+    function reloadPage() {
+        window.location.reload();
+    }
 
     const closeTooltip = () => {
         setShowTooltip(false);
     };
     const toggleTooltip = () => {
         setShowTooltip(!showTooltip);
-    };
-    return (
-        <div id="popup-ticket-6" className="popup">
-            <div className={'blur-filter'}>
-                <div className="popup-ticket1 its-6" id={'popup-content'}>
-                    <span className="close" onClick={closePopup2}>&times;</span>
-                    <form action={''} id={'form-add-ticket4'} className={'form-register'}>
-                        <h1 className={'popup-h1 for-its-4'}>Регистрация билета</h1>
-                        <label className={'bilet-ticket-2-p '}>Регистрация билета</label>
-                        <label className={'bilet-ticket-2-p2'} id='ticket-for-number3'>{number}</label>
-                        <label className={'bilet-ticket-2-p3'}>невозможна.</label>
-                        <p className={'bilet-ticket-2-p5'}>Акция действует для лотерейных билетов, купленных в отделениях Почты России
-                            в городах: Москва, Санкт-Петербург,
-                            Краснодар, Екатеринбург</p>
-                    </form>
+    }
 
+    return (
+        <div id="popup-take-gifts-error" className="popup">
+            <div className={'blur-filter'}>
+                <div className="popup-take-gifts-error its-2" id={'popup-content'}>
+                    <span className="close" onClick={closePopup2}>&times;</span>
+                    <form action={''} id={'form-add-ticket2'} className={'form-register'}>
+                        <h1 className={'popup-h1 take-gifts'}>Розыгрыш приза</h1>
+                        <p className={'bilet-ticket-2-p4 take-gifts-error-style'} id='ticket-for-number2254error'>{errorText}</p>
+                    </form>
                 </div>
             </div>
-
         </div>
-
-    )
+    );
 }
