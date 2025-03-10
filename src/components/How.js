@@ -14,10 +14,12 @@ export default function How (props) {
 
     const { ref: step1Ref, inView: step1InView
     } = useInView({ threshold: 0.3 });
+    const { ref: step4Ref, inView: step4InView
+    } = useInView({ threshold: 0 });
     const { ref: step2Ref, inView: step2InView
-    } = useInView({ threshold: 0.3 });
+    } = useInView({ threshold: 0 });
     const { ref: step3Ref, inView: step3InView
-    } = useInView({ threshold: 0.3 });
+    } = useInView({ threshold: 0 });
 
 
     const [isPrizesTextVisible, setIsPrizesTextVisible] = useState(false);
@@ -129,6 +131,7 @@ export default function How (props) {
     const [step1Visible, setStep1Visible] = useState(false);
     const [step2Visible, setStep2Visible] = useState(false);
     const [step3Visible, setStep3Visible] = useState(false);
+    const [step4Visible, setStep4Visible] = useState(false);
 
     useEffect(() => {
         if (step1InView) setStep1Visible(true);
@@ -137,6 +140,9 @@ export default function How (props) {
     useEffect(() => {
         if (step2InView) setStep2Visible(true);
     }, [step2InView]);
+    useEffect(() => {
+        if (step4InView) setStep4Visible(true);
+    }, [step4InView]);
 
     useEffect(() => {
         if (step3InView) setStep3Visible(true);
@@ -238,8 +244,8 @@ export default function How (props) {
                                 </p>
                             </div>
                         </div>
-                        <div className={'prizes-button'}>
-                        <a onClick={handleOnClick} className={'prizes-button-check'}>
+                        <div ref={step4Ref} className={`prizes-button ${step4Visible ? "fade-in" : ""}`}>
+                        <a onClick={handleOnClick} className={`prizes-button-check`}>
                                 <b>Зарегистрировать билет</b></a>
                             {showPopupE2 && <PopupE isOpen={showPopupE2} closeModal={() => setShowPopupE2(false)} />}
                             {isPopupOpen && (

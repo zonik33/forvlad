@@ -30,6 +30,7 @@ import howFull2 from "../image/img_91.png";
 import howFull3 from "../image/img_94.png";
 import howFull5 from "../image/img_124.png";
 import howFull6 from "../image/img_114.png";
+import man from "../image/img_56.png";
 
 export default function Prizes (props) {
 
@@ -85,28 +86,34 @@ export default function Prizes (props) {
             setIsComponentVisibled(true);
         }
     }, [inView]);
-    // useEffect(() => {
-    //     if (prizesTextInView) {
-    //         setIsPrizesTextVisible(true);
-    //     }
-    // }, [prizesTextInView]);
+    // Используем хук useInView для отслеживания видимости элемента
+    const [step1ticketVisible, setStep1ticketVisible] = useState(false);
+    const { ref: ticketRef, inView: ticketInView } = useInView({
+        threshold: 0.5, // Устанавливаем порог видимости
+    });
 
+    // Когда элемент становится видимым, обновляем состояние
+    useEffect(() => {
+        if (ticketInView) {
+            setStep1ticketVisible(true);
+        }
+    }, [ticketInView]);
         return (
-            <div className={'prizes'}>
+            <div className={'prizes'} >
                 <div className={'wrapper'}>
-                    <div className={'prizes-items11'}>
+                    <div className={'prizes-items11'} ref={ticketRef}>
 
                         <div className={'prizes-content-box-title-bot2-prizes'}>
-                            <div className={'prizes-text11'} id={'prizes'} ref={prizesRef}>
+                            <div className={'prizes-text11'} id={'prizes'} ref={prizesRef}  >
                                 Призы
                             </div>
-                            <p className={'how-center-p-text bonus-prizes'}> За участие в розыгрышах рулетки с подарками
+                            <p className={'how-center-p-text bonus-prizes'} > За участие в розыгрышах рулетки с подарками
                                 вы получите промокод** на лотерейный билет для участия в будущих тиражах от
                                 «Национальная
                                 Лотерея».
                             </p>
                             <p className={'how-center-p-text-first bonus-prizes'}>
-                                <label className={'left-stap-2'}>**</label> Для применения промокода перейдите на сайт
+                                <label className={'left-stap-2'} >**</label> Для применения промокода перейдите на сайт
                                 nloto.ru из вашего личного кабинета
                                 на сайте акции.
                                 Пройдите авторизацию и/или регистрацию. При необходимости подтвердите e-mail
@@ -119,7 +126,7 @@ export default function Prizes (props) {
                             {/*    билет,*/}
                             {/*    зарегистрированный на тираж</p>*/}
                             {/*<p className={'how-center-p-text-prizes-2'}>*Промокод на следующие лотерейные билеты:</p>*/}
-                            <div className={'how-tickets-img'}>
+                            <div className={`how-tickets-img ${step1ticketVisible ? "slideInFromTop" : ""}`}>
                                 <div className="how-full44-img for-test-img-test-mini-prizes">
                                     <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
                                        target="_blank"><img
@@ -138,7 +145,7 @@ export default function Prizes (props) {
                                         src={howFull1}/></a>
                                 </div>
                             </div>
-                            <div className={'how-tickets-img'}>
+                            <div className={`how-tickets-img ${step1ticketVisible ? "slideInFromTop" : ""}`}  ref={ticketRef}>
                                 <div className="how-full4444-img for-test-img-4-mini-prizes">
                                     <a href="https://nloto.ru/lottery/digital-8x20" target="_blank"><img
                                         src={howFull2}/></a>

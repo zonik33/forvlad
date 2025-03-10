@@ -21,6 +21,7 @@ import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
 import {useLocation} from "react-router-dom";
 import PopupTicket6 from "./PopupTicket/PopupTickets6";
 import PopupE from "./PopupReg/PopupE";
+import {useInView} from "react-intersection-observer";
 
 
 function openPopup2() {
@@ -85,6 +86,8 @@ export default function Main (props) {
 
         }
     }, [activeSection]);
+    const { ref: manRef, inView: manInView }
+        = useInView({ threshold: 0.3 });
 
     return (
         <main>
@@ -97,7 +100,7 @@ export default function Main (props) {
                     {/*    <img className={'bottle-float-left main-test-55'} src={img55}/>*/}
                     {/*</div>*/}
                     <div className={'myELementSecond'}>
-                        <img className={'man'} src={man}/>
+                        <img className={`man ${manInView ? "fade-in" : ""}`} src={man} ref={manRef}/>
                         <img className={'man-mobile'} src={manisok}/>
                         <img className={'man-tablet'} src={manisokes}/>
                         {/*<div className={'overlay'}></div>*/}
