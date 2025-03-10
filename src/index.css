@@ -80,6 +80,10 @@ header {
   width: 100%;
   z-index: 99;
 }
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон */
+  box-shadow: 0 8px 16px 0 rgba(124, 198, 252, 0.2); /* Меньшая тень */
+}
 
 header .container {
   position: relative;
@@ -1604,6 +1608,28 @@ header .menu-content-profile a:hover {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 2vw 0vw 0vw 0vw;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.how-tickets-img.slideInFromTop {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-top {
+  animation: slideInFromTop 0.5s ease-out;
 }
 
 .how-tickets-img-second {
@@ -2252,6 +2278,11 @@ header .menu-content-profile a:hover {
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
+  opacity: 1;
+}
+.man.fade-in {
+  opacity: 1;
+  transform: translateX(0); /* Возвращается на своё место */
 }
 .man-mobile {
   display: none;
@@ -2667,11 +2698,20 @@ header .menu-content-profile a:hover {
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.prizes-content-box-title-bot3 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 .prizes-content-box1.fade-in,
-.prizes-content-box2.fade-in,
+.prizes-content-box2.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 .prizes-content-box-title-bot3.fade-in {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.2s;
 }
 
 
@@ -3600,6 +3640,14 @@ canvas#wheel-profile-popup {
 .prizes-button {
   text-align: center;
   margin: 7.74vw;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.prizes-button.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .prizes-button-check {
   position: absolute;
@@ -19446,6 +19494,10 @@ iframe {
     margin-left: 0.2vw;
     margin-top: -0.2vw;
     color: #364059;
+  }
+  .header-scrolled {
+    background-color: rgba(255, 255, 255, 1); /* Полупрозрачный фон */
+    box-shadow: 0 8px 0px 0 rgba(124, 198, 252, 0.2); /* Меньшая тень */
   }
 }
 
