@@ -119,13 +119,6 @@ export default function Prizes (props) {
                                 Пройдите авторизацию и/или регистрацию. При необходимости подтвердите e-mail
                                 и в разделе «Мои билеты» вы увидите лотерейный билет, зарегистрированный на тираж.
                             </p>
-                            {/*<p className={'how-center-p-text-prizes bonus-prizes'}>Для применения промокода перейдите на сайт*/}
-                            {/*    nloto.ru из*/}
-                            {/*    вашего личного кабинета на сайте акции. Пройдите авторизацию и/или регистрацию. При*/}
-                            {/*    необходимости подтвердите Email <br></br>и в разделе «Мои билеты» вы увидите лотерейный*/}
-                            {/*    билет,*/}
-                            {/*    зарегистрированный на тираж</p>*/}
-                            {/*<p className={'how-center-p-text-prizes-2'}>*Промокод на следующие лотерейные билеты:</p>*/}
                             <div className={`how-tickets-img ${step1ticketVisible ? "slideInFromTop" : ""}`}>
                                 <div className="how-full44-img for-test-img-test-mini-prizes">
                                     <a href="https://nloto.ru/lottery/mechtallion" className={"#"}
@@ -154,10 +147,7 @@ export default function Prizes (props) {
                                     <a href="https://nloto.ru/lottery/digital-8x20-big8" target="_blank"><img
                                         src={howFull6}/></a>
                                 </div>
-                                {/*<div className="how-full4444-img for-test-img-6-mini-prizes">*/}
-                                {/*    <a href="https://nloto.ru/lottery/digital-5x37" target="_blank"><img*/}
-                                {/*        src={howFull5}/></a>*/}
-                                {/*</div>*/}
+
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
                                     <a href="https://nloto.ru/lottery/bingo-75" target="_blank"><img
                                         src={howFull3}/></a>
@@ -197,10 +187,7 @@ export default function Prizes (props) {
                                 </div>
                             </div>
                             <div className={'how-tickets-img-mobile'}>
-                                {/*<div className="how-full4444-img for-test-img-6-mini-prizes">*/}
-                                {/*    <a href="https://nloto.ru/lottery/digital-5x37" target="_blank"><img*/}
-                                {/*        src={howFull5}/></a>*/}
-                                {/*</div>*/}
+
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
                                     <a href="https://nloto.ru/lottery/bingo-75" target="_blank"><img
                                         src={howFull3}/></a>
