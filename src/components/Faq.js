@@ -130,6 +130,7 @@ export default function Faq() {
 
         <div className={`centered-container ${classes.root}`}>
 
+            {/*<img className={'bottle-float-left-mobile bigline-mobile'} src={biglinemobile}/>*/}
             <Accordion
                 expanded={expanded === 'panel1'}
                 onChange={handleChange('panel1')}
@@ -155,7 +156,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel2'}
                 onChange={handleChange('panel2')}
-                className={classes.hoverEffect}
+                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
             >
                 <AccordionSummary
                     expandIcon={
@@ -432,7 +433,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel13'}
                 onChange={handleChange('panel13')}
-                className={classes.hoverEffect}
+                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
             >
                 <AccordionSummary
                     expandIcon={
