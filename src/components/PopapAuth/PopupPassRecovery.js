@@ -48,7 +48,7 @@ export default function PopupPassRecovery (props) {
                     <button type={'button'} id={'submit-recovery'} onClick={openPopupCode}
                              className={'button-animation-code'}>Получить код</button>
                     <div className={'form-under-button-code'}>
-                        <p className={'popup-p-under'}>Если у вас уже есть логин и пароль <a href={'https://nloto.ru/'} className={'text-nloto'}>Nloto.ru</a>,
+                        <p className={'popup-p-under'}>Если у вас уже есть логин и пароль <a href={'https://nloto.ru/'} className={'text-nloto'}>Nlotо.ru</a>,
                             вы можете использовать их на этом сайте</p>
                         <p className={'popup-p-under-acrom'}>
                             Уже есть личный кабинет? <a href={'#'} onClick={openPopupAuth} id={'authorizationButton'}>Войти</a></p>
