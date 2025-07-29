@@ -13,7 +13,7 @@ import spinmain from "../image/spin-main.png";
 
 class TestForSpin extends React.Component {
     state = {
-        availableTickets: 3, // Изначально у пользователя нет билетов
+        availableTickets: 3,
         list: [
             top12,
             mecht,
@@ -24,28 +24,25 @@ class TestForSpin extends React.Component {
             fors,
             vel8,
         ],
-        // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
-        // list: ["$100","$500","$9,999","$1","$60"],
-        radius: 75, // PIXELS
-        rotate: 0, // DEGREES
-        easeOut: 0, // SECONDS
-        angle: 0, // RADIANS
-        top: null, // INDEX
-        offset: null, // RADIANS
-        net: null, // RADIANS
-        result: null, // INDEX
+        radius: 75,
+        rotate: 0,
+        easeOut: 0,
+        angle: 0,
+        top: null,
+        offset: null,
+        net: null,
+        result: null,
         spinning: false
     };
 
     componentDidMount() {
-        // generate canvas wheel on load
         this.renderWheel();
     }
     componentWillUnmount() {
-        clearInterval(this.autoSpinInterval); // Очистить интервал перед размонтированием компонента
+        clearInterval(this.autoSpinInterval);
     }
     autoSpin = () => {
-        if (!this.state.spinning) { // если вращение уже не происходит
+        if (!this.state.spinning) {
             this.spin();
         }
     }
@@ -61,15 +58,14 @@ class TestForSpin extends React.Component {
 
         let angle = 0;
         for (let i = 0; i < numOptions; i++) {
-            let imageUrl = this.state.list[i]; // Получаем URL-адрес изображения из вашего списка
+            let imageUrl = this.state.list[i];
             this.renderSector(i + 1, imageUrl, angle, arcSize, this.getColor(i));
             angle += arcSize;
         }
     }
 
     topPosition = (num, angle) => {
-        // set starting index and angle offset based on list length
-        // works upto 9 options
+
         let topSpot = null;
         let degreesOff = null;
         if (num === 9) {
@@ -99,9 +95,9 @@ class TestForSpin extends React.Component {
         let canvas = document.getElementById("wheel-profile");
         let ctx = canvas.getContext("2d");
 
-        let borderColor = "black";  // Default border color
-        let borderWidth = 4; // Default border width
-        let hubRadius = 10;  // Adjust the hub radius as needed
+        let borderColor = "black";
+        let borderWidth = 4;
+        let hubRadius = 10;
 
         switch (color) {
             case "fors":
@@ -111,15 +107,15 @@ class TestForSpin extends React.Component {
                 let img1 = new Image();
                 img1.src = image;
                 img1.onload = function() {
-                    ctx.save(); // Save the current state of the context
-                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
-                    ctx.rotate(Math.PI / 100 * -6); // Rotate the context by a small angle (-4 degrees in this example)
-                    let percentageWidth = 110; // Percentage of the canvas width
-                    let percentageHeight = 135; // Percentage of the canvas height
-                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
-                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
-                    ctx.drawImage(img1, - -13, -120, width, height); // Draw the image with the calculated size and offset
-                    ctx.restore(); // Restore the saved state
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.PI / 100 * -6);
+                    let percentageWidth = 110;
+                    let percentageHeight = 135;
+                    let width = canvas.width * (percentageWidth / 770);
+                    let height = canvas.height * (percentageHeight / 770);
+                    ctx.drawImage(img1, - -13, -120, width, height);
+                    ctx.restore();
                 };
                 break;
             case "vel8":
@@ -147,15 +143,15 @@ class TestForSpin extends React.Component {
                 let img4 = new Image();
                 img4.src = image;
                 img4.onload = function() {
-                    ctx.save(); // Save the current state of the context
-                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
-                    ctx.rotate(Math.PI / 100 * 2); // Rotate the context by a small angle (-4 degrees in this example)
-                    let percentageWidth = 110; // Percentage of the canvas width
-                    let percentageHeight = 135; // Percentage of the canvas height
-                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
-                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
-                    ctx.drawImage(img4, - -10, - -40, width, height); // Draw the image with the calculated size and offset
-                    ctx.restore(); // Restore the saved state
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.PI / 100 * 2);
+                    let percentageWidth = 110;
+                    let percentageHeight = 135;
+                    let width = canvas.width * (percentageWidth / 770);
+                    let height = canvas.height * (percentageHeight / 770);
+                    ctx.drawImage(img4, - -10, - -40, width, height);
+                    ctx.restore();
                 };
                 break;
             case "big8":
@@ -164,15 +160,15 @@ class TestForSpin extends React.Component {
                 let img5 = new Image();
                 img5.src = image;
                 img5.onload = function() {
-                    ctx.save(); // Save the current state of the context
-                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
-                    ctx.rotate(Math.PI / 100 * -2); // Rotate the context by a small angle (-4 degrees in this example)
-                    let percentageWidth = 150; // Percentage of the canvas width
-                    let percentageHeight = 135; // Percentage of the canvas height
-                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
-                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
-                    ctx.drawImage(img5, - 93, - -35, width, height); // Draw the image with the calculated size and offset
-                    ctx.restore(); // Restore the saved state
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.PI / 100 * -2);
+                    let percentageWidth = 150;
+                    let percentageHeight = 135;
+                    let width = canvas.width * (percentageWidth / 770);
+                    let height = canvas.height * (percentageHeight / 770);
+                    ctx.drawImage(img5, - 93, - -35, width, height);
+                    ctx.restore();
                 };
                 break;
             case "prem":
@@ -181,15 +177,15 @@ class TestForSpin extends React.Component {
                 let img6 = new Image();
                 img6.src = image;
                 img6.onload = function() {
-                    ctx.save(); // Save the current state of the context
-                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
-                    ctx.rotate(Math.PI / 100 * 5); // Rotate the context by a small angle (-4 degrees in this example)
-                    let percentageWidth = 150; // Percentage of the canvas width
-                    let percentageHeight = 100; // Percentage of the canvas height
-                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
-                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
-                    ctx.drawImage(img6, - 130, - -15, width, height); // Draw the image with the calculated size and offset
-                    ctx.restore(); // Restore the saved state
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.PI / 100 * 5);
+                    let percentageWidth = 150;
+                    let percentageHeight = 100;
+                    let width = canvas.width * (percentageWidth / 770);
+                    let height = canvas.height * (percentageHeight / 770);
+                    ctx.drawImage(img6, - 130, - -15, width, height);
+                    ctx.restore();
                 };
                 break;
 
@@ -199,15 +195,15 @@ class TestForSpin extends React.Component {
                 let img7 = new Image();
                 img7.src = image;
                 img7.onload = function() {
-                    ctx.save(); // Save the current state of the context
-                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
-                    ctx.rotate(Math.PI / 100 * 5); // Rotate the context by a small angle (-4 degrees in this example)
-                    let percentageWidth = 120; // Percentage of the canvas width
-                    let percentageHeight = 60; // Percentage of the canvas height
-                    let width = canvas.width * (percentageWidth / 770); // Calculate the width based on a percentage of the canvas width
-                    let height = canvas.height * (percentageHeight / 770); // Calculate the height based on a percentage of the canvas height
-                    ctx.drawImage(img7, - 130, - 40, width, height); // Draw the image with the calculated size and offset
-                    ctx.restore(); // Restore the saved state
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.PI / 100 * 5);
+                    let percentageWidth = 120;
+                    let percentageHeight = 60;
+                    let width = canvas.width * (percentageWidth / 770);
+                    let height = canvas.height * (percentageHeight / 770);
+                    ctx.drawImage(img7, - 130, - 40, width, height);
+                    ctx.restore();
                 };
                 break;
             case "m5x37":
@@ -216,15 +212,15 @@ class TestForSpin extends React.Component {
                 let img8 = new Image();
                 img8.src = image;
                 img8.onload = function() {
-                    ctx.save(); // Save the current state of the context
-                    ctx.translate(x, y); // Move the origin to the point where the image will be drawn
-                    ctx.rotate(Math.PI / 100 * -1); // Rotate the context by a small angle (-4 degrees in this example)
-                    let percentageWidth = 24; // Percentage of the canvas width
-                    let percentageHeight = 23; // Percentage of the canvas height
-                    let width = canvas.width * (percentageWidth / 200); // Calculate the width based on a percentage of the canvas width
-                    let height = canvas.height * (percentageHeight / 200); // Calculate the height based on a percentage of the canvas height
-                    ctx.drawImage(img8, - 62, - 115, width, height); // Draw the image with the calculated size and offset
-                    ctx.restore(); // Restore the saved state
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.PI / 100 * -1);
+                    let percentageWidth = 24;
+                    let percentageHeight = 23;
+                    let width = canvas.width * (percentageWidth / 200);
+                    let height = canvas.height * (percentageHeight / 200);
+                    ctx.drawImage(img8, - 62, - 115, width, height);
+                    ctx.restore();
                 };
                 break;
             default:
@@ -249,8 +245,8 @@ class TestForSpin extends React.Component {
 
         let img = new Image();
         img.src = image;
-        img.width = 0; // фиксированная ширина
-        img.height = 0; // фиксированная высота
+        img.width = 0;
+        img.height = 0;
         img.onload = function() {
             let aspectRatio = img.height / img.width;
             let newHeight = img.width * aspectRatio;
@@ -259,7 +255,6 @@ class TestForSpin extends React.Component {
             ctx.translate(baseSize + Math.cos(angle - arc / 2) * imageRadius, baseSize + Math.sin(angle - arc / 2) * imageRadius);
             ctx.rotate(angle - arc / 2 + Math.PI / 1);
 
-            // Поворот изображения на 180 градусов
             ctx.rotate(Math.PI);
 
             ctx.drawImage(img, -img.width / 2, -newHeight / 2, img.width, newHeight);
@@ -312,7 +307,6 @@ class TestForSpin extends React.Component {
             spinning: true
         });
 
-        // calcalute result after wheel stops spinning
         setTimeout(() => {
             this.getResult(randomSpin);
         }, 2000);
@@ -320,12 +314,9 @@ class TestForSpin extends React.Component {
 
     getResult = spin => {
         const { angle, top, offset, list } = this.state;
-        let netRotation = ((spin % 360) * Math.PI) / 180; // RADIANS
+        let netRotation = ((spin % 360) * Math.PI) / 180;
         let travel = netRotation + offset;
         let count = top + 1;
-        // this.setState(prevState => ({
-        //     availableTickets: prevState.availableTickets - 3
-        // }));
         while (travel > 0) {
             travel = travel - angle;
             count--;
@@ -337,7 +328,6 @@ class TestForSpin extends React.Component {
             result = list.length + count;
         }
 
-        // set state variable to display result
         this.setState({
             net: netRotation,
             result: result
@@ -345,7 +335,6 @@ class TestForSpin extends React.Component {
     };
 
     reset = () => {
-        // reset wheel and result
         this.setState({
             rotate: 0,
             easeOut: 0,

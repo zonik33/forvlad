@@ -359,17 +359,13 @@ class SpinForPopup extends React.Component {
     spin = async () => {
         // debugger;
         if (!this.state.spinning && this.state.availableTickets >= 3) {
-            const baseRotation = 360; // базовое вращение
-            const additionalRotation = 180; // дополнительное вращение перед остановкой
-            const sectors = 8; // количество секторов
-            // let randomSpin = Math.floor(Math.random() * 900) + 500; // Объявление переменной randomSpin
             this.setState({
                 buttonDisabled: true,
                 rotating: true,
                 showFullSizeImage: true,
-                errorMessage: '', // Сбрасываем сообщение об ошибке
+                errorMessage: '',
             });
-            // debugger;
+
 
             try {
                 const response = await axios.post('https://nloto-promo.ru/backend/api/roulette', {}, {
@@ -383,21 +379,13 @@ class SpinForPopup extends React.Component {
                     this.updateProfileData(response.data.data.profile);
 
                     const prizeNumber = response.data.data.prize;
-                    const prizeLink = response.data.data.link; // Ссылка на приз
+                    const prizeLink = response.data.data.link;
                     const selectedPrize = prizes[prizeNumber];
-                    const totalRotation = this.calculateRotation(prizeNumber); // вычисляем вращение
-                    // console.log("Базовое вращение: 360°");
-                    // console.log("Дополнительное вращение: 180°");
-                    // console.log("Угол остановки:", (prizeNumber - 1) * (360 / 8), "°");
-                    // console.log("Итоговое вращение:", totalRotation, "°");
+                    const totalRotation = this.calculateRotation(prizeNumber);
 
-
-
-
-                    // console.log("Полученный приз:", selectedPrize);
                     localStorage.setItem('prizeLink', prizeLink);
                     localStorage.setItem('prizeName', selectedPrize.name);
-                    localStorage.setItem('prizeImage', selectedPrize.image); // Здесь selectedPrize.image уже строка
+                    localStorage.setItem('prizeImage', selectedPrize.image);
                     localStorage.setItem('prizeNumber', prizeNumber);
                     this.setState({
                         showPhoto: true,
@@ -425,16 +413,14 @@ class SpinForPopup extends React.Component {
                 } else {
                     const errorMsg = response.data.error || 'Неизвестная ошибка. Попробуйте позже.';
                     this.setState({ errorMessage: errorMsg, buttonDisabled: false, spinning: false });
-                    localStorage.setItem('spinErrorMessage', errorMsg); // Сохраняем ошибку
-                    this.props.onError(errorMsg); // Handle error message
-                    // console.log("Ошибка 1:", errorMsg); // Логируем ошибку в консоль
+                    localStorage.setItem('spinErrorMessage', errorMsg);
+                    this.props.onError(errorMsg);
                 }
             } catch (error) {
                 const errorMsg = error.response ? error.response.data.error : 'Ошибка соединения с сервером. Пожалуйста, попробуйте еще раз.';
                 this.setState({ errorMessage: errorMsg, buttonDisabled: false, spinning: false });
-                localStorage.setItem('spinErrorMessage', errorMsg); // Сохраняем ошибку
-                this.props.onError(errorMsg); // Передаем ошибку дальше
-                // console.log("Ошибка 2:", errorMsg);
+                localStorage.setItem('spinErrorMessage', errorMsg);
+                this.props.onError(errorMsg);
             }
         }
     };
@@ -454,24 +440,14 @@ class SpinForPopup extends React.Component {
     };
 
     calculateRotation(prizeNumber) {
-        const angles = [235, 190, 350, 100, 20, 170, 280, 50]; // Углы остановки для призов 1-8
-        const baseRotation = 360; // базовое вращение
-        const additionalRotation = 180; // дополнительное вращение перед остановкой
-// console.log('Правильно: 5, 7, 4, 8, 2, 6, 1')
-        // Получаем угол остановки для указанного номера приза
-        const stopAt = angles[prizeNumber - 1] || 0; // Если номер приза вне диапазона, используем 0
-
-        // Корректируем угол остановки, чтобы он не стал отрицательным
+        const angles = [235, 190, 350, 100, 20, 170, 280, 50];
+        const baseRotation = 360;
+        const additionalRotation = 180;
+        const stopAt = angles[prizeNumber - 1] || 0;
         const correctedStopAt = (stopAt + 360) % 360;
-
-        const totalRotation = baseRotation + additionalRotation + correctedStopAt; // вычисляем общее вращение
-
-        // console.log("Результат calculateRotation для приза", prizeNumber, ":", totalRotation);
-
-        return totalRotation; // возвращаем итоговое вращение
+        const totalRotation = baseRotation + additionalRotation + correctedStopAt;
+        return totalRotation;
     }
-
-
 
     getResult = (spin, prizeName, prizeImage, prizeLink)=> {
         console.log("Переданная ошибка 11111:", prizeName);
@@ -479,9 +455,7 @@ class SpinForPopup extends React.Component {
         let netRotation = ((spin % 360) * Math.PI) / 180; // RADIANS
         let travel = netRotation + offset;
         let count = top + 1;
-        // this.setState(prevState => ({
-        //     availableTickets: prevState.availableTickets - 3
-        // }));
+
         while (travel > 0) {
             travel = travel - angle;
             count--;
@@ -492,11 +466,10 @@ class SpinForPopup extends React.Component {
         } else {
             result = list.length + count;
         }
-        const prizeNumber = indexToPrizeMap[result + 1]; // +1 чтобы учесть индекс, начинающийся с 1
-        const selectedPrize = prizes[prizeNumber]; // Получаем массив с информацией о призе
+        const prizeNumber = indexToPrizeMap[result + 1];
+        const selectedPrize = prizes[prizeNumber];
         const prizeError = localStorage.getItem('spinErrorMessage') || null;
 
-        // set state variable to display result
         this.setState({
             net: netRotation,
             result: result,
@@ -504,21 +477,19 @@ class SpinForPopup extends React.Component {
             prizeLink: prizeLink,
             prizeImage: selectedPrize.image,
         }, () => {
-            // Call the parent's spin complete function
+
             this.props.onSpinComplete(prizeName, prizeImage, prizeLink);
 
-            // Pass the error if it exists
+
             if (prizeError) {
                 console.log("Переданная ошибка:", prizeError);
                 this.props.onError(prizeName, prizeImage, prizeLink, prizeError);
-                // Optionally remove the error message from localStorage after using it
                 localStorage.removeItem('spinErrorMessage');
             }
         });
     };
 
     reset = () => {
-        // reset wheel and result
         this.setState({
             rotate: 0,
             easeOut: 0,

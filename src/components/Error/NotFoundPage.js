@@ -1,23 +1,9 @@
 import tickettext from "../../image/tickettext.png";
 import ticketText from "../../image/img_99.png";
 import users from "../../image/img_98.png";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import React, {useEffect, useRef, useState} from "react";
-import snake from "../../image/snake.png";
-import rings from "../../image/ring.png";
-import fullhearth from "../../image/full-hearth.png";
-import pluse1 from "../../image/pluse1.png";
-import leftring from "../../image/half-ring.png";
-import centerhearth from "../../image/center-hearth.png";
-import rightRing from "../../image/right-ring.png";
-import SelectProfile from "../lk-profile/SelectProfile";
-import snakefulls from "../../image/full-snake.png";
 import Popup from "../PopupReg/Popup";
-import PopupAuth from "../PopapAuth/PopupAuth";
-import PopupCode from "../PopupReg/PopupCode";
-import PopupPassword from "../PopupReg/PopupPassword";
-import PopupPassRecovery from "../PopapAuth/PopupPassRecovery";
-import PopupEnd from "../PopupTicket/PopupEnd";
 import PopupTicket1 from "../PopupTicket/PopupTicket1";
 import PopupTicket2 from "../PopupTicket/PopupTicket2";
 import PopupTicket3 from "../PopupTicket/PopupTicket3";
@@ -28,10 +14,6 @@ import ticket from "../../image/ticket.png";
 import ticketTextRight from "../../image/img_100.png";
 import tickets from "../../image/img_107.png";
 import tickettextblue from '../../image/img_109.png'
-import ScrollPrizes from "../Scroll/ScrollPrizes";
-import ScrollFaq from "../Scroll/ScrollFaq";
-import ScrollSupport from "../Scroll/ScrollSupport";
-import PopupPasswordCopy from "../PopupReg/PopupPasswordCopy";
 import exitlogo from "../../image/img_129.png";
 
 export default function NotFoundPage(props){
@@ -92,20 +74,20 @@ export default function NotFoundPage(props){
 
     const handleGoToPrizes = (event) => {
         event.preventDefault();
-        navigate("/?section=prizes"); // Передаем параметр "section" в URL
+        navigate("/?section=prizes");
     };
 
     const handleGoToWinners = (event) => {
         event.preventDefault();
-        navigate("/?section=winners"); // Передаем параметр "section" в URL
+        navigate("/?section=winners");
     };
     const handleGoToFaq = (event) => {
         event.preventDefault();
-        navigate("/?section=faq"); // Передаем параметр "section" в URL
+        navigate("/?section=faq");
     };
     const handleGoToSupport = (event) => {
         event.preventDefault();
-        navigate("/?section=support"); // Передаем параметр "section" в URL
+        navigate("/?section=support");
     };
     const [activeSection, setActiveSection] = useState(null);
     const prizesRef = useRef(null);

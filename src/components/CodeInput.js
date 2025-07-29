@@ -6,23 +6,20 @@ const CodeInput = ({ onSubmit, value = ['', '', '', ''], onChange }) => {
     const handleChange = (index, e) => {
         const newValue = e.target.value;
 
-        // Убедитесь, что пользователь вводит только цифры
         if (newValue.match(/^[0-9]$/) || newValue === '') {
-            // Обновляем массив значений кода
+            // обновляем массив
             const newCodeValues = [...value];
             newCodeValues[index] = newValue;
 
-            // Перейти к следующему полю, если текущее заполнено
+            // если текущее заполнено
             if (newValue && index < 3) {
                 inputRefs.current[index + 1].focus();
             }
 
-            // Проверьте, заполнены ли все поля
             if (newCodeValues.every((val) => val !== '')) {
                 onSubmit(newCodeValues.join(''));
             }
 
-            // Вызываем onChange из пропсов
             onChange(newCodeValues);
 
             return;
@@ -34,11 +31,10 @@ const CodeInput = ({ onSubmit, value = ['', '', '', ''], onChange }) => {
             const newCodeValues = [...value];
 
             if (newCodeValues[index]) {
-                // Если текущее поле не пустое, очищаем его
+                // очищаем
                 newCodeValues[index] = '';
                 onChange(newCodeValues);
             } else if (index > 0) {
-                // Перейти на предыдущее поле, если текущее пустое
                 inputRefs.current[index - 1].focus();
             }
         }

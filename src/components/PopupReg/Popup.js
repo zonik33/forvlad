@@ -170,7 +170,7 @@ function Popup(props) {
     useEffect(() => {
         const handleHashChange = () => {
             if (window.location.hash === '#registration') {
-                // console.log('123') // Здесь вызывайте функцию, которая открывает всплывающее окно
+                // console.log('true') //
             }
         };
 

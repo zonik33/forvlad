@@ -4,7 +4,6 @@ import ticket from '../image/ticket.png'
 import tickettext from '../image/tickettext.png'
 import tickettextblue from '../image/img_109.png'
 import ScrollPrizes from "./Scroll/ScrollPrizes";
-import ScrollWinners from "./Scroll/ScrollWinners";
 import ScrollFaq from "./Scroll/ScrollFaq";
 import Popup from "./PopupReg/Popup";
 import PopupCode from "./PopupReg/PopupCode";
@@ -12,24 +11,22 @@ import PopupPassword from "./PopupReg/PopupPassword";
 import PopupAuth from "./PopapAuth/PopupAuth";
 import PopupPassRecovery from "./PopapAuth/PopupPassRecovery";
 import {Link} from "react-router-dom";
-import Main from "./Main";
-import Footer from "./Footer";
 import React, {useEffect, useState} from "react";
-import PopupRegisterCopy from "./PopupReg/PopupRegisterCopy";
 import PopupEnd from "./PopupTicket/PopupEnd";
 import PopupPasswordCopy from "./PopupReg/PopupPasswordCopy";
 import ScrollSupport from "./Scroll/ScrollSupport";
+
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
 
     if (prevScrollPos > currentScrollPos) {
-        // Скроллим вверх
+
         document.querySelector("header .logo").classList.remove("transparent");
         document.querySelector("header .logo").classList.add("visible");
     } else {
-        // Скроллим вниз
+
         document.querySelector("header .logo").classList.remove("visible");
         document.querySelector("header .logo").classList.add("transparent");
     }
@@ -51,36 +48,36 @@ export default function Header (props){
     function openPopup2() {
         document.getElementById("popup-ticket1").style.display = "block";
         document.getElementById("popup-ticket1").classList.add("popup-animation");
-        document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-        document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
     }
     function openPopup3() {
         document.getElementById("popup-ticket1").style.display = "block";
         document.getElementById("popup-ticket1").classList.add("popup-animation");
-        document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-        document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
     }
 
 
     function toggleMenu() {
         const navLists = document.querySelector('.header-burger');
-        // Не выполняйте здесь toggle для navLists
+
         const navList = document.querySelector('header .menu');
-        navList.classList.toggle('show'); // Просто добавьте/удалите класс show
-        // Удалите toggle для document.documentElement и document.body
+        navList.classList.toggle('show');
+
     }
     function closeMenu() {
         const navLists = document.querySelector('.header-burger');
         navLists.classList.remove('active');
         const navList = document.querySelector('header .menu');
         navList.classList.remove('show');
-        document.documentElement.classList.remove('menu-open'); // Удаление класса 'menu-open' у элемента <html>
+        document.documentElement.classList.remove('menu-open');
         document.body.classList.remove('menu-open');
     }
     const currentDomain = window.location.origin;
     const handleOnClick = () => {
         if (isAuthenticated) {
-            openPopup2(); // Открываем попап для зарегистрированного пользователя
+            openPopup2();
         } else {
             openPopup();
         }
@@ -101,10 +98,8 @@ export default function Header (props){
         const isRegistrationLink = currentUrl === '#registration';
 
         if (isAuthenticated) {
-            // Пользователь зарегистрирован, перенаправляем в личный кабинет
             window.location.assign('/profile');
         } else if (isRegistrationLink) {
-            // Гость и переход по ссылке регистрации, открываем popup регистрации
             openPopup();
         }
     }
@@ -144,10 +139,7 @@ export default function Header (props){
         dropdown.classList.toggle('show');
     }
     function profileExit () {
-        // Удалить токен из localStorage
         localStorage.removeItem('auth_key');
-
-        // Перенаправить на главную страницу
         window.location.href = '/';
     };
     window.addEventListener("scroll", function () {

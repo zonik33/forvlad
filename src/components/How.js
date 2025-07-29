@@ -46,14 +46,14 @@ export default function How (props) {
     function openPopup2() {
         document.getElementById("popup-ticket1").style.display = "block";
         document.body.classList.add("no-scroll");
-        document.body.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
-        document.documentElement.style.overflow = "hidden"; // Разблокируйте прокрутку страницы
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
     }
     const auth_key = localStorage.getItem('auth_key');
     const isAuthenticated = !!auth_key;
     const handleOnClick = () => {
         if (isAuthenticated) {
-            openPopupTestSecond(); // Открываем попап для зарегистрированного пользователя
+            openPopupTestSecond();
         } else {
             openPopup();
         }
@@ -73,8 +73,8 @@ export default function How (props) {
 
     const closePopup = () => {
         setIsPopupOpen(false);
-        document.body.style.overflow = ""; // Разблокируйте прокрутку страницы
-        document.documentElement.style.overflow = ""; // Разблокируйте прокрутку страницы
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
     };
     const openPopup5 = () => {
         setIsPopupOpen5(true);

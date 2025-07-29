@@ -224,90 +224,12 @@ export default function Prizes (props) {
                                         </div>
                             </div>
                             <div className={'how-tickets-img-tablet'}>
-                                {/*<div className="how-full4444-img for-test-img-6-mini-prizes">*/}
-                                {/*    <a href="https://nloto.ru/lottery/digital-5x37" target="_blank"><img*/}
-                                {/*        src={howFull5}/></a>*/}
-                                {/*</div>*/}
                                 <div className="how-full4444-img for-test-img-7-mini-prizes">
                                     <a href="https://nloto.ru/lottery/bingo-75" target="_blank"><img
                                         src={howFull3}/></a>
                                 </div>
                             </div>
                         </div>
-
-
-                        {/*    <div className={'prizes-content-box11'}>*/}
-                        {/*        <div className={'prizes-content-box-title-middle1'}><p>Получите гарантированный</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-middle2'}><p>приз* за регистрацию билета!</p>*/}
-                        {/*        </div>*/}
-                        {/*        <img className={'prizes-content-box1-img11'} src={prizesLeft}/>*/}
-                        {/*        <img className={'bg-image1'} src={bgImagese}/>*/}
-                        {/*        <div className={'prizes-content-box-title-bot11'}><p>Гарантированный приз</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot22'}><p>ПОДАРОК ОТ 585</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot33'}><p>ЗОЛОТОЙ</p></div>*/}
-                        {/*    </div>*/}
-                        {/*    <div className="backdrop11">*/}
-                        {/*    </div>*/}
-
-                        {/*    <div className={'prizes-content-box22'}>*/}
-                        {/*        <div className={'prizes-content-box-title-middle1'}><p>Участвуйте в розыгрыше </p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-middle2'}><p> ценных призов </p></div>*/}
-                        {/*        <img className={'prizes-content-box2-img22'} src={prizesCenter}/>*/}
-                        {/*        <img className={'bg-image2'} src={bgImagese}/>*/}
-                        {/*        <div className={'prizes-content-box-title-bot111'}><p>Ежедневный приз</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot222'}><p>МЕДИЦИНСКАЯ</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot333'}><p>СТРАХОВКА</p></div>*/}
-                        {/*    </div>*/}
-                        {/*    <div className="backdrop22">*/}
-                        {/*    </div>*/}
-                        {/*    <div className={'prizes-content-box33'}>*/}
-                        {/*        <div className={'prizes-content-box-title-middle1'}><p>Разыгрываем</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-middle2'}><p>специальные призы** от</p>*/}
-                        {/*            <img className={'white-redmond-prizes'} src={whiteRedmond}/>*/}
-                        {/*        </div>*/}
-                        {/*        <img className={'prizes-content-box3-img33'} src={prizesRight}/>*/}
-                        {/*        <img className={'bg-image3'} src={bgImagese}/>*/}
-                        {/*        <div className={'prizes-content-box-title-bot1111'}>Ежедневный приз</div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot2222'}>Промокод</div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot3333'}>на 3000 рублей</div>*/}
-                        {/*    </div>*/}
-                        {/*    <div className="backdrop33">*/}
-                        {/*    </div>*/}
-                        {/*    <div className={'prizes-content-box44'}>*/}
-                        {/*        <div className={'prizes-content-box-title-middle1'}><p>Специальный приз***</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-middle2'}><p> от*/}
-                        {/*            М.Видео </p></div>*/}
-                        {/*        <img className={'prizes-content-box22222-img22222'} src={prizesCenterCard}/>*/}
-                        {/*        <img className={'bg-image22222'} src={bgImagese}/>*/}
-                        {/*        /!*<div className={'prizes-content-box-title-bot11111'}><p>Ежедневный приз</p></div>*!/*/}
-                        {/*        <div className={'prizes-content-box-title-bot22222'}><p>ПОДАРОЧНЫЙ СЕРТИФИКАТ</p></div>*/}
-                        {/*        <div className={'prizes-content-box-title-bot33333'}><p>НА 10000 РУБЛЕЙ</p></div>*/}
-                        {/*    </div>*/}
-                        {/*    <div className="backdrop44">*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-                        {/*<div className={"text-under-block"}>*/}
-                        {/*    <b>**только для билетов, купленных*/}
-                        {/*        в отделениях Почты России</b>*/}
-                        {/*</div>*/}
-                        {/*<div className={"text-under-block1"}>*/}
-                        {/*    <b>*внешний вид подарка может отличаться от изображения</b>*/}
-                        {/*</div>*/}
-                        {/*<div className={"text-under-block2"}>*/}
-                        {/*    <b>*** только для участников реферальной программы</b>*/}
-                        {/*</div>*/}
-
-                        {/*<div className={'prizes-background-image'}>*/}
-                        {/*    /!*<img className={'prizes-Ring'} src={prizesRing}/>*!/*/}
-                        {/*    /!*<img className={'prizes-left-title'} src={prizesFromLeft}/>*!/*/}
-                        {/*    /!*<img className={'prizes-right-pluse'} src={prizesRightPluse}/>*!/*/}
-                        {/*    /!*<img className={'prizes-right-hearth'} src={prizesRightHearth}/>*!/*/}
-                        {/*    /!*<img className={'prizes-right-snake'} src={prizesRightSnake}/>*!/*/}
-                        {/*    /!*<img className={'prizes-right-plusepluse'} src={prizesRightPlusePluse}/>*!/*/}
-                        {/*    /!*<img className={'prizes-right-half-ping'} src={prizesRightHalfRing}/>*!/*/}
-                        {/*    /!*<img className={'prizes-left-hearth'} src={prizesLeftHearth}/>*!/*/}
-                        {/*    /!*<img className={'prizes-left-full-hearth'} src={prizesLeftFullHearth}/>*!/*/}
-                        {/*    /!*<img className={'prizes-snake-inblock'} src={prizesSnakeInBlock}/>*!/*/}
                     </div>
                 </div>
             </div>

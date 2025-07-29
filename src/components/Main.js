@@ -93,18 +93,12 @@ export default function Main (props) {
         <main>
             <div className={'main'} id={'main'}>
                 <div className={'main-items'}>
-                    {/*<div className={'bottle-left'}>*/}
-                    {/*    <img className={'bottle-float-left'} src={wintohealth}/>*/}
-                    {/*</div>*/}
-                    {/*<div className="myElement">*/}
-                    {/*    <img className={'bottle-float-left main-test-55'} src={img55}/>*/}
-                    {/*</div>*/}
+
                     <div className={'myELementSecond'}>
                         <img className={`man ${manInView ? "fade-in" : ""}`} src={man} ref={manRef}/>
                         <img className={'man-mobile'} src={manisok}/>
                         <img className={'man-tablet'} src={manisokes}/>
-                        {/*<div className={'overlay'}></div>*/}
-                        {/*<div className={'overlay-low'}></div>*/}
+
                     </div>
                     <div className={'main-text-text'}>
                         <img className={'man logo-pochta'} src={logopochta}/>
@@ -119,21 +113,6 @@ export default function Main (props) {
                             <p className={'how-tickes-img-p-right'}>* Города-участники: Москва, Санкт-Петербург,
                                 Краснодар, Екатеринбург</p>
                         </div>
-
-                        {/*<div className={'main-text'}>*/}
-                        {/*    <div className={'buy-block'}>*/}
-                        {/*        <a className={'buy-block-a'}>КУПИТЕ</a>*/}
-                        {/*        <p className={'buy-block-p'}>БИЛЕТ<br></br> с 1.02.2024 <br></br>по 31.03.2024</p>*/}
-                        {/*    </div>*/}
-                        {/*    <div className={'take-block'}>*/}
-                        {/*        <a className={'take-block-a'}>ПОЛУЧИТЕ</a>*/}
-                        {/*        <p className={'take-block-p'}>Гарантированный подарок от 585 золотой*</p>*/}
-                        {/*    </div>*/}
-                        {/*    <div className={'win-block'}>*/}
-                        {/*        <a className={'win-block-a'}>ВЫИГРАЙТЕ</a>*/}
-                        {/*        <p className={'win-block-p'}>Медицинскую <br></br>страховку <br></br>каждый день</p>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
                         <a onClick={handleOnClick} className={'button-animation-text'}> <b>Участвовать в
                             акции</b> </a>
                         {showPopupE2 && <PopupE isOpen={showPopupE2} closeModal={() => setShowPopupE2(false)} />}
@@ -142,25 +121,11 @@ export default function Main (props) {
                         )}
                     </div>
                     <div className={'right-float-img'}>
-                        {/*<img className={'snake-left'} src={snake}/>*/}
-                        {/*<img className={'man'} src={man}/>*/}
-                        {/*<img className={'rings'} src={rings}/>*/}
-                        {/*<img className={'full-snake'} src={snakefulls}/>*/}
-                        {/*<img className={'full-hearth'} src={fullhearth}/>*/}
-                        {/*<img className={'pluse1'} src={pluse1}/>*/}
-                        {/*<img className={'pluse2'} src={plusemain}/>*/}
-                        {/*<img className={'left-half-ring'} src={leftring}/>*/}
-                        {/*<img className={'center-hearth'} src={centerhearth}/>*/}
-                        {/*<img className={'right-ring'} src={rightRing}/>*/}
-                        {/*<img className={'right-hearth'} src={rightHearth}/>*/}
-                        {/*<img className={'scroll-down'} src={scrollDown}/>*/}
-                        {/*<img className={'stars-man'} src={starsMan}/>*/}
                     </div>
                 </div>
             </div>
                 <How/>
                 <Prizes/>
-                {/*<Winners/>*/}
             <div className={'items-block-how qouest'}>
                 <div className={'question-block'} id={'faq'} ref={faqqRef}>Вопросы и ответы</div>
                 <Questions/>

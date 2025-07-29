@@ -1,6 +1,4 @@
-import CodeInput from "../CodeInput";
-import PhoneInput from "../PhoneInput";
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 export default function PopupVideos({ title, prize, video }) {
     function openPopupTicket3() {
@@ -22,8 +20,8 @@ export default function PopupVideos({ title, prize, video }) {
         video.src = video.src;
         document.getElementById("popup-videos").style.display = "none";
         document.body.classList.remove("no-scroll");
-        document.body.style.overflow = ""; // Заблокируйте прокрутку страницы
-        document.documentElement.style.overflow = ""; // Заблокируйте прокрутку страницы
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
     }
 
 // Функция обновления страницы
@@ -34,7 +32,6 @@ export default function PopupVideos({ title, prize, video }) {
         window.location.reload();
     }
     window.addEventListener('beforeunload', function(event) {
-        // Удаляем элемент 'number' из localStorage перед обновлением страницы
         localStorage.removeItem('number');
     });
 

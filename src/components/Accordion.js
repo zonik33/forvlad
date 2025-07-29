@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
-import Form from "./Form";
-import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
+import {FaChevronDown, FaChevronUp} from 'react-icons/fa';
 import {useLocation} from "react-router-dom";
 
 function Accordion() {
@@ -269,7 +268,6 @@ function Accordion() {
                     {/*    <Form/>*/}
 
                     {/*</div>*/}
-
 
                 </div>
             </div>

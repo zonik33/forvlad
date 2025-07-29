@@ -13,8 +13,8 @@ export default function Winners(props) {
     const [phoneInput, setPhoneInput] = useState('');
     const [registrationError, setRegistrationError] = useState('');
     const [winners, setWinners] = useState([]);
-    const [totalPages, setTotalPages] = useState(null); // Используем useState для хранения значения totalPages
-    let [currentPage, setCurrentPage] = useState(1); // Используем useState для хранения значения currentPage
+    const [totalPages, setTotalPages] = useState(null);
+    let [currentPage, setCurrentPage] = useState(1);
     const [selectedPage, setSelectedPage] = useState(currentPage);
     const pageNumbersRef = useRef(null);
     const listRef = useRef(null);
@@ -22,7 +22,6 @@ export default function Winners(props) {
     const handleSearch = () => {
         const apiUrl = `https://nloto-promo.ru/backend/api/winners?phone=${phoneInput}`;
 
-        // Дополнительная логика для обработки поиска
         fetch(apiUrl)
             .then((response) => response.json())
             .then((data) => {
@@ -32,7 +31,7 @@ export default function Winners(props) {
                 const winnersWithMatchingPhone = data.data.items;
                 setWinners(winnersWithMatchingPhone);
                 const totalPages = data.data.pages;
-                setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
+                setTotalPages(totalPages || 1);
                 setCurrentPage(1);
                 console.log("Запустил победителей");
             })
@@ -53,19 +52,17 @@ export default function Winners(props) {
     const selectChoose = (text) => {
         const apiUrl = `https://nloto-promo.ru/backend/api/winners?date=${text}`;
 
-        // Сохраняем предыдущее значение выбора
         const previousSelectedItem = selectedItem;
 
-        // Дополнительная логика для обработки поиска
         fetch(apiUrl)
             .then((response) => response.json())
             .then((data) => {
-                setSelectedItem(previousSelectedItem); // Используем сохраненное значение выбора
+                setSelectedItem(previousSelectedItem);
                 setIsActive(false);
                 setWinners(data.data.items);
 
                 const totalPages = data.data.pages;
-                setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
+                setTotalPages(totalPages || 1);
                 setCurrentPage(1);
                 console.log("Выбрали дату");
             })
@@ -81,7 +78,7 @@ export default function Winners(props) {
             );
 
             const totalPages = response.data.data.pages;
-            setTotalPages(totalPages || 1); // Set totalPages to 1 if it is falsy
+            setTotalPages(totalPages || 1);
             const data = response.data.data.items;
 
             setWinners(data);
@@ -104,18 +101,13 @@ export default function Winners(props) {
         dropdown.classList.toggle("open");
     }
 
-// Получаем список элементов выпадающего списка
     const dropdownItems = document.querySelectorAll('.select-custom-dropdown-item');
 
-// Добавляем обработчик события для каждого элемента
     dropdownItems.forEach(item => {
         item.addEventListener('click', (event) => {
-            // Получаем выбранный элемент
             const selectedItem = event.target.textContent;
-            // Обновляем текст внутри span с классом selected-item
             const selectedSpan = document.querySelector('.selected-item');
             selectedSpan.textContent = selectedItem;
-            // Закрываем выпадающий список
             const dropdown = document.getElementById('monthPicker');
             dropdown.classList.remove('open');
         });
@@ -148,14 +140,13 @@ export default function Winners(props) {
         function handlePageNumberClick(event) {
             const pageNumber = event.target.dataset.pageNumber;
 
-            // Обработка клика по номеру страницы
             if (pageNumber) {
                 const updatedPageNumber = parseInt(pageNumber);
                 setCurrentPage(updatedPageNumber);
                 renderPageNumbers();
                 updateButtonStates();
-                moveList(); // Двигаем элементы списка
-                fetchWinners(updatedPageNumber, selectedItem); // Вызов функции fetchWinners с актуальными значениями currentPage и selectedItem
+                moveList();
+                fetchWinners(updatedPageNumber, selectedItem);
 
             }
         }
@@ -165,7 +156,7 @@ export default function Winners(props) {
                 currentPage--;
                 renderPageNumbers();
                 updateButtonStates();
-                moveList(); // Двигаем элементы списка
+                moveList();
                 fetchWinners(currentPage);
 
             }
@@ -176,7 +167,7 @@ export default function Winners(props) {
                 currentPage++;
                 renderPageNumbers();
                 updateButtonStates();
-                moveList(); // Двигаем элементы списка
+                moveList();
                 fetchWinners(currentPage);
 
 
@@ -203,7 +194,6 @@ export default function Winners(props) {
 
         function renderPageNumbers() {
             if (pageNumbersRef.current && totalPages > 0) {
-                // Очистить контейнер номеров страниц
                 pageNumbersRef.current.innerHTML = '';
             }
             const showFirstEllipsis = currentPage > 2;
@@ -248,7 +238,7 @@ export default function Winners(props) {
                     currentPage = i;
                     updateButtonStates();
                     renderPageNumbers();
-                    moveList(); // Двигаем элементы списка
+                    moveList();
                 });
                 span.addEventListener('mouseover', function () {
                     if (!span.classList.contains('active')) {
@@ -273,13 +263,13 @@ export default function Winners(props) {
                 lastPageElement.classList.add('page-number');
                 lastPageElement.addEventListener('click', function () {
                 setCurrentPage(totalPages);
-                updateButtonStates(); // Обновить состояние кнопок
+                updateButtonStates();
                 renderPageNumbers();
                 fetchWinners(totalPages, selectedItem);
                 moveList();
             });
 
-            if (currentPage !== totalPages) { // Only show the last page element when there are more than two pages or the total pages is two
+            if (currentPage !== totalPages) {
                 pageNumbers.appendChild(lastPageElement);
             }
 
@@ -345,7 +335,7 @@ select();
 
     const location = useLocation();
     const params = new URLSearchParams(location.search);
-    const activeSection = params.get("section"); // Получаем значение параметра "section" из URL
+    const activeSection = params.get("section");
 
     const prizesRef = useRef(null);
     const winnersRef = useRef(null);
@@ -573,7 +563,7 @@ select();
                                 phoneInput={phoneInput}
                                 setPhoneInput={setPhoneInput}
                                 registrationError={registrationError}
-                                handleSearch={handleSearch} // Передача функции handleSearch в компонент InputWinners
+                                handleSearch={handleSearch}
                             />
                             <button className="search-btn" onClick={handleSearch}></button>
                         </div>

@@ -127,16 +127,6 @@
             function reloadPage() {
                 window.location.href = window.location.href;
             }
-            // function handleClickTest () {
-            //     const auth_key = "BBcPgT55ljAytlAgWcQFqGfdNUXQf9Tr";
-            //     const login = "+7 (927) 360-80-66"
-            //     if (auth_key) {
-            //         localStorage.setItem('auth_key', auth_key);
-            //         localStorage.setItem('login', login);
-            //     }
-            //     window.location.href = '/profile'
-            // }
-
 
 
             const [registrationError, setRegistrationError] = useState("");
@@ -144,7 +134,7 @@
 
 
             const handleCodeInputChange = (newCodeValues) => {
-                setCodeInputValue(newCodeValues); // Update based on child component's input
+                setCodeInputValue(newCodeValues);
                 setRegistrationError("");
             };
 
@@ -228,19 +218,15 @@
                     formData.append('domain', domain);
                     formData.append('g-recaptcha-response', token);
 
-                    // Здесь добавьте ваш код для отправки запроса на сервер
                     const response = await axios.post('https://nloto-promo.ru/backend/api/login', formData);
-                    // console.log("Ответ от сервера:", response.data);
                     if (response.data.result === false) {
-                        // console.log(response.data.result);
                         if (response.data.error.login) {
                             setRegistrationError(response.data.error.login[0]);
                         } else {
                             setRegistrationError('');
                         }
                     } else {
-                        // console.log("Успех:", response.data.result);
-                        // console.log(response.data.result);
+
                         const hash = response.data.data.hash;
                         localStorage.setItem('hash', hash);
                     }
@@ -252,15 +238,7 @@
                 let rutarget = window._rutarget || [];
                 rutarget.push({'event': 'thankYou', 'conv_id': 'registration'});
             }
-            function handleClickTest () {
-                // const auth_key = "T56UtCwneBsxhPqLcjgeJvx-udu0YDaO";
-                // const login = "+7 (927) 360-80-66"
-                // if (auth_key) {
-                //     localStorage.setItem('auth_key', auth_key);
-                //     localStorage.setItem('login', login);
-                // }
-                // window.location.href = '/profile'
-            }
+
             const recaptchaRef = useRef(null);
 
             return (
@@ -305,19 +283,13 @@
                                     )}
                                     <span id="nameError" className="error"></span>
                                 </div>
-                                {/*<label className={"right-label-popupCode"}>*/}
-                                {/*    <a onClick={openPopup} className={'text-nloto'}>Сменить номер</a>*/}
-                                {/*    {isPopupOpen && (*/}
-                                {/*        <Popup isOpen={isPopupOpen} closeModal={closePopup}/>*/}
-                                {/*    )}*/}
-                                {/*</label>*/}
+
                                 <div className="attempts-left">
                                     Осталось попыток: {attemptsLeft}
                                 </div>
                                 <span
                                     id="countdown"
                                     onClick={handleTimerClick}
-                                    // postRegister={postRegister}
                                     style={{
                                         textDecoration: isTimerClickable ? "underline" : "none",
                                         cursor: isTimerClickable ? "pointer" : "default"

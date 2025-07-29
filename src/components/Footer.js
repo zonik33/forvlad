@@ -1,9 +1,6 @@
 import ticketText from '../image/img_99.png'
 import ticketTextRight from '../image/img_100.png'
 import React from "react";
-import img55 from "../image/img_55.png";
-import man from "../image/img_56.png";
-import ticket from "../image/ticket.png";
 import {Link} from "react-router-dom";
 
 

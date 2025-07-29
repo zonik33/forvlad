@@ -130,7 +130,6 @@ export default function Faq() {
 
         <div className={`centered-container ${classes.root}`}>
 
-            {/*<img className={'bottle-float-left-mobile bigline-mobile'} src={biglinemobile}/>*/}
             <Accordion
                 expanded={expanded === 'panel1'}
                 onChange={handleChange('panel1')}
@@ -156,7 +155,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel2'}
                 onChange={handleChange('panel2')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -179,7 +178,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel3'}
                 onChange={handleChange('panel3')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -205,7 +204,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel4'}
                 onChange={handleChange('panel4')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -228,7 +227,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel5'}
                 onChange={handleChange('panel5')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -251,7 +250,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel6'}
                 onChange={handleChange('panel6')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -274,7 +273,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel7'}
                 onChange={handleChange('panel7')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -317,7 +316,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel8'}
                 onChange={handleChange('panel8')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -341,7 +340,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel9'}
                 onChange={handleChange('panel9')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -364,7 +363,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel10'}
                 onChange={handleChange('panel10')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -387,7 +386,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel11'}
                 onChange={handleChange('panel11')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -410,7 +409,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel12'}
                 onChange={handleChange('panel12')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -433,7 +432,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel13'}
                 onChange={handleChange('panel13')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -475,7 +474,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel14'}
                 onChange={handleChange('panel14')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -498,7 +497,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel15'}
                 onChange={handleChange('panel15')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={
@@ -521,7 +520,7 @@ export default function Faq() {
             <Accordion
                 expanded={expanded === 'panel16'}
                 onChange={handleChange('panel16')}
-                className={classes.hoverEffect} // Применяем эффект hover на весь аккордеон
+                className={classes.hoverEffect}
             >
                 <AccordionSummary
                     expandIcon={

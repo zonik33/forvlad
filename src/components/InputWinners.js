@@ -1,11 +1,10 @@
 import React from 'react';
 import InputMask from 'react-input-mask';
-import phoneInput from "./PhoneInput";
 
 class InputWinners extends React.Component {
     handleKeyPress = (e) => {
         if (e.key === 'Enter') {
-            // Выполните обработку формы, например, вызовите функцию `handleSearch`
+
             this.props.handleSearch();
         }
     };
@@ -22,7 +21,7 @@ class InputWinners extends React.Component {
                 id="phoneInput"
                 value={this.props.phoneInput}
                 onChange={(e) => setPhoneInput(e.target.value)}
-                onKeyPress={this.handleKeyPress} // Добавлен обработчик события onKeyPress
+                onKeyPress={this.handleKeyPress}
             />
         );
     }

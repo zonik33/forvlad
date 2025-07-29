@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import Profile from "./components/lk-profile/Profile";
 import Nav from "./Nav/Nav";
 import Gifts from "./components/lk-profile/Gifts";
@@ -7,7 +7,6 @@ import Tickets from "./components/lk-profile/Tickets";
 import NotFoundPage from "./components/Error/NotFoundPage";
 import axios from "axios";
 import Popup from "./components/PopupReg/Popup";
-import Videos from "./components/lk-profile/Videos";
 import WinnersVideos from "./components/Winners-videos/WinnersVideos";
 import PopupStart from "./components/PopupReg/PopupStart";
 import PopupBanner from "./components/PopupTicket/PopupBanner";
@@ -26,7 +25,6 @@ function App() {
     document.body.classList.add("no-scroll");
   }
 
-  // Функция для получения данных профиля
   async function fetchData() {
     if (isAuthenticated) {
       try {
@@ -43,14 +41,14 @@ function App() {
         if (error.response && error.response.status === 401) {
           localStorage.removeItem('auth_key');
           localStorage.removeItem('profile');
-          window.location.href = '/'; // Перенаправляем на главную
+          window.location.href = '/';
         }
       }
     }
   }
 
   useEffect(() => {
-    fetchData(); // Получение данных профиля
+    fetchData();
   }, []);
 
   useEffect(() => {
@@ -58,11 +56,9 @@ function App() {
     const referralCode = urlParams.get('ref');
 
     if (referralCode) {
-      // setShowPopup(true);
     }
   }, []);
 
-  // Открытие попапа при монтировании компонента
   useEffect(() => {
     setShowPopupE(true);
   }, []);
